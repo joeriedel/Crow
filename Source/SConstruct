@@ -1,0 +1,53 @@
+# Source/SConstruct
+# Balance construction file
+# Author: Joe Riedel (joeriedel@hotmail.com)
+
+Import('radvars')
+Import('boost_threads')
+Import('radiance_runtime')
+Import('radiance_engine')
+Import('radiance_main')
+Import('lua')
+Import('variant_dir')
+Import('exe_type')
+(build, source) = radvars
+
+def build_balance(name, type):
+	x = None
+	(linkQt, engine) = radiance_engine
+	if linkQt():
+		x = build.qtBuilder(name, build, source, '.', variant_dir, type)
+	else:
+		x = build.exeBuilder(name, build, source, '.', variant_dir, type)
+		if build.pc():
+			build.backend.addSDLMain(x.source)
+		
+	# this is relative to the Radiance dir (so it's adding Radiance/Source to the include path
+	# not our own Source folder!)
+	build.backend.addIncludePath(x.source, 'Source')
+
+	build.backend.addCgLibs(x.source)
+	build.backend.configLua(x.source)
+
+###############################################################################
+# Source
+###############################################################################
+
+	x.add('BalanceGame.cpp')
+
+###############################################################################
+# Libs
+###############################################################################
+
+	x.add(radiance_main, type='lib')
+	x.add(engine, type='lib')
+	x.add(boost_threads, type='lib')
+	x.add(lua, type='lib')
+	x.add(radiance_runtime, type='lib')
+	
+	if build.pc():
+		build.backend.addSDLLibs(x.source)
+		
+	return x.create()
+
+build_balance('Balance', exe_type)

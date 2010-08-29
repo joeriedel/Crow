@@ -1,0 +1,11 @@
+# contains files to ignore for this directory and all subdirectories
+*.pyc
+*.obj
+*.suo
+*.ncb
+*.vcproj.*.user
+*~
+moc_*.cc
+ui_*.h
+.sconsign.dblite
+Bin/*

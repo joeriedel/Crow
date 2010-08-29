@@ -1,0 +1,3 @@
+[submodule "Radiance"]
+	path = Radiance
+	url = git@github.com:joeriedel/Radiance.git
