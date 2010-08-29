@@ -1,3 +1,6 @@
 [submodule "Radiance"]
 	path = Radiance
 	url = git@github.com:joeriedel/Radiance.git
+[submodule "Base"]
+	path = Base
+	url = git@github.com:joeriedel/BalanceBase.git
