@@ -1,0 +1,151 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXFileReference section */
+		332258CE122AFF7700181494 /* Radiance.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Radiance.xcodeproj; path = ../../Radiance/Source/XCode/Radiance.xcodeproj; sourceTree = SOURCE_ROOT; };
+		332259D5122B002900181494 /* BalanceGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BalanceGame.cpp; path = ../BalanceGame.cpp; sourceTree = SOURCE_ROOT; };
+		332259D6122B002900181494 /* BalanceGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BalanceGame.h; path = ../BalanceGame.h; sourceTree = SOURCE_ROOT; };
+		332259D7122B002900181494 /* SConstruct */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SConstruct; path = ../SConstruct; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* Balance */ = {
+			isa = PBXGroup;
+			children = (
+				332259D5122B002900181494 /* BalanceGame.cpp */,
+				332259D6122B002900181494 /* BalanceGame.h */,
+				332259D7122B002900181494 /* SConstruct */,
+				332258CE122AFF7700181494 /* Radiance.xcodeproj */,
+			);
+			name = Balance;
+			sourceTree = "<group>";
+		};
+		332258CF122AFF7700181494 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		D28A88AD04BDD90700651E21 /* Balance OSX */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION) $(SCONS_OPTS)";
+			buildConfigurationList = 1DEB918F08733D9F0010E9CD /* Build configuration list for PBXLegacyTarget "Balance OSX" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/local/bin/scons;
+			buildWorkingDirectory = ../../;
+			dependencies = (
+			);
+			name = "Balance OSX";
+			passBuildSettingsInEnvironment = 1;
+			productName = Balance;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB919308733D9F0010E9CD /* Build configuration list for PBXProject "Balance" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* Balance */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 332258CF122AFF7700181494 /* Products */;
+					ProjectRef = 332258CE122AFF7700181494 /* Radiance.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				D28A88AD04BDD90700651E21 /* Balance OSX */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB919008733D9F0010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = Balance;
+				SCONS_OPTS = "-j 2";
+			};
+			name = Debug;
+		};
+		1DEB919108733D9F0010E9CD /* Developer */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = Balance;
+				SCONS_OPTS = "\U0001--developer -j 2";
+			};
+			name = Developer;
+		};
+		1DEB919408733D9F0010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		1DEB919508733D9F0010E9CD /* Developer */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Developer;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB918F08733D9F0010E9CD /* Build configuration list for PBXLegacyTarget "Balance OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB919008733D9F0010E9CD /* Debug */,
+				1DEB919108733D9F0010E9CD /* Developer */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Developer;
+		};
+		1DEB919308733D9F0010E9CD /* Build configuration list for PBXProject "Balance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB919408733D9F0010E9CD /* Debug */,
+				1DEB919508733D9F0010E9CD /* Developer */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Developer;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}
