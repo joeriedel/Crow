@@ -7,11 +7,24 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		330C5E25122EC03100E06694 /* Balance IOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Balance IOS-Info.plist"; sourceTree = "<group>"; };
+		330C5E3F122EC56300E06694 /* Balance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Balance.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		330C5E41122EC56300E06694 /* Balance-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Balance-Info.plist"; sourceTree = "<group>"; };
 		332258CE122AFF7700181494 /* Radiance.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Radiance.xcodeproj; path = ../../Radiance/Source/XCode/Radiance.xcodeproj; sourceTree = SOURCE_ROOT; };
 		332259D5122B002900181494 /* BalanceGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BalanceGame.cpp; path = ../BalanceGame.cpp; sourceTree = SOURCE_ROOT; };
 		332259D6122B002900181494 /* BalanceGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BalanceGame.h; path = ../BalanceGame.h; sourceTree = SOURCE_ROOT; };
 		332259D7122B002900181494 /* SConstruct */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SConstruct; path = ../SConstruct; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		330C5E3D122EC56300E06694 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		08FB7794FE84155DC02AAC07 /* Balance */ = {
@@ -21,8 +34,19 @@
 				332259D6122B002900181494 /* BalanceGame.h */,
 				332259D7122B002900181494 /* SConstruct */,
 				332258CE122AFF7700181494 /* Radiance.xcodeproj */,
+				330C5E23122EC03100E06694 /* Products */,
+				330C5E25122EC03100E06694 /* Balance IOS-Info.plist */,
+				330C5E41122EC56300E06694 /* Balance-Info.plist */,
 			);
 			name = Balance;
+			sourceTree = "<group>";
+		};
+		330C5E23122EC03100E06694 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				330C5E3F122EC56300E06694 /* Balance.app */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		332258CF122AFF7700181494 /* Products */ = {
@@ -35,21 +59,41 @@
 /* End PBXGroup section */
 
 /* Begin PBXLegacyTarget section */
-		D28A88AD04BDD90700651E21 /* Balance OSX */ = {
+		D28A88AD04BDD90700651E21 /* BalanceOSX */ = {
 			isa = PBXLegacyTarget;
 			buildArgumentsString = "$(ACTION) $(SCONS_OPTS)";
-			buildConfigurationList = 1DEB918F08733D9F0010E9CD /* Build configuration list for PBXLegacyTarget "Balance OSX" */;
+			buildConfigurationList = 1DEB918F08733D9F0010E9CD /* Build configuration list for PBXLegacyTarget "BalanceOSX" */;
 			buildPhases = (
 			);
 			buildToolPath = /usr/local/bin/scons;
 			buildWorkingDirectory = ../../;
 			dependencies = (
 			);
-			name = "Balance OSX";
+			name = BalanceOSX;
 			passBuildSettingsInEnvironment = 1;
 			productName = Balance;
 		};
 /* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		330C5E3E122EC56300E06694 /* BalanceIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 330C5E44122EC56300E06694 /* Build configuration list for PBXNativeTarget "BalanceIOS" */;
+			buildPhases = (
+				330C5E3B122EC56300E06694 /* Resources */,
+				330C5E3C122EC56300E06694 /* Sources */,
+				330C5E3D122EC56300E06694 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BalanceIOS;
+			productName = Balance;
+			productReference = 330C5E3F122EC56300E06694 /* Balance.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		08FB7793FE84155DC02AAC07 /* Project object */ = {
@@ -58,6 +102,7 @@
 			compatibilityVersion = "Xcode 3.1";
 			hasScannedForEncodings = 1;
 			mainGroup = 08FB7794FE84155DC02AAC07 /* Balance */;
+			productRefGroup = 330C5E23122EC03100E06694 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
 				{
@@ -67,10 +112,31 @@
 			);
 			projectRoot = "";
 			targets = (
-				D28A88AD04BDD90700651E21 /* Balance OSX */,
+				D28A88AD04BDD90700651E21 /* BalanceOSX */,
+				330C5E3E122EC56300E06694 /* BalanceIOS */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		330C5E3B122EC56300E06694 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		330C5E3C122EC56300E06694 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
 		1DEB919008733D9F0010E9CD /* Debug */ = {
@@ -124,10 +190,57 @@
 			};
 			name = Developer;
 		};
+		330C5E42122EC56300E06694 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "Balance-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = Balance;
+				SDKROOT = iphonesimulator4.0;
+				SYMROOT = "../../Bin/ios-gcc4-iphone-simulator-debug";
+			};
+			name = Debug;
+		};
+		330C5E43122EC56300E06694 /* Developer */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "Balance-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = Balance;
+				SDKROOT = iphonesimulator4.0;
+				SYMROOT = "../../Bin/ios-gcc4-iphone-simulator-debug";
+			};
+			name = Developer;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DEB918F08733D9F0010E9CD /* Build configuration list for PBXLegacyTarget "Balance OSX" */ = {
+		1DEB918F08733D9F0010E9CD /* Build configuration list for PBXLegacyTarget "BalanceOSX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB919008733D9F0010E9CD /* Debug */,
@@ -141,6 +254,15 @@
 			buildConfigurations = (
 				1DEB919408733D9F0010E9CD /* Debug */,
 				1DEB919508733D9F0010E9CD /* Developer */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Developer;
+		};
+		330C5E44122EC56300E06694 /* Build configuration list for PBXNativeTarget "BalanceIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				330C5E42122EC56300E06694 /* Debug */,
+				330C5E43122EC56300E06694 /* Developer */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Developer;

@@ -65,7 +65,7 @@ void Game::FocusChange(bool focus)
 }
 #endif
 
-#if defined(RAD_OPT_TOOLS)
+#if defined(RAD_OPT_PC_TOOLS)
 bool Game::RAD_IMPLEMENT_GET(wantEditor)
 {
 	return true;

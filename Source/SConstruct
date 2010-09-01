@@ -25,9 +25,10 @@ def build_balance(name, type):
 	# this is relative to the Radiance dir (so it's adding Radiance/Source to the include path
 	# not our own Source folder!)
 	build.backend.addIncludePath(x.source, 'Source')
-
-	build.backend.addCgLibs(x.source)
 	build.backend.configLua(x.source)
+	
+	if build.pc():
+		build.backend.addCgLibs(x.source)
 
 ###############################################################################
 # Source

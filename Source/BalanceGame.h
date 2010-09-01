@@ -28,7 +28,7 @@ private:
 	virtual RAD_DECLARE_GET(website, const wchar_t*);
 	virtual RAD_DECLARE_GET(allowMultipleInstances, bool);
 
-#if defined(RAD_OPT_TOOLS)
+#if defined(RAD_OPT_PC_TOOLS)
 	virtual RAD_DECLARE_GET(wantEditor, bool);
 	virtual void SwitchEditorMode(bool editor);
 	virtual void EditorStart();
