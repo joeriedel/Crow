@@ -18,7 +18,10 @@ def build_balance(name, type):
 	if linkQt():
 		x = build.qtBuilder(name, build, source, '.', variant_dir, type)
 	else:
-		x = build.exeBuilder(name, build, source, '.', variant_dir, type)
+		if type == 'LIB':
+			x = build.libBuilder(name, build, source, '.', variant_dir, type)
+		else:
+			x = build.exeBuilder(name, build, source, '.', variant_dir, type)
 		if build.pc():
 			build.backend.addSDLMain(x.source)
 		
@@ -51,4 +54,8 @@ def build_balance(name, type):
 		
 	return x.create()
 
-build_balance('Balance', exe_type)
+if build.switches.ios_device():
+	exe_type = 'LIB'
+	
+p = build_balance('Balance', exe_type)
+Return('p')

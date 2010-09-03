@@ -12,16 +12,31 @@
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
 		28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
+		336C04BC1231A0D70037BE72 /* MakeMeBuild.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 336C04BB1231A0D70037BE72 /* MakeMeBuild.cpp */; };
+		336C05741231B62C0037BE72 /* libBalance.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 336C056E1231B62C0037BE72 /* libBalance.a */; };
+		336C05751231B62C0037BE72 /* libboost_threads.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 336C056F1231B62C0037BE72 /* libboost_threads.a */; };
+		336C05761231B62C0037BE72 /* libEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 336C05701231B62C0037BE72 /* libEngine.a */; };
+		336C05771231B62C0037BE72 /* libLua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 336C05711231B62C0037BE72 /* libLua.a */; };
+		336C05781231B62C0037BE72 /* libMain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 336C05721231B62C0037BE72 /* libMain.a */; };
+		336C05791231B62C0037BE72 /* libRuntime.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 336C05731231B62C0037BE72 /* libRuntime.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D6058910D05DD3D006BFB54 /* Balance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Balance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		28FD14FF0DC6FC520079059D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		28FD15070DC6FC5B0079059D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		338B1CEF122C851300F9F4F7 /* Out.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Out.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		336C04BB1231A0D70037BE72 /* MakeMeBuild.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MakeMeBuild.cpp; sourceTree = "<group>"; };
+		336C04C71231A1140037BE72 /* Balance_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Balance_Prefix.pch; sourceTree = "<group>"; };
+		336C056E1231B62C0037BE72 /* libBalance.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBalance.a; path = "../../../Bin/ios-gcc4-iphone-device-debug/libBalance.a"; sourceTree = SOURCE_ROOT; };
+		336C056F1231B62C0037BE72 /* libboost_threads.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_threads.a; path = "../../../Bin/ios-gcc4-iphone-device-debug/libboost_threads.a"; sourceTree = SOURCE_ROOT; };
+		336C05701231B62C0037BE72 /* libEngine.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEngine.a; path = "../../../Bin/ios-gcc4-iphone-device-debug/libEngine.a"; sourceTree = SOURCE_ROOT; };
+		336C05711231B62C0037BE72 /* libLua.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLua.a; path = "../../../Bin/ios-gcc4-iphone-device-debug/libLua.a"; sourceTree = SOURCE_ROOT; };
+		336C05721231B62C0037BE72 /* libMain.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMain.a; path = "../../../Bin/ios-gcc4-iphone-device-debug/libMain.a"; sourceTree = SOURCE_ROOT; };
+		336C05731231B62C0037BE72 /* libRuntime.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libRuntime.a; path = "../../../Bin/ios-gcc4-iphone-device-debug/libRuntime.a"; sourceTree = SOURCE_ROOT; };
+		8D1107310486CEB800E47090 /* Balance-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Balance-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +48,12 @@
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */,
 				28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */,
+				336C05741231B62C0037BE72 /* libBalance.a in Frameworks */,
+				336C05751231B62C0037BE72 /* libboost_threads.a in Frameworks */,
+				336C05761231B62C0037BE72 /* libEngine.a in Frameworks */,
+				336C05771231B62C0037BE72 /* libLua.a in Frameworks */,
+				336C05781231B62C0037BE72 /* libMain.a in Frameworks */,
+				336C05791231B62C0037BE72 /* libRuntime.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,7 +63,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				338B1CEF122C851300F9F4F7 /* Out.app */,
+				1D6058910D05DD3D006BFB54 /* Balance.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -50,6 +71,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				336C04BA1231A0C30037BE72 /* Classes */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
@@ -61,7 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
-				8D1107310486CEB800E47090 /* Info.plist */,
+				8D1107310486CEB800E47090 /* Balance-Info.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -69,6 +91,12 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				336C056E1231B62C0037BE72 /* libBalance.a */,
+				336C056F1231B62C0037BE72 /* libboost_threads.a */,
+				336C05701231B62C0037BE72 /* libEngine.a */,
+				336C05711231B62C0037BE72 /* libLua.a */,
+				336C05721231B62C0037BE72 /* libMain.a */,
+				336C05731231B62C0037BE72 /* libRuntime.a */,
 				28FD15070DC6FC5B0079059D /* QuartzCore.framework */,
 				28FD14FF0DC6FC520079059D /* OpenGLES.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
@@ -77,12 +105,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		336C04BA1231A0C30037BE72 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				336C04C71231A1140037BE72 /* Balance_Prefix.pch */,
+				336C04BB1231A0D70037BE72 /* MakeMeBuild.cpp */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D6058900D05DD3D006BFB54 /* Out */ = {
+		1D6058900D05DD3D006BFB54 /* Balance */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Out" */;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Balance" */;
 			buildPhases = (
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
@@ -92,9 +129,9 @@
 			);
 			dependencies = (
 			);
-			name = Out;
-			productName = GLTest;
-			productReference = 338B1CEF122C851300F9F4F7 /* Out.app */;
+			name = Balance;
+			productName = Balance;
+			productReference = 1D6058910D05DD3D006BFB54 /* Balance.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,14 +139,14 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "XibPlistGen" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Balance" */;
 			compatibilityVersion = "Xcode 3.1";
 			hasScannedForEncodings = 1;
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1D6058900D05DD3D006BFB54 /* Out */,
+				1D6058900D05DD3D006BFB54 /* Balance */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				336C04BC1231A0D70037BE72 /* MakeMeBuild.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,10 +182,15 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = GLTest_Prefix.pch;
+				GCC_PREFIX_HEADER = Balance_Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
-				INFOPLIST_FILE = Info.plist;
-				PRODUCT_NAME = Out;
+				INFOPLIST_FILE = "Balance-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Bin/ios-gcc4-iphone-device-debug\"",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = Balance;
 			};
 			name = Debug;
 		};
@@ -157,10 +200,14 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = GLTest_Prefix.pch;
+				GCC_PREFIX_HEADER = Balance_Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
-				INFOPLIST_FILE = Info.plist;
-				PRODUCT_NAME = GLTest;
+				INFOPLIST_FILE = "Balance-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Bin/ios-gcc4-iphone-device-debug\"",
+				);
+				PRODUCT_NAME = Balance;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -196,7 +243,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Out" */ = {
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Balance" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
@@ -205,7 +252,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "XibPlistGen" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Balance" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
