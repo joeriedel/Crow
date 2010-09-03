@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		330C5E25122EC03100E06694 /* Balance IOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Balance IOS-Info.plist"; sourceTree = "<group>"; };
 		330C5E3F122EC56300E06694 /* Balance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Balance.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		330C5E41122EC56300E06694 /* Balance-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Balance-Info.plist"; sourceTree = "<group>"; };
 		332258CE122AFF7700181494 /* Radiance.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Radiance.xcodeproj; path = ../../Radiance/Source/XCode/Radiance.xcodeproj; sourceTree = SOURCE_ROOT; };
 		332259D5122B002900181494 /* BalanceGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BalanceGame.cpp; path = ../BalanceGame.cpp; sourceTree = SOURCE_ROOT; };
 		332259D6122B002900181494 /* BalanceGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BalanceGame.h; path = ../BalanceGame.h; sourceTree = SOURCE_ROOT; };
@@ -35,8 +33,6 @@
 				332259D7122B002900181494 /* SConstruct */,
 				332258CE122AFF7700181494 /* Radiance.xcodeproj */,
 				330C5E23122EC03100E06694 /* Products */,
-				330C5E25122EC03100E06694 /* Balance IOS-Info.plist */,
-				330C5E41122EC56300E06694 /* Balance-Info.plist */,
 			);
 			name = Balance;
 			sourceTree = "<group>";
@@ -200,7 +196,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
-				INFOPLIST_FILE = "Balance-Info.plist";
+				INFOPLIST_FILE = IOS/Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -211,7 +207,7 @@
 				PREBINDING = NO;
 				PRODUCT_NAME = Balance;
 				SDKROOT = iphonesimulator4.0;
-				SYMROOT = "../../Bin/ios-gcc4-iphone-simulator-debug";
+				SYMROOT = "../../Bin/ios-gcc4-iphone-device-debug";
 			};
 			name = Debug;
 		};
@@ -222,7 +218,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
-				INFOPLIST_FILE = "Balance-Info.plist";
+				INFOPLIST_FILE = IOS/Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -232,8 +228,8 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = Balance;
-				SDKROOT = iphonesimulator4.0;
-				SYMROOT = "../../Bin/ios-gcc4-iphone-simulator-debug";
+				SDKROOT = iphoneos4.0;
+				SYMROOT = "../../Bin/ios-gcc4-iphone-device-debug";
 			};
 			name = Developer;
 		};
