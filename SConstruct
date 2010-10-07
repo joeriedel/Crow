@@ -78,7 +78,7 @@ if build.switches.ios_device() and build.switches.ios_universal_binary():
 		p = build.backend.makeIOSUniversalBinary(source, name, [other, architecture], os.path.abspath('.'), 'Bin/Intermediate/' + project_name + '/' + build.backend.target() , libs)
 		source.Install(build.__absTargetDir__(), p)
 		
-	makeUB('libBalance.a', [output, output2])
+	makeUB('lib' + project_name + '.a', [output, output2])
 	makeUB('libLua.a', lua_libs)
 	makeUB('libboost_threads.a', boost_thread_libs)
 	makeUB('libRuntime.a', radiance_runtime_libs)
