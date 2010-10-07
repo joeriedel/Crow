@@ -1,1 +1,0 @@
-.\Bin\win-msvc8-debug\Balance.exe

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 9.00
 # Visual Studio 2005
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Radiance", "..\..\Radiance\Source\VS8Projects\Radiance.vcproj", "{EED5D9C2-121C-4AE9-B82C-17CBCEBC9BAB}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Balance", "Balance.vcproj", "{63E6F49A-4BD0-4C11-91BF-9E738642414E}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Crow", "Crow.vcproj", "{63E6F49A-4BD0-4C11-91BF-9E738642414E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

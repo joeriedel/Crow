@@ -1,5 +1,5 @@
 # Source/SConstruct
-# Balance construction file
+# Crow construction file
 # Author: Joe Riedel (joeriedel@hotmail.com)
 
 Import('radvars')
@@ -10,9 +10,10 @@ Import('radiance_main')
 Import('lua')
 Import('variant_dir')
 Import('exe_type')
+Import('project_name')
 (build, source) = radvars
 
-def build_balance(name, type):
+def build_game(name, type):
 	x = None
 	(linkQt, engine) = radiance_engine
 	if linkQt():
@@ -37,7 +38,7 @@ def build_balance(name, type):
 # Source
 ###############################################################################
 
-	x.add('BalanceGame.cpp')
+	x.add(project_name + 'Game.cpp')
 
 ###############################################################################
 # Libs
@@ -57,5 +58,5 @@ def build_balance(name, type):
 if build.switches.ios_device():
 	exe_type = 'LIB'
 	
-p = build_balance('Balance', exe_type)
+p = build_game(project_name, exe_type)
 Return('p')

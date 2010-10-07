@@ -2,7 +2,7 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="8.00"
-	Name="Balance"
+	Name="Crow"
 	ProjectGUID="{63E6F49A-4BD0-4C11-91BF-9E738642414E}"
 	Keyword="MakeFileProj"
 	>
@@ -62,11 +62,11 @@
 			Name="Source"
 			>
 			<File
-				RelativePath="..\BalanceGame.cpp"
+				RelativePath="..\CrowGame.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\BalanceGame.h"
+				RelativePath="..\CrowGame.h"
 				>
 			</File>
 			<File

@@ -1,9 +1,10 @@
 # SConstruct
-# Balance construction file
+# Crow construction file
 # Author: Joe Riedel (joeriedel@hotmail.com)
 
 import os
 
+project_name = 'Crow'
 build_switches_override = None
 variant_override = '../'
 architecture = None
@@ -13,13 +14,13 @@ SConscript('./Radiance/SConscript', ['build_switches_override', 'variant_overrid
 Import('radvars')
 (build, source) = radvars
 
-variant_dir = build.variantDir('Balance')
+variant_dir = build.variantDir(project_name)
 exe_type = 'EXE'
 output = SConscript(
 	'Source/SConstruct', 
-	variant_dir='Bin/Intermediate/Balance' + build.targetDir(), 
+	variant_dir='Bin/Intermediate/' + project_name + build.targetDir(), 
 	duplicate=0,
-	exports=['variant_dir', 'exe_type']
+	exports=['variant_dir', 'exe_type', 'project_name']
 )
 
 if build.switches.ios_device() and build.switches.ios_universal_binary():
@@ -51,13 +52,13 @@ if build.switches.ios_device() and build.switches.ios_universal_binary():
 	Import('radvars')
 	(build, source) = radvars
 
-	variant_dir = build.variantDir('Balance')
+	variant_dir = build.variantDir(project_name)
 	exe_type = 'EXE'
 	output2 = SConscript(
 		'Source/SConstruct', 
-		variant_dir='Bin/Intermediate/Balance' + build.targetDir(), 
+		variant_dir='Bin/Intermediate/' + project_name + build.targetDir(), 
 		duplicate=0,
-		exports=['variant_dir', 'exe_type']
+		exports=['variant_dir', 'exe_type', 'project_name']
 	)
 	
 	# gather generated libs
@@ -74,7 +75,7 @@ if build.switches.ios_device() and build.switches.ios_universal_binary():
 	radiance_engine_libs.append(radiance_engine[1])
 	
 	def makeUB(name, libs):
-		p = build.backend.makeIOSUniversalBinary(source, name, [other, architecture], os.path.abspath('.'), 'Bin/Intermediate/Balance' + '/' + build.backend.target() , libs)
+		p = build.backend.makeIOSUniversalBinary(source, name, [other, architecture], os.path.abspath('.'), 'Bin/Intermediate/' + project_name + '/' + build.backend.target() , libs)
 		source.Install(build.__absTargetDir__(), p)
 		
 	makeUB('libBalance.a', [output, output2])
@@ -85,11 +86,11 @@ if build.switches.ios_device() and build.switches.ios_universal_binary():
 	makeUB('libEngine.a', radiance_engine_libs)
 	
 if build.win() and build.tools(): # build .com variant on windows for command line stuff.
-	variant_dir = build.variantDir('BalanceCom')
+	variant_dir = build.variantDir(project_name + 'Com')
 	exe_type = 'COM'
 	SConscript(
 		'Source/SConstruct', 
-		variant_dir='Bin/Intermediate/BalanceCom' + build.targetDir(), 
+		variant_dir='Bin/Intermediate/' + project_name + 'Com' + build.targetDir(), 
 		duplicate=0,
-		exports=['variant_dir', 'exe_type']
+		exports=['variant_dir', 'exe_type', 'project_name']
 	)

@@ -1,8 +1,8 @@
-// BalanceGame.cpp
+// CrowGame.cpp
 // Copyright (c) 2010 Pyramind Labs LLC, All Rights Reserved
 // Author: Joe Riedel (joeriedel@hotmail.com)
 
-#include "BalanceGame.h"
+#include "CrowGame.h"
 
 GameBase *GameBase::New() { return new Game(); }
 
@@ -31,7 +31,7 @@ bool Game::Initialize(const task::HControl &control)
 
 const wchar_t *Game::RAD_IMPLEMENT_GET(title)
 {
-	return L"Balance";
+	return L"Crow";
 }
 
 const wchar_t *Game::RAD_IMPLEMENT_GET(company)
