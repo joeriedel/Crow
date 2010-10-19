@@ -62,11 +62,11 @@
 			Name="Source"
 			>
 			<File
-				RelativePath="..\CrowGame.cpp"
+				RelativePath="..\CrowApp.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\CrowGame.h"
+				RelativePath="..\CrowApp.h"
 				>
 			</File>
 			<File

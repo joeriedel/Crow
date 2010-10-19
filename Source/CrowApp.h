@@ -1,16 +1,16 @@
-// CrowGame.h
+// CrowApp.h
 // Copyright (c) 2010 Pyramind Labs LLC, All Rights Reserved
 // Author: Joe Riedel (joeriedel@hotmail.com)
 
 #pragma once
 
-#include <Engine/Game.h>
+#include <Engine/App.h>
 
-class Game : public GameBase
+class CrowApp : public App
 {
 public:
-	Game();
-	virtual ~Game();
+	CrowApp();
+	virtual ~CrowApp();
 
 	virtual bool PreInit();
 	virtual bool Initialize(const task::HControl &control);
