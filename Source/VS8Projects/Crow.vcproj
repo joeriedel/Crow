@@ -70,6 +70,14 @@
 				>
 			</File>
 			<File
+				RelativePath="..\CrowGame.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\CrowGame.h"
+				>
+			</File>
+			<File
 				RelativePath="..\SConstruct"
 				>
 			</File>

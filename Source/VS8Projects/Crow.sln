@@ -5,22 +5,64 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Radiance", "..\..\Radiance\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Crow", "Crow.vcproj", "{63E6F49A-4BD0-4C11-91BF-9E738642414E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tread", "..\Tools\Tread\Tread.vcproj", "{3DC24D84-3EDE-404E-B70C-7F7868E6EF68}"
+	ProjectSection(ProjectDependencies) = postProject
+		{86830748-82A2-4FB5-A8E1-8521B42688DE} = {86830748-82A2-4FB5-A8E1-8521B42688DE}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QGames", "..\Tools\Tread\plugins\QGames\QGames.vcproj", "{1389F229-0719-4773-9293-B978CAAB1290}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3DC24D84-3EDE-404E-B70C-7F7868E6EF68} = {3DC24D84-3EDE-404E-B70C-7F7868E6EF68}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tread", "Tread", "{A78CE1B3-113C-4922-86CD-26C9FA6D1D05}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CJ60StaticLib", "..\Tools\Tread\CJ60\CJ60Lib\CJ60StaticLib.vcproj", "{86830748-82A2-4FB5-A8E1-8521B42688DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
+		Release with Debug Info|Win32 = Release with Debug Info|Win32
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{EED5D9C2-121C-4AE9-B82C-17CBCEBC9BAB}.Debug|Win32.ActiveCfg = Debug|Win32
 		{EED5D9C2-121C-4AE9-B82C-17CBCEBC9BAB}.Debug|Win32.Build.0 = Debug|Win32
+		{EED5D9C2-121C-4AE9-B82C-17CBCEBC9BAB}.Release with Debug Info|Win32.ActiveCfg = Release|Win32
+		{EED5D9C2-121C-4AE9-B82C-17CBCEBC9BAB}.Release with Debug Info|Win32.Build.0 = Release|Win32
 		{EED5D9C2-121C-4AE9-B82C-17CBCEBC9BAB}.Release|Win32.ActiveCfg = Release|Win32
 		{EED5D9C2-121C-4AE9-B82C-17CBCEBC9BAB}.Release|Win32.Build.0 = Release|Win32
 		{63E6F49A-4BD0-4C11-91BF-9E738642414E}.Debug|Win32.ActiveCfg = Debug|Win32
 		{63E6F49A-4BD0-4C11-91BF-9E738642414E}.Debug|Win32.Build.0 = Debug|Win32
+		{63E6F49A-4BD0-4C11-91BF-9E738642414E}.Release with Debug Info|Win32.ActiveCfg = Release|Win32
+		{63E6F49A-4BD0-4C11-91BF-9E738642414E}.Release with Debug Info|Win32.Build.0 = Release|Win32
 		{63E6F49A-4BD0-4C11-91BF-9E738642414E}.Release|Win32.ActiveCfg = Release|Win32
 		{63E6F49A-4BD0-4C11-91BF-9E738642414E}.Release|Win32.Build.0 = Release|Win32
+		{3DC24D84-3EDE-404E-B70C-7F7868E6EF68}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3DC24D84-3EDE-404E-B70C-7F7868E6EF68}.Debug|Win32.Build.0 = Debug|Win32
+		{3DC24D84-3EDE-404E-B70C-7F7868E6EF68}.Release with Debug Info|Win32.ActiveCfg = Release with Debug Info|Win32
+		{3DC24D84-3EDE-404E-B70C-7F7868E6EF68}.Release with Debug Info|Win32.Build.0 = Release with Debug Info|Win32
+		{3DC24D84-3EDE-404E-B70C-7F7868E6EF68}.Release|Win32.ActiveCfg = Release|Win32
+		{3DC24D84-3EDE-404E-B70C-7F7868E6EF68}.Release|Win32.Build.0 = Release|Win32
+		{1389F229-0719-4773-9293-B978CAAB1290}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1389F229-0719-4773-9293-B978CAAB1290}.Debug|Win32.Build.0 = Debug|Win32
+		{1389F229-0719-4773-9293-B978CAAB1290}.Release with Debug Info|Win32.ActiveCfg = Release|Win32
+		{1389F229-0719-4773-9293-B978CAAB1290}.Release with Debug Info|Win32.Build.0 = Release|Win32
+		{1389F229-0719-4773-9293-B978CAAB1290}.Release|Win32.ActiveCfg = Release|Win32
+		{1389F229-0719-4773-9293-B978CAAB1290}.Release|Win32.Build.0 = Release|Win32
+		{86830748-82A2-4FB5-A8E1-8521B42688DE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{86830748-82A2-4FB5-A8E1-8521B42688DE}.Debug|Win32.Build.0 = Debug|Win32
+		{86830748-82A2-4FB5-A8E1-8521B42688DE}.Release with Debug Info|Win32.ActiveCfg = Release|Win32
+		{86830748-82A2-4FB5-A8E1-8521B42688DE}.Release with Debug Info|Win32.Build.0 = Release|Win32
+		{86830748-82A2-4FB5-A8E1-8521B42688DE}.Release|Win32.ActiveCfg = Release|Win32
+		{86830748-82A2-4FB5-A8E1-8521B42688DE}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3DC24D84-3EDE-404E-B70C-7F7868E6EF68} = {A78CE1B3-113C-4922-86CD-26C9FA6D1D05}
+		{86830748-82A2-4FB5-A8E1-8521B42688DE} = {A78CE1B3-113C-4922-86CD-26C9FA6D1D05}
+		{1389F229-0719-4773-9293-B978CAAB1290} = {A78CE1B3-113C-4922-86CD-26C9FA6D1D05}
 	EndGlobalSection
 EndGlobal
