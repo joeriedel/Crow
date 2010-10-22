@@ -1117,7 +1117,7 @@ void CMapView::OnMouseMove(UINT nFlags, CPoint point)
 				vec3 v = View.or3d.frw * -dy * 2;
 				if( nFlags&MK_SHIFT )
 				{
-					v *= 4.0f;
+					v *= 8.0f;
 				}
 				
 				View.pos3d += v;
@@ -1196,8 +1196,8 @@ void CMapView::OnMouseMove(UINT nFlags, CPoint point)
 					//
 					// move us on up/left.
 					//
-					vec3 up = View.or3d.up  * dy / 0.5f;
-					vec3 lf = View.or3d.lft * dx / 0.5f;
+					vec3 up = View.or3d.up  * dy * 1.5f;
+					vec3 lf = View.or3d.lft * dx * 1.5f;
 
 					View.pos3d += up+lf;
 

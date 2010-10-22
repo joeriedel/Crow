@@ -66,6 +66,7 @@
 #include <fstream>
 #include "r_sys.h"
 #include "c_tokenizer.h"
+#include <boost/shared_ptr.hpp>
 
 #define TREAD_API_VERSION 1
 
@@ -497,6 +498,8 @@ class OS_CLEXP CRenderMesh
 {
 public:
 
+	typedef boost::shared_ptr<CRenderMesh> Ref;
+
 	DECLARE_TREAD_NEW();
 
 	CRenderMesh();
@@ -583,8 +586,8 @@ public:
 	//
 	// Specifies the indices into the vertex arrays. Should have num_tris*3 indices for triangles. 
 	//
-	unsigned short* tris;
-	//unsigned int* tris;
+	//unsigned short* tris;
+	unsigned int* tris;
 
 	//
 	// Specifies the shader that the mesh should be drawn with. Can be NULL.
@@ -1214,7 +1217,7 @@ public:
 
 #define OBJECT_TYPE_WORLD		0x00000004
 #define OBJECT_TYPE_BMODEL		0x00000008
-#define OBJECT_TYPE_JMODEL		0x00000010
+#define OBJECT_TYPE_STATICMESH	0x00000010
 #define OBJECT_TYPE_SKEL		0x00000020
 #define OBJECT_TYPE_FIRST_USER  0x00004000
 
@@ -1717,6 +1720,7 @@ public:
 	virtual CObjectCreator *ObjectCreator(int i) = 0;
 
 	virtual void RunGame(const char *mapFile) = 0;
+	virtual const char *GameDir() const = 0;
 
 	virtual void UpdateVertexMode(CTreadDoc *doc) = 0;
 	virtual void UpdateSelectionBounds(CTreadDoc *doc) = 0;

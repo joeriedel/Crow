@@ -560,7 +560,7 @@ BOOL CMainFrame::PreTranslateMessage(MSG* pMsg)
 				case 0x55: SendMessage( WM_COMMAND, ID_TOOLS_SELECTOBJECTBYUID ); return true; // U
 				case 0xDB: SendMessage( WM_COMMAND, ID_VIEW_TOGGLEBRUSHES ); return true; // [
 				case 0xDC: SendMessage( WM_COMMAND, ID_SELECTION_OPENGROUPMODE ); return true; // '\'
-				//case 0xDD: SendMessage( WM_COMMAND, ID_VIEW_HIDESHOWJMODELS ); return true; // ]
+				case 0xDD: SendMessage( WM_COMMAND, ID_VIEW_HIDESHOWJMODELS ); return true; // ]
 				case 0xBE: SendMessage( WM_COMMAND, ID_VIEW_PROPERTIES ); return true; // '.'
 					
 				case VK_UP:
@@ -604,9 +604,11 @@ void CMainFrame::OnUpdateViewSystemconsole(CCmdUI* pCmdUI)
 void CMainFrame::OnToolsReloadmodels() 
 {
 	// TODO: Add your command handler code here
-	m_sys_console->ShowWindow( SW_SHOW );
+	//m_sys_console->ShowWindow( SW_SHOW );
+	HCURSOR c = SetCursor(LoadCursor(0, IDC_WAIT));
 	Sys_ReloadStuff();
-	m_sys_console->ShowWindow( SW_HIDE );
+	SetCursor(c);
+	//m_sys_console->ShowWindow( SW_HIDE );
 }
 
 void CMainFrame::OnFileImportmap(CPluginFileImport *plugin) 

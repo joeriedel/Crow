@@ -83,4 +83,5 @@ public:
 	afx_msg void OnEnChangeExeCmdline();
 	afx_msg void OnBnClickedLocateDir();
 	afx_msg void OnEnChangeGameDir();
+	afx_msg void OnLbnSelchangeTexdirs();
 };

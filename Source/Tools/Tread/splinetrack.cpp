@@ -1827,7 +1827,7 @@ void CSplineSegment::MakeRenderMesh( CRenderMesh* m )
 	m->xyz = new vec3[SEGMENT_SUBDIVIDE_SIZE];
 	m->num_pts = SEGMENT_SUBDIVIDE_SIZE;
 	m->num_tris = SEGMENT_SUBDIVIDE_SIZE;
-	m->tris = new unsigned short[SEGMENT_SUBDIVIDE_SIZE];
+	m->tris = new unsigned int[SEGMENT_SUBDIVIDE_SIZE];
 	m->pick = this;
 	m->solid2d = false;
 

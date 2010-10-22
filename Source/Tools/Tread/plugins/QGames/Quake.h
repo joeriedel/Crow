@@ -242,6 +242,7 @@ public:
 	virtual const char *PakType(int i);
 
 	virtual void InitializeToolsList(QuakeToolsList &tools);
+	virtual CTextureFactory *CreateStaticPakFile() { return 0; }
 	virtual CTextureFactory *CreatePakFile();
 	virtual CQuakeCompiler *CreateCompiler(const char *filename, QuakeToolsList &tools, CTreadDoc *doc, bool runMap);
 
@@ -251,7 +252,7 @@ public:
 	const QuakePakList &PakList() const;
 	const char *EXEPath() const;
 	const char *EXECmdLine() const;
-	const char *GameDir() const;
+	virtual const char *GameDir() const;
 	const TextureFactoryList &GetTextureFactoryList() const;
 
 protected:

@@ -144,7 +144,7 @@ void CQuakeCompiler::ThreadProc()
 	strcpy(bspFile, m_filename);
 	StrSetFileExtension(bspFile, "");
 	CString cmdLine;
-
+	
 	int start = ReadTickMilliseconds();
 
 	for (QuakeToolsList::iterator it = m_tools.begin(); it != m_tools.end(); ++it)
@@ -173,10 +173,13 @@ void CQuakeCompiler::ThreadProc()
 
 	int end = ReadTickMilliseconds();
 
-	m_doc->WriteToCompileWindow("************\n\nelapsed time: %d second(s)\n", (end-start)/1000);
-	m_doc->WriteToCompileWindow("done.\n");
+	if (!m_tools.empty())
+	{
+		m_doc->WriteToCompileWindow("************\n\nelapsed time: %d second(s)\n", (end-start)/1000);
+		m_doc->WriteToCompileWindow("done.\n");
 
-	PlaySound( "SystemAsterisk" , 0, SND_ALIAS|SND_ASYNC);
+		PlaySound( "SystemAsterisk" , 0, SND_ALIAS|SND_ASYNC);
+	}
 
 	if (m_runMap)
 	{
@@ -476,6 +479,19 @@ CLinkedList<CShader> *CQuakeGame::ShaderList()
 	{
 		typedef stdext::hash_map<std::string, CShader*> ShaderHash;
 		ShaderHash hash;
+
+		{
+			CTextureFactory *tf = CreateStaticPakFile();
+			if (tf && tf->Open(0))
+			{
+				m_tfl.push_back(tf);
+			}
+			else
+			{
+				delete tf;
+			}
+		}
+
 		for (QuakePakList::iterator it = m_paks.begin(); it != m_paks.end(); ++it)
 		{
 			CTextureFactory *tf = CreatePakFile();

@@ -36,6 +36,7 @@
 #include "Quake.h"
 #include "Quake2.h"
 #include "Quake3.h"
+#include "Crow.h"
 
 class CQuakeGames : public CPlugin
 {
@@ -85,6 +86,46 @@ public:
 	}
 };
 
+class CRadianceGames : public CPlugin
+{
+public:
+
+	virtual void Release()
+	{
+		delete this;
+	}
+
+	virtual CPluginGame *GamePlugin(int i)
+	{
+		switch (i)
+		{
+		case 0:
+			return new CrowGame();
+		}
+		return 0;
+	}
+
+	virtual CPluginFileImport *FileImporter(int i)
+	{
+		switch (i)
+		{
+		case 0:
+			return new CrowMap();
+		}
+		return 0;
+	}
+
+	virtual CObjectCreator *ObjectCreator(int i)
+	{
+		return 0;
+	}
+
+	virtual CMapObject *ObjectForClass(int classbits, int subclassbits)
+	{
+		return 0;
+	}
+};
+
 OS_PLUGIN_EXPORT_FN int PluginAPIVersion()
 {
 	return TREAD_API_VERSION;
@@ -95,7 +136,8 @@ OS_PLUGIN_EXPORT_FN CPlugin *PluginCreate(int i)
 	switch (i)
 	{
 	case 0:
-		return new CQuakeGames();
+		return new CRadianceGames();
+		//return new CQuakeGames();
 	}
 	return 0;
 }

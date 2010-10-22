@@ -462,9 +462,9 @@ void R_MakeBoxMeshCmds( CRenderMesh* mesh, const vec3& mins, const vec3& maxs, b
 		int mult = (double_sided) ? 2 : 1;
 		mesh->num_tris = 12*mult;
 		mesh->cmds = GL_TRIANGLES;
-		mesh->tris = new unsigned short[6*6*mult];
+		mesh->tris = new unsigned int[6*6*mult];
 
-		unsigned short* tris = mesh->tris;
+		unsigned int* tris = mesh->tris;
 
 		//
 		// top
@@ -593,9 +593,9 @@ void R_MakeBoxMeshCmds( CRenderMesh* mesh, const vec3& mins, const vec3& maxs, b
 	{
 		mesh->num_tris = 5*2*6;
 		mesh->cmds = GL_LINES;
-		mesh->tris = new unsigned short[mesh->num_tris];
+		mesh->tris = new unsigned int[mesh->num_tris];
 
-		unsigned short* tris = mesh->tris;
+		unsigned int* tris = mesh->tris;
 
 		//
 		// top
@@ -1023,7 +1023,7 @@ static inline void R_OutputMeshTris( CRenderMesh* mesh )
 	{
 		if( mesh->cmds == GL_TRIANGLES )
 		{
-			R_glDrawRangeElements( GL_TRIANGLES, 0, mesh->num_pts-1, mesh->num_tris*3, GL_UNSIGNED_SHORT, mesh->tris );
+			R_glDrawRangeElements( GL_TRIANGLES, 0, mesh->num_pts-1, mesh->num_tris*3, GL_UNSIGNED_INT, mesh->tris );
 		}
 		else
 		if( mesh->cmds == GL_LINES )
@@ -1035,11 +1035,11 @@ static inline void R_OutputMeshTris( CRenderMesh* mesh )
 			int i;
 			for(i = 0; i < mesh->num_tris-1; i++) // num_tris is the point count.
 			{
-				if( mesh->tris[i] == (unsigned short)-1 )
+				if( mesh->tris[i] == -1 )
 				{
 					continue;
 				}
-				if(mesh->tris[i+1] == (unsigned short)-1 )
+				if(mesh->tris[i+1] == -1 )
 				{
 					i++;
 					continue;

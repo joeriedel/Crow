@@ -39,9 +39,12 @@
 
 class C_Tokenizer;
 class CSkelModel;
+struct MaxScene;
+
+typedef boost::shared_ptr<MaxScene> MaxSceneRef;
 
 #define EDDS_BOX		0
-#define EDDS_JMODEL		1
+#define EDDS_SCENE		1
 #define EDDS_ICON		2
 #define EDDS_SKEL		3
 
@@ -292,6 +295,7 @@ protected:
 	CRenderMesh m_icomesh;	
 	CRenderMesh m_lightbox_mesh;
 	CRenderMesh m_lightbox_outline_mesh;
+	MaxSceneRef m_maxScene;
 
 	vec3 m_model_angles;
 
@@ -311,6 +315,9 @@ protected:
 	void SetupLightBoxMesh();
 	void SetupIconMesh();
 	void SetupProps( CLinkedList<CObjProp>* list );
+	void LoadMaxScene();
+	void UpdateScene();
+
 	static void CopyPropList( CLinkedList<CObjProp>* src, CLinkedList<CObjProp>* dst );
 
 	class CEntityParmsMenu : public CObjectMenu

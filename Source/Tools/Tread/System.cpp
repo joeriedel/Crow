@@ -2347,7 +2347,7 @@ void CRenderMesh::AllocMesh( int n_pts, int n_tris )
 	rgba = new unsigned int[n_pts];
 
 	if( n_tris > 0 )
-		tris = new unsigned short[n_tris * 3];
+		tris = new unsigned int[n_tris * 3];
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -3608,7 +3608,7 @@ void Sys_ReloadStuff(void)
 	//c_selobjentry = 0;
 
 	//Sys_InitCreators();
-	Sys_GetPropView()->ObjTreeLoad();
+	//Sys_GetPropView()->ObjTreeLoad();
 
 	CChildFrame* pFrame = Sys_GetActiveFrame();
 

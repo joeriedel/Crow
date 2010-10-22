@@ -5225,11 +5225,11 @@ void CTreadDoc::OnViewHideshowjmodels()
 	// TODO: Add your command handler code here
 	if( m_bToggleJmodels )
 	{
-		WalkObjects( WalkShowObjectsWithBits, (void*)(OBJECT_TYPE_JMODEL), true, false );
+		WalkObjects( WalkShowObjectsWithBits, (void*)(OBJECT_TYPE_STATICMESH), true, false );
 	}
 	else
 	{
-		WalkObjects( WalkHideObjectsWithBits, (void*)(OBJECT_TYPE_JMODEL), true, false );
+		WalkObjects( WalkHideObjectsWithBits, (void*)(OBJECT_TYPE_STATICMESH), true, false );
 	}
 
 	m_bToggleJmodels = !m_bToggleJmodels;

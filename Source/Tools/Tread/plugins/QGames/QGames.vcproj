@@ -43,7 +43,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\..\sdk;..\..\burgerlib"
+				AdditionalIncludeDirectories="..\..\sdk;..\..\burgerlib;..\..\..\..\..\Radiance\Extern\boost\1.38.0"
 				PreprocessorDefinitions="WIN32;_WINDOWS;_DEBUG;_USRDLL;_CRT_SECURE_NO_WARNINGS"
 				StringPooling="true"
 				MinimalRebuild="false"
@@ -131,7 +131,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="..\..\sdk;..\..\burgerlib"
+				AdditionalIncludeDirectories="..\..\sdk;..\..\burgerlib;..\..\..\..\..\Radiance\Extern\boost\1.38.0"
 				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;_USRDLL;_CRT_SECURE_NO_WARNINGS"
 				StringPooling="true"
 				RuntimeLibrary="0"
@@ -209,6 +209,14 @@
 			</File>
 			<File
 				RelativePath=".\ByteParser.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Crow.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Crow.h"
 				>
 			</File>
 			<File

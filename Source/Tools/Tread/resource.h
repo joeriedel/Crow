@@ -303,6 +303,8 @@
 #define ID_EDIT                         35095
 #define ID_EDIT_TEMP                    35096
 #define ID_EDIT_WORLDSPAWN              35097
+#define ID_VIEW_TOGGLESTATICMESHES      35098
+#define ID_TOOLS_RELOADMODELS35100      35100
 #define IDR_CRAP_ITEM                   37000
 #define ID_PLUGIN_GLOBAL_MENU_MIN       37001
 #define ID_PLUGIN_GLOBAL_MENU_MAX       38000
@@ -316,7 +318,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_3D_CONTROLS                     1
 #define _APS_NEXT_RESOURCE_VALUE        163
-#define _APS_NEXT_COMMAND_VALUE         35098
+#define _APS_NEXT_COMMAND_VALUE         35101
 #define _APS_NEXT_CONTROL_VALUE         1194
 #define _APS_NEXT_SYMED_VALUE           104
 #endif

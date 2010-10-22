@@ -198,6 +198,10 @@ BEGIN
         MENUITEM "Abort Active Compile...\tCtrl+Break", ID_TOOLS_ABORTACTIVECOMPILE
         MENUITEM "Run Game...\tF9",             ID_TOOLS_RUNABDUCTED
     END
+    POPUP "&Tools"
+    BEGIN
+        MENUITEM "&Reload Models...",           ID_TOOLS_RELOADMODELS
+    END
     POPUP "&View"
     BEGIN
         MENUITEM "System &Console",             ID_VIEW_SYSTEMCONSOLE
@@ -234,7 +238,8 @@ BEGIN
             MENUITEM "Sky Box",                     ID_TOOLS_BRUSHFILTER_SKYBOX
             MENUITEM "Sky Portal",                  ID_TOOLS_BRUSHFILTER_SKYPORTAL
         END
-        MENUITEM "Toggle Brushes\t]",           ID_VIEW_TOGGLEBRUSHES
+        MENUITEM "Toggle Brushes\t[",           ID_VIEW_TOGGLEBRUSHES
+        MENUITEM "Toggle Static Meshes\t ]",    ID_VIEW_HIDESHOWJMODELS
         MENUITEM SEPARATOR
         MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
         MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR

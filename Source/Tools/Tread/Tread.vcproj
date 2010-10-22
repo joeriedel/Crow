@@ -50,7 +50,7 @@
 				Optimization="2"
 				InlineFunctionExpansion="2"
 				WholeProgramOptimization="true"
-				AdditionalIncludeDirectories=".\CJ60\Include;.\BurgerLib;.\sdk"
+				AdditionalIncludeDirectories=".\CJ60\Include;.\BurgerLib;.\sdk;..\..\..\Radiance\Extern\boost\1.38.0"
 				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;__BUILDING_TREAD__"
 				StringPooling="true"
 				RuntimeLibrary="0"
@@ -152,7 +152,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories=".\CJ60\Include;.\BurgerLib;.\sdk"
+				AdditionalIncludeDirectories=".\CJ60\Include;.\BurgerLib;.\sdk;..\..\..\Radiance\Extern\boost\1.38.0"
 				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;__BUILDING_TREAD__"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -253,7 +253,7 @@
 				Optimization="2"
 				InlineFunctionExpansion="0"
 				WholeProgramOptimization="true"
-				AdditionalIncludeDirectories=".\CJ60\Include;.\BurgerLib;.\sdk"
+				AdditionalIncludeDirectories=".\CJ60\Include;.\BurgerLib;.\sdk;..\..\..\Radiance\Extern\boost\1.38.0"
 				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;__BUILDING_TREAD__"
 				StringPooling="true"
 				RuntimeLibrary="0"
@@ -957,6 +957,14 @@
 						PreprocessorDefinitions=""
 					/>
 				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\MaxScene.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\MaxScene.h"
+				>
 			</File>
 			<File
 				RelativePath="ObjectCreatorTree.cpp"

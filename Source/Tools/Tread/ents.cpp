@@ -44,6 +44,7 @@
 #include "mapfile.h"
 #include "resource.h"
 #include "MainFrm.h"
+#include "MaxScene.h"
 
 #define PROJECT_VERTEX( v, l, d, pv ) ((pv) = (v) + normalized( (v) - (l) ) * (d))
 #define MAX_SKEL_MATERIALS	32
@@ -161,10 +162,6 @@ void CEntity::MakeEntityMenu()
 	if( m_bMenuCreated )
 		return;
 
-	m_EntityMenu.AddMenuItem( 1, "Grab Texture" );
-	m_EntityMenu.AddMenuItem( 2, "Apply Texture" );
-	m_EntityMenu.AddMenuItem( 3, "Select All w/ Texture" );
-	//m_EntityMenu.AddMenuItem( 4, "Edit Shader" );
 	m_EntityMenu.AddMenuItem( 0, "@SEP@" );
 	m_EntityMenu.AddMenuItem( ID_TOOLS_CHECKSELECTEDOBJECTS, "Check Selected Objects For Errors...", true );
 	m_EntityMenu.AddMenuItem( 0, "@SEP@" );
@@ -193,80 +190,10 @@ CEntity::CEntityParmsMenu::~CEntityParmsMenu()
 
 void CEntity::CEntityParmsMenu::OnMenuItem( int id )
 {
-	switch( id )
-	{
-	case 1: // grab.
-		{
-			CShader* s = view->GetDocument()->ShaderForName( entity->m_sShader );
-			if( s )
-			{
-				view->GetDocument()->SetSelectedShader(s);
-				Sys_AdjustToViewTexture( s );
-				Sys_RedrawWindows( VIEW_TYPE_TEXTURE );
-			}
-		}
-	break;
-	case 2:
-		view->GetDocument()->GenericUndoRedoFromSelection()->SetTitle( "Paint Selection" );
-		view->GetDocument()->PaintSelection();
-		Sys_RedrawWindows( VIEW_TYPE_3D );
-	break;
-	case 3:
-		view->GetDocument()->SelectObjectsByShader( entity->m_sShader );
-		view->GetDocument()->UpdateSelectionInterface();
-		view->GetDocument()->Prop_UpdateSelection();
-		Sys_RedrawWindows();
-	break;
-	/*case 4:
-		Sys_EditShader( ShaderForName( entity->m_sShader ) );
-	break;*/
-	}
 }
 
 void CEntity::CEntityParmsMenu::OnUpdateCmdUI( int id, CCmdUI* pUI )
 {
-	switch( id )
-	{
-	case 1:
-	case 2:
-	case 3:
-	case 4:
-
-		if( entity->m_pDef && entity->m_pDef->GetDrawStyle() == EDDS_JMODEL )
-		{
-			pUI->Enable();
-
-			CString shader, string;
-
-			if( id == 1 )
-				string = "Grab";
-			else
-			if( id == 2 )
-				string = "Apply";
-			else
-			if( id == 3 )
-				string = "Select Objects With";
-			/*else
-			if( id == 4 )
-				string = "Edit Shader";*/
-
-			if( id == 1 || id == 3 || id == 4 )
-				shader = entity->m_sShader;
-			else
-				shader = view->GetDocument()->SelectedShaderName();
-
-			{
-				char buff[256];
-				sprintf(buff, "%s \"%s\"", string, shader );
-				pUI->SetText( buff );
-			}
-		}
-		else
-		{
-			pUI->Enable( FALSE );
-		}
-	break;
-	}
 }
 
 CEntity::CEntity() : CMapObject()
@@ -274,12 +201,8 @@ CEntity::CEntity() : CMapObject()
 	m_pDef = 0;
 	m_icon = 0;
 	m_iconhandle = BAD_TC_HANDLE;
-	//m_skm_meshes = 0;
-	//m_skm_mesh_count = 0;
 	m_pos = vec3::zero;
 	m_bDrag = false;
-	//m_skm = 0;
-	//m_jmodel = 0;
 	m_model_angles = vec3::zero;
 	m_numobjs = 0;
 	m_objs = 0;
@@ -296,13 +219,9 @@ CEntity::CEntity( const CEntity& e ) : CMapObject( e )
 {
 	m_pDef = 0;
 	m_icon = 0;
-	//m_skm = 0;
-	//m_skm_meshes = 0;
-	//m_skm_mesh_count = 0;
 	m_iconhandle = BAD_TC_HANDLE;
 	m_bDrag = false;
 	m_pos = e.m_pos;
-	//m_jmodel = 0;
 	m_model_angles = e.m_model_angles;
 	m_sClassname = e.m_sClassname;
 	m_sShader = e.m_sShader;
@@ -345,9 +264,6 @@ CEntity::~CEntity()
 		delete[] m_plane_facings;
 	if( m_skm_tris )
 		delete[] m_skm_tris;
-
-	//FreeSkmMeshes();
-	//FreeJmdlMesh();
 }
 
 void CEntity::OnSetVisible( bool bVisible, CTreadDoc* pDoc )
@@ -546,7 +462,7 @@ bool CEntity::ObjectIsFirstOwned( CMapObject* obj )
 
 void CEntity::SelectByShader( const char* szShader, CTreadDoc* pDoc )
 {
-	if( m_pDef == 0 || m_pDef->GetDrawStyle() != EDDS_JMODEL )
+	if( m_pDef == 0 || m_pDef->GetDrawStyle() != EDDS_SCENE )
 		return;
 
 	if( !szShader || !szShader[0] )
@@ -567,13 +483,13 @@ bool CEntity::CheckObject( CString& message, CTreadDoc* pDoc )
 		return true;
 	}
 
-	if( m_pDef->GetDrawStyle() == EDDS_JMODEL )
+	if( m_pDef->GetDrawStyle() == EDDS_SCENE )
 	{
-		/*if( m_jmodel == 0 )
+		if (!m_maxScene)
 		{
-			message = "missing jmodel!";
+			message = "Missing Mesh Scene!";
 			return true;
-		}*/
+		}
 	}
 
 	if( m_pDef->IsOwner() )
@@ -629,52 +545,13 @@ CMapObject* CEntity::MakeFromKeyList( CTreadDoc* pDoc, CLinkedList<CEntKey>* lis
 
 	CEntity* ent = new CEntity();
 
-	bool jmodel = false;
-
-	if( !stricmp( classkey->StringForKey(), "jmodel" ) )
-	{
-		jmodel = true;
-
-		CEntKey* key = FindKey( list, "model" );
-		
-		char buff[256];
-		strcpy( buff, key->StringForKey() );
-
-		//
-		// skip /vmodels/
-		//
-		CString s = &buff[9];
-		s.Replace( '/', ':' );
-
-		ent->m_sClassname.Format("jmodel@@%s", s );
-		
-		key = FindKey( list, "shader" );
-		if( key )
-			ent->m_sShader = key->StringForKey();
-	}
-	else
-	{
-		ent->m_sClassname = classkey->StringForKey();
-	}
-
+	ent->m_sClassname = classkey->StringForKey();
 	CEntKey* key;
 
 	for(key = list->ResetPos(); key; key = list->GetNextItem() )
 	{
 		if( key == classkey )
 			continue;
-
-		//
-		// skip jmodel keys?
-		//
-		if( jmodel )
-		{
-			if( !stricmp( key->GetName(), "model" ) || 
-				!stricmp( key->GetName(), "shader" ) )
-			{
-				continue;
-			}
-		}
 
 		//
 		// special keys.
@@ -716,25 +593,6 @@ CEntKey* CEntity::FindKey( CLinkedList<CEntKey>* list, const char* name )
 
 	return 0;
 }
-
-//void CEntity::FreeJmdlMesh()
-//{
-//	if( m_jmdlmesh.xyz )
-//		delete[] m_jmdlmesh.xyz;
-//	if( m_jmdlmesh.normals[0] )
-//		delete[] m_jmdlmesh.normals[0];
-//	if( m_jmdlmesh.normals[1] )
-//		delete[] m_jmdlmesh.normals[1];
-//	if( m_jmdlmesh.normals[2] )
-//		delete[] m_jmdlmesh.normals[2];
-//
-//	m_jmdlmesh.xyz = 0;
-//	m_jmdlmesh.normals[0] = 
-//	m_jmdlmesh.normals[1] = 
-//	m_jmdlmesh.normals[2] = 0;
-//	
-//	m_jmodel = 0;
-//}
 
 void CEntity::CopyPropList( CLinkedList<CObjProp>* src, CLinkedList<CObjProp>* dst )
 {
@@ -793,60 +651,12 @@ void CEntity::SetProp( CTreadDoc* pDoc, CObjProp* prop )
 				}		
 			}
 		}
-		if( m_pDef->GetDrawStyle() == EDDS_JMODEL )
+
+		if (m_pDef->GetDrawStyle() == EDDS_SCENE)
 		{
-			if( !stricmp( prop->GetName(), "modelpath" ) )
+			if (!stricmp(t->GetName(), m_pDef->GetModel()))
 			{
-				//
-				// try to change it...
-				//
-				m_sClassname.Format("jmodel@@%s", prop->GetString());
-				m_sClassname.Replace('/', ':');
-				m_sClassname.Replace('\\', ':');
-				OnConnectToEntDefs(pDoc);
-				pDoc->BuildSelectionBounds();
-				pDoc->UpdateSelectionInterface();
-				return;
-			}
-		}
-
-		if( m_pDef->GetDrawStyle() == EDDS_SKEL ||
-			m_pDef->GetDrawStyle() == EDDS_JMODEL )
-		{
-			if( !stricmp( prop->GetName(), m_pDef->GetRotationKey() ) )
-			{
-				if( prop->GetType() == CObjProp::facing ) 
-				{
-					m_model_angles[2] = prop->GetFloat();
-					m_model_angles[0] = m_model_angles[1] = 0.0f;
-				}
-				else
-				{
-					m_model_angles = prop->GetVector();
-				}
-
-				int i;
-				for(i = 0; i < 3; i++)
-				{
-					m_model_angles[i] = CLAMP_VAL( m_model_angles[i], 0, 360.0f );
-				}
-
-				/*UpdateSkelMesh();
-				UpdateJmdlMesh();
-				SetLightingRebuildFlag();*/
-
-				if( prop->GetType() == CObjProp::facing ) 
-				{
-					prop->SetFloat( m_model_angles[2] );
-				}
-				else
-				{
-					prop->SetVector( m_model_angles );
-				}
-				
-				t->SetValue( prop );
-				
-				pDoc->Prop_PropChange( prop->GetName() );
+				LoadMaxScene();
 			}
 		}
 
@@ -897,10 +707,6 @@ void CEntity::SetupProps( CLinkedList<CObjProp>* master_list )
 void CEntity::SetShaderName( const char* name, CTreadDoc* pDoc )
 {
 	m_sShader = name;
-	//if( m_pDef && m_jmodel )
-	//{
-	//	m_jmdlmesh.shader = ShaderForName( name );
-	//}
 }
 
 void CEntity::OnRemoveFromMap( CTreadDoc* pDoc )
@@ -992,29 +798,6 @@ bool CEntity::ReadFromFile( CFile* pFile, CTreadDoc* pDoc, int nVersion )
 
 	return true;
 }
-
-//void CEntity::FreeSkmMeshes()
-//{
-//	if( m_skm )
-//		delete m_skm;
-//
-//	m_skm = 0;
-//
-//	if( m_skm_meshes )
-//	{
-//		int i;
-//		for(i = 0; i < m_skm_mesh_count; i++)
-//		{
-//			m_skm_meshes[i].st = 0;
-//			m_skm_meshes[i].FreeMesh();
-//		}
-//
-//		delete[] m_skm_meshes;
-//	}
-//
-//	m_skm_mesh_count = 0;
-//	m_skm_meshes = 0;
-//}
 
 void CEntity::OnMouseDown( CMapView* pView, int nMX, int nMY, int nButtons, CPickObject* pSrc )
 {
@@ -1198,7 +981,7 @@ void CEntity::SetupIconMesh()
 	{
 		m_icomesh.xyz = new vec3[4];
 		m_icomesh.normals[0] = new vec3[4];
-		m_icomesh.tris = new unsigned short[6];
+		m_icomesh.tris = new unsigned int[6];
 		m_icomesh.st = new vec2[4];
 
 		m_icomesh.num_pts = 4;
@@ -1241,6 +1024,41 @@ void CEntity::SetupIconMesh()
 	}
 
 	SetupLightBoxMesh();
+}
+
+void CEntity::LoadMaxScene()
+{
+	m_maxScene.reset();
+	CPluginGame *plugin = Sys_GetActiveDocument()->GamePlugin();
+
+	if (!m_pDef || !plugin)
+		return;
+
+	if (m_pDef->GetDrawStyle() != EDDS_SCENE || !m_pDef->GetModel())
+		return;
+
+	CObjProp *t = CObjProp::FindProp(&m_props, m_pDef->GetModel());
+	if (!t || t->GetString()[0] == 0)
+		return;
+
+	m_maxScene.reset(new MaxScene());
+
+	if (!m_maxScene->Load(CString(plugin->GameDir()) + "/Base/" + t->GetString() + ".rscn"))
+	{
+		m_maxScene.reset();
+		return;
+	}
+
+	for (std::vector<CRenderMesh::Ref>::const_iterator it = m_maxScene->meshes.begin(); it != m_maxScene->meshes.end(); ++it)
+		(*it)->pick = this;
+
+	UpdateScene();
+}
+
+void CEntity::UpdateScene()
+{
+	if (m_maxScene)
+		m_maxScene->Translate(m_pos - m_maxScene->origin);
 }
 
 void CEntity::RepaintShader( const char* szShader, CTreadDoc* pDoc )
@@ -1301,10 +1119,8 @@ void CEntity::GenTriMeshTXSpaceVecs( CRenderMesh* mesh )
 
 int CEntity::GetObjectTypeBits()
 {
-	/*if( m_skm )
-		return OBJECT_TYPE_SKEL;
-	if( m_jmodel )
-		return OBJECT_TYPE_JMODEL;*/
+	if (m_maxScene)
+		return OBJECT_TYPE_STATICMESH;
 
 	return 0;
 }
@@ -1320,11 +1136,12 @@ void CEntity::OnConnectToEntDefs(CTreadDoc* doc)
 	m_boxmesh.FreeMesh();
 	m_boxmesh.shader = 0;
 	m_boxmesh.texture = 0;
-	//FreeSkmMeshes();
-	//FreeJmdlMesh();
+	m_maxScene.reset();
 
 	if( m_sClassname != "" )
+	{
 		m_pDef = doc->GameDef()->EntDefForName( m_sClassname );
+	}
 	else
 	{
 		m_pDef = 0;
@@ -1389,8 +1206,8 @@ void CEntity::OnConnectToEntDefs(CTreadDoc* doc)
 		//if( m_pDef->GetDrawStyle() == EDDS_SKEL )
 		//	SetupSkmMesh();
 		//else
-		//if( m_pDef->GetDrawStyle() == EDDS_JMODEL )
-		//	SetupJmdlMesh();
+		if( m_pDef->GetDrawStyle() == EDDS_SCENE )
+			LoadMaxScene();
 	}
 
 	//
@@ -1445,29 +1262,14 @@ void CEntity::GetObjectMinsMaxs( vec3* pMins, vec3* pMaxs )
 	{
 		switch( m_pDef->GetDrawStyle() )
 		{
-		case EDDS_JMODEL:
+		case EDDS_SCENE:
 
-			//if( m_jmodel )
-			//{
-			//	//*pMins = m_jmodel->mins;
-			//	//*pMaxs = m_jmodel->maxs;
-			//	int i;
-			//	vec3 mn, mx;
-
-			//	mn = vec3::bogus_max;
-			//	mx = vec3::bogus_min;
-
-			//	for(i = 0; i < m_jmdlmesh.num_pts; i++)
-			//	{
-			//		mn = vec_mins( m_jmdlmesh.xyz[i], mn );
-			//		mx = vec_maxs( m_jmdlmesh.xyz[i], mx );
-			//	}
-
-			//	*pMins = mn - m_pos;
-			//	*pMaxs = mx - m_pos;
-
-			//	return;
-			//}
+			if (m_maxScene)
+			{
+				*pMins = m_maxScene->mins;
+				*pMaxs = m_maxScene->maxs;
+				return;
+			}
 
 		break;
 		}
@@ -1503,8 +1305,7 @@ void CEntity::SetObjectWorldPos( const vec3& pos, CTreadDoc* pDoc )
 {
 	m_pos = pos;
 	UpdateBoxMesh();
-	/*UpdateSkelMesh();
-	UpdateJmdlMesh();*/
+	UpdateScene();
 	SetupLightBoxMesh();
 	CMapObject::SetObjectWorldPos( pos, pDoc );
 }
@@ -1514,7 +1315,7 @@ void CEntity::SetObjectTransform( const mat3x3& m, CTreadDoc* pDoc )
 	if( m_pDef )
 	{
 		if( m_pDef->GetDrawStyle() == EDDS_SKEL ||
-			m_pDef->GetDrawStyle() == EDDS_JMODEL )
+			m_pDef->GetDrawStyle() == EDDS_SCENE )
 		{
 			vec3 angles = euler_from_matrix( m );
 
@@ -1600,8 +1401,7 @@ void CEntity::CopyObject( CMapObject* obj, CTreadDoc* pDoc )
 	}
 
 	UpdateBoxMesh();
-	/*UpdateSkelMesh();
-	UpdateJmdlMesh();*/
+	UpdateScene();
 	SetupLightBoxMesh();
 }
 
@@ -1631,13 +1431,15 @@ int CEntity::GetNumRenderMeshes( CMapView* view )
 
 	if( m_pDef && m_pDef->GetDrawStyle() == EDDS_ICON )
 	{
-		if( view->View.bShowIcons == FALSE ) return 0;
+		if( view->View.bShowIcons == FALSE ) 
+			return 0;
 	}
 
-	/*if( m_pDef && m_skm && m_skm_mesh_count && m_pDef->GetDrawStyle() == EDDS_SKEL )
+	if (m_pDef && m_pDef->GetDrawStyle() == EDDS_SCENE)
 	{
-		return m_skm_mesh_count;
-	}*/
+		if (m_maxScene)
+			return (int)m_maxScene->meshes.size();
+	}
 
 	return (m_bLightBoxMesh && IsSelected() && ((view->GetDocument()->GetViewLightingFlag()==false)||(view->GetViewType() != VIEW_TYPE_3D))) ? 3 : 1;
 }
@@ -1646,19 +1448,11 @@ CRenderMesh* CEntity::GetRenderMesh( int num, CMapView* view )
 {
 	if( m_pDef )
 	{
-		/*if( m_pDef->GetDrawStyle() == EDDS_SKEL &&
-			m_skm_mesh_count && m_skm )
+		if (m_pDef->GetDrawStyle() == EDDS_SCENE)
 		{
-			CRenderMesh* m = &m_skm_meshes[num];
-
-			return m;
+			if (m_maxScene && num < (int)m_maxScene->meshes.size())
+				return m_maxScene->meshes[num].get();
 		}
-		else
-		if( m_pDef->GetDrawStyle() == EDDS_JMODEL &&
-			m_jmodel )
-		{
-			return &m_jmdlmesh;
-		}*/
 
 		if( TC_VALID( m_iconhandle, m_iconkey ) &&
 			m_icon == 0 )
@@ -1729,8 +1523,7 @@ void CEntity::FlipObject( const vec3& origin, const vec3& axis )
 	m_pos = (axis*(2*-d))+m_pos;
 
 	UpdateBoxMesh();
-	/*UpdateSkelMesh();
-	UpdateJmdlMesh();*/
+	UpdateScene();
 	SetupLightBoxMesh();
 }
 
@@ -1738,11 +1531,6 @@ const char* CEntity::GetRootName()
 {
 	if( m_pDef )
 	{
-		if( m_pDef->GetDrawStyle() == EDDS_JMODEL )
-		{
-			return "jmodel";
-		}
-
 		return GetDisplayName();
 	}
 
@@ -1762,8 +1550,7 @@ void CEntity::SnapToGrid( float fGridSize, bool x, bool y, bool z )
 
 	m_pos = p;
 	UpdateBoxMesh();
-	/*UpdateSkelMesh();
-	UpdateJmdlMesh();*/
+	UpdateScene();
 	SetupLightBoxMesh();
 
 	CMapObject::SnapToGrid( fGridSize, x, y, z );
@@ -2397,14 +2184,14 @@ bool CEntDef::ParseAtt( C_Tokenizer* script )
 
 			m_skel_fixed_offset = ( t == "true" ) ? true : false;
 		}
-		/*else
-		if( t == "jmodel" )
+		else
+		if( t == "scene" )
 		{
-			m_style = EDDS_JMODEL;
+			m_style = EDDS_SCENE;
 
-			if( script->GetToken( m_sModel ) )
+			if( !script->GetToken( m_sModel ) )
 				return false;
-		}*/
+		}
 		else
 		{
 			return false;

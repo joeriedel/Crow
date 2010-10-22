@@ -1,0 +1,59 @@
+//
+// Crow entity script.
+//
+
+Crow // Game Name
+Crow // Plugin
+
+@worldspawn
+{
+	$key soundtrack : "Sound Track" default "" as string
+}
+
+
+//
+// Common
+//
+
+@base SpawnFlags
+{
+	$key spawnflags : "SpawnFlags" default "0" as integer flags
+	{
+		"Not in easy" = 256
+		"Not in normal" = 512
+		"Not in hard" = 1024
+		"Not in deathmatch" = 2048
+	}
+}
+
+@base TargetName
+{
+	$key targetname : Name default "" as string for target_dst
+}
+
+@base Target
+{
+	$key target : Target default "" as string for target_src
+	$key killtarget : KillTarget default "" as string for target_src
+}
+
+//
+// Player
+//
+
+@base Player extends SpawnFlags
+{
+	$att box size "-16 -16 -24 16 16 24" color "0 0 1"
+	$key angle : Angle default "0" as facing
+	$att category "Player"
+}
+
+info_player_start : "Single Player Start" extends Player {}
+
+static_mesh_scene : "Static Mesh Scene"
+{
+	$att box size "-16 -16 -24 16 16 24" color "0 0 1"
+	$att category "Scene"
+	$att modeltype scene file
+	$key file : File default "" as string
+}

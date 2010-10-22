@@ -29,6 +29,10 @@
 #define IDC_GAME_DIR                    1012
 #define IDC_QUAKE_BUILD_OPTIONS_COMMAND_LINE 1013
 #define IDC_LOCATE_DIR                  1013
+#define IDC_TEXDIRS                     1020
+#define IDC_ADD_TEXDIR                  1021
+#define IDC_REMOVE_PAK2                 1022
+#define IDC_REMOVE_TEXDIR               1022
 
 // Next default values for new objects
 // 
