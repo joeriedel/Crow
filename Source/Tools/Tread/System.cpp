@@ -3188,7 +3188,7 @@ static void LoadPlugins()
 	FS_FileSearch_t search;
 	FS_FileSearchData_t file;
 	
-	if( FS_OpenSearch( "base:plugins", 0, &search, _fs_osf_disk ) == FALSE )
+	if( FS_OpenSearch( "TreadBase:Plugins", 0, &search, _fs_osf_disk ) == FALSE )
 	{
 		while( FS_GetNextFile( &search, &file ) == FALSE )
 		{
@@ -3296,7 +3296,7 @@ static void LoadGameDefs()
 	FS_FileSearch_t search;
 	FS_FileSearchData_t file;
 	
-	if( FS_OpenSearch( "base", 0, &search, _fs_osf_disk ) == FALSE )
+	if( FS_OpenSearch( "TreadBase", 0, &search, _fs_osf_disk ) == FALSE )
 	{
 		while( FS_GetNextFile( &search, &file ) == FALSE )
 		{

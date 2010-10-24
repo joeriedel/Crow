@@ -7,8 +7,8 @@ del /S /Q /F *.user
 del /S /Q /F *.vspscc
 del /S /Q /F *.vssscc
 del logfile.txt
-del /S /Q /F base\plugins\*.*
-rd base\plugins
+del /S /Q /F TreadBase\Plugins\*.*
+rd TreadBase\Plugins
 del /Q /F debug\*.*
 rd debug
 del /Q /F release\*.*

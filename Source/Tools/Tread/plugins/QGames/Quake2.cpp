@@ -89,9 +89,9 @@ CQuakeUserData *CQuake2Game::CreateUserData(CTreadDoc *doc)
 
 void CQuake2Game::InitializeToolsList(QuakeToolsList &tools)
 {
-	tools.push_back(LoadToolOpts(CQuakeTool("QBsp"), "9:base:quake2.opts"));
-	tools.push_back(LoadToolOpts(CQuakeTool("QVis"), "9:base:quake2.opts"));
-	tools.push_back(LoadToolOpts(CQuakeTool("QRad"), "9:base:quake2.opts"));
+	tools.push_back(LoadToolOpts(CQuakeTool("QBsp"), "9:TreadBase:quake2.opts"));
+	tools.push_back(LoadToolOpts(CQuakeTool("QVis"), "9:TreadBase:quake2.opts"));
+	tools.push_back(LoadToolOpts(CQuakeTool("QRad"), "9:TreadBase:quake2.opts"));
 }
 
 CString CQuake2Game::TrimTextureName(const char *str)

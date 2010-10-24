@@ -446,7 +446,7 @@ namespace
 			for (unsigned int i = 0; i < group.verts.size(); ++i)
 			{
 				mesh->xyz[i] = group.verts[i].orgPos;
-				mesh->normals[0][i] = -group.verts[i].normal;
+				mesh->normals[0][i] = group.verts[i].normal;
 				mesh->st[i] = group.verts[i].st[0];
 			}
 

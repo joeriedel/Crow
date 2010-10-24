@@ -87,10 +87,10 @@ CQuakeUserData *CQuake3Game::CreateUserData(CTreadDoc *doc)
 
 void CQuake3Game::InitializeToolsList(QuakeToolsList &tools)
 {
-	tools.push_back(LoadToolOpts(CQuakeTool("QBsp"), "9:base:quake3.opts"));
-	tools.push_back(LoadToolOpts(CQuakeTool("QVis"), "9:base:quake3.opts"));
-	tools.push_back(LoadToolOpts(CQuakeTool("QRad"), "9:base:quake3.opts"));
-	tools.push_back(LoadToolOpts(CQuakeTool("Bots"), "9:base:quake3.opts"));
+	tools.push_back(LoadToolOpts(CQuakeTool("QBsp"), "9:TreadBase:quake3.opts"));
+	tools.push_back(LoadToolOpts(CQuakeTool("QVis"), "9:TreadBase:quake3.opts"));
+	tools.push_back(LoadToolOpts(CQuakeTool("QRad"), "9:TreadBase:quake3.opts"));
+	tools.push_back(LoadToolOpts(CQuakeTool("Bots"), "9:TreadBase:quake3.opts"));
 }
 
 void CQuake3Game::RunMapCompile(const char *inpath, QuakeToolsList &tools, CTreadDoc *doc, bool runGame)

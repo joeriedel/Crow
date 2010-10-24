@@ -346,9 +346,9 @@ CQuakeTool &CQuakeGame::LoadToolOpts(CQuakeTool &tool, const char *filename)
 
 void CQuakeGame::InitializeToolsList(QuakeToolsList &tools)
 {
-	tools.push_back(LoadToolOpts(CQuakeTool("QBsp"), "9:base:quake.opts"));
-	tools.push_back(LoadToolOpts(CQuakeTool("QVis"), "9:base:quake.opts"));
-	tools.push_back(LoadToolOpts(CQuakeTool("QLight"), "9:base:quake.opts"));
+	tools.push_back(LoadToolOpts(CQuakeTool("QBsp"), "9:TreadBase:quake.opts"));
+	tools.push_back(LoadToolOpts(CQuakeTool("QVis"), "9:TreadBase:quake.opts"));
+	tools.push_back(LoadToolOpts(CQuakeTool("QLight"), "9:TreadBase:quake.opts"));
 }
 
 CQuakeTool CQuakeGame::ToolForName(const char *name) const
