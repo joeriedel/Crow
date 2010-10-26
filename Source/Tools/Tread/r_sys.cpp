@@ -68,6 +68,7 @@ static void R_SetupProjection( CMapView* pView );
 static void R_DrawForLightZ( CRenderMesh* mesh, int flags, int blend, unsigned int color );
 static void R_DrawTextured( CRenderMesh* mesh, int flags, int blend, unsigned int color );
 static void R_DrawWireframe( CRenderMesh* mesh, int flags, int blend, unsigned int color );
+static void R_DrawNormals( CRenderMesh* mesh, int flags, int blend, unsigned int color );
 static void R_DrawMesh2D( CRenderMesh* mesh, int flags, int blend, unsigned int color );
 static void R_DrawSolid( CRenderMesh* mesh, int flags, int blend, unsigned int color );
 static void R_DrawPick3D( CRenderMesh* mesh, int flags, int blend, unsigned int color );
@@ -1222,6 +1223,28 @@ static void R_DrawWireframe( CRenderMesh* mesh, int flags, int blend, unsigned i
 	}
 }
 
+static void R_DrawNormals( CRenderMesh* mesh, int flags, int blend, unsigned int color )
+{
+	if( !mesh->normals[0] || !mesh->xyz[0] || mesh->num_pts < 1 )
+		return;
+
+	R_glSet( 0, flags|_va_off|_ca_off|_ia_off|_na_off, blend );
+
+	glColor4ubv( (GLubyte*)&color );
+
+	R_glCommit( 0 );
+
+	glBegin(GL_LINES);
+	for (int i = 0; i < mesh->num_pts; ++i)
+	{
+		vec3 v = mesh->xyz[i];
+		glVertex3f(v.x, v.y, v.z);
+		v += mesh->normals[0][i] * 10.0f;
+		glVertex3f(v.x, v.y, v.z);
+	}
+	glEnd();
+}
+
 static void R_DrawTextured( CRenderMesh* mesh, int flags, int blend, unsigned int color )
 {
 	R_glDisableAllTMUs( 0 );
@@ -1481,7 +1504,14 @@ static void R_Draw3D( CMapView* pView )
 	{
 		R_RenderObjectList( pView, pDoc->GetObjectList(), R_DrawWireframe, flags, blends, 0xFFDDDDDD );
 	}
+
 	glPolygonMode( GL_FRONT_AND_BACK, GL_FILL );
+
+	if (pView->View.bShowNormals)
+	{
+		R_RenderObjectList( pView, pDoc->GetObjectList(), R_DrawNormals, flags, blends, 0xFFFFFFFF );
+		R_RenderObjectList( pView, pDoc->GetSelectedObjectList(), R_DrawNormals, flags, blends, 0xFFFFFFFF );
+	}
 
 	R_glSet( 0, _dtf_lequal|_dwm_on|_cwm_all|_cfm_none|_no_arrays, blends );
 	R_glCommit( 0 );

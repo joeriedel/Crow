@@ -101,6 +101,16 @@ public:
 	vec2 &operator /= ( float s );
 	
 	vec2 &operator = ( const vec2 &v );
+
+	bool operator == (const vec2 &v) const
+	{
+		return x == v.x && y == v.y;
+	}
+
+	bool operator != (const vec2 &v) const
+	{
+		return !(*this == v);
+	}
 	
 	float length_squared() const;
 	float length() const;
@@ -158,6 +168,16 @@ public:
 	vec3  operator *  ( const mat4x3 &m ) const;
 	vec3 &operator *= ( const mat3x3 &m );
 	vec3  operator *  ( const mat3x3 &m ) const;
+
+	bool operator == (const vec3 &v) const
+	{
+		return x == v.x && y == v.y && z == v.z;
+	}
+
+	bool operator != (const vec3 &v) const
+	{
+		return !(*this == v);
+	}
 
 	float length_squared() const;
 	float length() const;

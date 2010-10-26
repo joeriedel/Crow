@@ -163,6 +163,7 @@ public:
 		bool bSelectionWireframe;
 		bool bShowEntityNames;
 		bool bShaded;
+		bool bShowNormals;
 		bool bSelBoxVisible;
 		bool bShowIcons;
 

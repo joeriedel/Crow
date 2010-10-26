@@ -517,6 +517,7 @@ static void WriteViewData( CFile* file, CMapView* pView, int nVersion )
 	MAP_WriteInt( file, pView->View.bSelectionWireframe );
 	MAP_WriteInt( file, pView->View.bShaded );
 	MAP_WriteInt( file, pView->View.bShowEntityNames );
+	MAP_WriteInt( file, pView->View.bShowNormals );
 }
 
 static void ReadViewData( CFile* file, CMapView* pView, int nVersion )
@@ -545,6 +546,9 @@ static void ReadViewData( CFile* file, CMapView* pView, int nVersion )
 	pView->View.bSelectionWireframe = MAP_ReadInt( file );
 	pView->View.bShaded = MAP_ReadInt( file );
 	pView->View.bShowEntityNames = MAP_ReadInt( file );
+	pView->View.bShowNormals = false;
+	if (TREAD_FILE_VERSION(nVersion) > MAP_VERSION_1)
+		pView->View.bShowNormals = MAP_ReadInt(file);
 
 	pView->View.bSelBoxVisible = false;
 	pView->SetViewType( type );

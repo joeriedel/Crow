@@ -658,7 +658,7 @@ public:
 		//
 		// Defines the indices into the mesh's vertices for the polygon.
 		//
-		unsigned short* indices;
+		unsigned int* indices;
 
 		// Specifies the shader the polygon is to be drawn with. Can be NULL.
 		//

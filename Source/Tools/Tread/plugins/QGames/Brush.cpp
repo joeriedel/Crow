@@ -3144,7 +3144,7 @@ void CQBrush::MakeRenderMesh()
 
 		poly = new CRenderMesh::poly_s();
 		poly->num_pts = f->num_verts;
-		poly->indices = new unsigned short[f->num_verts];
+		poly->indices = new unsigned int[f->num_verts];
 		poly->pick = f;
 		poly->selcolor = 0xFFFFFFFF;
 		poly->selected = f->selected;

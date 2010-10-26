@@ -170,6 +170,7 @@ CMapView::CViewParmsMenu::CViewParmsMenu() : CObjectMenu()
 	AddMenuItem( 39, "Wireframe" );
 	AddMenuItem( 44, "Selected Wireframe" );
 	AddMenuItem( 42, "Shaded" );
+	AddMenuItem( 46, "Show Normals");
 	AddMenuItem( 45, "Icons" );
 	AddMenuItem( 43, "Entity Names" );
 	AddMenuItem( 0, "@SEP@" );
@@ -310,6 +311,7 @@ void CMapView::CViewParmsMenu::OnMenuItem( int id )
 	case 43:
 	case 44:
 	case 45:
+	case 46:
 
 		if( id == 39 )
 			pView->View.bShowWireframe = !pView->View.bShowWireframe;
@@ -321,6 +323,8 @@ void CMapView::CViewParmsMenu::OnMenuItem( int id )
 			pView->View.bSelectionWireframe = !pView->View.bSelectionWireframe;
 		if( id == 45 )
 			pView->View.bShowIcons = !pView->View.bShowIcons;
+		if (id == 46 )
+			pView->View.bShowNormals = !pView->View.bShowNormals;
 
 		pView->RedrawWindow();
 
@@ -463,6 +467,7 @@ void CMapView::CViewParmsMenu::OnUpdateCmdUI( int id, CCmdUI* pUI )
 	case 42:
 	case 44:
 	case 45:
+	case 46:
 
 		pUI->Enable( pView->GetViewType() == VIEW_TYPE_3D );
 		
@@ -474,6 +479,8 @@ void CMapView::CViewParmsMenu::OnUpdateCmdUI( int id, CCmdUI* pUI )
 			pUI->SetCheck( pView->View.bSelectionWireframe );
 		if( id == 45 )
 			pUI->SetCheck( pView->View.bShowIcons );
+		if( id == 46 )
+			pUI->SetCheck( pView->View.bShowNormals );
 
 	break;
 

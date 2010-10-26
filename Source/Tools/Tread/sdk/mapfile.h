@@ -35,7 +35,8 @@
 #ifndef MAPFILE_H
 #define MAPFILE_H
 
-#define MAP_VERSION 1
+#define MAP_VERSION_1 1
+#define MAP_VERSION 2
 
 class CFile;
 class CMapObject;

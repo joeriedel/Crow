@@ -9,6 +9,7 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <set>
 #include <iterator>
 #include <stdio.h>
 
@@ -74,7 +75,7 @@ namespace
 	}
 
 	typedef vec2 UV;
-	typedef std::vector<UReg> TriFaceIdxVec;
+	typedef std::set<UReg> TriFaceIdxSet;
 	typedef std::vector<UV> UVVec;
 
 	struct TriVert
@@ -198,7 +199,7 @@ namespace
 			}
 			if (z == 2)
 			{
-				f.plane = plane3(mdl.verts[f.v[0]].pos, mdl.verts[f.v[1]].pos, mdl.verts[f.v[2]].pos);
+				f.plane = -plane3(mdl.verts[f.v[0]].pos, mdl.verts[f.v[1]].pos, mdl.verts[f.v[2]].pos);
 				mdl.tris.push_back(f);
 			}
 			else if (!warn)
@@ -216,95 +217,126 @@ namespace
 		vec2 st[MaxUVChannels];
 		vec3 normal;
 		vec3 color;
-		TriFaceIdxVec faces;
+		TriFaceIdxSet faces;
 		int sm;
 
-		bool operator < (const SmoothVert &v)
+		bool operator < (const SmoothVert &v) const
 		{
-			for (int i = 0; i < 3; ++i)
+			if (pos[0] < v.pos[0] ||
+				(pos[0] == v.pos[0] && pos[1] < v.pos[1]) ||
+				(pos[0] == v.pos[0] && pos[1] == v.pos[1] && pos[2] < v.pos[2]))
 			{
-				if (pos[i] < v.pos[i]) return true;
+				return true;
 			}
-			for (int i = 0; i < MaxUVChannels; ++i)
+
+			if (pos == v.pos)
 			{
-				for (int j = 0; j < 2; ++j)
+				for (int i = 0; i < MaxUVChannels; ++i)
 				{
-					if (st[i][j] < v.st[i][j]) return true;
+					if (st[i][0] < v.st[i][0] ||
+						(st[i][0] == v.st[i][0] && st[i][1] < v.st[i][1]) ||
+						(st[i][0] == v.st[i][0] && st[i][1] == v.st[i][1] && st[i][2] < v.st[i][2]))
+					{
+						return true;
+					}
 				}
 			}
-			return sm < v.sm;
+			return false;
+		}
+
+		bool operator <= (const SmoothVert &v) const
+		{
+			return (*this < v) || (*this == v);
+		}
+
+		bool operator > (const SmoothVert &v) const
+		{
+			if (pos[0] > v.pos[0] ||
+				(pos[0] == v.pos[0] && pos[1] > v.pos[1]) ||
+				(pos[0] == v.pos[0] && pos[1] == v.pos[1] && pos[2] > v.pos[2]))
+			{
+				return true;
+			}
+
+			if (pos == v.pos)
+			{
+				for (int i = 0; i < MaxUVChannels; ++i)
+				{
+					if (st[i][0] > v.st[i][0] ||
+						(st[i][0] == v.st[i][0] && st[i][1] > v.st[i][1]) ||
+						(st[i][0] == v.st[i][0] && st[i][1] == v.st[i][1] && st[i][2] > v.st[i][2]))
+					{
+						return true;
+					}
+				}
+			}
+			return false;
+		}
+
+		bool operator >= (const SmoothVert &v) const
+		{
+			return (*this > v) || (*this == v);
+		}
+
+		bool operator == (const SmoothVert &v) const
+		{
+			for (int i = 0; i < 3; i++)
+				if (pos[i] != v.pos[i])
+					return false;
+
+			for (int i = 0; i < MaxUVChannels; ++i)
+				for (int j = 0; j < 2; ++j)
+					if (st[i][j] != v.st[i][j])
+						return false;
+
+			return true;
+		}
+
+		bool operator != (const SmoothVert &v) const
+		{
+			return !(*this == v);
 		}
 	};
 
+	typedef std::multimap<SmoothVert, int> SmoothVertIdxMap;
 	typedef std::vector<SmoothVert> SmoothVertVec;
 
 	void AddFaces(const SmoothVert &src, SmoothVert &dst)
 	{
-		dst.faces.reserve(dst.faces.size()+src.faces.size());
-		TriFaceIdxVec faces;
-		for (TriFaceIdxVec::const_iterator it = src.faces.begin(); it != src.faces.end(); ++it)
-		{
-			TriFaceIdxVec::iterator it2;
-			for (it2 = dst.faces.begin(); it2 != dst.faces.end(); ++it2)
-			{
-				if (*it == *it2) break;
-			}
-			if (it2 != dst.faces.end()) continue;
-			faces.push_back(*it);
-		}
-
-		std::copy(faces.begin(), faces.end(), std::back_insert_iterator<TriFaceIdxVec>(dst.faces));
+		for (TriFaceIdxSet::const_iterator it = src.faces.begin(); it != src.faces.end(); ++it)
+			dst.faces.insert(*it);
 	}
 
 	void CombineFaces(SmoothVert &a, SmoothVert &b)
 	{
-		a.faces.reserve(a.faces.size()+b.faces.size());
-		b.faces.reserve(a.faces.size()+b.faces.size());
-		TriFaceIdxVec faces = a.faces;
-		for (TriFaceIdxVec::iterator it = b.faces.begin(); it != b.faces.end(); ++it)
-		{
-			TriFaceIdxVec::iterator it2;
-			for (it2 = faces.begin(); it2 != faces.end(); ++it2)
-			{
-				if (*it == *it2) 
-					break;
-			}
-			if (it2 != faces.end()) 
-				continue;
-			faces.push_back(*it);
-		}
-
-		a.faces = faces;
-		b.faces = faces;
+		AddFaces(a, b);
+		a.faces = b.faces;
 	}
 
-	int HashVert(const SmoothVert &v, SmoothVertVec &vec)
+	int HashVert(const SmoothVert &v, SmoothVertVec &vec, SmoothVertIdxMap &idxMap)
 	{
-		SmoothVertVec::iterator it;
-		for (it = vec.begin(); it != vec.end(); ++it)
+		SmoothVertIdxMap::iterator idxIt = idxMap.find(v);
+		if (idxIt != idxMap.end())
 		{
-			SmoothVert &x = *it;
-			if (x.pos != v.pos) 
-				continue;
-			int i;
-			for (i = 0; i < MaxUVChannels; ++i)
+			SmoothVertIdxMap::iterator end = idxMap.upper_bound(v);
+			while (idxIt != end)
 			{
-				if (x.st[i] != v.st[i]) 
-					break;
-			}
-			if (i != MaxUVChannels) 
-				continue;
+				SmoothVert &x = vec[idxIt->second];
+				if (v.sm & x.sm)
+				{
+					x.sm |= v.sm;
+					AddFaces(v, x);
+					return idxIt->second;
+				}
 
-			if (v.sm & x.sm) // smooth across this vertex?
-			{
-				x.sm |= v.sm;
-				AddFaces(v, x);
-				return (int)(it-vec.begin());
+				++idxIt;
 			}
 		}
 
 		vec.push_back(v);
-		return (int)(vec.size()-1);
+		int ofs = (int)(vec.size()-1);
+		idxMap.insert(SmoothVertIdxMap::value_type(v, ofs));
+		return ofs;
 	}
 
 	void MakeNormals(const TriModel &mdl, SmoothVertVec &vec)
@@ -314,12 +346,16 @@ namespace
 		for (SmoothVertVec::iterator it = vec.begin(); it != vec.end(); ++it)
 		{
 			SmoothVert &a = *it;
-			for (SmoothVertVec::iterator it2 = vec.begin(); it2 != vec.end(); ++it2)
+			for (SmoothVertVec::iterator it2 = it+1; it2 != vec.end(); ++it2)
 			{
-				if (it == it2) continue;
+				if (it == it2) 
+					continue;
+
 				SmoothVert &b = *it2;
 
-				if (a.pos != b.pos) continue;
+				if (a.pos != b.pos) 
+					continue;
+
 				if (a.sm & b.sm) // smooth?
 				{
 					a.sm = b.sm = (a.sm|b.sm);
@@ -333,7 +369,7 @@ namespace
 			SmoothVert &v = *it;
 			v.normal = vec3::zero;
 			
-			for (TriFaceIdxVec::iterator it2 = v.faces.begin(); it2 != v.faces.end(); ++it2)
+			for (TriFaceIdxSet::iterator it2 = v.faces.begin(); it2 != v.faces.end(); ++it2)
 			{
 				U32 idx = *it2;
 				v.normal += mdl.tris[idx].plane;
@@ -352,6 +388,7 @@ namespace
 	)
 	{
 		SmoothVertVec smv;
+		SmoothVertIdxMap smidxm;
 		SmoothVert v;
 		const UVVec     *uvv = mdl.uvs;
 		const UVFaceVec *uvf = mdl.uvtris;
@@ -380,7 +417,7 @@ namespace
 			for (int i = 0; i < 3; ++i)
 			{
 				v.faces.clear();
-				v.faces.push_back(idx);
+				v.faces.insert(idx);
 				v.pos = mdl.verts[tri.v[i]].pos;
 				v.orgPos = mdl.verts[tri.v[i]].orgPos;
 				v.sm  = tri.smg;
@@ -398,7 +435,7 @@ namespace
 				}
 
 				// reverse winding
-				tri.sm[2-i] = HashVert(v, smv);
+				tri.sm[2-i] = HashVert(v, smv, smidxm);
 			}
 
 			MatGroup &group = matMap[tri.mat];
