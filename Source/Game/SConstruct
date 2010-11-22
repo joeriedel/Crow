@@ -39,7 +39,14 @@ def build_game(name, type):
 # Source
 ###############################################################################
 
+	def entities(x):
+		x.add('Entities/G_Exports.cpp')
+		x.add('Entities/G_PlayerPawn.cpp')
+		x.add('Entities/G_ViewController.cpp')
+		x.add('Entities/G_Worldspawn.cpp')
+
 	x.add(project_name + 'App.cpp')
+	x.add(project_name + 'Game.cpp')
 
 ###############################################################################
 # Libs
@@ -50,6 +57,8 @@ def build_game(name, type):
 	x.add(boost_threads, type='lib')
 	x.add(lua, type='lib')
 	x.add(radiance_runtime, type='lib')
+	
+	entities(x)
 	
 	if build.pc():
 		build.backend.addSDLLibs(x.source)

@@ -234,8 +234,7 @@ namespace
 				for (int i = 0; i < MaxUVChannels; ++i)
 				{
 					if (st[i][0] < v.st[i][0] ||
-						(st[i][0] == v.st[i][0] && st[i][1] < v.st[i][1]) ||
-						(st[i][0] == v.st[i][0] && st[i][1] == v.st[i][1] && st[i][2] < v.st[i][2]))
+						(st[i][0] == v.st[i][0] && st[i][1] < v.st[i][1]))
 					{
 						return true;
 					}
@@ -263,8 +262,7 @@ namespace
 				for (int i = 0; i < MaxUVChannels; ++i)
 				{
 					if (st[i][0] > v.st[i][0] ||
-						(st[i][0] == v.st[i][0] && st[i][1] > v.st[i][1]) ||
-						(st[i][0] == v.st[i][0] && st[i][1] == v.st[i][1] && st[i][2] > v.st[i][2]))
+						(st[i][0] == v.st[i][0] && st[i][1] > v.st[i][1]))
 					{
 						return true;
 					}

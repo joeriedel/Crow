@@ -73,9 +73,53 @@
 					>
 				</File>
 				<File
+					RelativePath="..\Game\CrowGame.cpp"
+					>
+				</File>
+				<File
+					RelativePath="..\Game\CrowGame.h"
+					>
+				</File>
+				<File
 					RelativePath="..\Game\SConstruct"
 					>
 				</File>
+				<Filter
+					Name="Entities"
+					>
+					<File
+						RelativePath="..\Game\Entities\G_Exports.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\Game\Entities\G_Exports.h"
+						>
+					</File>
+					<File
+						RelativePath="..\Game\Entities\G_PlayerPawn.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\Game\Entities\G_PlayerPawn.h"
+						>
+					</File>
+					<File
+						RelativePath="..\Game\Entities\G_ViewController.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\Game\Entities\G_ViewController.h"
+						>
+					</File>
+					<File
+						RelativePath="..\Game\Entities\G_Worldspawn.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\Game\Entities\G_Worldspawn.h"
+						>
+					</File>
+				</Filter>
 			</Filter>
 		</Filter>
 		<File

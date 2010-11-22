@@ -3,11 +3,13 @@
 // Author: Joe Riedel (joeriedel@hotmail.com)
 
 #include "CrowApp.h"
+#include "Entities/G_Exports.h"
 
 App *App::New() { return new CrowApp(); }
 
 CrowApp::CrowApp()
 {
+	spawn::G_Exports();
 }
 
 CrowApp::~CrowApp()
