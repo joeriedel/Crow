@@ -11,7 +11,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleExecutable</key>
-	<string>Balance</string>
+	<string>Crow</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.sunside.Balance</string>
 </dict>

@@ -21,12 +21,14 @@
 		3355227F1299FD4300AA9C93 /* G_Worldspawn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_Worldspawn.h; sourceTree = "<group>"; };
 		335522801299FD4300AA9C93 /* SConstruct */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SConstruct; path = ../../Game/SConstruct; sourceTree = SOURCE_ROOT; };
 		335522811299FD5A00AA9C93 /* Radiance.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Radiance.xcodeproj; path = ../../../Radiance/Source/XCode/Radiance.xcodeproj; sourceTree = SOURCE_ROOT; };
+		33ECF043129A2805006996C1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		08FB7794FE84155DC02AAC07 /* Balance */ = {
 			isa = PBXGroup;
 			children = (
+				33ECF042129A2805006996C1 /* OSX */,
 				335522811299FD5A00AA9C93 /* Radiance.xcodeproj */,
 				335522731299FD4300AA9C93 /* CrowApp.cpp */,
 				335522741299FD4300AA9C93 /* CrowApp.h */,
@@ -68,6 +70,15 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		33ECF042129A2805006996C1 /* OSX */ = {
+			isa = PBXGroup;
+			children = (
+				33ECF043129A2805006996C1 /* Info.plist */,
+			);
+			name = OSX;
+			path = ../../Game/OSX;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -122,7 +133,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = Balance;
+				PRODUCT_NAME = Crow;
 				SCONS_OPTS = "-j 2";
 			};
 			name = Debug;
