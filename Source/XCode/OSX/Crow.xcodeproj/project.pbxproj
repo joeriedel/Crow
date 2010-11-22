@@ -7,20 +7,33 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		332258CE122AFF7700181494 /* Radiance.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Radiance.xcodeproj; path = ../../Radiance/Source/XCode/Radiance.xcodeproj; sourceTree = SOURCE_ROOT; };
-		332259D7122B002900181494 /* SConstruct */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SConstruct; path = ../SConstruct; sourceTree = SOURCE_ROOT; };
-		33B06451125D727D0098229E /* CrowGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CrowGame.cpp; path = ../CrowGame.cpp; sourceTree = SOURCE_ROOT; };
-		33B06452125D727D0098229E /* CrowGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrowGame.h; path = ../CrowGame.h; sourceTree = SOURCE_ROOT; };
+		335522731299FD4300AA9C93 /* CrowApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CrowApp.cpp; path = ../../Game/CrowApp.cpp; sourceTree = SOURCE_ROOT; };
+		335522741299FD4300AA9C93 /* CrowApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrowApp.h; path = ../../Game/CrowApp.h; sourceTree = SOURCE_ROOT; };
+		335522751299FD4300AA9C93 /* CrowGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CrowGame.cpp; path = ../../Game/CrowGame.cpp; sourceTree = SOURCE_ROOT; };
+		335522761299FD4300AA9C93 /* CrowGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrowGame.h; path = ../../Game/CrowGame.h; sourceTree = SOURCE_ROOT; };
+		335522781299FD4300AA9C93 /* G_Exports.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_Exports.cpp; sourceTree = "<group>"; };
+		335522791299FD4300AA9C93 /* G_Exports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_Exports.h; sourceTree = "<group>"; };
+		3355227A1299FD4300AA9C93 /* G_PlayerPawn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_PlayerPawn.cpp; sourceTree = "<group>"; };
+		3355227B1299FD4300AA9C93 /* G_PlayerPawn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_PlayerPawn.h; sourceTree = "<group>"; };
+		3355227C1299FD4300AA9C93 /* G_ViewController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_ViewController.cpp; sourceTree = "<group>"; };
+		3355227D1299FD4300AA9C93 /* G_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_ViewController.h; sourceTree = "<group>"; };
+		3355227E1299FD4300AA9C93 /* G_Worldspawn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_Worldspawn.cpp; sourceTree = "<group>"; };
+		3355227F1299FD4300AA9C93 /* G_Worldspawn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_Worldspawn.h; sourceTree = "<group>"; };
+		335522801299FD4300AA9C93 /* SConstruct */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SConstruct; path = ../../Game/SConstruct; sourceTree = SOURCE_ROOT; };
+		335522811299FD5A00AA9C93 /* Radiance.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Radiance.xcodeproj; path = ../../../Radiance/Source/XCode/Radiance.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		08FB7794FE84155DC02AAC07 /* Balance */ = {
 			isa = PBXGroup;
 			children = (
-				33B06451125D727D0098229E /* CrowGame.cpp */,
-				33B06452125D727D0098229E /* CrowGame.h */,
-				332259D7122B002900181494 /* SConstruct */,
-				332258CE122AFF7700181494 /* Radiance.xcodeproj */,
+				335522811299FD5A00AA9C93 /* Radiance.xcodeproj */,
+				335522731299FD4300AA9C93 /* CrowApp.cpp */,
+				335522741299FD4300AA9C93 /* CrowApp.h */,
+				335522751299FD4300AA9C93 /* CrowGame.cpp */,
+				335522761299FD4300AA9C93 /* CrowGame.h */,
+				335522771299FD4300AA9C93 /* Entities */,
+				335522801299FD4300AA9C93 /* SConstruct */,
 				330C5E23122EC03100E06694 /* Products */,
 			);
 			name = Balance;
@@ -33,7 +46,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		332258CF122AFF7700181494 /* Products */ = {
+		335522771299FD4300AA9C93 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				335522781299FD4300AA9C93 /* G_Exports.cpp */,
+				335522791299FD4300AA9C93 /* G_Exports.h */,
+				3355227A1299FD4300AA9C93 /* G_PlayerPawn.cpp */,
+				3355227B1299FD4300AA9C93 /* G_PlayerPawn.h */,
+				3355227C1299FD4300AA9C93 /* G_ViewController.cpp */,
+				3355227D1299FD4300AA9C93 /* G_ViewController.h */,
+				3355227E1299FD4300AA9C93 /* G_Worldspawn.cpp */,
+				3355227F1299FD4300AA9C93 /* G_Worldspawn.h */,
+			);
+			name = Entities;
+			path = ../../Game/Entities;
+			sourceTree = SOURCE_ROOT;
+		};
+		335522821299FD5A00AA9C93 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -70,8 +99,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 332258CF122AFF7700181494 /* Products */;
-					ProjectRef = 332258CE122AFF7700181494 /* Radiance.xcodeproj */;
+					ProductGroup = 335522821299FD5A00AA9C93 /* Products */;
+					ProjectRef = 335522811299FD5A00AA9C93 /* Radiance.xcodeproj */;
 				},
 			);
 			projectRoot = "";
