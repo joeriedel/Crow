@@ -58,6 +58,9 @@ def build_game(name, type):
 	x.add(lua, type='lib')
 	x.add(radiance_runtime, type='lib')
 	
+	if build.tools():
+		x.add(glsl_optimizer, type='lib')
+	
 	entities(x)
 	
 	if build.pc():
