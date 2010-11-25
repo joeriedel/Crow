@@ -118,6 +118,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
+				CommandLine="copy &quot;$(TargetPath)&quot; &quot;$(ProjectDir)\..\..\..\Base&quot;"
 			/>
 		</Configuration>
 		<Configuration
