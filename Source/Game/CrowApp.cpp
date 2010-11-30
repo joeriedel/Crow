@@ -20,14 +20,16 @@ bool CrowApp::PreInit()
 {
 	COut(C_Info) << string::Shorten(title).c_str() << " built on " << __DATE__ << " @ " << __TIME__ << std::endl;
 	COut(C_Info) << "PreInit..." << std::endl;
-	if (!App::PreInit()) return false;
+	if (!App::PreInit()) 
+		return false;
 	return true;
 }
 
-bool CrowApp::Initialize(const task::HControl &control)
+bool CrowApp::Initialize()
 {
 	COut(C_Info) << "Initializing..." << std::endl;
-	if (!App::Initialize(control)) return false;
+	if (!App::Initialize()) 
+		return false;
 	return true;
 }
 

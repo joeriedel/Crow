@@ -17,7 +17,6 @@ G_PlayerPawn::~G_PlayerPawn()
 
 int G_PlayerPawn::Spawn(
 	const Keys &keys,
-	const task::HControl &control,
 	const xtime::TimeSlice &time,
 	int flags
 )

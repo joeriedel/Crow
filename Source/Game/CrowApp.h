@@ -13,7 +13,7 @@ public:
 	virtual ~CrowApp();
 
 	virtual bool PreInit();
-	virtual bool Initialize(const task::HControl &control);
+	virtual bool Initialize();
 	virtual void Finalize();
 
 #if defined(RAD_OPT_PC)

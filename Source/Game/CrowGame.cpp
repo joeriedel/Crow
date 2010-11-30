@@ -16,11 +16,11 @@ Game::Tickable::Ref GSPlay::New()
 	return Game::Tickable::Ref(new (ZWorld) GSPlay());
 }
 
-Game::Ref Game::New(App &app)
+Game::Ref Game::New()
 {
-	return Game::Ref(new CrowGame(app));
+	return Game::Ref(new CrowGame());
 }
 
-CrowGame::CrowGame(App &app) : Game(app)
+CrowGame::CrowGame()
 {
 }

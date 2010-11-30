@@ -11,7 +11,7 @@ class CrowGame : public Game
 {
 public:
 
-	CrowGame(App &app);
+	CrowGame();
 };
 
 #include <Runtime/PopPack.h>
