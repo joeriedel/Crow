@@ -29,14 +29,14 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 332EF58112A1E8EE004F29C0 /* glsl-optimizer.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D /* libglsl_optimizer.a */;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = "glsl-optimizer";
 		};
 		332EF58E12A1E8F3004F29C0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 332EF58A12A1E8F3004F29C0 /* Radiance.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D /* libRadiance.a */;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = Radiance;
 		};
 /* End PBXContainerItemProxy section */
@@ -326,7 +326,7 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = Crow;
-				SDKROOT = iphoneos4.0;
+				SDKROOT = iphoneos3.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv6 armv7";
 			};
@@ -350,7 +350,7 @@
 					"\"$(SRCROOT)/../../../Radiance/Source/XCode/IOS/build/Debug-iphoneos\"",
 				);
 				PRODUCT_NAME = Crow;
-				SDKROOT = iphoneos4.0;
+				SDKROOT = iphoneos3.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -379,6 +379,7 @@
 					_XOPEN_SOURCE,
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_THUMB_SUPPORT = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
@@ -388,7 +389,7 @@
 					../../../Radiance/Extern/SDL/1.2,
 				);
 				PREBINDING = NO;
-				SDKROOT = iphoneos4.0;
+				SDKROOT = iphoneos3.2;
 			};
 			name = Debug;
 		};
@@ -415,6 +416,7 @@
 					_XOPEN_SOURCE,
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_THUMB_SUPPORT = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
@@ -425,7 +427,7 @@
 				);
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
-				SDKROOT = iphoneos4.0;
+				SDKROOT = iphoneos3.2;
 			};
 			name = Release;
 		};
