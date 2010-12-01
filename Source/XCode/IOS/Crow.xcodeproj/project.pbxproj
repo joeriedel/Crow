@@ -18,9 +18,9 @@
 		332EF5A512A1E943004F29C0 /* G_PlayerPawn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59912A1E942004F29C0 /* G_PlayerPawn.cpp */; };
 		332EF5A612A1E943004F29C0 /* G_ViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59B12A1E942004F29C0 /* G_ViewController.cpp */; };
 		332EF5A712A1E943004F29C0 /* G_Worldspawn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59D12A1E942004F29C0 /* G_Worldspawn.cpp */; };
-		332EF5B712A1EAE2004F29C0 /* libglsl_optimizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 332EF5B512A1EAE2004F29C0 /* libglsl_optimizer.a */; };
-		332EF5B812A1EAE3004F29C0 /* libRadiance.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 332EF5B612A1EAE2004F29C0 /* libRadiance.a */; };
 		336C04BC1231A0D70037BE72 /* MakeMeBuild.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 336C04BB1231A0D70037BE72 /* MakeMeBuild.cpp */; };
+		337AD52712A631B300E73AAB /* libglsl_optimizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 337AD4F312A62F6F00E73AAB /* libglsl_optimizer.a */; };
+		337AD52812A631B300E73AAB /* libRadiance.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 337AD4F412A62F6F00E73AAB /* libRadiance.a */; };
 		33FEFFF212A0C3D400D0C604 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 33FEFE3212A0C3D400D0C604 /* Base */; };
 /* End PBXBuildFile section */
 
@@ -61,12 +61,12 @@
 		332EF59C12A1E942004F29C0 /* G_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_ViewController.h; sourceTree = "<group>"; };
 		332EF59D12A1E942004F29C0 /* G_Worldspawn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_Worldspawn.cpp; sourceTree = "<group>"; };
 		332EF59E12A1E942004F29C0 /* G_Worldspawn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_Worldspawn.h; sourceTree = "<group>"; };
-		332EF5B512A1EAE2004F29C0 /* libglsl_optimizer.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglsl_optimizer.a; path = "../../../Radiance/Source/XCode/IOS/build/Debug-iphoneos/libglsl_optimizer.a"; sourceTree = SOURCE_ROOT; };
-		332EF5B612A1EAE2004F29C0 /* libRadiance.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libRadiance.a; path = "../../../Radiance/Source/XCode/IOS/build/Debug-iphoneos/libRadiance.a"; sourceTree = SOURCE_ROOT; };
 		336C04BB1231A0D70037BE72 /* MakeMeBuild.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MakeMeBuild.cpp; sourceTree = "<group>"; };
+		337AD4F312A62F6F00E73AAB /* libglsl_optimizer.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglsl_optimizer.a; path = "../../../Radiance/Source/XCode/IOS/build/Release-iphoneos/libglsl_optimizer.a"; sourceTree = SOURCE_ROOT; };
+		337AD4F412A62F6F00E73AAB /* libRadiance.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libRadiance.a; path = "../../../Radiance/Source/XCode/IOS/build/Release-iphoneos/libRadiance.a"; sourceTree = SOURCE_ROOT; };
+		337AD52412A6318500E73AAB /* CrowDev-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CrowDev-Info.plist"; sourceTree = "<group>"; };
 		33B06471125D73750098229E /* Crow_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Crow_Prefix.pch; sourceTree = "<group>"; };
 		33C3BAC212A06E1900976EFE /* Crow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crow.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		33C3BD7512A0806400976EFE /* CrowDev-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CrowDev-Info.plist"; sourceTree = "<group>"; };
 		33FEFE3212A0C3D400D0C604 /* Base */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Base; path = ../../../Base; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -79,8 +79,8 @@
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */,
 				28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */,
-				332EF5B712A1EAE2004F29C0 /* libglsl_optimizer.a in Frameworks */,
-				332EF5B812A1EAE3004F29C0 /* libRadiance.a in Frameworks */,
+				337AD52712A631B300E73AAB /* libglsl_optimizer.a in Frameworks */,
+				337AD52812A631B300E73AAB /* libRadiance.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,8 +94,6 @@
 				332EF58A12A1E8F3004F29C0 /* Radiance.xcodeproj */,
 				332EF58112A1E8EE004F29C0 /* glsl-optimizer.xcodeproj */,
 				33FEFE3212A0C3D400D0C604 /* Base */,
-				33C3BABD12A06A4500976EFE /* DeveloperFrameworks */,
-				33C3BAB612A06A2900976EFE /* DebugFrameworks */,
 				336C04BA1231A0C30037BE72 /* Classes */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -107,7 +105,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				33C3BD7512A0806400976EFE /* CrowDev-Info.plist */,
+				337AD52412A6318500E73AAB /* CrowDev-Info.plist */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 			);
 			name = Resources;
@@ -116,6 +114,8 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				337AD4F312A62F6F00E73AAB /* libglsl_optimizer.a */,
+				337AD4F412A62F6F00E73AAB /* libRadiance.a */,
 				28FD15070DC6FC5B0079059D /* QuartzCore.framework */,
 				28FD14FF0DC6FC520079059D /* OpenGLES.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
@@ -183,22 +183,6 @@
 				336C04BB1231A0D70037BE72 /* MakeMeBuild.cpp */,
 			);
 			name = Classes;
-			sourceTree = "<group>";
-		};
-		33C3BAB612A06A2900976EFE /* DebugFrameworks */ = {
-			isa = PBXGroup;
-			children = (
-				332EF5B512A1EAE2004F29C0 /* libglsl_optimizer.a */,
-				332EF5B612A1EAE2004F29C0 /* libRadiance.a */,
-			);
-			name = DebugFrameworks;
-			sourceTree = "<group>";
-		};
-		33C3BABD12A06A4500976EFE /* DeveloperFrameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = DeveloperFrameworks;
 			sourceTree = "<group>";
 		};
 		33C3BAC312A06E1900976EFE /* Products */ = {
@@ -323,6 +307,7 @@
 					"\"$(SRCROOT)/../../../Bin/ios-gcc4-iphone-device-debug-armv7\"",
 					"\"$(SRCROOT)/../../../../StaticLib/build/Debug-iphoneos\"",
 					"\"$(SRCROOT)/../../../Radiance/Source/XCode/IOS/build/Debug-iphoneos\"",
+					"\"$(SRCROOT)/../../../Radiance/Source/XCode/IOS/build/Release-iphoneos\"",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = Crow;
@@ -340,7 +325,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Crow_Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
-				INFOPLIST_FILE = "Crow-Info.plist";
+				INFOPLIST_FILE = "CrowDev-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../Bin/ios-gcc4-iphone-device-debug\"",
@@ -348,6 +333,7 @@
 					"\"$(SRCROOT)/../../../Bin/ios-gcc4-iphone-device-debug-armv7\"",
 					"\"$(SRCROOT)/../../../../StaticLib/build/Debug-iphoneos\"",
 					"\"$(SRCROOT)/../../../Radiance/Source/XCode/IOS/build/Debug-iphoneos\"",
+					"\"$(SRCROOT)/../../../Radiance/Source/XCode/IOS/build/Release-iphoneos\"",
 				);
 				PRODUCT_NAME = Crow;
 				SDKROOT = iphoneos3.2;
@@ -388,8 +374,11 @@
 					../../../Radiance/Extern/Lua/5.1.4,
 					../../../Radiance/Extern/SDL/1.2,
 				);
+				INFOPLIST_FILE = "CrowDev-Info.plist";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../../../Radiance/Source/XCode/IOS/build/Release-iphoneos";
 				PREBINDING = NO;
 				SDKROOT = iphoneos3.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -401,6 +390,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					RAD_OPT_POSIXFILES,
 					RAD_OPT_POSIXTHREADS,
@@ -411,8 +401,7 @@
 					RAD_OPT_GL,
 					RAD_TARGET_DEBUG,
 					RAD_OPT_CONSOLE,
-					_DEBUG,
-					DEBUG,
+					NDEBUG,
 					_XOPEN_SOURCE,
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
@@ -425,9 +414,12 @@
 					../../../Radiance/Extern/Lua/5.1.4,
 					../../../Radiance/Extern/SDL/1.2,
 				);
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../../../Radiance/Source/XCode/IOS/build/Release-iphoneos";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
 				SDKROOT = iphoneos3.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USE_HEADERMAP = NO;
 			};
 			name = Release;
 		};
