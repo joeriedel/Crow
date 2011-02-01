@@ -9,7 +9,7 @@
 
 namespace world {
 
-class RADENG_CLASS G_PlayerPawn : public E_PlayerPawn
+class G_PlayerPawn : public E_PlayerPawn
 {
 public:
 	G_PlayerPawn();

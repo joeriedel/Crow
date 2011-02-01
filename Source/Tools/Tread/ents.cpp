@@ -1043,7 +1043,7 @@ void CEntity::LoadMaxScene()
 
 	m_maxScene.reset(new MaxScene());
 
-	if (!m_maxScene->Load(CString(plugin->GameDir()) + "/Base/" + t->GetString() + ".rscn"))
+	if (!m_maxScene->Load(CString(plugin->GameDir()) + "/Base/" + t->GetString() + ".3dx"))
 	{
 		m_maxScene.reset();
 		return;

@@ -48,7 +48,7 @@ if build.switches.ios_device() and build.switches.ios_universal_binary():
 		exports=['variant_dir', 'exe_type', 'project_name']
 	)
 		
-if build.win() and build.tools(): # build .com variant on windows for command line stuff.
+if build.win() and build.tools() and (not build.switches.no_com()) : # build .com variant on windows for command line stuff.
 	variant_dir = build.variantDir(project_name + 'Com')
 	exe_type = 'COM'
 	SConscript(
