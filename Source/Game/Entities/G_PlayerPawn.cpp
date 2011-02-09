@@ -21,8 +21,8 @@ int G_PlayerPawn::Spawn(
 	int flags
 )
 {
+	E_SPAWN_BASE();
 	world->playerPawn = shared_from_this();
-	this->org = keys.Vec3ForKey("origin");
 	return pkg::SR_Success;
 }
 

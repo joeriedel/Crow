@@ -1,6 +1,6 @@
 [submodule "Radiance"]
 	path = Radiance
-	url = git@github.com:joeriedel/Radiance.git
+	url = git@github.com:zoid/Radiance.git
 [submodule "Base"]
 	path = Base
-	url = git@github.com:joeriedel/CrowBase.git
+	url = git@github.com:zoid/CrowBase.git

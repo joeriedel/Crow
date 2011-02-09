@@ -19,8 +19,8 @@ void G_ViewController::PostSpawn()
 {
 	if (!world->playerPawn.get())
 		return;
-	this->org = world->playerPawn->org;
-	world->camera->org = this->org;
+	this->pos = world->playerPawn->pos;
+	world->camera->pos = this->pos;
 }
 
 } // world

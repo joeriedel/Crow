@@ -11,6 +11,7 @@ namespace world {
 
 class G_PlayerPawn : public E_PlayerPawn
 {
+	E_DECL_BASE(E_PlayerPawn);
 public:
 	G_PlayerPawn();
 	virtual ~G_PlayerPawn();
