@@ -7,7 +7,7 @@
 
 namespace world {
 
-G_PlayerPawn::G_PlayerPawn()
+G_PlayerPawn::G_PlayerPawn() : E_CONSTRUCT_BASE
 {
 }
 
