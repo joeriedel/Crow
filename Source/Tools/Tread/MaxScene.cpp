@@ -13,6 +13,7 @@
 #include <iterator>
 #include <stdio.h>
 
+typedef int S32;
 typedef unsigned int U32;
 typedef unsigned int UReg;
 typedef unsigned char U8;
@@ -24,8 +25,16 @@ namespace
 	enum
 	{
 		Id = RAD_FOURCC('R', 'S', 'C', 'N'),
-		Version = 1,
-		MaxUVChannels = 1
+		Version = 2,
+		MaxUVChannels = 1,
+
+		HasMaterialFlag = 0x80000000,
+		ContentsDetailFlag = 0x40000000,
+		ContentsAreaportalFlag = 0x20000000,
+		ContentsNoClipFlag = 0x00800000,
+		ContentsNoDrawFlag = 0x00400000,
+		HasMeshFlag = 0x00100000,
+		HasAnimsFlag = 0x00200000
 	};
 
 	struct Material
@@ -74,6 +83,23 @@ namespace
 		return vec3(v[0], v[1], v[2]);
 	}
 
+	void ReadMat3(FILE *fp)
+	{
+		float v[12];
+		fread(v, sizeof(float), 12, fp);
+	}
+
+	void ReadQuat(FILE *fp)
+	{
+		float v[4];
+		fread(v, sizeof(float), 4, fp);
+	}
+
+	void ReadBoneTM(FILE *fp)
+	{
+		ReadMat3(fp);
+	}
+
 	typedef vec2 UV;
 	typedef std::set<UReg> TriFaceIdxSet;
 	typedef std::vector<UV> UVVec;
@@ -115,7 +141,7 @@ namespace
 		int id;
 	};
 
-	void ReadTriModel(FILE *fp, TriModel &mdl)
+	void ReadTriModel(FILE *fp, TriModel &mdl, int flags, int numSkelBones)
 	{
 		mdl.verts.clear();
 		mdl.tris.clear();
@@ -129,83 +155,135 @@ namespace
 		}
 
 		U32 nv, nf, nc;
-		fread(&nv, sizeof(U32), 1, fp);
-		fread(&nf, sizeof(U32), 1, fp);
-		fread(&nc, sizeof(U32), 1, fp);
 
-		mdl.verts.reserve(nv);
-		for (U32 i = 0; i < nv; ++i)
+		if (flags&HasMeshFlag)
 		{
-			TriVert v;
-			v.orgPos = ReadVec3(fp);
-			v.pos[0] = floorf(v.orgPos[0] - 0.5f) + 1.0f;
-			v.pos[1] = floorf(v.orgPos[1] - 0.5f) + 1.0f;
-			v.pos[2] = floorf(v.orgPos[2] - 0.5f) + 1.0f;
-			mdl.mins = vec_mins(mdl.mins, v.pos);
-			mdl.maxs = vec_maxs(mdl.maxs, v.pos);
-			mdl.verts.push_back(v);
-		}
+			fread(&nv, sizeof(U32), 1, fp);
+			fread(&nf, sizeof(U32), 1, fp);
+			fread(&nc, sizeof(U32), 1, fp);
 
-		for (U32 i = 0; i < nc; ++i)
-		{
-			U32 nuv;
-			fread(&nuv, sizeof(U32), 1, fp);
-
-			if (i < MaxUVChannels)
+			mdl.verts.reserve(nv);
+			for (U32 i = 0; i < nv; ++i)
 			{
-				mdl.uvs[i].reserve(nuv);
-				mdl.uvtris[i].reserve(nf);
+				TriVert v;
+				v.orgPos = ReadVec3(fp);
+				v.pos = v.orgPos;
+				mdl.mins = vec_mins(mdl.mins, v.pos);
+				mdl.maxs = vec_maxs(mdl.maxs, v.pos);
+				mdl.verts.push_back(v);
 			}
 
-			for (U32 j = 0; j < nuv; ++j)
+			for (U32 i = 0; i < nc; ++i)
 			{
-				vec2 v = ReadVec2(fp); // ignore
-				
+				U32 nuv;
+				fread(&nuv, sizeof(U32), 1, fp);
+
 				if (i < MaxUVChannels)
 				{
-					mdl.uvs[i].push_back(v);
+					mdl.uvs[i].reserve(nuv);
+					mdl.uvtris[i].reserve(nf);
+				}
+
+				for (U32 j = 0; j < nuv; ++j)
+				{
+					vec2 v = ReadVec2(fp); // ignore
+					
+					if (i < MaxUVChannels)
+					{
+						mdl.uvs[i].push_back(v);
+					}
+				}
+				for (U32 j = 0; j < nf; ++j)
+				{
+					UVFace f;
+					fread(&f.v[0], sizeof(int), 1, fp);
+					fread(&f.v[1], sizeof(int), 1, fp);
+					fread(&f.v[2], sizeof(int), 1, fp);
+									
+					if (i < MaxUVChannels)
+					{
+						mdl.uvtris[i].push_back(f);
+					}
 				}
 			}
-			for (U32 j = 0; j < nf; ++j)
+			
+			mdl.tris.reserve(nf);
+			bool warn = false;
+			for (U32 i = 0; i < nf; ++i)
 			{
-				UVFace f;
+				TriFace f;
 				fread(&f.v[0], sizeof(int), 1, fp);
 				fread(&f.v[1], sizeof(int), 1, fp);
 				fread(&f.v[2], sizeof(int), 1, fp);
-								
-				if (i < MaxUVChannels)
+				fread(&f.smg, sizeof(int), 1, fp);
+				fread(&f.mat, sizeof(int), 1, fp);
+
+				int z;
+				for (z = 0; z < 2; ++z)
 				{
-					mdl.uvtris[i].push_back(f);
+					if (mdl.verts[f.v[z]].pos == mdl.verts[f.v[z+1]].pos) break;
+					if (mdl.verts[f.v[z]].pos == mdl.verts[f.v[(z+2)%3]].pos) break;
+				}
+				if (z == 2)
+				{
+					f.plane = -plane3(mdl.verts[f.v[0]].pos, mdl.verts[f.v[1]].pos, mdl.verts[f.v[2]].pos);
+					mdl.tris.push_back(f);
+				}
+				else if (!warn)
+				{
+					warn = true;
+					Sys_printf("WARNING: mesh id %d has degenerate triangles.\n", mdl.id);
 				}
 			}
 		}
-		
-		mdl.tris.reserve(nf);
-		bool warn = false;
-		for (U32 i = 0; i < nf; ++i)
-		{
-			TriFace f;
-			fread(&f.v[0], sizeof(int), 1, fp);
-			fread(&f.v[1], sizeof(int), 1, fp);
-			fread(&f.v[2], sizeof(int), 1, fp);
-			fread(&f.smg, sizeof(int), 1, fp);
-			fread(&f.mat, sizeof(int), 1, fp);
 
-			int z;
-			for (z = 0; z < 2; ++z)
+		S32 numAnims = 0;
+		U32 frameRate = 30;
+
+		fread(&numAnims, sizeof(S32), 1, fp);
+
+		if (numAnims < 0)
+			return; // not skinned
+
+		// Tread ignores all this
+
+		fread(&frameRate, sizeof(S32), 1, fp);
+
+		if (flags&HasMeshFlag)
+		{
+			// skin
+			for (U32 i = 0; i < nv; ++i)
 			{
-				if (mdl.verts[f.v[z]].pos == mdl.verts[f.v[z+1]].pos) break;
-				if (mdl.verts[f.v[z]].pos == mdl.verts[f.v[(z+2)%3]].pos) break;
+				U32 numWeights;
+				fread(&numWeights, sizeof(S32), 1, fp);
+
+				for (U32 j = 0; j < numWeights; ++j)
+				{
+					float w;
+					U32 b;
+
+					fread(&w, sizeof(float), 1, fp);
+					fread(&b, sizeof(U32), 1, fp);
+
+				}
 			}
-			if (z == 2)
+		}
+
+		// anims
+		for (int i = 0; i < numAnims; ++i)
+		{
+			ReadString(fp);
+			
+			U32 v[2];
+			fread(v, sizeof(U32), 2, fp);
+
+			for (U32 j = 0; j < v[1]; ++j)
 			{
-				f.plane = -plane3(mdl.verts[f.v[0]].pos, mdl.verts[f.v[1]].pos, mdl.verts[f.v[2]].pos);
-				mdl.tris.push_back(f);
-			}
-			else if (!warn)
-			{
-				warn = true;
-				Sys_printf("WARNING: mesh id %d has degenerate triangles.\n", mdl.id);
+				for (int k = 0; k < numSkelBones; ++k)
+				{
+					ReadBoneTM(fp);
+					ReadString(fp);
+				}
 			}
 		}
 	}
@@ -569,15 +647,37 @@ bool MaxScene::Load(const char *filename)
 		U32 z;
 		fread(&z, sizeof(U32), 1, fp);
 
+		std::vector<int> skelBoneCounts;
+		skelBoneCounts.reserve(z);
+
+		// skels.
+		for (U32 j = 0; j < z; ++j)
+		{
+			U32 numBones;
+			fread(&numBones, sizeof(U32), 1, fp);
+			skelBoneCounts.push_back(numBones);
+
+			for (U32 b = 0; b < numBones; ++b)
+			{
+				ReadString(fp);
+				fread(&unused, sizeof(U32), 1, fp);
+				ReadMat3(fp);
+			}
+		}
+
+		fread(&z, sizeof(U32), 1, fp);
+
 		for (U32 j = 0; j < z; ++j)
 		{
 			Material *m = 0;
 			U32 flags;
+			S32 skel;
 
 			fread(&mdl.id, sizeof(int), 1, fp);
 			fread(&flags, sizeof(U32), 1, fp);
+			fread(&skel, sizeof(S32), 1, fp);
 
-			if (flags & 0x80000000) // has material
+			if (flags & HasMaterialFlag) // has material
 			{
 				U32 idx;
 				fread(&idx, sizeof(U32), 1, fp);
@@ -607,13 +707,10 @@ bool MaxScene::Load(const char *filename)
 				mdl.contents |= Map::ContentsNoDraw;
 			}*/
 
-			ReadTriModel(fp, mdl);
+			if (flags&(HasMeshFlag|HasAnimsFlag))
+				ReadTriModel(fp, mdl, flags, skel >= 0 ? skelBoneCounts[skel] : 0);
 
-			if (mdl.tris.empty())
-			{
-				Sys_printf("WARNING: model id %d has no valid triangles.\n", mdl.id);
-			}
-			else
+			if (!mdl.tris.empty())
 			{
 				for (TriFaceVec::iterator it = mdl.tris.begin(); it != mdl.tris.end(); ++it)
 				{
