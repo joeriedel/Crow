@@ -25,4 +25,3 @@ xcopy Radiance\Extern\Win\SDL\1.2\SDL.dll Bin\win-msvc8-developer /D
 xcopy Radiance\Extern\Win\VLD\1.9h\VS8\bin\dbghelp.dll Bin\win-msvc8-debug /D
 xcopy Radiance\Extern\Win\VLD\1.9h\VS8\bin\Microsoft.DTfW.DHL.manifest Bin\win-msvc8-debug /D
 xcopy Radiance\Extern\Win\VLD\1.9h\VS8\bin\vld.dll Bin\win-msvc8-debug /D
-pause
