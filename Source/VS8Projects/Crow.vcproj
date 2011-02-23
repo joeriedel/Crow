@@ -96,14 +96,6 @@
 						>
 					</File>
 					<File
-						RelativePath="..\Game\Entities\G_PlayerPawn.cpp"
-						>
-					</File>
-					<File
-						RelativePath="..\Game\Entities\G_PlayerPawn.h"
-						>
-					</File>
-					<File
 						RelativePath="..\Game\Entities\G_ViewController.cpp"
 						>
 					</File>
@@ -111,12 +103,16 @@
 						RelativePath="..\Game\Entities\G_ViewController.h"
 						>
 					</File>
+				</Filter>
+				<Filter
+					Name="Lua"
+					>
 					<File
-						RelativePath="..\Game\Entities\G_Worldspawn.cpp"
+						RelativePath="..\Game\Lua\G_SkModel.cpp"
 						>
 					</File>
 					<File
-						RelativePath="..\Game\Entities\G_Worldspawn.h"
+						RelativePath="..\Game\Lua\G_SkModel.h"
 						>
 					</File>
 				</Filter>

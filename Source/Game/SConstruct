@@ -41,9 +41,8 @@ def build_game(name, type):
 
 	def entities(x):
 		x.add('Entities/G_Exports.cpp')
-		x.add('Entities/G_PlayerPawn.cpp')
 		x.add('Entities/G_ViewController.cpp')
-		x.add('Entities/G_Worldspawn.cpp')
+		x.add('Lua/G_SkModel.cpp')
 
 	x.add(project_name + 'App.cpp')
 	x.add(project_name + 'Game.cpp')

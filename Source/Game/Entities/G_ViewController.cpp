@@ -7,7 +7,7 @@
 
 namespace world {
 
-G_ViewController::G_ViewController()
+G_ViewController::G_ViewController() : E_CONSTRUCT_BASE
 {
 }
 
@@ -17,10 +17,8 @@ G_ViewController::~G_ViewController()
 
 void G_ViewController::PostSpawn()
 {
-	if (!world->playerPawn.get())
-		return;
-	this->pos = world->playerPawn->pos;
-	world->camera->pos = this->pos;
+	target = world->playerPawn;
+	E_ViewController::PostSpawn();
 }
 
 } // world
