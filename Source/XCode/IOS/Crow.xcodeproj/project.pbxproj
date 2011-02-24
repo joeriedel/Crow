@@ -19,24 +19,24 @@
 		332EF5A612A1E943004F29C0 /* G_ViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59B12A1E942004F29C0 /* G_ViewController.cpp */; };
 		332EF5A712A1E943004F29C0 /* G_Worldspawn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59D12A1E942004F29C0 /* G_Worldspawn.cpp */; };
 		336C04BC1231A0D70037BE72 /* MakeMeBuild.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 336C04BB1231A0D70037BE72 /* MakeMeBuild.cpp */; };
-		337AD52712A631B300E73AAB /* libglsl_optimizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 337AD4F312A62F6F00E73AAB /* libglsl_optimizer.a */; };
-		337AD52812A631B300E73AAB /* libRadiance.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 337AD4F412A62F6F00E73AAB /* libRadiance.a */; };
+		337F032A12A87F7F001376E7 /* libglsl_optimizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 337F031B12A87F74001376E7 /* libglsl_optimizer.a */; };
+		337F032B12A87F81001376E7 /* libRadiance.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 337F032112A87F74001376E7 /* libRadiance.a */; };
 		33FEFFF212A0C3D400D0C604 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 33FEFE3212A0C3D400D0C604 /* Base */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		332EF58812A1E8EE004F29C0 /* PBXContainerItemProxy */ = {
+		337F031A12A87F74001376E7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 332EF58112A1E8EE004F29C0 /* glsl-optimizer.xcodeproj */;
+			containerPortal = 337F031012A87F74001376E7 /* glsl-optimizer.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D /* libglsl_optimizer.a */;
 			remoteInfo = "glsl-optimizer";
 		};
-		332EF58E12A1E8F3004F29C0 /* PBXContainerItemProxy */ = {
+		337F032012A87F74001376E7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 332EF58A12A1E8F3004F29C0 /* Radiance.xcodeproj */;
+			containerPortal = 337F031312A87F74001376E7 /* Radiance.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D /* libRadiance.a */;
 			remoteInfo = Radiance;
 		};
 /* End PBXContainerItemProxy section */
@@ -47,8 +47,6 @@
 		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		28FD14FF0DC6FC520079059D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		28FD15070DC6FC5B0079059D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		332EF58112A1E8EE004F29C0 /* glsl-optimizer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "glsl-optimizer.xcodeproj"; path = "../../../Radiance/Source/XCode/IOS/glsl-optimizer.xcodeproj"; sourceTree = SOURCE_ROOT; };
-		332EF58A12A1E8F3004F29C0 /* Radiance.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Radiance.xcodeproj; path = ../../../Radiance/Source/XCode/IOS/Radiance.xcodeproj; sourceTree = SOURCE_ROOT; };
 		332EF59212A1E942004F29C0 /* CrowApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CrowApp.cpp; sourceTree = "<group>"; };
 		332EF59312A1E942004F29C0 /* CrowApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowApp.h; sourceTree = "<group>"; };
 		332EF59412A1E942004F29C0 /* CrowGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CrowGame.cpp; sourceTree = "<group>"; };
@@ -62,9 +60,9 @@
 		332EF59D12A1E942004F29C0 /* G_Worldspawn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_Worldspawn.cpp; sourceTree = "<group>"; };
 		332EF59E12A1E942004F29C0 /* G_Worldspawn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_Worldspawn.h; sourceTree = "<group>"; };
 		336C04BB1231A0D70037BE72 /* MakeMeBuild.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MakeMeBuild.cpp; sourceTree = "<group>"; };
-		337AD4F312A62F6F00E73AAB /* libglsl_optimizer.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglsl_optimizer.a; path = "../../../Radiance/Source/XCode/IOS/build/Release-iphoneos/libglsl_optimizer.a"; sourceTree = SOURCE_ROOT; };
-		337AD4F412A62F6F00E73AAB /* libRadiance.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libRadiance.a; path = "../../../Radiance/Source/XCode/IOS/build/Release-iphoneos/libRadiance.a"; sourceTree = SOURCE_ROOT; };
 		337AD52412A6318500E73AAB /* CrowDev-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CrowDev-Info.plist"; sourceTree = "<group>"; };
+		337F031012A87F74001376E7 /* glsl-optimizer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "glsl-optimizer.xcodeproj"; path = "../../../Radiance/Source/XCode/IOS/glsl-optimizer.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		337F031312A87F74001376E7 /* Radiance.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Radiance.xcodeproj; path = ../../../Radiance/Source/XCode/IOS/Radiance.xcodeproj; sourceTree = SOURCE_ROOT; };
 		33B06471125D73750098229E /* Crow_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Crow_Prefix.pch; sourceTree = "<group>"; };
 		33C3BAC212A06E1900976EFE /* Crow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33FEFE3212A0C3D400D0C604 /* Base */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Base; path = ../../../Base; sourceTree = SOURCE_ROOT; };
@@ -79,8 +77,8 @@
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */,
 				28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */,
-				337AD52712A631B300E73AAB /* libglsl_optimizer.a in Frameworks */,
-				337AD52812A631B300E73AAB /* libRadiance.a in Frameworks */,
+				337F032A12A87F7F001376E7 /* libglsl_optimizer.a in Frameworks */,
+				337F032B12A87F81001376E7 /* libRadiance.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,9 +88,9 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				337F031012A87F74001376E7 /* glsl-optimizer.xcodeproj */,
+				337F031312A87F74001376E7 /* Radiance.xcodeproj */,
 				332EF59012A1E927004F29C0 /* Source */,
-				332EF58A12A1E8F3004F29C0 /* Radiance.xcodeproj */,
-				332EF58112A1E8EE004F29C0 /* glsl-optimizer.xcodeproj */,
 				33FEFE3212A0C3D400D0C604 /* Base */,
 				336C04BA1231A0C30037BE72 /* Classes */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -114,30 +112,12 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				337AD4F312A62F6F00E73AAB /* libglsl_optimizer.a */,
-				337AD4F412A62F6F00E73AAB /* libRadiance.a */,
 				28FD15070DC6FC5B0079059D /* QuartzCore.framework */,
 				28FD14FF0DC6FC520079059D /* OpenGLES.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		332EF58212A1E8EE004F29C0 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				332EF58912A1E8EE004F29C0 /* libglsl_optimizer.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		332EF58B12A1E8F3004F29C0 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				332EF58F12A1E8F3004F29C0 /* libRadiance.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		332EF59012A1E927004F29C0 /* Source */ = {
@@ -185,6 +165,22 @@
 			name = Classes;
 			sourceTree = "<group>";
 		};
+		337F031112A87F74001376E7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				337F031B12A87F74001376E7 /* libglsl_optimizer.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		337F031412A87F74001376E7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				337F032112A87F74001376E7 /* libRadiance.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		33C3BAC312A06E1900976EFE /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,12 +222,12 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 332EF58212A1E8EE004F29C0 /* Products */;
-					ProjectRef = 332EF58112A1E8EE004F29C0 /* glsl-optimizer.xcodeproj */;
+					ProductGroup = 337F031112A87F74001376E7 /* Products */;
+					ProjectRef = 337F031012A87F74001376E7 /* glsl-optimizer.xcodeproj */;
 				},
 				{
-					ProductGroup = 332EF58B12A1E8F3004F29C0 /* Products */;
-					ProjectRef = 332EF58A12A1E8F3004F29C0 /* Radiance.xcodeproj */;
+					ProductGroup = 337F031412A87F74001376E7 /* Products */;
+					ProjectRef = 337F031312A87F74001376E7 /* Radiance.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -242,18 +238,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		332EF58912A1E8EE004F29C0 /* libglsl_optimizer.a */ = {
+		337F031B12A87F74001376E7 /* libglsl_optimizer.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libglsl_optimizer.a;
-			remoteRef = 332EF58812A1E8EE004F29C0 /* PBXContainerItemProxy */;
+			remoteRef = 337F031A12A87F74001376E7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		332EF58F12A1E8F3004F29C0 /* libRadiance.a */ = {
+		337F032112A87F74001376E7 /* libRadiance.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libRadiance.a;
-			remoteRef = 332EF58E12A1E8F3004F29C0 /* PBXContainerItemProxy */;
+			remoteRef = 337F032012A87F74001376E7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
