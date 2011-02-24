@@ -15,13 +15,12 @@
 		332EF5A212A1E943004F29C0 /* CrowApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59212A1E942004F29C0 /* CrowApp.cpp */; };
 		332EF5A312A1E943004F29C0 /* CrowGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59412A1E942004F29C0 /* CrowGame.cpp */; };
 		332EF5A412A1E943004F29C0 /* G_Exports.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59712A1E942004F29C0 /* G_Exports.cpp */; };
-		332EF5A512A1E943004F29C0 /* G_PlayerPawn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59912A1E942004F29C0 /* G_PlayerPawn.cpp */; };
 		332EF5A612A1E943004F29C0 /* G_ViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59B12A1E942004F29C0 /* G_ViewController.cpp */; };
-		332EF5A712A1E943004F29C0 /* G_Worldspawn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59D12A1E942004F29C0 /* G_Worldspawn.cpp */; };
 		336C04BC1231A0D70037BE72 /* MakeMeBuild.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 336C04BB1231A0D70037BE72 /* MakeMeBuild.cpp */; };
 		337F032A12A87F7F001376E7 /* libglsl_optimizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 337F031B12A87F74001376E7 /* libglsl_optimizer.a */; };
 		337F032B12A87F81001376E7 /* libRadiance.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 337F032112A87F74001376E7 /* libRadiance.a */; };
-		33FEFFF212A0C3D400D0C604 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 33FEFE3212A0C3D400D0C604 /* Base */; };
+		33F2DCC41315F584008217BC /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 33FEFE3212A0C3D400D0C604 /* Base */; };
+		33F2DD7B13160636008217BC /* G_SkModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33F2DD7913160636008217BC /* G_SkModel.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,14 +28,14 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 337F031012A87F74001376E7 /* glsl-optimizer.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D /* libglsl_optimizer.a */;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = "glsl-optimizer";
 		};
 		337F032012A87F74001376E7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 337F031312A87F74001376E7 /* Radiance.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D /* libRadiance.a */;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = Radiance;
 		};
 /* End PBXContainerItemProxy section */
@@ -53,19 +52,17 @@
 		332EF59512A1E942004F29C0 /* CrowGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowGame.h; sourceTree = "<group>"; };
 		332EF59712A1E942004F29C0 /* G_Exports.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_Exports.cpp; sourceTree = "<group>"; };
 		332EF59812A1E942004F29C0 /* G_Exports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_Exports.h; sourceTree = "<group>"; };
-		332EF59912A1E942004F29C0 /* G_PlayerPawn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_PlayerPawn.cpp; sourceTree = "<group>"; };
-		332EF59A12A1E942004F29C0 /* G_PlayerPawn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_PlayerPawn.h; sourceTree = "<group>"; };
 		332EF59B12A1E942004F29C0 /* G_ViewController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_ViewController.cpp; sourceTree = "<group>"; };
 		332EF59C12A1E942004F29C0 /* G_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_ViewController.h; sourceTree = "<group>"; };
-		332EF59D12A1E942004F29C0 /* G_Worldspawn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_Worldspawn.cpp; sourceTree = "<group>"; };
-		332EF59E12A1E942004F29C0 /* G_Worldspawn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_Worldspawn.h; sourceTree = "<group>"; };
 		336C04BB1231A0D70037BE72 /* MakeMeBuild.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MakeMeBuild.cpp; sourceTree = "<group>"; };
 		337AD52412A6318500E73AAB /* CrowDev-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CrowDev-Info.plist"; sourceTree = "<group>"; };
 		337F031012A87F74001376E7 /* glsl-optimizer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "glsl-optimizer.xcodeproj"; path = "../../../Radiance/Source/XCode/IOS/glsl-optimizer.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		337F031312A87F74001376E7 /* Radiance.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Radiance.xcodeproj; path = ../../../Radiance/Source/XCode/IOS/Radiance.xcodeproj; sourceTree = SOURCE_ROOT; };
 		33B06471125D73750098229E /* Crow_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Crow_Prefix.pch; sourceTree = "<group>"; };
 		33C3BAC212A06E1900976EFE /* Crow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crow.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		33FEFE3212A0C3D400D0C604 /* Base */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Base; path = ../../../Base; sourceTree = SOURCE_ROOT; };
+		33F2DD7913160636008217BC /* G_SkModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_SkModel.cpp; sourceTree = "<group>"; };
+		33F2DD7A13160636008217BC /* G_SkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_SkModel.h; sourceTree = "<group>"; };
+		33FEFE3212A0C3D400D0C604 /* Base */ = {isa = PBXFileReference; explicitFileType = folder; name = Base; path = ../../../Base; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +128,7 @@
 		332EF59112A1E942004F29C0 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				33F2DD7813160636008217BC /* Lua */,
 				332EF59212A1E942004F29C0 /* CrowApp.cpp */,
 				332EF59312A1E942004F29C0 /* CrowApp.h */,
 				332EF59412A1E942004F29C0 /* CrowGame.cpp */,
@@ -146,12 +144,8 @@
 			children = (
 				332EF59712A1E942004F29C0 /* G_Exports.cpp */,
 				332EF59812A1E942004F29C0 /* G_Exports.h */,
-				332EF59912A1E942004F29C0 /* G_PlayerPawn.cpp */,
-				332EF59A12A1E942004F29C0 /* G_PlayerPawn.h */,
 				332EF59B12A1E942004F29C0 /* G_ViewController.cpp */,
 				332EF59C12A1E942004F29C0 /* G_ViewController.h */,
-				332EF59D12A1E942004F29C0 /* G_Worldspawn.cpp */,
-				332EF59E12A1E942004F29C0 /* G_Worldspawn.h */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -187,6 +181,15 @@
 				33C3BAC212A06E1900976EFE /* Crow.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		33F2DD7813160636008217BC /* Lua */ = {
+			isa = PBXGroup;
+			children = (
+				33F2DD7913160636008217BC /* G_SkModel.cpp */,
+				33F2DD7A13160636008217BC /* G_SkModel.h */,
+			);
+			path = Lua;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
-				33FEFFF212A0C3D400D0C604 /* Base in Resources */,
+				33F2DCC41315F584008217BC /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,9 +278,8 @@
 				332EF5A212A1E943004F29C0 /* CrowApp.cpp in Sources */,
 				332EF5A312A1E943004F29C0 /* CrowGame.cpp in Sources */,
 				332EF5A412A1E943004F29C0 /* G_Exports.cpp in Sources */,
-				332EF5A512A1E943004F29C0 /* G_PlayerPawn.cpp in Sources */,
 				332EF5A612A1E943004F29C0 /* G_ViewController.cpp in Sources */,
-				332EF5A712A1E943004F29C0 /* G_Worldspawn.cpp in Sources */,
+				33F2DD7B13160636008217BC /* G_SkModel.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
