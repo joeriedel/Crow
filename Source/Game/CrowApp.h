@@ -6,6 +6,10 @@
 
 #include <Engine/App.h>
 
+#if defined(RAD_TARGET_GOLDEN)
+#include <Engine/Game/Game.h>
+#endif
+
 class CrowApp : public App
 {
 public:
@@ -21,6 +25,10 @@ public:
 	virtual void FocusChange(bool focus);
 #endif
 
+protected:
+
+	virtual void OnTick(float dt);
+
 private:
 
 	virtual RAD_DECLARE_GET(title, const wchar_t*);
@@ -32,5 +40,10 @@ private:
 	virtual RAD_DECLARE_GET(wantEditor, bool);
 	virtual void SwitchEditorMode(bool editor);
 	virtual void EditorStart();
+#endif
+
+#if defined(RAD_TARGET_GOLDEN)
+	bool RunAutoExec();
+	Game::Ref m_game;
 #endif
 };
