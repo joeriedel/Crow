@@ -6,7 +6,7 @@
 
 #include <Engine/App.h>
 
-#if defined(RAD_TARGET_GOLDEN)
+#if defined(RAD_TARGET_GOLDEN) || defined(RAD_OPT_IOS)
 #include <Engine/Game/Game.h>
 #endif
 
@@ -42,7 +42,7 @@ private:
 	virtual void EditorStart();
 #endif
 
-#if defined(RAD_TARGET_GOLDEN)
+#if defined(RAD_TARGET_GOLDEN) || defined(RAD_OPT_IOS)
 	bool RunAutoExec();
 	Game::Ref m_game;
 #endif

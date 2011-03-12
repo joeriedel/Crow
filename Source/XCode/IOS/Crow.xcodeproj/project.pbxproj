@@ -12,11 +12,12 @@
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
 		28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
+		330257AD132C23540032AD96 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 330257AB132C23540032AD96 /* Icon-72.png */; };
 		332C4194132AC86800E10CA2 /* CrowApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59212A1E942004F29C0 /* CrowApp.cpp */; };
+		332C4BB5132B364E00E10CA2 /* autoexec.txt in Resources */ = {isa = PBXBuildFile; fileRef = 332C4BB4132B364E00E10CA2 /* autoexec.txt */; };
 		332EF5A312A1E943004F29C0 /* CrowGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59412A1E942004F29C0 /* CrowGame.cpp */; };
 		332EF5A412A1E943004F29C0 /* G_Exports.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59712A1E942004F29C0 /* G_Exports.cpp */; };
 		332EF5A612A1E943004F29C0 /* G_ViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59B12A1E942004F29C0 /* G_ViewController.cpp */; };
-		336C04BC1231A0D70037BE72 /* MakeMeBuild.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 336C04BB1231A0D70037BE72 /* MakeMeBuild.cpp */; };
 		337F032A12A87F7F001376E7 /* libglsl_optimizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 337F031B12A87F74001376E7 /* libglsl_optimizer.a */; };
 		337F032B12A87F81001376E7 /* libRadiance.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 337F032112A87F74001376E7 /* libRadiance.a */; };
 		33F2DCC41315F584008217BC /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 33FEFE3212A0C3D400D0C604 /* Base */; };
@@ -46,6 +47,10 @@
 		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		28FD14FF0DC6FC520079059D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		28FD15070DC6FC5B0079059D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		330257AB132C23540032AD96 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		330257AC132C23540032AD96 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		332C4BB4132B364E00E10CA2 /* autoexec.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = autoexec.txt; path = ../../../autoexec.txt; sourceTree = SOURCE_ROOT; };
+		332C4BF4132C00AF00E10CA2 /* Crow-iPad-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Crow-iPad-Info.plist"; sourceTree = "<group>"; };
 		332EF59212A1E942004F29C0 /* CrowApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CrowApp.cpp; sourceTree = "<group>"; };
 		332EF59312A1E942004F29C0 /* CrowApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowApp.h; sourceTree = "<group>"; };
 		332EF59412A1E942004F29C0 /* CrowGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CrowGame.cpp; sourceTree = "<group>"; };
@@ -54,8 +59,6 @@
 		332EF59812A1E942004F29C0 /* G_Exports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_Exports.h; sourceTree = "<group>"; };
 		332EF59B12A1E942004F29C0 /* G_ViewController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_ViewController.cpp; sourceTree = "<group>"; };
 		332EF59C12A1E942004F29C0 /* G_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_ViewController.h; sourceTree = "<group>"; };
-		336C04BB1231A0D70037BE72 /* MakeMeBuild.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MakeMeBuild.cpp; sourceTree = "<group>"; };
-		337AD52412A6318500E73AAB /* CrowDev-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CrowDev-Info.plist"; sourceTree = "<group>"; };
 		337F031012A87F74001376E7 /* glsl-optimizer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "glsl-optimizer.xcodeproj"; path = "../../../Radiance/Source/XCode/IOS/glsl-optimizer.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		337F031312A87F74001376E7 /* Radiance.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Radiance.xcodeproj; path = ../../../Radiance/Source/XCode/IOS/Radiance.xcodeproj; sourceTree = SOURCE_ROOT; };
 		33B06471125D73750098229E /* Crow_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Crow_Prefix.pch; sourceTree = "<group>"; };
@@ -88,8 +91,8 @@
 				337F031012A87F74001376E7 /* glsl-optimizer.xcodeproj */,
 				337F031312A87F74001376E7 /* Radiance.xcodeproj */,
 				332EF59012A1E927004F29C0 /* Source */,
+				332C4BB4132B364E00E10CA2 /* autoexec.txt */,
 				33FEFE3212A0C3D400D0C604 /* Base */,
-				336C04BA1231A0C30037BE72 /* Classes */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				33C3BAC312A06E1900976EFE /* Products */,
@@ -100,7 +103,9 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				337AD52412A6318500E73AAB /* CrowDev-Info.plist */,
+				330257AB132C23540032AD96 /* Icon-72.png */,
+				330257AC132C23540032AD96 /* Icon.png */,
+				332C4BF4132C00AF00E10CA2 /* Crow-iPad-Info.plist */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 			);
 			name = Resources;
@@ -120,6 +125,7 @@
 		332EF59012A1E927004F29C0 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				33B06471125D73750098229E /* Crow_Prefix.pch */,
 				332EF59112A1E942004F29C0 /* Game */,
 			);
 			name = Source;
@@ -148,15 +154,6 @@
 				332EF59C12A1E942004F29C0 /* G_ViewController.h */,
 			);
 			path = Entities;
-			sourceTree = "<group>";
-		};
-		336C04BA1231A0C30037BE72 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				33B06471125D73750098229E /* Crow_Prefix.pch */,
-				336C04BB1231A0D70037BE72 /* MakeMeBuild.cpp */,
-			);
-			name = Classes;
 			sourceTree = "<group>";
 		};
 		337F031112A87F74001376E7 /* Products */ = {
@@ -195,9 +192,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D6058900D05DD3D006BFB54 /* CrowDev */ = {
+		1D6058900D05DD3D006BFB54 /* CrowiPadDev */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "CrowDev" */;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "CrowiPadDev" */;
 			buildPhases = (
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
@@ -207,7 +204,7 @@
 			);
 			dependencies = (
 			);
-			name = CrowDev;
+			name = CrowiPadDev;
 			productName = Balance;
 			productReference = 33C3BAC212A06E1900976EFE /* Crow.app */;
 			productType = "com.apple.product-type.application";
@@ -242,7 +239,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				1D6058900D05DD3D006BFB54 /* CrowDev */,
+				1D6058900D05DD3D006BFB54 /* CrowiPadDev */,
 			);
 		};
 /* End PBXProject section */
@@ -271,6 +268,8 @@
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				33F2DCC41315F584008217BC /* Base in Resources */,
+				332C4BB5132B364E00E10CA2 /* autoexec.txt in Resources */,
+				330257AD132C23540032AD96 /* Icon-72.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +280,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				336C04BC1231A0D70037BE72 /* MakeMeBuild.cpp in Sources */,
 				332EF5A312A1E943004F29C0 /* CrowGame.cpp in Sources */,
 				332EF5A412A1E943004F29C0 /* G_Exports.cpp in Sources */,
 				332EF5A612A1E943004F29C0 /* G_ViewController.cpp in Sources */,
@@ -304,7 +302,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Crow_Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
-				INFOPLIST_FILE = "CrowDev-Info.plist";
+				INFOPLIST_FILE = "Crow-iPad-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../Bin/ios-gcc4-iphone-device-debug\"",
@@ -317,7 +315,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = Crow;
 				SDKROOT = iphoneos4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 				VALID_ARCHS = "armv6 armv7";
 			};
 			name = Debug;
@@ -330,7 +328,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Crow_Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
-				INFOPLIST_FILE = "CrowDev-Info.plist";
+				INFOPLIST_FILE = "Crow-iPad-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../Bin/ios-gcc4-iphone-device-debug\"",
@@ -342,7 +340,7 @@
 				);
 				PRODUCT_NAME = Crow;
 				SDKROOT = iphoneos4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -431,7 +429,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "CrowDev" */ = {
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "CrowiPadDev" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,

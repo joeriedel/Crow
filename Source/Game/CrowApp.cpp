@@ -76,16 +76,16 @@ bool CrowApp::Initialize()
 #if defined(RAD_OPT_PC)
 	engine->sys->r->ctx = engine->sys->r.Cast<r::IRBackend>()->BindContext();
 #endif
-
-	RunAutoExec();
 #endif
 
-
+#if defined(RAD_OPT_GOLDEN) || defined(RAD_OPT_IOS)
+	RunAutoExec();
+#endif
 
 	return true;
 }
 
-#if defined(RAD_TARGET_GOLDEN)
+#if defined(RAD_TARGET_GOLDEN) || defined(RAD_OPT_IOS)
 bool CrowApp::RunAutoExec()
 {
 	wchar_t nativePath[file::MaxFilePathLen+1];
@@ -126,13 +126,15 @@ bool CrowApp::RunAutoExec()
 
 void CrowApp::OnTick(float dt)
 {
-#if defined(RAD_TARGET_GOLDEN)
+#if defined(RAD_TARGET_GOLDEN) || defined(RAD_OPT_IOS)
 	if (m_game)
 	{
-		r::VidMode vidMode = engine->sys->r.Cast<r::IRBackend>()->curVidMode;
+		r::HRBackend rb = engine->sys->r.Cast<r::IRBackend>();
+		RAD_ASSERT(rb);
+		r::VidMode vidMode = rb->curVidMode;
 		m_game->SetViewport(0, 0, vidMode.w, vidMode.h);
 		m_game->Tick(dt);
-		SDL_GL_SwapBuffers();
+		rb->SwapBuffers();
 	}
 #endif
 }
@@ -154,7 +156,7 @@ const wchar_t *CrowApp::RAD_IMPLEMENT_GET(website)
 
 void CrowApp::Finalize()
 {
-#if defined(RAD_TARGET_GOLDEN)
+#if defined(RAD_TARGET_GOLDEN) || defined(RAD_OPT_IOS)
 	m_game.reset();
 #if defined(RAD_OPT_PC)
 	engine->sys->r->ctx = r::HContext();
