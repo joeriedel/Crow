@@ -12,7 +12,7 @@
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
 		28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
-		332EF5A212A1E943004F29C0 /* CrowApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59212A1E942004F29C0 /* CrowApp.cpp */; };
+		332C4194132AC86800E10CA2 /* CrowApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59212A1E942004F29C0 /* CrowApp.cpp */; };
 		332EF5A312A1E943004F29C0 /* CrowGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59412A1E942004F29C0 /* CrowGame.cpp */; };
 		332EF5A412A1E943004F29C0 /* G_Exports.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59712A1E942004F29C0 /* G_Exports.cpp */; };
 		332EF5A612A1E943004F29C0 /* G_ViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59B12A1E942004F29C0 /* G_ViewController.cpp */; };
@@ -282,11 +282,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				336C04BC1231A0D70037BE72 /* MakeMeBuild.cpp in Sources */,
-				332EF5A212A1E943004F29C0 /* CrowApp.cpp in Sources */,
 				332EF5A312A1E943004F29C0 /* CrowGame.cpp in Sources */,
 				332EF5A412A1E943004F29C0 /* G_Exports.cpp in Sources */,
 				332EF5A612A1E943004F29C0 /* G_ViewController.cpp in Sources */,
 				33F2DD7B13160636008217BC /* G_SkModel.cpp in Sources */,
+				332C4194132AC86800E10CA2 /* CrowApp.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
