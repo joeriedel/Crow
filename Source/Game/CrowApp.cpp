@@ -78,7 +78,7 @@ bool CrowApp::Initialize()
 #endif
 #endif
 
-#if defined(RAD_OPT_GOLDEN) || defined(RAD_OPT_IOS)
+#if defined(RAD_TARGET_GOLDEN) || defined(RAD_OPT_IOS)
 	RunAutoExec();
 #endif
 
@@ -134,7 +134,7 @@ void CrowApp::OnTick(float dt)
 		r::VidMode vidMode = rb->curVidMode;
 		m_game->SetViewport(0, 0, vidMode.w, vidMode.h);
 		m_game->Tick(dt);
-		rb->SwapBuffers();
+		engine->sys->r->SwapBuffers();
 	}
 #endif
 }
