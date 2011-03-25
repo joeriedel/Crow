@@ -116,6 +116,50 @@
 						>
 					</File>
 				</Filter>
+				<Filter
+					Name="Script"
+					>
+					<File
+						RelativePath="..\..\Base\Scripts\Class.lua"
+						>
+					</File>
+					<File
+						RelativePath="..\..\Base\Scripts\CrowPawn.lua"
+						>
+					</File>
+					<File
+						RelativePath="..\..\Base\Scripts\CrowStateBlend.lua"
+						>
+					</File>
+					<File
+						RelativePath="..\..\Base\Scripts\Entity.lua"
+						>
+					</File>
+					<File
+						RelativePath="..\..\Base\Scripts\Imports.lua"
+						>
+					</File>
+					<File
+						RelativePath="..\..\Base\Scripts\InfoNull.lua"
+						>
+					</File>
+					<File
+						RelativePath="..\..\Base\Scripts\Math.lua"
+						>
+					</File>
+					<File
+						RelativePath="..\..\Base\Scripts\System.lua"
+						>
+					</File>
+					<File
+						RelativePath="..\..\Base\Scripts\ViewController.lua"
+						>
+					</File>
+					<File
+						RelativePath="..\..\Base\Scripts\Worldspawn.lua"
+						>
+					</File>
+				</Filter>
 			</Filter>
 		</Filter>
 		<File

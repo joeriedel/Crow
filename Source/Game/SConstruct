@@ -8,6 +8,7 @@ Import('radiance_runtime')
 Import('radiance_engine')
 Import('radiance_main')
 Import('glsl_optimizer')
+Import('freetype')
 Import('lua')
 Import('variant_dir')
 Import('exe_type')
@@ -55,6 +56,7 @@ def build_game(name, type):
 	x.add(engine, type='lib')
 	x.add(boost_threads, type='lib')
 	x.add(lua, type='lib')
+	x.add(freetype, type='lib')
 	x.add(radiance_runtime, type='lib')
 	
 	if build.tools():
