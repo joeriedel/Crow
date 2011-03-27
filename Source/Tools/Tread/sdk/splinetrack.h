@@ -229,6 +229,8 @@ private:
 	bool WriteKeyframeList( CLinkedList<CSplineKeyFrame>* list, CFile* file, CTreadDoc* doc, int nVersion );
 	bool ReadKeyframeList( CLinkedList<CSplineKeyFrame>* list, CFile* file, CTreadDoc* doc, int nVersion );
 
+	static CMapObject* MakeSplineTrack( CTreadDoc* doc );
+
 public:
 
 	CSplineTrack();
@@ -289,7 +291,7 @@ public:
 
 	void WriteToMapFile( std::fstream& file, CTreadDoc* doc );
 
-	static CMapObject* MakeSplineTrack( CTreadDoc* doc, void* parm );
+	static CObjectCreator *Creator();
 };
 
 #endif

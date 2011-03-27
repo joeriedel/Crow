@@ -581,9 +581,9 @@ static CMapObject* ObjectForClass( CPluginGame *game, int classbits, int subclas
 	case MAPOBJ_CLASS_ENTITY:
 		return new CEntity();
 	break;
-	//case MAPOBJ_CLASS_SPLINETRACK:
-	//	return new CSplineTrack();
-	//break;
+	case MAPOBJ_CLASS_SPLINETRACK:
+		return new CSplineTrack();
+	break;
 	};
 
 	return 0;

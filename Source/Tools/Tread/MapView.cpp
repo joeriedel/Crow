@@ -1474,11 +1474,11 @@ void CMapView::OnLButtonDown(UINT nFlags, CPoint point)
 
 						if( m )
 						{
-							/*if( m->GetClass() == MAPOBJ_CLASS_SPLINETRACK )
+							if( m->GetClass() == MAPOBJ_CLASS_SPLINETRACK )
 							{
 								m_lpick->MouseDown( this, point.x, point.y, nFlags|MS_LBUTTON );
 							}
-							else*/
+							else
 							{
 								m_lpick = 0;
 

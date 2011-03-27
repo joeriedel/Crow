@@ -35,6 +35,7 @@
 #include "stdafx.h"
 #include "QuakeMap.h"
 #include "Quake.h"
+#include "splinetrack.h"
 #include <vector>
 
 static bool ParseEntity( C_Tokenizer* script, CTreadDoc* pDoc );
@@ -55,6 +56,15 @@ int CQuakeMap::WriteEntities( CMapObject* obj, void* p, void* p2 )
 	{
 		qm->WriteEntity(*qm->m_file, e, doc);
 		Sys_StepStatusBar();
+	}
+	else if (obj->GetClass() == MAPOBJ_CLASS_SPLINETRACK)
+	{
+		CSplineTrack *track = dynamic_cast<CSplineTrack*>(obj);
+		if (track)
+		{
+			track->WriteToMapFile(*qm->m_file, doc);
+			Sys_StepStatusBar();
+		}
 	}
 
 	return 0;

@@ -42,6 +42,22 @@
 
 #define SEGMENT_SUBDIVIDE_SIZE	50
 
+class CSplineTrackCreator : public CObjectCreator
+{
+public:
+	virtual void Release() { delete this; }
+	virtual const char *Name() { return "Spline Track"; }
+	virtual CMapObject *CreateObject(CTreadDoc *doc)
+	{
+		return CSplineTrack::MakeSplineTrack(doc);
+	}
+};
+
+CObjectCreator *CSplineTrack::Creator()
+{
+	return new CSplineTrackCreator();
+}
+
 //////////////////////////////////////////////////////////////////////
 // CSplineControlPoint_Manipulator3D								//
 //////////////////////////////////////////////////////////////////////
@@ -584,6 +600,7 @@ CSplineTrack::CSplineTrack() : CMapObject()
 	m_NameProp->SetType( CObjProp::string );
 	m_NameProp->SetString( "" );
 	m_NameProp->SetName("targetname");
+	m_NameProp->SetDisplayName("targetname");
 	m_Props.AddItem( m_NameProp );
 
 	MakeSplineMenu();
@@ -1462,7 +1479,7 @@ const char* CSplineTrack::GetRootName()
 
 int CSplineTrack::GetClass()
 {
-	return 0;
+	return MAPOBJ_CLASS_SPLINETRACK;
 }
 
 void CSplineTrack::GetWorldMinsMaxs( vec3* pMins, vec3* pMaxs )
@@ -1547,7 +1564,7 @@ void CSplineTrack::SetObjectWorldPos( const vec3& pos, CTreadDoc* pDoc )
 	m_pos = pos;
 }
 
-CMapObject* CSplineTrack::MakeSplineTrack( CTreadDoc* doc, void* parm )
+CMapObject* CSplineTrack::MakeSplineTrack( CTreadDoc* doc )
 {
 	CSplineSegment* seg;
 	CSplineTrack* track;
@@ -1664,11 +1681,11 @@ void CSplineTrack::WriteToMapFile( std::fstream& file, CTreadDoc* doc )
 
 	if( m_motion )
 	{
-		file << "\"nomotion\" \"0\"";
+		file << "\"nomotion\" \"0\"\n";
 	}
 	else
 	{
-		file << "\"nomotion\" \"1\"";
+		file << "\"nomotion\" \"1\"\n";
 	}
 
 	file << "}\n";

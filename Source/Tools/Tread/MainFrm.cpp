@@ -554,7 +554,7 @@ BOOL CMainFrame::PreTranslateMessage(MSG* pMsg)
 				case 0x57: SendMessage( WM_COMMAND, ID_VIEW_EXPANDVIEW ); return true; // W
 				case VK_DELETE: SendMessage( WM_COMMAND, ID_EDIT_DELETE ); return true;
 				case 0xBF: SendMessage( WM_COMMAND, ID_TOOLS_CENTERONSELECTION ); return true; // '/'
-				//case 0xBC: SendMessage( WM_COMMAND, ID_TOOLS_ANIMATIONMODE ); return true; // ,
+				case 0xBC: SendMessage( WM_COMMAND, ID_TOOLS_ANIMATIONMODE ); return true; // ,
 				case 0x31: SendMessage( WM_COMMAND, ID_VIEW_VERTICES ); return true; // 1
 				case 0x32: SendMessage( WM_COMMAND, ID_VIEW_FACES ); return true; // 2
 				case 0x55: SendMessage( WM_COMMAND, ID_TOOLS_SELECTOBJECTBYUID ); return true; // U

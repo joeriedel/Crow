@@ -688,20 +688,20 @@ void CObjPropView::LoadSelection()
 {
 	if( m_pDoc && m_pDoc->GetSelectedObjectCount() > 0 )
 	{
-		/*if( m_pDoc->IsInTrackAnimationMode() )
+		if( m_pDoc->IsInTrackAnimationMode() )
 		{
 			if( m_pDoc->GetSelectedObjectCount( MAPOBJ_CLASS_SPLINETRACK ) != 
 				m_pDoc->GetSelectedObjectCount() )
 			{
 				goto badselection;
 			}
-		}*/
+		}
 
 		LoadProperties(m_pDoc, false);
 	}
 	else
 	{
-//badselection:
+badselection:
 
 		m_pSelProp = 0;
 		//m_sSelProp = "";

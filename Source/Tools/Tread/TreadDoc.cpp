@@ -1047,7 +1047,7 @@ bool CTreadDoc::IsInTrackAnimationMode()
 
 void CTreadDoc::SetInTrackAnimationMode( bool editing )
 {
-	editing = false;
+//	editing = false;
 	CTrackAnimDialog* td = Sys_GetMainFrame()->GetTrackAnimDialog();
 
 	if( ((bool)td->IsWindowVisible()) != editing )

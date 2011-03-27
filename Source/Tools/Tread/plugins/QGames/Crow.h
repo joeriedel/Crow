@@ -31,6 +31,8 @@ public:
 	virtual void InitializeToolsList(QuakeToolsList &tools);
 	virtual void GetLeakFileName(CTreadDoc *doc, char *buff, int buffSize);
 
+	virtual CObjectCreator *ObjectCreator(int i);
+
 protected:
 
 	virtual void RunMapCompile(const char *mappath, QuakeToolsList &tools, CTreadDoc *doc, bool runGame);

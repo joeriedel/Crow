@@ -642,8 +642,8 @@ void CTrackAnimDialog::AnimateForTime()
 
 		for( obj = m_doc->GetSelectedObjectList()->ResetPos(); obj; obj = m_doc->GetSelectedObjectList()->GetNextItem() )
 		{
-			//if( obj->GetClass() == MAPOBJ_CLASS_SPLINETRACK )
-			//	continue;
+			if( obj->GetClass() == MAPOBJ_CLASS_SPLINETRACK )
+				continue;
 
 			obj->RestoreAnimTransform( m_doc );
 			v = obj->GetObjectWorldPos();
@@ -664,8 +664,8 @@ void CTrackAnimDialog::AnimateForTime()
 		
 		for( obj = m_doc->GetSelectedObjectList()->ResetPos(); obj; obj = m_doc->GetSelectedObjectList()->GetNextItem() )
 		{
-			//if( obj->GetClass() == MAPOBJ_CLASS_SPLINETRACK )
-			//	continue;
+			if( obj->GetClass() == MAPOBJ_CLASS_SPLINETRACK )
+				continue;
 
 			v = obj->GetObjectWorldPos();
 			v -= tr;
@@ -1012,7 +1012,7 @@ vec3 CTrackAnimDialog::GetSelectionRotation()
 
 			for( obj = m_doc->GetSelectedObjectList()->ResetPos(); obj; obj = m_doc->GetSelectedObjectList()->GetNextItem() )
 			{
-				/*if( obj->GetClass() != MAPOBJ_CLASS_SPLINETRACK )*/
+				if( obj->GetClass() != MAPOBJ_CLASS_SPLINETRACK )
 				{
 					vec3 a;
 					obj->GetAnimAngles( &a );

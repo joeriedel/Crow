@@ -200,6 +200,7 @@ BEGIN
     END
     POPUP "&Tools"
     BEGIN
+        MENUITEM "Animation Mode\t,",           ID_TOOLS_ANIMATIONMODE
         MENUITEM "&Reload Models...",           ID_TOOLS_RELOADMODELS
     END
     POPUP "&View"

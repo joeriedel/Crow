@@ -5,6 +5,7 @@
 
 #include "stdafx.h"
 #include "Crow.h"
+#include "splinetrack.h"
 
 ///////////////////////////////////////////////////////////////////////////////
 // CrowGame
@@ -69,6 +70,20 @@ void CrowGame::GetLeakFileName(CTreadDoc *doc, char *buff, int buffSize)
 CQuakeCompiler *CrowGame::CreateCompiler(const char *filename, QuakeToolsList &tools, CTreadDoc *doc, bool runMap)
 {
 	return new CQuakeCompiler(filename, tools, doc, runMap);
+}
+
+CObjectCreator *CrowGame::ObjectCreator(int i)
+{
+	if (i < 3)
+		return CQuakeGame::ObjectCreator(i);
+	switch (i)
+	{
+	case 3:
+		return CSplineTrack::Creator();
+		break;
+	}
+
+	return 0;
 }
 
 ///////////////////////////////////////////////////////////////////////////////
