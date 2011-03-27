@@ -162,6 +162,30 @@
 				</Filter>
 			</Filter>
 		</Filter>
+		<Filter
+			Name="Shaders"
+			>
+			<File
+				RelativePath="..\..\Base\Shaders\F_1T.sh"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Base\Shaders\F_1T_A.sh"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Base\Shaders\F_2T_ADD.sh"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Base\Shaders\F_2T_MUL.sh"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Base\Shaders\F_COLOR.sh"
+				>
+			</File>
+		</Filter>
 		<File
 			RelativePath="..\..\SConstruct"
 			>
