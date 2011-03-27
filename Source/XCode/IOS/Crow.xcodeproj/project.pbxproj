@@ -34,6 +34,7 @@
 		332EF5A612A1E943004F29C0 /* G_ViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59B12A1E942004F29C0 /* G_ViewController.cpp */; };
 		33519A1B132C890F000D4455 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 33FEFE3212A0C3D400D0C604 /* Base */; };
 		33519A1C132C8915000D4455 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 33519A16132C88F0000D4455 /* Base */; };
+		336CE188133ED20800523593 /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 338C24FC133EBECF00C4740B /* libfreetype.a */; };
 		337F032A12A87F7F001376E7 /* libglsl_optimizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 337F031B12A87F74001376E7 /* libglsl_optimizer.a */; };
 		337F032B12A87F81001376E7 /* libRadiance.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 337F032112A87F74001376E7 /* libRadiance.a */; };
 		33F2DD7B13160636008217BC /* G_SkModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33F2DD7913160636008217BC /* G_SkModel.cpp */; };
@@ -53,6 +54,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = Radiance;
+		};
+		338C24FB133EBECF00C4740B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 338C24F4133EBECF00C4740B /* freetype.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = freetype;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -79,6 +87,7 @@
 		33519A16132C88F0000D4455 /* Base */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Base; path = ../../../Cooked/Packages/Base; sourceTree = SOURCE_ROOT; };
 		337F031012A87F74001376E7 /* glsl-optimizer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "glsl-optimizer.xcodeproj"; path = "../../../Radiance/Source/XCode/IOS/glsl-optimizer.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		337F031312A87F74001376E7 /* Radiance.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Radiance.xcodeproj; path = ../../../Radiance/Source/XCode/IOS/Radiance.xcodeproj; sourceTree = SOURCE_ROOT; };
+		338C24F4133EBECF00C4740B /* freetype.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = freetype.xcodeproj; path = ../../../Radiance/Source/XCode/IOS/freetype.xcodeproj; sourceTree = SOURCE_ROOT; };
 		33B06471125D73750098229E /* Crow_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Crow_Prefix.pch; sourceTree = "<group>"; };
 		33C3BAC212A06E1900976EFE /* Crow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33F2DD7913160636008217BC /* G_SkModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_SkModel.cpp; sourceTree = "<group>"; };
@@ -110,6 +119,7 @@
 				3302583D132C768D0032AD96 /* QuartzCore.framework in Frameworks */,
 				3302583E132C768D0032AD96 /* libglsl_optimizer.a in Frameworks */,
 				3302583F132C768D0032AD96 /* libRadiance.a in Frameworks */,
+				336CE188133ED20800523593 /* libfreetype.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +129,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				338C24F4133EBECF00C4740B /* freetype.xcodeproj */,
 				337F031012A87F74001376E7 /* glsl-optimizer.xcodeproj */,
 				337F031312A87F74001376E7 /* Radiance.xcodeproj */,
 				332EF59012A1E927004F29C0 /* Source */,
@@ -205,6 +216,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		338C24F5133EBECF00C4740B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				338C24FC133EBECF00C4740B /* libfreetype.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		33C3BAC312A06E1900976EFE /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +299,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 338C24F5133EBECF00C4740B /* Products */;
+					ProjectRef = 338C24F4133EBECF00C4740B /* freetype.xcodeproj */;
+				},
+				{
 					ProductGroup = 337F031112A87F74001376E7 /* Products */;
 					ProjectRef = 337F031012A87F74001376E7 /* glsl-optimizer.xcodeproj */;
 				},
@@ -309,6 +332,13 @@
 			fileType = archive.ar;
 			path = libRadiance.a;
 			remoteRef = 337F032012A87F74001376E7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		338C24FC133EBECF00C4740B /* libfreetype.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libfreetype.a;
+			remoteRef = 338C24FB133EBECF00C4740B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -450,7 +480,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					RAD_OPT_POSIXFILES,
 					RAD_OPT_POSIXTHREADS,
@@ -565,7 +595,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					RAD_OPT_POSIXFILES,
 					RAD_OPT_POSIXTHREADS,
