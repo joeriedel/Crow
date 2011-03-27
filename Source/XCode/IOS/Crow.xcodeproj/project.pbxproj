@@ -37,6 +37,7 @@
 		336CE188133ED20800523593 /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 338C24FC133EBECF00C4740B /* libfreetype.a */; };
 		337F032A12A87F7F001376E7 /* libglsl_optimizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 337F031B12A87F74001376E7 /* libglsl_optimizer.a */; };
 		337F032B12A87F81001376E7 /* libRadiance.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 337F032112A87F74001376E7 /* libRadiance.a */; };
+		338E741E133EE04A00991013 /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 338C24FC133EBECF00C4740B /* libfreetype.a */; };
 		33F2DD7B13160636008217BC /* G_SkModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33F2DD7913160636008217BC /* G_SkModel.cpp */; };
 /* End PBXBuildFile section */
 
@@ -106,6 +107,7 @@
 				28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */,
 				337F032A12A87F7F001376E7 /* libglsl_optimizer.a in Frameworks */,
 				337F032B12A87F81001376E7 /* libRadiance.a in Frameworks */,
+				338E741E133EE04A00991013 /* libfreetype.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
