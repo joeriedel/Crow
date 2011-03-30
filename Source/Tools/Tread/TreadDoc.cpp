@@ -1029,14 +1029,14 @@ void CTreadDoc::SetEditSplineTrack( CSplineTrack* track, CSplineSegment* seg )
 
 	if( IsInTrackAnimationMode() )
 	{
-		/*if( GetSelectedObjectCount(MAPOBJ_CLASS_SPLINETRACK) > 1 )
+		if( GetSelectedObjectCount(MAPOBJ_CLASS_SPLINETRACK) > 1 )
 		{
 			Sys_GetMainFrame()->GetTrackAnimDialog()->Load( 0, 0, this );
 		}
 		else
 		{
 			Sys_GetMainFrame()->GetTrackAnimDialog()->Load( m_editsplinetrack, m_editsplinetrackseg, this );
-		}*/
+		}
 	}
 }
 
