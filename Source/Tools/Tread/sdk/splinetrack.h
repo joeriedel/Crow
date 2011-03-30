@@ -47,7 +47,7 @@
 // all times/ticks are in milliseconds.
 // the track control can only handle things at a 10th of a second.
 //
-class CSplineSegment : public CPickObject, public CLLObject
+class OS_CLEXP CSplineSegment : public CPickObject, public CLLObject
 {
 public:
 
@@ -66,7 +66,7 @@ public:
 	void MakeRenderMesh( CRenderMesh* mesh );
 };
 
-class CSplineKeyFrame : public CLLObject
+class OS_CLEXP CSplineKeyFrame : public CLLObject
 {
 public:
 
@@ -81,7 +81,7 @@ public:
 };
 
 class CSplineControlPoint_Manipulator;
-class CSplineControlPoint_Manipulator3D : public CVec3D_Manipulator
+class OS_CLEXP CSplineControlPoint_Manipulator3D : public CVec3D_Manipulator
 {
 private:
 
@@ -98,7 +98,7 @@ public:
 	bool OnDrag( CMapView* pView, int nButtons, const vec3& move );
 };
 
-class CSplineControlPoint_Manipulator : public CManipulator
+class OS_CLEXP CSplineControlPoint_Manipulator : public CManipulator
 {
 private:
 
@@ -142,7 +142,7 @@ public:
 #define KEYFRAME_MASK_TICKS 0x4
 #define KEYFRAME_MASK_ALL	0xFF
 
-class CSplineTrack : public CMapObject
+class OS_CLEXP CSplineTrack : public CMapObject
 {
 friend class CSplineControlPoint_Manipulator;
 private:
