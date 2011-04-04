@@ -88,11 +88,27 @@
 					Name="Entities"
 					>
 					<File
+						RelativePath="..\Game\Entities\G_CrowPawn.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\Game\Entities\G_CrowPawn.h"
+						>
+					</File>
+					<File
 						RelativePath="..\Game\Entities\G_Exports.cpp"
 						>
 					</File>
 					<File
 						RelativePath="..\Game\Entities\G_Exports.h"
+						>
+					</File>
+					<File
+						RelativePath="..\Game\Entities\G_ScreenView.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\Game\Entities\G_ScreenView.h"
 						>
 					</File>
 					<File
