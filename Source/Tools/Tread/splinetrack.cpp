@@ -40,7 +40,7 @@
 #include "resource.h"
 #include "mapfile.h"
 
-#define SEGMENT_SUBDIVIDE_SIZE	50
+#define SEGMENT_SUBDIVIDE_SIZE	16
 
 class CSplineTrackCreator : public CObjectCreator
 {
@@ -1671,6 +1671,8 @@ void CSplineTrack::WriteToMapFile( std::fstream& file, CTreadDoc* doc )
 		
 		str = k->s;
 		str.Replace( '"', '\'' );
+		str.Replace( "\r\n", "\n");
+		str.Replace( "\n", "\\n");
 		file << "\"event_keyframe_data " << i << "\" \"" << str << "\"\n";
 	}
 
