@@ -1837,22 +1837,36 @@ CSplineSegment::~CSplineSegment()
 {
 }
 
+//#define DEBUG_DV_SPLINE
+
 void CSplineSegment::MakeRenderMesh( CRenderMesh* m )
 {
 	int i;
 
 	m->FreeMesh();
 	m->cmds = GL_LINES;
-	m->xyz = new vec3[SEGMENT_SUBDIVIDE_SIZE];
+#if defined(DEBUG_DV_SPLINE)
+	m->num_pts = SEGMENT_SUBDIVIDE_SIZE*2;
+	m->num_tris = SEGMENT_SUBDIVIDE_SIZE*4;
+#else
 	m->num_pts = SEGMENT_SUBDIVIDE_SIZE;
 	m->num_tris = SEGMENT_SUBDIVIDE_SIZE;
-	m->tris = new unsigned int[SEGMENT_SUBDIVIDE_SIZE];
+#endif
+	m->xyz = new vec3[m->num_pts];
+	m->tris = new unsigned int[m->num_tris];
 	m->pick = this;
 	m->solid2d = false;
 
-	for(i = 0; i < SEGMENT_SUBDIVIDE_SIZE; i++)
+	for (i = 0; i < SEGMENT_SUBDIVIDE_SIZE; i++)
+	{
 		m->tris[i] = i;
-
+#if defined(DEBUG_DV_SPLINE)
+		m->tris[i*3+SEGMENT_SUBDIVIDE_SIZE] = i;
+		m->tris[i*3+SEGMENT_SUBDIVIDE_SIZE+1] = i+SEGMENT_SUBDIVIDE_SIZE;
+		m->tris[i*3+SEGMENT_SUBDIVIDE_SIZE+2] = -1;
+#endif
+	}
+	
 	//
 	// the # of midway pts =='s numpts-1.
 	//
@@ -1868,6 +1882,7 @@ void CSplineSegment::MakeRenderMesh( CRenderMesh* m )
 	float _3u_sqr;
 
 	u = 0;
+	
 	for(i = 0; i < SEGMENT_SUBDIVIDE_SIZE; i++, u+=nummids)
 	{
 		sqr_u = u*u;
@@ -1889,11 +1904,29 @@ void CSplineSegment::MakeRenderMesh( CRenderMesh* m )
 				   ctrls[1][1]*_3u +
 				   ctrls[2][1]*_3u_sqr +
 				   ctrls[3][1]*cub_u;
-
+		
 		m->xyz[i][2] = ctrls[0][2]*cub_inv_u +
 				   ctrls[1][2]*_3u +
 				   ctrls[2][2]*_3u_sqr +
 				   ctrls[3][2]*cub_u;
+#if defined(DEBUG_DV_SPLINE)
+		vec3 fwd;
+		fwd[0] = 3*(ctrls[1][0]-ctrls[0][0])*sqr_inv_u+
+			3*(ctrls[2][0]-ctrls[1][0])*2*u*inv_u +
+			3*(ctrls[3][0]-ctrls[2][0])*sqr_u;
+		
+		fwd[1] = 3*(ctrls[1][1]-ctrls[0][1])*sqr_inv_u+
+			3*(ctrls[2][1]-ctrls[1][1])*2*u*inv_u +
+			3*(ctrls[3][1]-ctrls[2][1])*sqr_u;
+
+		fwd[2] = 3*(ctrls[1][2]-ctrls[0][2])*sqr_inv_u+
+			3*(ctrls[2][2]-ctrls[1][2])*2*u*inv_u +
+			3*(ctrls[3][2]-ctrls[2][2])*sqr_u;
+
+		fwd.normalize();
+		fwd = m->xyz[i]+(fwd*16.f);
+		m->xyz[i+SEGMENT_SUBDIVIDE_SIZE] = fwd;
+#endif
 	}
 	
 	//

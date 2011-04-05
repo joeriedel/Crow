@@ -203,8 +203,12 @@ void CQuakeMap::WriteEntity(std::fstream &file, CEntity *entity, CTreadDoc *doc)
 		{	
 			CString s = p->GetString();
 			s.Replace( '"', '\'' );
+			if (s[0] == '/' || s[0] == '\\')
+				s = s.Right(s.GetLength()-1);
+			s.Replace('\\', '/');
 
-			file << "\"" << p->GetName() << "\" \"" << s << "\"\n";
+			if (s.GetLength()>0)
+				file << "\"" << p->GetName() << "\" \"" << s << "\"\n";
 		}
 	}
 
