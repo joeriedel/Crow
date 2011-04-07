@@ -38,6 +38,10 @@
 		337F032A12A87F7F001376E7 /* libglsl_optimizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 337F031B12A87F74001376E7 /* libglsl_optimizer.a */; };
 		337F032B12A87F81001376E7 /* libRadiance.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 337F032112A87F74001376E7 /* libRadiance.a */; };
 		338E741E133EE04A00991013 /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 338C24FC133EBECF00C4740B /* libfreetype.a */; };
+		33BBC130134D75AB00458D52 /* G_CrowPawn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33BBC12C134D75AB00458D52 /* G_CrowPawn.cpp */; };
+		33BBC131134D75AB00458D52 /* G_ScreenView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33BBC12E134D75AB00458D52 /* G_ScreenView.cpp */; };
+		33BBC132134D75B200458D52 /* G_CrowPawn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33BBC12C134D75AB00458D52 /* G_CrowPawn.cpp */; };
+		33BBC133134D75B400458D52 /* G_ScreenView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33BBC12E134D75AB00458D52 /* G_ScreenView.cpp */; };
 		33F2DD7B13160636008217BC /* G_SkModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33F2DD7913160636008217BC /* G_SkModel.cpp */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +94,10 @@
 		337F031312A87F74001376E7 /* Radiance.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Radiance.xcodeproj; path = ../../../Radiance/Source/XCode/IOS/Radiance.xcodeproj; sourceTree = SOURCE_ROOT; };
 		338C24F4133EBECF00C4740B /* freetype.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = freetype.xcodeproj; path = ../../../Radiance/Source/XCode/IOS/freetype.xcodeproj; sourceTree = SOURCE_ROOT; };
 		33B06471125D73750098229E /* Crow_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Crow_Prefix.pch; sourceTree = "<group>"; };
+		33BBC12C134D75AB00458D52 /* G_CrowPawn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_CrowPawn.cpp; sourceTree = "<group>"; };
+		33BBC12D134D75AB00458D52 /* G_CrowPawn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_CrowPawn.h; sourceTree = "<group>"; };
+		33BBC12E134D75AB00458D52 /* G_ScreenView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_ScreenView.cpp; sourceTree = "<group>"; };
+		33BBC12F134D75AB00458D52 /* G_ScreenView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_ScreenView.h; sourceTree = "<group>"; };
 		33C3BAC212A06E1900976EFE /* Crow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33F2DD7913160636008217BC /* G_SkModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_SkModel.cpp; sourceTree = "<group>"; };
 		33F2DD7A13160636008217BC /* G_SkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_SkModel.h; sourceTree = "<group>"; };
@@ -194,6 +202,10 @@
 		332EF59612A1E942004F29C0 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				33BBC12C134D75AB00458D52 /* G_CrowPawn.cpp */,
+				33BBC12D134D75AB00458D52 /* G_CrowPawn.h */,
+				33BBC12E134D75AB00458D52 /* G_ScreenView.cpp */,
+				33BBC12F134D75AB00458D52 /* G_ScreenView.h */,
 				332EF59712A1E942004F29C0 /* G_Exports.cpp */,
 				332EF59812A1E942004F29C0 /* G_Exports.h */,
 				332EF59B12A1E942004F29C0 /* G_ViewController.cpp */,
@@ -380,6 +392,8 @@
 				332EF5A612A1E943004F29C0 /* G_ViewController.cpp in Sources */,
 				33F2DD7B13160636008217BC /* G_SkModel.cpp in Sources */,
 				332C4194132AC86800E10CA2 /* CrowApp.cpp in Sources */,
+				33BBC130134D75AB00458D52 /* G_CrowPawn.cpp in Sources */,
+				33BBC131134D75AB00458D52 /* G_ScreenView.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +406,8 @@
 				33025836132C768D0032AD96 /* G_ViewController.cpp in Sources */,
 				33025837132C768D0032AD96 /* G_SkModel.cpp in Sources */,
 				33025838132C768D0032AD96 /* CrowApp.cpp in Sources */,
+				33BBC132134D75B200458D52 /* G_CrowPawn.cpp in Sources */,
+				33BBC133134D75B400458D52 /* G_ScreenView.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
