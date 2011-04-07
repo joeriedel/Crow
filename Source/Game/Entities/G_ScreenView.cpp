@@ -114,7 +114,7 @@ void G_ScreenView::TickPhysics(
 	FrameVecs(fwd, up, left);
 
 	m_ps.pos = (fwd * m_pos[2]) + (left * m_pos[0]) + (up * m_pos[1]);
-	Move(m_ps.origin + m_ps.pos, true, true);
+	Move(true, true);
 }
 
 } // world

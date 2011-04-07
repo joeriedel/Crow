@@ -160,6 +160,10 @@
 						>
 					</File>
 					<File
+						RelativePath="..\..\Base\Scripts\Input.lua"
+						>
+					</File>
+					<File
 						RelativePath="..\..\Base\Scripts\Math.lua"
 						>
 					</File>

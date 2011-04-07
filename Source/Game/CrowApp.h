@@ -43,6 +43,7 @@ private:
 #endif
 
 #if defined(RAD_TARGET_GOLDEN) || defined(RAD_OPT_IOS)
+	virtual RAD_DECLARE_GET(game, Game*) { return m_game.get(); }
 	bool RunAutoExec();
 	Game::Ref m_game;
 #endif
