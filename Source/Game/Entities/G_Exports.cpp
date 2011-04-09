@@ -6,10 +6,11 @@
 #include <Runtime/ReflectMap.h>
 #include <Engine/World/Entity.h>
 #include "G_ViewController.h"
-#include "G_CrowPawn.h"
+#include "G_ScreenPawn.h"
 
 E_EXPORT(RADNULL_API, view_controller)
 E_EXPORT(RADNULL_API, info_player_start)
+E_EXPORT(RADNULL_API, info_enemy_start)
 
 namespace spawn {
 

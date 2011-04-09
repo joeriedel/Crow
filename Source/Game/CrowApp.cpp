@@ -113,6 +113,10 @@ bool CrowApp::RunAutoExec()
 	if (script.GetToken(token))
 	{
 		m_game = Game::New();
+		r::HRBackend rb = engine->sys->r.Cast<r::IRBackend>();
+		RAD_ASSERT(rb);
+		r::VidMode vidMode = rb->curVidMode;
+		m_game->SetViewport(0, 0, vidMode.w, vidMode.h);
 		if (!m_game->LoadMap(token.c_str()))
 		{
 			m_game.reset();

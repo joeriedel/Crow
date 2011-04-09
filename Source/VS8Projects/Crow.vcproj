@@ -88,19 +88,19 @@
 					Name="Entities"
 					>
 					<File
-						RelativePath="..\Game\Entities\G_CrowPawn.cpp"
-						>
-					</File>
-					<File
-						RelativePath="..\Game\Entities\G_CrowPawn.h"
-						>
-					</File>
-					<File
 						RelativePath="..\Game\Entities\G_Exports.cpp"
 						>
 					</File>
 					<File
 						RelativePath="..\Game\Entities\G_Exports.h"
+						>
+					</File>
+					<File
+						RelativePath="..\Game\Entities\G_ScreenPawn.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\Game\Entities\G_ScreenPawn.h"
 						>
 					</File>
 					<File
@@ -144,7 +144,7 @@
 						>
 					</File>
 					<File
-						RelativePath="..\..\Base\Scripts\CrowStateBlend.lua"
+						RelativePath="..\..\Base\Scripts\EnemyPawn.lua"
 						>
 					</File>
 					<File
