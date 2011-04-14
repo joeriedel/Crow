@@ -107,6 +107,7 @@ void G_ScreenView::TickPhysics(
 		m_pos[i] = math::Clamp(m_pos[i], m_mins[i], m_maxs[i]);
 
 	m_ps.worldAngles = WrapAngles(m_ps.originAngles + m_ps.angles);
+	m_ps.cameraAngles = m_ps.worldAngles;
 
 	Mat4 m = Mat4::Rotation(QuatFromAngles(Vec3(0, 0, m_ps.worldAngles[2])));
 	Vec3 fwd = Vec3(1, 0, 0) * m;
@@ -114,6 +115,7 @@ void G_ScreenView::TickPhysics(
 	FrameVecs(fwd, up, left);
 
 	m_ps.pos = (fwd * m_pos[2]) + (left * m_pos[0]) + (up * m_pos[1]);
+	m_ps.cameraPos = m_ps.origin;
 	Move(true, true);
 }
 
