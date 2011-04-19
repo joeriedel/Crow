@@ -37,7 +37,7 @@ void G_ScreenView::DoSyncLuaState(lua_State *L)
 	m_maxs = lua::Marshal<Vec3>::Get(L, -1, true);
 	lua_pop(L, 1);
 
-	lua_getfield(L, -1, "screenMaxSpeed");
+	lua_getfield(L, -1, "screenMaxVelocity");
 	m_maxSpeed = lua::Marshal<Vec3>::Get(L, -1, true);
 	lua_pop(L, 1);
 
@@ -67,7 +67,7 @@ void G_ScreenView::DoSetLuaState(lua_State *L)
 	lua::Marshal<Vec3>::Push(L, m_maxs);
 	lua_setfield(L, -2, "screenMaxs");
 	lua::Marshal<Vec3>::Push(L, m_maxSpeed);
-	lua_setfield(L, -2, "screenMaxSpeed");
+	lua_setfield(L, -2, "screenMaxVelocity");
 	lua::Marshal<Vec3>::Push(L, m_velocity);
 	lua_setfield(L, -2, "screenVelocity");
 	lua::Marshal<Vec3>::Push(L, m_accel);
@@ -100,7 +100,7 @@ void G_ScreenView::TickPhysics(
 
 	m_velocity += m_accel*dt;
 	for (int i = 0; i < 3; ++i)
-		m_velocity[i] = std::max(m_maxSpeed[i], m_velocity[i]);
+		m_velocity[i] = math::Clamp(m_velocity[i], -m_maxSpeed[i], m_maxSpeed[i]);
 
 	m_pos += m_velocity*dt;
 	for (int i = 0; i < 3; ++i)
