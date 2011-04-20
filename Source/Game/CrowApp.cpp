@@ -8,15 +8,6 @@
 #include <Runtime/File.h>
 #include "Entities/G_Exports.h"
 
-#if defined(RAD_OPT_PC)
-#include <Engine/Renderer/PC/RBackend.h>
-#include <SDL/SDL.h>
-#elif defined(RAD_OPT_IOS)
-#include <Engine/Renderer/IOS/RBackend.h>
-#else
-#error RAD_ERROR_UNSUP_PLAT
-#endif
-
 App *App::New() { return new CrowApp(); }
 
 CrowApp::CrowApp()
@@ -113,9 +104,7 @@ bool CrowApp::RunAutoExec()
 	if (script.GetToken(token))
 	{
 		m_game = Game::New();
-		r::HRBackend rb = engine->sys->r.Cast<r::IRBackend>();
-		RAD_ASSERT(rb);
-		r::VidMode vidMode = rb->curVidMode;
+		r::VidMode vidMode = engine->sys->r->curVidMode;
 		m_game->SetViewport(0, 0, vidMode.w, vidMode.h);
 		if (!m_game->LoadMap(token.c_str()))
 		{
@@ -133,9 +122,7 @@ void CrowApp::OnTick(float dt)
 #if defined(RAD_TARGET_GOLDEN) || defined(RAD_OPT_IOS)
 	if (m_game)
 	{
-		r::HRBackend rb = engine->sys->r.Cast<r::IRBackend>();
-		RAD_ASSERT(rb);
-		r::VidMode vidMode = rb->curVidMode;
+		r::VidMode vidMode = engine->sys->r->curVidMode;
 		m_game->SetViewport(0, 0, vidMode.w, vidMode.h);
 		m_game->Tick(dt);
 		engine->sys->r->SwapBuffers();
