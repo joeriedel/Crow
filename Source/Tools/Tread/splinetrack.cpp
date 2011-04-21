@@ -1242,7 +1242,7 @@ void CSplineTrack::EvaluateCurve1D( float* ctrls, float* outpt, float u )
 			   ctrls[3]*cub_u;
 }
 
-void CSplineTrack::EvaluateCurve3D( vec3* ctrls, vec3* outpt, float u )
+void CSplineTrack::EvaluateCurve3D( vec3* ctrls, vec3* outpt, vec3 *fwd, float u )
 {
 	vec_t inv_u;
 	vec_t sqr_u;
@@ -1276,6 +1276,20 @@ void CSplineTrack::EvaluateCurve3D( vec3* ctrls, vec3* outpt, float u )
 			   ctrls[1][2]*_3u +
 			   ctrls[2][2]*_3u_sqr +
 			   ctrls[3][2]*cub_u;
+
+	fwd[0][0] = 3*(ctrls[1][0]-ctrls[0][0])*sqr_inv_u+
+			3*(ctrls[2][0]-ctrls[1][0])*2*u*inv_u +
+			3*(ctrls[3][0]-ctrls[2][0])*sqr_u;
+	
+	fwd[0][1] = 3*(ctrls[1][1]-ctrls[0][1])*sqr_inv_u+
+			3*(ctrls[2][1]-ctrls[1][1])*2*u*inv_u +
+			3*(ctrls[3][1]-ctrls[2][1])*sqr_u;
+
+	fwd[0][2] = 3*(ctrls[1][2]-ctrls[0][2])*sqr_inv_u+
+			3*(ctrls[2][2]-ctrls[1][2])*2*u*inv_u +
+			3*(ctrls[3][2]-ctrls[2][2])*sqr_u;
+
+	fwd->normalize();
 }
 
 void CSplineTrack::GetFovBorders( CLinkedList<CSplineKeyFrame>* fovs, int ticks, float* start, float* end, float* t )
@@ -1411,7 +1425,13 @@ void CSplineTrack::EvaluateSpline( int ticks, vec3* pos, vec3* rot, float* fov )
 		seg = SegmentForTicks( &m_segs, ticks );
 		if( seg )
 		{
-			EvaluateCurve3D( seg->ctrls, pos, TemperalForTicks( seg, ticks ) );
+			vec3 z;
+
+			EvaluateCurve3D( seg->ctrls, pos, &z, TemperalForTicks( seg, ticks ) );
+
+			rot[0][0] = 0.f;
+			rot[0][1] = RADIANS_TO_DEGREES(asin(-z[2])); // this is works but won't let us pitch over (upside down)
+			rot[0][2] = RADIANS_TO_DEGREES(atan2(z[1], z[0]));
 		}
 		else
 		{
@@ -1432,20 +1452,6 @@ void CSplineTrack::EvaluateSpline( int ticks, vec3* pos, vec3* rot, float* fov )
 		{
 			*pos = seg->ctrls[CTRLA_POINT];
 		}
-	}
-
-	//
-	// evaluate rots.
-	//
-	{
-		vec3 ctrls[4];
-		float t;
-
-		GetRotationBorders( &m_rots, ticks, &ctrls[0], &ctrls[3], &t );
-		
-		ctrls[1] = ctrls[0];
-		ctrls[2] = ctrls[3];
-		EvaluateCurve3D( ctrls, rot, t );
 	}
 
 	//

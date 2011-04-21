@@ -623,7 +623,7 @@ void CTrackAnimDialog::AnimateForTime()
 
 		m_view->View.pos3d = pos;
 	
-		m_view->View.fov = fov;
+//		m_view->View.fov = fov;
 		m_view->View.or3d.set_angles( angles );
 
 		m_view->RedrawWindow();

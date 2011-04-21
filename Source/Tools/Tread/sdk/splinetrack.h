@@ -165,7 +165,7 @@ private:
 	void FreeMeshes();
 	void BuildMeshes();
 
-	void EvaluateCurve3D( vec3* ctrls, vec3* out, float f );
+	void EvaluateCurve3D( vec3* ctrls, vec3* out, vec3 *fwd, float f );
 	void EvaluateCurve1D( float* ctrls, float* out, float f );
 	
 	CSplineSegment* SegmentForTicks( CLinkedList<CSplineSegment>* segs, int ticks );
