@@ -4,6 +4,7 @@
 // See Radiance/LICENSE for licensing terms.
 
 #include "G_ScreenView.h"
+#include <Engine/World/World.h>
 #include <algorithm>
 #undef max
 
@@ -17,7 +18,8 @@ m_velocity(Vec3::Zero),
 m_accel(Vec3::Zero),
 m_mins(Vec3::Zero),
 m_maxs(Vec3::Zero),
-m_screenMode(false)
+m_screenMode(false),
+m_clip(0)
 {
 }
 
@@ -103,8 +105,34 @@ void G_ScreenView::TickPhysics(
 		m_velocity[i] = math::Clamp(m_velocity[i], -m_maxSpeed[i], m_maxSpeed[i]);
 
 	m_pos += m_velocity*dt;
-	for (int i = 0; i < 3; ++i)
-		m_pos[i] = math::Clamp(m_pos[i], m_mins[i], m_maxs[i]);
+
+	int clip = 0;
+
+	if (m_pos[0] < m_mins[0])
+	{
+		clip |= ClipMinX;
+		m_pos[0] = m_mins[0];
+	}
+
+	if (m_pos[0] > m_maxs[0])
+	{
+		clip |= ClipMaxX;
+		m_pos[0] = m_maxs[0];
+	}
+
+	if (m_pos[1] < m_mins[1])
+	{
+		clip |= ClipMinY;
+		m_pos[1] = m_mins[1];
+	}
+
+	if (m_pos[1] > m_maxs[1])
+	{
+		clip |= ClipMaxY;
+		m_pos[1] = m_maxs[1];
+	}
+
+	m_pos[2] = math::Clamp(m_pos[2], m_mins[2], m_maxs[2]);
 
 	m_ps.worldAngles = WrapAngles(m_ps.originAngles + m_ps.angles);
 	m_ps.cameraAngles = m_ps.worldAngles;
@@ -117,6 +145,21 @@ void G_ScreenView::TickPhysics(
 	m_ps.pos = (fwd * m_pos[2]) + (left * m_pos[0]) + (up * m_pos[1]);
 	m_ps.cameraPos = m_ps.origin;
 	Move(true, true);
+
+	if (clip & ~m_clip) // new bits set in clip mask?
+	{
+		lua_State *L = world->lua->L;
+
+		// Notify script of clipping if it occured.
+		if (PushEntityCall(L, "OnScreenMoveClipped"))
+		{
+			lua_pushinteger(L, clip & ~m_clip);
+			lua::Marshal<Vec3>::Push(L, m_velocity);
+			world->lua->Call(L, "ScreenViewPhysics", 3, 0, 0);
+		}
+	}
+
+	m_clip = clip;
 }
 
 } // world

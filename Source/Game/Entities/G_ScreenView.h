@@ -41,6 +41,14 @@ protected:
 	);
 
 private:
+	
+	enum
+	{
+		RAD_FLAG(ClipMinX),
+		RAD_FLAG(ClipMaxX),
+		RAD_FLAG(ClipMinY),
+		RAD_FLAG(ClipMaxY)
+	};
 
 	RAD_DECLARE_GET(screenMins, const Vec3&) { return m_mins; }
 	RAD_DECLARE_SET(screenMins, const Vec3&) { m_mins = value; }
@@ -55,6 +63,7 @@ private:
 	RAD_DECLARE_GET(screenPos, const Vec3&) { return m_pos; }
 	RAD_DECLARE_SET(screenPos, const Vec3&) { m_pos = value; }
 
+	int m_clip;
 	Vec3 m_pos;
 	Vec3 m_maxSpeed;
 	Vec3 m_velocity;
