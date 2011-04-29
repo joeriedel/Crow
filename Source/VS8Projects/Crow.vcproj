@@ -152,6 +152,10 @@
 						>
 					</File>
 					<File
+						RelativePath="..\..\Base\Scripts\Game.lua"
+						>
+					</File>
+					<File
 						RelativePath="..\..\Base\Scripts\Imports.lua"
 						>
 					</File>
@@ -165,6 +169,18 @@
 					</File>
 					<File
 						RelativePath="..\..\Base\Scripts\Math.lua"
+						>
+					</File>
+					<File
+						RelativePath="..\..\Base\Scripts\OmenLevel.lua"
+						>
+					</File>
+					<File
+						RelativePath="..\..\Base\Scripts\Overworld.lua"
+						>
+					</File>
+					<File
+						RelativePath="..\..\Base\Scripts\Owl.lua"
 						>
 					</File>
 					<File
