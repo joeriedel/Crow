@@ -7,10 +7,12 @@
 #include <Engine/World/Entity.h>
 #include "G_ViewController.h"
 #include "G_ScreenPawn.h"
+#include "G_ScreenProjectile.h"
 
 E_EXPORT(RADNULL_API, view_controller)
 E_EXPORT(RADNULL_API, info_player_start)
 E_EXPORT(RADNULL_API, info_enemy_start)
+E_EXPORT(RADNULL_API, info_projectile)
 
 namespace spawn {
 

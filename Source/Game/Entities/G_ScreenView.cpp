@@ -142,7 +142,7 @@ void G_ScreenView::TickPhysics(
 	Vec3 up, left;
 	FrameVecs(fwd, up, left);
 
-	m_ps.pos = (fwd * m_pos[2]) + (left * m_pos[0]) + (up * m_pos[1]);
+	m_ps.pos = (left*m_pos[0])+(up*m_pos[1])+(fwd*m_pos[2]);
 	m_ps.cameraPos = m_ps.origin;
 	Move(true, true);
 

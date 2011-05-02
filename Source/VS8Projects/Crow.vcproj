@@ -104,6 +104,14 @@
 						>
 					</File>
 					<File
+						RelativePath="..\Game\Entities\G_ScreenProjectile.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\Game\Entities\G_ScreenProjectile.h"
+						>
+					</File>
+					<File
 						RelativePath="..\Game\Entities\G_ScreenView.cpp"
 						>
 					</File>
@@ -181,6 +189,10 @@
 					</File>
 					<File
 						RelativePath="..\..\Base\Scripts\Owl.lua"
+						>
+					</File>
+					<File
+						RelativePath="..\..\Base\Scripts\Projectile.lua"
 						>
 					</File>
 					<File
