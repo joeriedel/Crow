@@ -36,6 +36,8 @@
 		332EF5A612A1E943004F29C0 /* G_ViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59B12A1E942004F29C0 /* G_ViewController.cpp */; };
 		33519A1B132C890F000D4455 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 33FEFE3212A0C3D400D0C604 /* Base */; };
 		33519A1C132C8915000D4455 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 33519A16132C88F0000D4455 /* Base */; };
+		335A01FD136F4BD0007C6377 /* G_ScreenProjectile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 335A01FB136F4BD0007C6377 /* G_ScreenProjectile.cpp */; };
+		335A01FE136F4BD5007C6377 /* G_ScreenProjectile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 335A01FB136F4BD0007C6377 /* G_ScreenProjectile.cpp */; };
 		336CE188133ED20800523593 /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 338C24FC133EBECF00C4740B /* libfreetype.a */; };
 		337F032A12A87F7F001376E7 /* libglsl_optimizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 337F031B12A87F74001376E7 /* libglsl_optimizer.a */; };
 		337F032B12A87F81001376E7 /* libRadiance.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 337F032112A87F74001376E7 /* libRadiance.a */; };
@@ -92,6 +94,8 @@
 		332EF59B12A1E942004F29C0 /* G_ViewController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_ViewController.cpp; sourceTree = "<group>"; };
 		332EF59C12A1E942004F29C0 /* G_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_ViewController.h; sourceTree = "<group>"; };
 		33519A16132C88F0000D4455 /* Base */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Base; path = ../../../Cooked/Packages/Base; sourceTree = SOURCE_ROOT; };
+		335A01FB136F4BD0007C6377 /* G_ScreenProjectile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_ScreenProjectile.cpp; sourceTree = "<group>"; };
+		335A01FC136F4BD0007C6377 /* G_ScreenProjectile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_ScreenProjectile.h; sourceTree = "<group>"; };
 		337F031012A87F74001376E7 /* glsl-optimizer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "glsl-optimizer.xcodeproj"; path = "../../../Radiance/Source/XCode/IOS/glsl-optimizer.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		337F031312A87F74001376E7 /* Radiance.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Radiance.xcodeproj; path = ../../../Radiance/Source/XCode/IOS/Radiance.xcodeproj; sourceTree = SOURCE_ROOT; };
 		338C24F4133EBECF00C4740B /* freetype.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = freetype.xcodeproj; path = ../../../Radiance/Source/XCode/IOS/freetype.xcodeproj; sourceTree = SOURCE_ROOT; };
@@ -204,6 +208,8 @@
 			children = (
 				33277BA613501AE6005DBC1F /* G_ScreenPawn.cpp */,
 				33277BA713501AE6005DBC1F /* G_ScreenPawn.h */,
+				335A01FB136F4BD0007C6377 /* G_ScreenProjectile.cpp */,
+				335A01FC136F4BD0007C6377 /* G_ScreenProjectile.h */,
 				33BBC12E134D75AB00458D52 /* G_ScreenView.cpp */,
 				33BBC12F134D75AB00458D52 /* G_ScreenView.h */,
 				332EF59712A1E942004F29C0 /* G_Exports.cpp */,
@@ -394,6 +400,7 @@
 				332C4194132AC86800E10CA2 /* CrowApp.cpp in Sources */,
 				33BBC131134D75AB00458D52 /* G_ScreenView.cpp in Sources */,
 				33277BA813501AE6005DBC1F /* G_ScreenPawn.cpp in Sources */,
+				335A01FD136F4BD0007C6377 /* G_ScreenProjectile.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +415,7 @@
 				33025838132C768D0032AD96 /* CrowApp.cpp in Sources */,
 				33BBC133134D75B400458D52 /* G_ScreenView.cpp in Sources */,
 				33277BB913501D24005DBC1F /* G_ScreenPawn.cpp in Sources */,
+				335A01FE136F4BD5007C6377 /* G_ScreenProjectile.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

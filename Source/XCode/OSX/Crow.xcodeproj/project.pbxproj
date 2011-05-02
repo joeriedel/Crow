@@ -14,12 +14,8 @@
 		335522761299FD4300AA9C93 /* CrowGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrowGame.h; path = ../../Game/CrowGame.h; sourceTree = SOURCE_ROOT; };
 		335522781299FD4300AA9C93 /* G_Exports.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_Exports.cpp; sourceTree = "<group>"; };
 		335522791299FD4300AA9C93 /* G_Exports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_Exports.h; sourceTree = "<group>"; };
-		3355227A1299FD4300AA9C93 /* G_PlayerPawn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_PlayerPawn.cpp; sourceTree = "<group>"; };
-		3355227B1299FD4300AA9C93 /* G_PlayerPawn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_PlayerPawn.h; sourceTree = "<group>"; };
 		3355227C1299FD4300AA9C93 /* G_ViewController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_ViewController.cpp; sourceTree = "<group>"; };
 		3355227D1299FD4300AA9C93 /* G_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_ViewController.h; sourceTree = "<group>"; };
-		3355227E1299FD4300AA9C93 /* G_Worldspawn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_Worldspawn.cpp; sourceTree = "<group>"; };
-		3355227F1299FD4300AA9C93 /* G_Worldspawn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_Worldspawn.h; sourceTree = "<group>"; };
 		335522801299FD4300AA9C93 /* SConstruct */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SConstruct; path = ../../Game/SConstruct; sourceTree = SOURCE_ROOT; };
 		33ECF043129A2805006996C1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,12 +56,8 @@
 			children = (
 				335522781299FD4300AA9C93 /* G_Exports.cpp */,
 				335522791299FD4300AA9C93 /* G_Exports.h */,
-				3355227A1299FD4300AA9C93 /* G_PlayerPawn.cpp */,
-				3355227B1299FD4300AA9C93 /* G_PlayerPawn.h */,
 				3355227C1299FD4300AA9C93 /* G_ViewController.cpp */,
 				3355227D1299FD4300AA9C93 /* G_ViewController.h */,
-				3355227E1299FD4300AA9C93 /* G_Worldspawn.cpp */,
-				3355227F1299FD4300AA9C93 /* G_Worldspawn.h */,
 			);
 			name = Entities;
 			path = ../../Game/Entities;
