@@ -12,72 +12,73 @@ namespace world {
 
 G_ScreenView::G_ScreenView() : 
 E_CONSTRUCT_BASE,
-m_pos(Vec3::Zero),
-m_maxSpeed(Vec3::Zero),
-m_velocity(Vec3::Zero),
-m_accel(Vec3::Zero),
-m_mins(Vec3::Zero),
-m_maxs(Vec3::Zero),
-m_screenMode(false),
-m_clip(0)
+m_enabled(false),
+m_target(Vec3::Zero),
+m_targetVel(Vec3::Zero),
+m_clip(Vec3::Zero)
 {
+	m_spring.length = 1.f;
+	m_spring.elasticity = 1000.f;
+	m_spring.tolerance = 1.f;
+
+	m_vertex.pos = Vec3::Zero;
+	m_vertex.vel = Vec3::Zero;
+	m_vertex.force = Vec3::Zero;
+	m_vertex.mass = 100.f;
+	m_vertex.drag[0] = m_vertex.drag[1] = 0.1f;
+	m_vertex.friction = 0.1f;
+	m_vertex.inner = false;
+	m_vertex.outer = false;
 }
 
 G_ScreenView::~G_ScreenView()
 {
 }
 
-void G_ScreenView::DoSyncLuaState(lua_State *L)
-{
-	Entity::DoSyncLuaState(L);
-
-	lua_getfield(L, -1, "screenMins");
-	m_mins = lua::Marshal<Vec3>::Get(L, -1, true);
-	lua_pop(L, 1);
-
-	lua_getfield(L, -1, "screenMaxs");
-	m_maxs = lua::Marshal<Vec3>::Get(L, -1, true);
-	lua_pop(L, 1);
-
-	lua_getfield(L, -1, "screenMaxVelocity");
-	m_maxSpeed = lua::Marshal<Vec3>::Get(L, -1, true);
-	lua_pop(L, 1);
-
-	lua_getfield(L, -1, "screenVelocity");
-	m_velocity = lua::Marshal<Vec3>::Get(L, -1, true);
-	lua_pop(L, 1);
-
-	lua_getfield(L, -1, "screenAccel");
-	m_accel = lua::Marshal<Vec3>::Get(L, -1, true);
-	lua_pop(L, 1);
-
-	lua_getfield(L, -1, "screenPos");
-	m_pos = lua::Marshal<Vec3>::Get(L, -1, true);
-	lua_pop(L, 1);
-
-	lua_getfield(L, -1, "screenMode");
-	m_screenMode = lua_toboolean(L, -1) ? true : false;
-	lua_pop(L, 1);
-}
-
 void G_ScreenView::DoSetLuaState(lua_State *L)
 {
 	Entity::DoSetLuaState(L);
 
-	lua::Marshal<Vec3>::Push(L, m_mins);
-	lua_setfield(L, -2, "screenMins");
-	lua::Marshal<Vec3>::Push(L, m_maxs);
-	lua_setfield(L, -2, "screenMaxs");
-	lua::Marshal<Vec3>::Push(L, m_maxSpeed);
-	lua_setfield(L, -2, "screenMaxVelocity");
-	lua::Marshal<Vec3>::Push(L, m_velocity);
-	lua_setfield(L, -2, "screenVelocity");
-	lua::Marshal<Vec3>::Push(L, m_accel);
-	lua_setfield(L, -2, "screenAccel");
-	lua::Marshal<Vec3>::Push(L, m_pos);
-	lua_setfield(L, -2, "screenPos");
-	lua_pushboolean(L, m_screenMode ? 1 : 0);
-	lua_setfield(L, -2, "screenMode");
+	lua_createtable(L, 0, 3);
+	lua_pushboolean(L, m_enabled ? 1 : 0);
+	lua_setfield(L, -2, "enabled");
+	lua::Marshal<physics::Spring>::Push(L, m_spring);
+	lua_setfield(L, -2, "spring");
+	lua::Marshal<physics::SpringVertex>::Push(L, m_vertex);
+	lua_setfield(L, -2, "vertex");
+	lua::Marshal<Vec3>::Push(L, m_target);
+	lua_setfield(L, -2, "target");
+	lua::Marshal<Vec3>::Push(L, m_targetVel);
+	lua_setfield(L, -2, "targetVel");
+	lua::Marshal<Vec3>::Push(L, m_clip);
+	lua_setfield(L, -2, "clip");
+	lua_setfield(L, -2, "screenControl");
+
+}
+
+void G_ScreenView::DoSyncLuaState(lua_State *L)
+{
+	Entity::DoSyncLuaState(L);
+
+	lua_getfield(L, -1, "screenControl");
+	lua_getfield(L, -1, "enabled");
+	m_enabled = lua_toboolean(L, -1) ? true : false;
+	lua_pop(L, 1);
+	lua_getfield(L, -1, "spring");
+	m_spring = lua::Marshal<physics::Spring>::Get(L, -1, false);
+	lua_pop(L, 1);
+	lua_getfield(L, -1, "vertex");
+	m_vertex = lua::Marshal<physics::SpringVertex>::Get(L, -1, false);
+	lua_pop(L, 1);
+	lua_getfield(L, -1, "target");
+	m_target = lua::Marshal<Vec3>::Get(L, -1, false);
+	lua_pop(L, 1);
+	lua_getfield(L, -1, "targetVel");
+	m_targetVel = lua::Marshal<Vec3>::Get(L, -1, false);
+	lua_pop(L, 1);
+	lua_getfield(L, -1, "clip");
+	m_clip = lua::Marshal<Vec3>::Get(L, -1, false);
+	lua_pop(L, 2);
 }
 
 void G_ScreenView::TickPhysics(
@@ -86,8 +87,8 @@ void G_ScreenView::TickPhysics(
 	const xtime::TimeSlice &time
 )
 {
-	if (!m_screenMode)
-	{ // not in screen mode
+	if (!m_enabled)
+	{ // no screen controls
 		Entity::TickPhysics(frame, dt, time);
 		return;
 	}
@@ -100,39 +101,11 @@ void G_ScreenView::TickPhysics(
 		m_ps.originAngles = parent->ps->worldAngles;
 	}
 
-	m_velocity += m_accel*dt;
+	m_target += m_targetVel*dt;
 	for (int i = 0; i < 3; ++i)
-		m_velocity[i] = math::Clamp(m_velocity[i], -m_maxSpeed[i], m_maxSpeed[i]);
+		m_target[i] = math::Clamp(m_target[i], -m_clip[i], m_clip[i]);
 
-	m_pos += m_velocity*dt;
-
-	int clip = 0;
-
-	if (m_pos[0] < m_mins[0])
-	{
-		clip |= ClipMinX;
-		m_pos[0] = m_mins[0];
-	}
-
-	if (m_pos[0] > m_maxs[0])
-	{
-		clip |= ClipMaxX;
-		m_pos[0] = m_maxs[0];
-	}
-
-	if (m_pos[1] < m_mins[1])
-	{
-		clip |= ClipMinY;
-		m_pos[1] = m_mins[1];
-	}
-
-	if (m_pos[1] > m_maxs[1])
-	{
-		clip |= ClipMaxY;
-		m_pos[1] = m_maxs[1];
-	}
-
-	m_pos[2] = math::Clamp(m_pos[2], m_mins[2], m_maxs[2]);
+	m_vertex.Update(dt, m_target, m_spring);
 
 	m_ps.worldAngles = WrapAngles(m_ps.originAngles + m_ps.angles);
 	m_ps.cameraAngles = m_ps.worldAngles;
@@ -142,24 +115,9 @@ void G_ScreenView::TickPhysics(
 	Vec3 up, left;
 	FrameVecs(fwd, up, left);
 
-	m_ps.pos = (left*m_pos[0])+(up*m_pos[1])+(fwd*m_pos[2]);
+	m_ps.pos = (left*m_vertex.pos[0])+(up*m_vertex.pos[1])+(fwd*m_vertex.pos[2]);
 	m_ps.cameraPos = m_ps.origin;
 	Move(true, true);
-
-	if (clip & ~m_clip) // new bits set in clip mask?
-	{
-		lua_State *L = world->lua->L;
-
-		// Notify script of clipping if it occured.
-		if (PushEntityCall(L, "OnScreenMoveClipped"))
-		{
-			lua_pushinteger(L, clip & ~m_clip);
-			lua::Marshal<Vec3>::Push(L, m_velocity);
-			world->lua->Call(L, "ScreenViewPhysics", 3, 0, 0);
-		}
-	}
-
-	m_clip = clip;
 }
 
 } // world

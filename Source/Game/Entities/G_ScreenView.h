@@ -10,6 +10,7 @@
 #pragma once
 
 #include <Engine/World/Entity.h>
+#include <Engine/Physics/Spring.h>
 #include <Runtime/PushPack.h>
 
 namespace world {
@@ -22,12 +23,8 @@ public:
 	G_ScreenView();
 	virtual ~G_ScreenView();
 
-	RAD_DECLARE_PROPERTY(G_ScreenView, screenMins, const Vec3&, const Vec3&);
-	RAD_DECLARE_PROPERTY(G_ScreenView, screenMaxs, const Vec3&, const Vec3&);
-	RAD_DECLARE_PROPERTY(G_ScreenView, screenMaxSpeed, const Vec3&, const Vec3&);
-	RAD_DECLARE_PROPERTY(G_ScreenView, screenVelocity, const Vec3&, const Vec3&);
-	RAD_DECLARE_PROPERTY(G_ScreenView, screenAccel, const Vec3&, const Vec3&);
-	RAD_DECLARE_PROPERTY(G_ScreenView, screenPos, const Vec3&, const Vec3&);
+	RAD_DECLARE_READONLY_PROPERTY(G_ScreenView, spring, physics::Spring*);
+	RAD_DECLARE_READONLY_PROPERTY(G_ScreenView, vertex, physics::SpringVertex*);
 
 protected:
 
@@ -41,35 +38,16 @@ protected:
 	);
 
 private:
+
+	RAD_DECLARE_GET(spring, physics::Spring*) { return &const_cast<G_ScreenView*>(this)->m_spring; }
+	RAD_DECLARE_GET(vertex, physics::SpringVertex*) { return &const_cast<G_ScreenView*>(this)->m_vertex; }
 	
-	enum
-	{
-		RAD_FLAG(ClipMinX),
-		RAD_FLAG(ClipMaxX),
-		RAD_FLAG(ClipMinY),
-		RAD_FLAG(ClipMaxY)
-	};
-
-	RAD_DECLARE_GET(screenMins, const Vec3&) { return m_mins; }
-	RAD_DECLARE_SET(screenMins, const Vec3&) { m_mins = value; }
-	RAD_DECLARE_GET(screenMaxs, const Vec3&) { return m_maxs; }
-	RAD_DECLARE_SET(screenMaxs, const Vec3&) { m_maxs = value; }
-	RAD_DECLARE_GET(screenMaxSpeed, const Vec3&) { return m_maxSpeed; }
-	RAD_DECLARE_SET(screenMaxSpeed, const Vec3&) { m_maxSpeed = value; }
-	RAD_DECLARE_GET(screenVelocity, const Vec3&) { return m_velocity; }
-	RAD_DECLARE_SET(screenVelocity, const Vec3&) { m_velocity = value; }
-	RAD_DECLARE_GET(screenAccel, const Vec3&) { return m_accel; }
-	RAD_DECLARE_SET(screenAccel, const Vec3&) { m_accel = value; }
-	RAD_DECLARE_GET(screenPos, const Vec3&) { return m_pos; }
-	RAD_DECLARE_SET(screenPos, const Vec3&) { m_pos = value; }
-
-	int m_clip;
-	Vec3 m_pos;
-	Vec3 m_maxSpeed;
-	Vec3 m_velocity;
-	Vec3 m_accel;
-	Vec3 m_mins, m_maxs;
-	bool m_screenMode;
+	physics::Spring m_spring;
+	physics::SpringVertex m_vertex;
+	Vec3 m_target;
+	Vec3 m_clip;
+	Vec3 m_targetVel;
+	bool m_enabled;
 };
 
 } // world
