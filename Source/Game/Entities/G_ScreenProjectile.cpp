@@ -91,8 +91,8 @@ void G_ScreenProjectile::TickPhysics(
 	
 	m_ps.pos = parent->ps->worldPos+(left*pos[0])+(up*pos[1])+(fwd*pos[2]);
 	m_ps.cameraPos = m_ps.pos;
-	m_ps.angles = LookAngles((end-start).Normalize());
-	m_ps.worldAngles = WrapAngles(m_ps.originAngles + m_ps.angles);
+	m_ps.angles.pos = LookAngles((end-start).Normalize());
+	m_ps.worldAngles = WrapAngles(m_ps.originAngles + m_ps.angles.pos);
 	Move(true, false);
 }
 

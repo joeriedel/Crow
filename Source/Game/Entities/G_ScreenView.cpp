@@ -17,18 +17,6 @@ m_target(Vec3::Zero),
 m_targetVel(Vec3::Zero),
 m_clip(Vec3::Zero)
 {
-	m_spring.length = 1.f;
-	m_spring.elasticity = 1000.f;
-	m_spring.tolerance = 1.f;
-
-	m_vertex.pos = Vec3::Zero;
-	m_vertex.vel = Vec3::Zero;
-	m_vertex.force = Vec3::Zero;
-	m_vertex.mass = 100.f;
-	m_vertex.drag[0] = m_vertex.drag[1] = 0.1f;
-	m_vertex.friction = 0.1f;
-	m_vertex.inner = false;
-	m_vertex.outer = false;
 }
 
 G_ScreenView::~G_ScreenView()
@@ -107,7 +95,7 @@ void G_ScreenView::TickPhysics(
 
 	m_vertex.Update(dt, m_target, m_spring);
 
-	m_ps.worldAngles = WrapAngles(m_ps.originAngles + m_ps.angles);
+	m_ps.worldAngles = WrapAngles(m_ps.originAngles + m_ps.angles.pos);
 	m_ps.cameraAngles = m_ps.worldAngles;
 
 	Mat4 m = Mat4::Rotation(QuatFromAngles(Vec3(0, 0, m_ps.worldAngles[2])));
