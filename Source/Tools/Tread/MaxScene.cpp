@@ -25,7 +25,8 @@ namespace
 	enum
 	{
 		Id = RAD_FOURCC('R', 'S', 'C', 'N'),
-		Version = 2,
+		Version2 = 2,
+		Version = 3,
 		MaxUVChannels = 1,
 
 		HasMaterialFlag = 0x80000000,
@@ -141,7 +142,7 @@ namespace
 		int id;
 	};
 
-	void ReadTriModel(FILE *fp, TriModel &mdl, int flags, int numSkelBones)
+	void ReadTriModel(FILE *fp, int version, TriModel &mdl, int flags, int numSkelBones)
 	{
 		mdl.verts.clear();
 		mdl.tris.clear();
@@ -274,8 +275,17 @@ namespace
 		{
 			ReadString(fp);
 			
-			U32 v[2];
-			fread(v, sizeof(U32), 2, fp);
+			U32 v[3];
+
+			if (version > Version2)
+			{
+				fread(v, sizeof(U32), 3, fp);
+				v[1] = v[2];
+			}
+			else
+			{
+				fread(v, sizeof(U32), 2, fp);
+			}
 
 			for (U32 j = 0; j < v[1]; ++j)
 			{
@@ -588,7 +598,7 @@ bool MaxScene::Load(const char *filename)
 	fread(&id, sizeof(U32), 1, fp);
 	fread(&version, sizeof(U32), 1, fp);
 
-	if (id != Id || version != Version)
+	if (id != Id || (version < Version2 || version > Version))
 	{
 		fclose(fp);
 		return false;
@@ -629,6 +639,36 @@ bool MaxScene::Load(const char *filename)
 		}
 		
 		mats.push_back(m);
+	}
+
+	if (version > Version2) // load cameras (tread discards all this)
+	{
+		fread(&n, sizeof(U32), 1, fp);
+		for (U32 i = 0; i < n; ++i)
+		{
+			U32 unused, z;
+			ReadString(fp);
+			fread(&unused, sizeof(U32), 1, fp);
+			fread(&unused, sizeof(U32), 1, fp);
+
+			fread(&z, sizeof(U32), 1, fp);
+			fread(&unused, sizeof(U32), 1, fp);
+
+			for (U32 k = 0; k < z; ++k)
+			{
+				ReadString(fp);
+				fread(&unused, sizeof(U32), 1, fp);
+				fread(&unused, sizeof(U32), 1, fp);
+				U32 numFrames;
+				fread(&numFrames, sizeof(U32), 1, fp);
+				for (U32 j = 0; j < numFrames; ++j)
+				{
+					fread(&unused, sizeof(U32), 1, fp);
+					ReadBoneTM(fp);
+					ReadString(fp);
+				}
+			}
+		}
 	}
 
 	// entities
@@ -708,7 +748,7 @@ bool MaxScene::Load(const char *filename)
 			}*/
 
 			if (flags&(HasMeshFlag|HasAnimsFlag))
-				ReadTriModel(fp, mdl, flags, skel >= 0 ? skelBoneCounts[skel] : 0);
+				ReadTriModel(fp, version, mdl, flags, skel >= 0 ? skelBoneCounts[skel] : 0);
 
 			if (!mdl.tris.empty())
 			{
