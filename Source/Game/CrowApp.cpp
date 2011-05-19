@@ -7,6 +7,9 @@
 #include <Engine/Utils/Tokenizer.h>
 #include <Runtime/File.h>
 #include "Entities/G_Exports.h"
+#if defined(RAD_TARGET_GOLDEN) && defined(RAD_OPT_PC)
+#include <Engine/Renderer/PC/RBackend.h>
+#endif
 
 App *App::New() { return new CrowApp(); }
 
