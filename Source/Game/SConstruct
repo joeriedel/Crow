@@ -9,6 +9,8 @@ Import('radiance_engine')
 Import('radiance_main')
 Import('glsl_optimizer')
 Import('freetype')
+Import('libogg')
+Import('libvorbis')
 Import('lua')
 Import('variant_dir')
 Import('exe_type')
@@ -35,6 +37,7 @@ def build_game(name, type):
 	
 	if build.pc():
 		build.backend.addCgLibs(x.source)
+		build.backend.addOpenALLibs(x.source)
 
 ###############################################################################
 # Source
@@ -61,6 +64,8 @@ def build_game(name, type):
 	x.add(lua, type='lib')
 	x.add(freetype, type='lib')
 	x.add(radiance_runtime, type='lib')
+	x.add(libogg, type='lib')
+	x.add(libvorbis, type='lib')
 	
 	if build.tools():
 		x.add(glsl_optimizer, type='lib')
