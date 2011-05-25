@@ -144,6 +144,10 @@
 					Name="Script"
 					>
 					<File
+						RelativePath="..\..\Base\Scripts\CinematicLevel.lua"
+						>
+					</File>
+					<File
 						RelativePath="..\..\Base\Scripts\Class.lua"
 						>
 					</File>
@@ -184,6 +188,10 @@
 						>
 					</File>
 					<File
+						RelativePath="..\..\Base\Scripts\OpeningCinematic.lua"
+						>
+					</File>
+					<File
 						RelativePath="..\..\Base\Scripts\Overworld.lua"
 						>
 					</File>
@@ -192,11 +200,23 @@
 						>
 					</File>
 					<File
+						RelativePath="..\..\Base\Scripts\PostFX.lua"
+						>
+					</File>
+					<File
 						RelativePath="..\..\Base\Scripts\Projectile.lua"
 						>
 					</File>
 					<File
+						RelativePath="..\..\Base\Scripts\SoundEmitter.lua"
+						>
+					</File>
+					<File
 						RelativePath="..\..\Base\Scripts\System.lua"
+						>
+					</File>
+					<File
+						RelativePath="..\..\Base\Scripts\Thwap.lua"
 						>
 					</File>
 					<File
