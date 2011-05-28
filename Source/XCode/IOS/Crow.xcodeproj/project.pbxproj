@@ -42,7 +42,6 @@
 		337F032A12A87F7F001376E7 /* libglsl_optimizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 337F031B12A87F74001376E7 /* libglsl_optimizer.a */; };
 		337F032B12A87F81001376E7 /* libRadiance.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 337F032112A87F74001376E7 /* libRadiance.a */; };
 		338E741E133EE04A00991013 /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 338C24FC133EBECF00C4740B /* libfreetype.a */; };
-		339E09931389C04E004B5DC9 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 339E09921389C04E004B5DC9 /* OpenAL.framework */; };
 		339E09991389C064004B5DC9 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 339E09981389C064004B5DC9 /* OpenAL.framework */; };
 		339E099A1389C06B004B5DC9 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 339E09981389C064004B5DC9 /* OpenAL.framework */; };
 		339E09FF1389C4F4004B5DC9 /* liblibogg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 339E09FE1389C4F2004B5DC9 /* liblibogg.a */; };
@@ -78,14 +77,14 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 339E09F61389C4F2004B5DC9 /* libogg.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D /* liblibogg.a */;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = libogg;
 		};
 		339E0A6F1389C73C004B5DC9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 339E0A681389C73C004B5DC9 /* libvorbis.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D /* liblibvorbis.a */;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = libvorbis;
 		};
 /* End PBXContainerItemProxy section */
@@ -118,7 +117,6 @@
 		337F031012A87F74001376E7 /* glsl-optimizer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "glsl-optimizer.xcodeproj"; path = "../../../Radiance/Source/XCode/IOS/glsl-optimizer.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		337F031312A87F74001376E7 /* Radiance.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Radiance.xcodeproj; path = ../../../Radiance/Source/XCode/IOS/Radiance.xcodeproj; sourceTree = SOURCE_ROOT; };
 		338C24F4133EBECF00C4740B /* freetype.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = freetype.xcodeproj; path = ../../../Radiance/Source/XCode/IOS/freetype.xcodeproj; sourceTree = SOURCE_ROOT; };
-		339E09921389C04E004B5DC9 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		339E09981389C064004B5DC9 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		339E09F61389C4F2004B5DC9 /* libogg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libogg.xcodeproj; path = ../../../Radiance/Source/XCode/IOS/libogg.xcodeproj; sourceTree = SOURCE_ROOT; };
 		339E0A681389C73C004B5DC9 /* libvorbis.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libvorbis.xcodeproj; path = ../../../Radiance/Source/XCode/IOS/libvorbis.xcodeproj; sourceTree = SOURCE_ROOT; };
@@ -158,7 +156,6 @@
 				3302583E132C768D0032AD96 /* libglsl_optimizer.a in Frameworks */,
 				3302583F132C768D0032AD96 /* libRadiance.a in Frameworks */,
 				336CE188133ED20800523593 /* libfreetype.a in Frameworks */,
-				339E09931389C04E004B5DC9 /* OpenAL.framework in Frameworks */,
 				339E09991389C064004B5DC9 /* OpenAL.framework in Frameworks */,
 				339E09FF1389C4F4004B5DC9 /* liblibogg.a in Frameworks */,
 				339E0A711389C73E004B5DC9 /* liblibvorbis.a in Frameworks */,
