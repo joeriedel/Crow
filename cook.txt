@@ -16,6 +16,8 @@ UI/start_button_M
 UI/continue_button_M
 UI/options_button_M
 UI/crow_title_M
+UI/crow_energy_L1_M
+UI/crow_energy_L2_M
 Cinematic/opening_cinematic
 Cinematic/ch1_intro
 Cinematic/opening_cin_fate2_M
