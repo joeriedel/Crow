@@ -48,6 +48,10 @@
 		339E0A711389C73E004B5DC9 /* liblibvorbis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 339E0A701389C73C004B5DC9 /* liblibvorbis.a */; };
 		33BBC131134D75AB00458D52 /* G_ScreenView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33BBC12E134D75AB00458D52 /* G_ScreenView.cpp */; };
 		33BBC133134D75B400458D52 /* G_ScreenView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33BBC12E134D75AB00458D52 /* G_ScreenView.cpp */; };
+		33D313971395D870007345A9 /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 33D313961395D86F007345A9 /* Default-Landscape.png */; };
+		33D313981395D870007345A9 /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 33D313961395D86F007345A9 /* Default-Landscape.png */; };
+		33D3139A1395D876007345A9 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 33D313991395D876007345A9 /* Default-Portrait.png */; };
+		33D3139B1395D876007345A9 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 33D313991395D876007345A9 /* Default-Portrait.png */; };
 		33F2DD7B13160636008217BC /* G_SkModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33F2DD7913160636008217BC /* G_SkModel.cpp */; };
 /* End PBXBuildFile section */
 
@@ -124,6 +128,8 @@
 		33BBC12E134D75AB00458D52 /* G_ScreenView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_ScreenView.cpp; sourceTree = "<group>"; };
 		33BBC12F134D75AB00458D52 /* G_ScreenView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_ScreenView.h; sourceTree = "<group>"; };
 		33C3BAC212A06E1900976EFE /* Crow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		33D313961395D86F007345A9 /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape.png"; sourceTree = "<group>"; };
+		33D313991395D876007345A9 /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait.png"; sourceTree = "<group>"; };
 		33F2DD7913160636008217BC /* G_SkModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_SkModel.cpp; sourceTree = "<group>"; };
 		33F2DD7A13160636008217BC /* G_SkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_SkModel.h; sourceTree = "<group>"; };
 		33FEFE3212A0C3D400D0C604 /* Base */ = {isa = PBXFileReference; explicitFileType = folder; name = Base; path = ../../../Base; sourceTree = SOURCE_ROOT; };
@@ -187,6 +193,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				33D313991395D876007345A9 /* Default-Portrait.png */,
+				33D313961395D86F007345A9 /* Default-Landscape.png */,
 				3302582A132C76490032AD96 /* CrowiPadGold.plist */,
 				33025825132C75FE0032AD96 /* CrowiPadDev.plist */,
 				330257AB132C23540032AD96 /* Icon-72.png */,
@@ -438,6 +446,8 @@
 				332C4BB5132B364E00E10CA2 /* autoexec.txt in Resources */,
 				330257AD132C23540032AD96 /* Icon-72.png in Resources */,
 				33519A1B132C890F000D4455 /* Base in Resources */,
+				33D313981395D870007345A9 /* Default-Landscape.png in Resources */,
+				33D3139B1395D876007345A9 /* Default-Portrait.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +459,8 @@
 				33025831132C768D0032AD96 /* autoexec.txt in Resources */,
 				33025832132C768D0032AD96 /* Icon-72.png in Resources */,
 				33519A1C132C8915000D4455 /* Base in Resources */,
+				33D313971395D870007345A9 /* Default-Landscape.png in Resources */,
+				33D3139A1395D876007345A9 /* Default-Portrait.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
