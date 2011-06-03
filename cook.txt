@@ -1,11 +1,10 @@
 01Scarecrow/Overworld01
+01Scarecrow/Overworld02
 01Scarecrow/OmenLevel02
-07Demon/Overworld01
 Characters/Crow
 Characters/Owl
-UI/tint_overlay01_M
-UI/omen_overlay01_M
 UI/rain_overlay01_M
+UI/rain_overlay02_M
 FX/crow_shield01
 FX/Owlprojectile01
 UI/omen_meter_M
@@ -18,6 +17,8 @@ UI/options_button_M
 UI/crow_title_M
 UI/crow_energy_L1_M
 UI/crow_energy_L2_M
+FX/crow_attack01_M
+FX/Invert_M
 Cinematic/opening_cinematic
 Cinematic/ch1_intro
 Cinematic/opening_cin_fate2_M
