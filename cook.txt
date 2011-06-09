@@ -1,8 +1,13 @@
 01Scarecrow/Overworld01
 01Scarecrow/Overworld02
+01Scarecrow/Overworld03
 01Scarecrow/OmenLevel02
+01Scarecrow/OmenLevel03
+01Scarecrow/BossLevel01
 Characters/Crow
 Characters/Owl
+Characters/Banshee
+Characters/Scarecrow
 UI/rain_overlay01_M
 UI/rain_overlay02_M
 FX/crow_shield01
