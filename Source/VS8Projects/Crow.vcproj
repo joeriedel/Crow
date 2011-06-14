@@ -144,6 +144,14 @@
 					Name="Script"
 					>
 					<File
+						RelativePath="..\..\Base\Scripts\Actor.lua"
+						>
+					</File>
+					<File
+						RelativePath="..\..\Base\Scripts\Banshee.lua"
+						>
+					</File>
+					<File
 						RelativePath="..\..\Base\Scripts\CinematicLevel.lua"
 						>
 					</File>
@@ -184,6 +192,10 @@
 						>
 					</File>
 					<File
+						RelativePath="..\..\Base\Scripts\OmenBossTrigger.lua"
+						>
+					</File>
+					<File
 						RelativePath="..\..\Base\Scripts\OmenLevel.lua"
 						>
 					</File>
@@ -208,6 +220,10 @@
 						>
 					</File>
 					<File
+						RelativePath="..\..\Base\Scripts\Shiny.lua"
+						>
+					</File>
+					<File
 						RelativePath="..\..\Base\Scripts\SoundEmitter.lua"
 						>
 					</File>
@@ -217,6 +233,10 @@
 					</File>
 					<File
 						RelativePath="..\..\Base\Scripts\Thwap.lua"
+						>
+					</File>
+					<File
+						RelativePath="..\..\Base\Scripts\UI.lua"
 						>
 					</File>
 					<File
