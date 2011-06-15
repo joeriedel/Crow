@@ -55,6 +55,8 @@ void G_ScreenProjectile::Fire(const Vec3 &_start, const Vec3 &_end)
 
 	Vec3 start = _start-parent->ps->worldPos;
 	Vec3 end   = _end-parent->ps->worldPos;
+	end = math::Lerp(start, end, (m_distance[1]+32)/m_distance[1]);
+	m_distance[1] += 16.f;
 
 	m_start[0] = left.Dot(start);
 	m_start[1] = up.Dot(start);
