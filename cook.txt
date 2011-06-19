@@ -12,6 +12,9 @@ UI/rain_overlay01_M
 UI/rain_overlay02_M
 FX/crow_shield01
 FX/Owlprojectile01
+FX/Banshee_fireball01
+FX/Banshee_shield01
+FX/Banshee_blockfx01
 UI/omen_meter_M
 UI/menu_button01M
 UI/Solid_M
