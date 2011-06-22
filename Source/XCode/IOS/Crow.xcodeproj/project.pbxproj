@@ -338,8 +338,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 33025840132C768D0032AD96 /* Build configuration list for PBXNativeTarget "CrowiPadGold" */;
 			buildPhases = (
-				3302582E132C768D0032AD96 /* Resources */,
 				33025833132C768D0032AD96 /* Sources */,
+				3302582E132C768D0032AD96 /* Resources */,
 				33025839132C768D0032AD96 /* Frameworks */,
 			);
 			buildRules = (
@@ -515,7 +515,7 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = Crow;
-				SDKROOT = iphoneos4.2;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv6 armv7";
 			};
@@ -532,7 +532,7 @@
 				INFOPLIST_FILE = CrowiPadDev.plist;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = Crow;
-				SDKROOT = iphoneos4.2;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -553,7 +553,7 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = Crow;
-				SDKROOT = iphoneos4.2;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv6 armv7";
 			};
@@ -570,7 +570,7 @@
 				INFOPLIST_FILE = CrowiPadGold.plist;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = Crow;
-				SDKROOT = iphoneos4.2;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -629,7 +629,7 @@
 				INFOPLIST_FILE = CrowiPadDev.plist;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = Crow;
-				SDKROOT = iphoneos4.2;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -646,7 +646,7 @@
 				INFOPLIST_FILE = CrowiPadGold.plist;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = Crow;
-				SDKROOT = iphoneos4.2;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
