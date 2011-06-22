@@ -57,6 +57,7 @@ Objects/crow_title
 Objects/Runestone_Mesh01
 Objects/Runestone_Mesh02
 Objects/Shiny_Object_Mesh01
+Objects/tornado01
 Audio/Scarecrow01Omenlevel01_music
 Audio/Scarecrow01Overworld01_music
 Audio/demontalk_audio01
