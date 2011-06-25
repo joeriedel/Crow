@@ -6,9 +6,9 @@
 #include <Engine/Game/GSLoadMap.h>
 #include <Engine/Game/GSPlay.h>
 
-Game::Tickable::Ref GSLoadMap::New(int mapId)
+Game::Tickable::Ref GSLoadMap::New(int mapId, int slot, bool play)
 {
-	return Game::Tickable::Ref(new (ZWorld) GSLoadMap(mapId));
+	return Game::Tickable::Ref(new (ZWorld) GSLoadMap(mapId, slot, play));
 }
 
 Game::Tickable::Ref GSPlay::New()
@@ -23,4 +23,9 @@ Game::Ref Game::New()
 
 CrowGame::CrowGame()
 {
+}
+
+bool CrowGame::LoadEntry()
+{
+	return LoadMapSeq("Cinematic/ToL", 1, true, false);
 }

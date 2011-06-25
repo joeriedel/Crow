@@ -73,10 +73,10 @@ bool CrowApp::Initialize()
 #endif
 
 #if defined(RAD_TARGET_GOLDEN) || defined(RAD_OPT_IOS)
-	RunAutoExec();
-#endif
-
+	return RunAutoExec();
+#else
 	return true;
+#endif
 }
 
 #if defined(RAD_TARGET_GOLDEN) || defined(RAD_OPT_IOS)
@@ -109,7 +109,7 @@ bool CrowApp::RunAutoExec()
 		m_game = Game::New();
 		r::VidMode vidMode = engine->sys->r->curVidMode;
 		m_game->SetViewport(0, 0, vidMode.w, vidMode.h);
-		if (!m_game->LoadMap(token.c_str(), true))
+		if (!(m_game->LoadEntry() && m_game->LoadMap(token.c_str(), 0, true, true)))
 		{
 			m_game.reset();
 			return false;

@@ -53,6 +53,7 @@ Cinematic/opening_cinematic
 Cinematic/ch1_intro
 Cinematic/opening_cin_fate2_M
 Cinematic/opening_cin_fate3_M
+Cinematic/ToL
 Objects/crow_title
 Objects/Runestone_Mesh01
 Objects/Runestone_Mesh02

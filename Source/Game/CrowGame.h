@@ -12,6 +12,8 @@ class CrowGame : public Game
 public:
 
 	CrowGame();
+
+	virtual bool LoadEntry();
 };
 
 #include <Runtime/PopPack.h>
