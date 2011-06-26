@@ -27,5 +27,5 @@ CrowGame::CrowGame()
 
 bool CrowGame::LoadEntry()
 {
-	return LoadMapSeq("Cinematic/ToL", 1, true, false);
+	return LoadMapSeq("Cinematic/ToL", 1, world::UD_Slot, false);
 }
