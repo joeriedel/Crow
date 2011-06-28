@@ -75,8 +75,8 @@ Audio/banshee_impact
 Audio/cave_drips1
 Audio/crow_caw1
 Audio/crow_caw2
-Audio/distanct_thunder1
-Audio/distanct_thunder2
+Audio/distant_thunder1
+Audio/distant_thunder2
 Audio/grab_trinket1
 Audio/owl_intro1
 Audio/press_button1
