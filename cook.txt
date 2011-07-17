@@ -67,6 +67,10 @@ Objects/Runestone_Mesh01
 Objects/Runestone_Mesh02
 Objects/Shiny_Object_Mesh01
 Objects/tornado01
+Objects/windmill_blade1
+Objects/windmill_blade2
+Objects/windmillblades_broken
+Objects/windmillblades_looping
 Audio/Scarecrow01Omenlevel01_music
 Audio/Scarecrow01Overworld01_music
 Audio/demontalk_audio01
