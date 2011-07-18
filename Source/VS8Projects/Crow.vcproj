@@ -586,6 +586,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\..\Base\Scripts\OmenEnergy.lua"
+				>
+			</File>
+			<File
 				RelativePath="..\..\Base\Scripts\OmenLevel.lua"
 				>
 			</File>

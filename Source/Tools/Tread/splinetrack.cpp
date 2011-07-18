@@ -1244,51 +1244,16 @@ void CSplineTrack::EvaluateCurve1D( float* ctrls, float* outpt, float u )
 
 void CSplineTrack::EvaluateCurve3D( vec3* ctrls, vec3* outpt, vec3 *fwd, float u )
 {
-	vec_t inv_u;
-	vec_t sqr_u;
-	vec_t cub_u;
-	vec_t sqr_inv_u;
-	vec_t cub_inv_u;
-	vec_t _3u;
-	vec_t _3u_sqr;
+	vec3 a = -ctrls[0] + 3*ctrls[1] - 3*ctrls[2] + ctrls[3];
+	vec3 b = 3*ctrls[0] - 6*ctrls[1] + 3*ctrls[2];
+	vec3 c = -3*ctrls[0] + 3*ctrls[1];
+	vec3 d = ctrls[0];
 
-	sqr_u = u*u;
-	cub_u = sqr_u*u;
-	
-	inv_u = 1-u;
-	sqr_inv_u = inv_u*inv_u;
-	cub_inv_u = sqr_inv_u*inv_u;
-	
-	_3u = 3*u*sqr_inv_u;
-	_3u_sqr = 3*sqr_u*inv_u;
+	float u_sq = u*u;
+	float u_cb = u*u_sq;
 
-	outpt[0][0] = ctrls[0][0]*cub_inv_u +
-			   ctrls[1][0]*_3u +
-			   ctrls[2][0]*_3u_sqr +
-			   ctrls[3][0]*cub_u;
-	
-	outpt[0][1] = ctrls[0][1]*cub_inv_u +
-			   ctrls[1][1]*_3u +
-			   ctrls[2][1]*_3u_sqr +
-			   ctrls[3][1]*cub_u;
-
-	outpt[0][2] = ctrls[0][2]*cub_inv_u +
-			   ctrls[1][2]*_3u +
-			   ctrls[2][2]*_3u_sqr +
-			   ctrls[3][2]*cub_u;
-
-	fwd[0][0] = 3*(ctrls[1][0]-ctrls[0][0])*sqr_inv_u+
-			3*(ctrls[2][0]-ctrls[1][0])*2*u*inv_u +
-			3*(ctrls[3][0]-ctrls[2][0])*sqr_u;
-	
-	fwd[0][1] = 3*(ctrls[1][1]-ctrls[0][1])*sqr_inv_u+
-			3*(ctrls[2][1]-ctrls[1][1])*2*u*inv_u +
-			3*(ctrls[3][1]-ctrls[2][1])*sqr_u;
-
-	fwd[0][2] = 3*(ctrls[1][2]-ctrls[0][2])*sqr_inv_u+
-			3*(ctrls[2][2]-ctrls[1][2])*2*u*inv_u +
-			3*(ctrls[3][2]-ctrls[2][2])*sqr_u;
-
+	*outpt = a*u_cb + b*u_sq + c*u + d;
+	*fwd = 3*a*u_sq + 2*b*u + c;
 	fwd->normalize();
 }
 
@@ -1878,57 +1843,22 @@ void CSplineSegment::MakeRenderMesh( CRenderMesh* m )
 	//
 	float nummids = 1.0f/(float)(SEGMENT_SUBDIVIDE_SIZE-1);
 
-	float u;
-	float inv_u;
-	float sqr_u;
-	float cub_u;
-	float sqr_inv_u;
-	float cub_inv_u;
-	float _3u;
-	float _3u_sqr;
-
-	u = 0;
+	float u = 0;
 	
+	vec3 a = -ctrls[0] + 3*ctrls[1] - 3*ctrls[2] + ctrls[3];
+	vec3 b = 3*ctrls[0] - 6*ctrls[1] + 3*ctrls[2];
+	vec3 c = -3*ctrls[0] + 3*ctrls[1];
+	vec3 d = ctrls[0];
+
 	for(i = 0; i < SEGMENT_SUBDIVIDE_SIZE; i++, u+=nummids)
 	{
-		sqr_u = u*u;
-		cub_u = sqr_u*u;
-		
-		inv_u = 1-u;
-		sqr_inv_u = inv_u*inv_u;
-		cub_inv_u = sqr_inv_u*inv_u;
-		
-		_3u = 3*u*sqr_inv_u;
-		_3u_sqr = 3*sqr_u*inv_u;
+		float u_sq = u*u;
+		float u_cb = u*u_sq;
 
-		m->xyz[i][0] = ctrls[0][0]*cub_inv_u +
-				   ctrls[1][0]*_3u +
-				   ctrls[2][0]*_3u_sqr +
-				   ctrls[3][0]*cub_u;
+		m->xyz[i] = a*u_cb + b*u_sq + c*u + d;
 		
-		m->xyz[i][1] = ctrls[0][1]*cub_inv_u +
-				   ctrls[1][1]*_3u +
-				   ctrls[2][1]*_3u_sqr +
-				   ctrls[3][1]*cub_u;
-		
-		m->xyz[i][2] = ctrls[0][2]*cub_inv_u +
-				   ctrls[1][2]*_3u +
-				   ctrls[2][2]*_3u_sqr +
-				   ctrls[3][2]*cub_u;
 #if defined(DEBUG_DV_SPLINE)
-		vec3 fwd;
-		fwd[0] = 3*(ctrls[1][0]-ctrls[0][0])*sqr_inv_u+
-			3*(ctrls[2][0]-ctrls[1][0])*2*u*inv_u +
-			3*(ctrls[3][0]-ctrls[2][0])*sqr_u;
-		
-		fwd[1] = 3*(ctrls[1][1]-ctrls[0][1])*sqr_inv_u+
-			3*(ctrls[2][1]-ctrls[1][1])*2*u*inv_u +
-			3*(ctrls[3][1]-ctrls[2][1])*sqr_u;
-
-		fwd[2] = 3*(ctrls[1][2]-ctrls[0][2])*sqr_inv_u+
-			3*(ctrls[2][2]-ctrls[1][2])*2*u*inv_u +
-			3*(ctrls[3][2]-ctrls[2][2])*sqr_u;
-
+		vec3 fwd = 3*a*u_sq + 2*b*u + c;
 		fwd.normalize();
 		fwd = m->xyz[i]+(fwd*16.f);
 		m->xyz[i+SEGMENT_SUBDIVIDE_SIZE] = fwd;
