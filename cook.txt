@@ -51,6 +51,8 @@ UI/ToL_menu1_M
 UI/ToL_menu1a_M
 UI/ToL_menu1b_M
 UI/spellcasting_overlay1_M
+UI/crow_energy_L1_low_M
+UI/crow_energy_L2_low_M
 FX/crow_attack01_M
 FX/Crow_Feathers_Particles01
 FX/Invert_M
