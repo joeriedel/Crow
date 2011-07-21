@@ -92,6 +92,7 @@ Audio/crow_caw2
 Audio/distant_thunder1
 Audio/distant_thunder2
 Audio/grab_trinket1
+Audio/grab_omen_energy1
 Audio/owl_intro1
 Audio/press_button1
 Audio/river1
