@@ -8,6 +8,7 @@
 01Scarecrow/OmenLevel03
 01Scarecrow/BossLevel01
 Characters/Scarecrow
+Characters/Scarecrow2
 Characters/Owl
 Characters/Banshee
 FX/Banshee_fireball01
@@ -44,11 +45,17 @@ Audio/banshee_pain1
 Audio/banshee_impact
 Audio/owl_intro1
 Objects/tornado01
+Objects/treetop1
 Objects/windmill_blade1
 Objects/windmill_blade2
 Objects/windmillblades_broken
 Objects/windmillblades_looping
 FX/Owlprojectile01
+Characters/Crow_Feathers03_M
+Characters/Crow_windy
+FX/wave_projectile1
+FX/pumpkin_projectile1
+FX/fence_projectile1
 
 // OPENING CINEMATIC
 
