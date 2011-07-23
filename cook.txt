@@ -56,6 +56,9 @@ Characters/Crow_windy
 FX/wave_projectile1
 FX/pumpkin_projectile1
 FX/fence_projectile1
+FX/treeglow01
+FX/windmillglow01
+FX/windmillglow02
 
 // OPENING CINEMATIC
 
