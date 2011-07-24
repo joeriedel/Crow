@@ -101,10 +101,6 @@ UI/ToL_menu1_M
 UI/ToL_menu1a_M
 UI/ToL_menu1b_M
 UI/spellcasting_overlay1_M
-UI/damage_M
-UI/dodge_bonus_M
-UI/shield_bonus_M
-UI/attack_bonus_M
 UI/minus_float_text_TF
 UI/plus_float_text_TF
 FX/crow_attack01_M
