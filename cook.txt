@@ -44,6 +44,10 @@ Audio/banshee_scream1
 Audio/banshee_pain1
 Audio/banshee_impact
 Audio/owl_intro1
+Audio/scarecrow_pumpkin_hit
+Audio/scarecrow_pumpkin_spawn
+Audio/scarecrow_fence_spawn
+Audio/scarecrow_fence_hit
 Objects/tornado01
 Objects/treetop1
 Objects/windmill_blade1
@@ -107,7 +111,10 @@ UI/boss_meter_M
 UI/boss_meter_low_M
 UI/boss_meter_TF
 FX/crow_attack01_M
+FX/crow_attack_fail01_M
 FX/Crow_Feathers_Particles01
+FX/Crow_Feather01
+FX/Crow_Feather02
 FX/Invert_M
 FX/WindTurb_M
 FX/demoneyes01_M
@@ -137,3 +144,14 @@ Audio/twister1
 Audio/windmill_creaking1
 Audio/windmill_working1
 Audio/windy_stormy01
+Audio/crow_attack
+Audio/crow_attack_fail
+Audio/crow_shield
+Audio/crow_shield_block
+Audio/crow_shield_expiring
+Audio/crow_shield_expired
+Audio/omen_meter_tap
+Audio/omen_meter_tap_fail
+Audio/slow_mo_start
+Audio/slow_mo_end
+Audio/projectile_miss
