@@ -49,6 +49,8 @@ Audio/scarecrow_pumpkin_spawn
 Audio/scarecrow_fence_spawn
 Audio/scarecrow_fence_hit
 Objects/tornado01
+Objects/tornadoobjects1
+Objects/tornadoobjects2
 Objects/treetop1
 Objects/windmill_blade1
 Objects/windmill_blade2
