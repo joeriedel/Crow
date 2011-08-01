@@ -23,20 +23,7 @@ void G_ScreenProjectile::PushCallTable(lua_State *L)
 	Entity::PushCallTable(L);
 	lua_pushcfunction(L, lua_Fire);
 	lua_setfield(L, -2, "NativeFire");
-}
-
-void G_ScreenProjectile::DoSetLuaState(lua_State *L)
-{
-	Entity::DoSetLuaState(L);
-
-	lua_createtable(L, 2, 0);
-	lua_pushinteger(L, 1);
-	lua_pushnumber(L, m_distance[0]);
-	lua_settable(L, -3);
-	lua_pushinteger(L, 2);
-	lua_pushnumber(L, m_distance[1]);
-	lua_settable(L, -3);
-	lua_setfield(L, -2, "distance");
+	LUART_REGISTER_GET(L, Distance);
 }
 
 void G_ScreenProjectile::Fire(const Vec3 &_start, const Vec3 &_end)
@@ -104,11 +91,22 @@ int G_ScreenProjectile::lua_Fire(lua_State *L)
 	Vec3 start = lua::Marshal<Vec3>::Get(L, 2, true);
 	Vec3 end = lua::Marshal<Vec3>::Get(L, 3, true);
 
-	self->SyncLuaState(L); // make sure to pull in m_ps.parent
 	self->Fire(start, end);
-	self->SetLuaState(L);
 
 	return 0;
+}
+
+int G_ScreenProjectile::LUART_GETFN(Distance)(lua_State *L)
+{
+	G_ScreenProjectile *self = static_cast<G_ScreenProjectile*>(WorldLua::EntFramePtr(L, 1, true));
+	lua_createtable(L, 2, 0);
+	lua_pushinteger(L, 1);
+	lua_pushnumber(L, self->m_distance[0]);
+	lua_settable(L, -3);
+	lua_pushinteger(L, 2);
+	lua_pushnumber(L, self->m_distance[1]);
+	lua_settable(L, -3);
+	return 1;
 }
 
 } // world

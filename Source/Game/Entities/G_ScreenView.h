@@ -28,16 +28,22 @@ public:
 
 protected:
 
-	virtual void DoSyncLuaState(lua_State *L);
-	virtual void DoSetLuaState(lua_State *L);
-	
 	virtual void TickPhysics(
 		int frame, 
 		float dt, 
 		const xtime::TimeSlice &time
 	);
 
+	virtual void PushCallTable(lua_State *L);
+
 private:
+
+	ENT_DECL_GETSET(ScreenControlSpring);
+	ENT_DECL_GETSET(ScreenControlVertex);
+	ENT_DECL_GETSET(ScreenControlTarget);
+	ENT_DECL_GETSET(ScreenControlClip);
+	ENT_DECL_GETSET(ScreenControlTargetVelocity);
+	ENT_DECL_GETSET(ScreenControlEnabled);
 
 	RAD_DECLARE_GET(spring, physics::Spring*) { return &const_cast<G_ScreenView*>(this)->m_spring; }
 	RAD_DECLARE_GET(vertex, physics::SpringVertex*) { return &const_cast<G_ScreenView*>(this)->m_vertex; }
@@ -48,6 +54,7 @@ private:
 	Vec3 m_clip;
 	Vec3 m_targetVel;
 	bool m_enabled;
+	bool m_first;
 };
 
 } // world

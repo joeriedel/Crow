@@ -13,6 +13,7 @@ namespace world {
 G_ScreenView::G_ScreenView() : 
 E_CONSTRUCT_BASE,
 m_enabled(false),
+m_first(true),
 m_target(Vec3::Zero),
 m_targetVel(Vec3::Zero),
 m_clip(Vec3::Zero)
@@ -23,51 +24,12 @@ G_ScreenView::~G_ScreenView()
 {
 }
 
-void G_ScreenView::DoSetLuaState(lua_State *L)
-{
-	Entity::DoSetLuaState(L);
-
-	lua_createtable(L, 0, 3);
-	lua_pushboolean(L, m_enabled ? 1 : 0);
-	lua_setfield(L, -2, "enabled");
-	lua::Marshal<physics::Spring>::Push(L, m_spring);
-	lua_setfield(L, -2, "spring");
-	lua::Marshal<physics::SpringVertex>::Push(L, m_vertex);
-	lua_setfield(L, -2, "vertex");
-	lua::Marshal<Vec3>::Push(L, m_target);
-	lua_setfield(L, -2, "target");
-	lua::Marshal<Vec3>::Push(L, m_targetVel);
-	lua_setfield(L, -2, "targetVel");
-	lua::Marshal<Vec3>::Push(L, m_clip);
-	lua_setfield(L, -2, "clip");
-	lua_setfield(L, -2, "screenControl");
-
-}
-
-void G_ScreenView::DoSyncLuaState(lua_State *L)
-{
-	Entity::DoSyncLuaState(L);
-
-	lua_getfield(L, -1, "screenControl");
-	lua_getfield(L, -1, "enabled");
-	m_enabled = lua_toboolean(L, -1) ? true : false;
-	lua_pop(L, 1);
-	lua_getfield(L, -1, "spring");
-	m_spring = lua::Marshal<physics::Spring>::Get(L, -1, false);
-	lua_pop(L, 1);
-	lua_getfield(L, -1, "vertex");
-	m_vertex = lua::Marshal<physics::SpringVertex>::Get(L, -1, false);
-	lua_pop(L, 1);
-	lua_getfield(L, -1, "target");
-	m_target = lua::Marshal<Vec3>::Get(L, -1, false);
-	lua_pop(L, 1);
-	lua_getfield(L, -1, "targetVel");
-	m_targetVel = lua::Marshal<Vec3>::Get(L, -1, false);
-	lua_pop(L, 1);
-	lua_getfield(L, -1, "clip");
-	m_clip = lua::Marshal<Vec3>::Get(L, -1, false);
-	lua_pop(L, 2);
-}
+ENT_GETSET(G_ScreenView, ScreenControlSpring, physics::Spring, m_spring);
+ENT_GETSET(G_ScreenView, ScreenControlVertex, physics::SpringVertex, m_vertex);
+ENT_GETSET(G_ScreenView, ScreenControlTarget, Vec3, m_target);
+ENT_GETSET(G_ScreenView, ScreenControlClip, Vec3, m_clip);
+ENT_GETSET(G_ScreenView, ScreenControlTargetVelocity, Vec3, m_targetVel);
+ENT_GETSET(G_ScreenView, ScreenControlEnabled, bool, m_enabled);
 
 void G_ScreenView::TickPhysics(
 	int frame, 
@@ -106,6 +68,17 @@ void G_ScreenView::TickPhysics(
 	m_ps.pos = (left*m_vertex.pos[0])+(up*m_vertex.pos[1])+(fwd*m_vertex.pos[2]);
 	m_ps.cameraPos = m_ps.origin;
 	Move(true, true);
+}
+
+void G_ScreenView::PushCallTable(lua_State *L)
+{
+	Entity::PushCallTable(L);
+	LUART_REGISTER_GETSET(L, ScreenControlSpring);
+	LUART_REGISTER_GETSET(L, ScreenControlVertex);
+	LUART_REGISTER_GETSET(L, ScreenControlTarget);
+	LUART_REGISTER_GETSET(L, ScreenControlClip);
+	LUART_REGISTER_GETSET(L, ScreenControlTargetVelocity);
+	LUART_REGISTER_GETSET(L, ScreenControlEnabled);
 }
 
 } // world

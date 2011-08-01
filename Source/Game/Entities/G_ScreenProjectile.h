@@ -23,7 +23,6 @@ public:
 protected:
 	
 	virtual void PushCallTable(lua_State *L);
-	virtual void DoSetLuaState(lua_State *L);
 
 	virtual void TickPhysics(
 		int frame, 
@@ -32,6 +31,8 @@ protected:
 	);
 
 private:
+
+	ENT_DECL_GET(Distance);
 
 	RAD_DECLARE_GET(start, const Vec3&) { return m_start; }
 	RAD_DECLARE_SET(start, const Vec3&) { m_start = value; }
