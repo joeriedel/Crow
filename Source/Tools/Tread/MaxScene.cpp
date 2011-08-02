@@ -1,5 +1,5 @@
 // MaxScene.cpp
-// Copyright (c) 2010 Pyramind Labs LLC, All Rights Reserved
+// Copyright (c) 2010 Sunside Inc., All Rights Reserved
 // Author: Joe Riedel (joeriedel@hotmail.com)
 // See Radiance/LICENSE for licensing terms.
 

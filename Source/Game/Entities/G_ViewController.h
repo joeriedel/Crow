@@ -1,5 +1,5 @@
 // G_ViewController.h
-// Copyright (c) 2010 Pyramind Labs LLC, All Rights Reserved
+// Copyright (c) 2010 Sunside Inc., All Rights Reserved
 // Author: Joe Riedel (joeriedel@hotmail.com)
 
 #include <Engine/World/Entities/E_ViewController.h>
