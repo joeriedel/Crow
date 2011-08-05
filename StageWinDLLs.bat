@@ -2,6 +2,7 @@ mkdir Bin
 cd Bin
 mkdir win-msvc8-debug
 mkdir win-msvc8-developer
+mkdir win-msvc8-developer-sym
 mkdir win-msvc8-golden
 cd ..
 
