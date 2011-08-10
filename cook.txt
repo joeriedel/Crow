@@ -13,7 +13,7 @@ Characters/Owl
 Characters/Banshee
 FX/Banshee_fireball01
 FX/Banshee_shield01
-FX/Banshee_blockfx01
+FX/Banshee_teleport
 UI/rain_overlay01_M
 UI/rain_overlay02_M
 UI/demontip_01_M
@@ -43,6 +43,9 @@ Audio/banshee_intro1
 Audio/banshee_scream1
 Audio/banshee_pain1
 Audio/banshee_impact
+Audio/banshee_failed_attack
+Audio/banshee_teleport_disappear
+Audio/banshee_teleport_appear
 Audio/owl_intro1
 Audio/scarecrow_pumpkin_hit
 Audio/scarecrow_pumpkin_spawn
