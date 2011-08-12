@@ -109,7 +109,7 @@ bool CrowApp::RunAutoExec()
 		m_game = Game::New();
 		r::VidMode vidMode = engine->sys->r->curVidMode;
 		m_game->SetViewport(0, 0, vidMode.w, vidMode.h);
-		if (!(m_game->LoadEntry() && m_game->LoadMap(token.c_str(), 0, world::UD_Slot, true)))
+		if (!(m_game->LoadEntry() && m_game->LoadMapSeq(token.c_str(), 0, world::UD_Slot, true)))
 		{
 			m_game.reset();
 			return false;

@@ -13,6 +13,9 @@
 	<key>CFBundleIconFiles</key>
 	<array>
 		<string>Icon-72.png</string>
+		<string>Icon.png</string>
+		<string>Icon-114.png</string>
+		<string>Icon-114.png</string>
 	</array>
 	<key>CFBundleIdentifier</key>
 	<string>com.pyramindlabs.${TARGET_NAME:rfc1034identifier}</string>
@@ -26,10 +29,6 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
-	<key>Icons files</key>
-	<array>
-		<string>Icon-72.png</string>
-	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSMainNibFile</key>
