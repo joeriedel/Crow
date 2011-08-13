@@ -90,12 +90,10 @@ FX/crow_shield01
 UI/omen_meter_M
 UI/menu_button01M
 UI/Solid_M
-UI/extras_button_M
 UI/start_button_M
 UI/start_button2_M
 UI/continue_button_M
 UI/continue_button2_M
-UI/options_button_M
 UI/crow_title_M
 UI/main-UI01_M
 UI/main-UI02_M
