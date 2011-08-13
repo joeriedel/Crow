@@ -92,7 +92,9 @@ UI/menu_button01M
 UI/Solid_M
 UI/extras_button_M
 UI/start_button_M
+UI/start_button2_M
 UI/continue_button_M
+UI/continue_button2_M
 UI/options_button_M
 UI/crow_title_M
 UI/main-UI01_M
@@ -115,6 +117,9 @@ UI/plus_float_text_TF
 UI/boss_meter_M
 UI/boss_meter_low_M
 UI/boss_meter_TF
+UI/confirmation_omen01_M
+UI/confirmation_omen01a_M
+UI/confirmation_omen01b_M
 FX/crow_attack01_M
 FX/crow_attack_fail01_M
 FX/Crow_Feathers_Particles01
