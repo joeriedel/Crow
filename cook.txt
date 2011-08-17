@@ -68,6 +68,14 @@ FX/fence_projectile1
 FX/treeglow01
 FX/windmillglow01
 FX/windmillglow02
+01Scarecrow/darksky00_M
+01Scarecrow/fencegroup01_M
+01Scarecrow/skybox01_M
+01Scarecrow/terrain01_M
+01Scarecrow/wheat01_M
+01Scarecrow/wheatbale01_M
+01Scarecrow/treebranches01_M
+Characters/Scarecrow01_M
 
 // OPENING CINEMATIC
 
