@@ -35,6 +35,8 @@ UI/gametip_05_M
 UI/gametip_06_M
 UI/gametip_07_M
 UI/gametip_08_M
+UI/gametip_09_M
+UI/gametip_10_M
 Audio/Scarecrow01Omenlevel01_music
 Audio/Scarecrow01Overworld01_music
 Audio/banshee_fireball_impact
