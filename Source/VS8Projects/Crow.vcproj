@@ -626,6 +626,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\..\Base\Scripts\ScoreScreen.lua"
+				>
+			</File>
+			<File
 				RelativePath="..\..\Base\Scripts\Shiny.lua"
 				>
 			</File>

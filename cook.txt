@@ -118,6 +118,10 @@ UI/boss_meter_TF
 UI/confirmation_omen01_M
 UI/confirmation_omen01a_M
 UI/confirmation_omen01b_M
+UI/Score_Screen_TF
+UI/Score_Screen_Blue_TF
+UI/Score_Screen_Red_TF
+UI/Score_Screen_Big_TF
 FX/crow_attack01_M
 FX/crow_attack_fail01_M
 FX/Crow_Feathers_Particles01
@@ -158,8 +162,11 @@ Audio/crow_shield
 Audio/crow_shield_block
 Audio/crow_shield_expiring
 Audio/crow_shield_expired
+Audio/crows_cawing_loop1
 Audio/omen_meter_tap
 Audio/omen_meter_tap_fail
-Audio/slow_mo_start
 Audio/slow_mo_end
+Audio/scarecrow_laugh1
 Audio/projectile_miss
+Audio/score_reveal
+Audio/score_tick
