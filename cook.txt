@@ -181,3 +181,4 @@ Audio/scarecrow_laugh1
 Audio/projectile_miss
 Audio/score_reveal
 Audio/score_tick
+Audio/lightning_strike1
