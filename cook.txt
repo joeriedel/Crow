@@ -147,6 +147,10 @@ Cinematic/ToL
 Objects/Runestone_Mesh01
 Objects/Runestone_Mesh02
 Objects/Shiny_Object_Mesh01
+Objects/sparkles1_M
+Objects/trinketgem1_M
+Objects/trinketglow1_M
+Objects/trinketglow2_M
 
 
 Audio/demontalk_audio01
