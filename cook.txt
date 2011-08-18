@@ -136,6 +136,7 @@ UI/Score_Screen_TF
 UI/Score_Screen_Blue_TF
 UI/Score_Screen_Red_TF
 UI/Score_Screen_Big_TF
+UI/spellcasting_edgelines_M
 FX/crow_attack01_M
 FX/crow_attack_fail01_M
 FX/Crow_Feathers_Particles01
@@ -145,6 +146,10 @@ FX/Invert_M
 FX/WindTurb_M
 FX/demoneyes01_M
 FX/demonedge01_M
+FX/owl_glow_eyes1
+FX/owl_feathers1
+FX/owl_glow_eyes1
+FX/lightning1_M
 Cinematic/ToL
 
 Objects/Runestone_Mesh01
