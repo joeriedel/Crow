@@ -57,6 +57,12 @@ Audio/scarecrow_pumpkin_spawn
 Audio/scarecrow_fence_spawn
 Audio/scarecrow_fence_hit
 Audio/owl_projectile_throw
+Audio/scarecrow_VO1
+Audio/scarecrow_VO2
+Audio/scarecrow_VO3
+Audio/scarecrow_VO4
+Audio/scarecrow_VO5
+Audio/scarecrow_VO6
 Objects/tornado01
 Objects/tornadoobjects1
 Objects/tornadoobjects2
