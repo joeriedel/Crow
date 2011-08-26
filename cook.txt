@@ -145,7 +145,8 @@ UI/Score_Screen_Red_TF
 UI/Score_Screen_Big_TF
 UI/spellcasting_edgelines_M
 FX/crow_attack01_M
-FX/crow_attack_fail01_M
+FX/crow_attack_blocked01_M
+FX/crow_attack_missed01_M
 FX/Crow_Feathers_Particles01
 FX/Crow_Feather01
 FX/Crow_Feather02
@@ -156,6 +157,7 @@ FX/demonedge01_M
 FX/owl_glow_eyes1
 FX/owl_feathers1
 FX/owl_glow_eyes1
+FX/crowshieldcracking01_M
 FX/lightning1_M
 Cinematic/ToL
 
@@ -187,6 +189,7 @@ Audio/crow_attack
 Audio/crow_attack_fail
 Audio/crow_shield
 Audio/crow_shield_block
+Audio/crow_shield_break
 Audio/crow_shield_expiring
 Audio/crow_shield_expired
 Audio/crows_cawing_loop1
