@@ -1,5 +1,5 @@
 
-// SCARECROW
+// CHAPTER 1
 
 01Scarecrow/Overworld01
 01Scarecrow/Overworld02
@@ -90,6 +90,19 @@ FX/windmillglow02
 01Scarecrow/treebranches01_M
 Characters/Scarecrow01_M
 
+
+// CHAPTER 2
+
+02Giant/Overworld01
+02Giant/Overworld02
+02Giant/Overworld03
+02Giant/OmenLevel01
+02Giant/OmenLevel02
+02Giant/BossLevel01
+Characters/Archer1
+Characters/Giant
+
+
 // OPENING CINEMATIC
 
 Cinematic/opening_cinematic
@@ -107,7 +120,6 @@ Characters/Crow
 // GLOBALS
 
 FX/crow_shield01
-
 UI/omen_meter_M
 UI/menu_button01M
 UI/Solid_M
@@ -160,7 +172,6 @@ FX/owl_glow_eyes1
 FX/crowshieldcracking01_M
 FX/lightning1_M
 Cinematic/ToL
-
 Objects/Runestone_Mesh01
 Objects/Runestone_Mesh02
 Objects/Shiny_Object_Mesh01
