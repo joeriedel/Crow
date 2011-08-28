@@ -101,6 +101,7 @@ Characters/Scarecrow01_M
 02Giant/BossLevel01
 Characters/Archer1
 Characters/Giant
+FX/snow_overlay1_M
 
 
 // OPENING CINEMATIC
