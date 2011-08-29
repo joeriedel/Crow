@@ -102,6 +102,7 @@ Characters/Scarecrow01_M
 Characters/Archer1
 Characters/Giant
 FX/snow_overlay1_M
+Audio/ch2_audio
 
 
 // OPENING CINEMATIC
