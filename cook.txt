@@ -105,10 +105,11 @@ FX/snow_overlay1_M
 Audio/ch2_audio
 
 
-// OPENING CINEMATIC
+// CINEMATIC
 
 Cinematic/opening_cinematic
 Cinematic/ch1_intro
+Cinematic/ch2_intro
 Cinematic/opening_cin_fate2_M
 Cinematic/opening_cin_fate3_M
 Objects/crow_title
@@ -178,8 +179,6 @@ Objects/Runestone_Mesh01
 Objects/Runestone_Mesh02
 Objects/Shiny_Object_Mesh01
 Objects/trinket1
-
-
 Audio/demontalk_audio01
 Audio/opening_cinematic_soundtrack
 Audio/rain_wind_thunder01
