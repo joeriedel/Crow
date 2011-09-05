@@ -622,6 +622,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\..\Base\Scripts\Rider.lua"
+				>
+			</File>
+			<File
 				RelativePath="..\..\Base\Scripts\Score.lua"
 				>
 			</File>
