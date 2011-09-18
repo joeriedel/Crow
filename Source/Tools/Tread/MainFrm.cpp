@@ -575,7 +575,7 @@ BOOL CMainFrame::PreTranslateMessage(MSG* pMsg)
 						(key==VK_LEFT)?NUDGE_LEFT:NUDGE_RIGHT;
 
 						Sys_GetActiveDocument()->NudgeSelection( dirbits );
-					}
+					} break;
 
 				case 0x21: // PGUP
 					{
