@@ -41,7 +41,7 @@ class OS_CLEXP CVec3D_Manipulator : public CManipulator
 {
 public:
 
-	CVec3D_Manipulator();
+	explicit CVec3D_Manipulator(float scale=1.f);
 	virtual ~CVec3D_Manipulator();
 
 	float size;
@@ -63,6 +63,7 @@ public:
 
 private:
 
+	float m_scale;
 	bool m_bHover;
 };
 

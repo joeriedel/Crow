@@ -1203,8 +1203,8 @@ void CMapView::OnMouseMove(UINT nFlags, CPoint point)
 					//
 					// move us on up/left.
 					//
-					vec3 up = View.or3d.up  * dy * 1.5f;
-					vec3 lf = View.or3d.lft * dx * 1.5f;
+					vec3 up = View.or3d.up  * dy * 3.5f;
+					vec3 lf = View.or3d.lft * dx * 3.5f;
 
 					View.pos3d += up+lf;
 
@@ -1539,14 +1539,14 @@ void CMapView::OnLButtonDown(UINT nFlags, CPoint point)
 			}
 			else
 			{
-				if( !(nFlags&MK_CONTROL) && !(nFlags&MS_ALT) )
-				{
-					GetDocument()->MakeUndoDeselectAction();
-					GetDocument()->ClearSelection();
-					GetDocument()->UpdateSelectionInterface();
-					GetDocument()->Prop_UpdateSelection();
-					redraw = true;
-				}
+				//if( !(nFlags&MK_CONTROL) && !(nFlags&MS_ALT) )
+				//{
+				//	GetDocument()->MakeUndoDeselectAction();
+				//	GetDocument()->ClearSelection();
+				//	GetDocument()->UpdateSelectionInterface();
+				//	GetDocument()->Prop_UpdateSelection();
+				//	redraw = true;
+				//}
 				
 				box = true;
 			}
@@ -1663,7 +1663,7 @@ void CMapView::OnLButtonUp(UINT nFlags, CPoint point)
 			//w >>= 1;
 			//h >>= 1;
 
-			if( w == 0 || h == 0 )
+			if( w < 4 || h < 4 )
 			{
 				Sys_RedrawWindows();
 				return;

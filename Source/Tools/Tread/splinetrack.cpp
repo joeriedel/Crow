@@ -61,7 +61,7 @@ CObjectCreator *CSplineTrack::Creator()
 //////////////////////////////////////////////////////////////////////
 // CSplineControlPoint_Manipulator3D								//
 //////////////////////////////////////////////////////////////////////
-CSplineControlPoint_Manipulator3D::CSplineControlPoint_Manipulator3D() : CVec3D_Manipulator()
+CSplineControlPoint_Manipulator3D::CSplineControlPoint_Manipulator3D() : CVec3D_Manipulator(10.f)
 {
 	m_bMoved = false;
 	src = 0;
@@ -329,7 +329,7 @@ void CSplineControlPoint_Manipulator::OnDraw( CMapView* pView )
 
 	if( pView->GetViewType() != VIEW_TYPE_3D )
 	{
-		s = size*pView->View.fInvScale;
+		s = 7.f*pView->View.fInvScale;
 	}
 	else
 	{
@@ -810,7 +810,7 @@ void CSplineTrack::MakeManipulators( CTreadDoc* doc )
 {
 	CSplineSegment* segA, *segB;
 	CSplineControlPoint_Manipulator* m;
-	float size = 7.0f;
+	float size = 64.0f;
 	int ofs = 0;
 	int count = 4 + (3*(m_segs.GetCount()-1));
 

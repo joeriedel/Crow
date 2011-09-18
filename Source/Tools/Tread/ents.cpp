@@ -1049,8 +1049,9 @@ void CEntity::LoadMaxScene()
 		return;
 	}
 
-	for (std::vector<CRenderMesh::Ref>::const_iterator it = m_maxScene->meshes.begin(); it != m_maxScene->meshes.end(); ++it)
-		(*it)->pick = this;
+	// The guys don't want to be able to select the scene via the mouse.
+	/*for (std::vector<CRenderMesh::Ref>::const_iterator it = m_maxScene->meshes.begin(); it != m_maxScene->meshes.end(); ++it)
+		(*it)->pick = this;*/
 
 	UpdateScene();
 }

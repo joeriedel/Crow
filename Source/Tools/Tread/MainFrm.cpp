@@ -43,6 +43,7 @@
 #include "TrackAnimDialog.h"
 #include "CheckMapDialog.h"
 #include "ObjectPropertiesDialog.h"
+#include "ChildFrm.h"
 
 #include "files.h"
 #include "shaders.h"
@@ -575,6 +576,34 @@ BOOL CMainFrame::PreTranslateMessage(MSG* pMsg)
 
 						Sys_GetActiveDocument()->NudgeSelection( dirbits );
 					}
+
+				case 0x21: // PGUP
+					{
+						float nextSize = Sys_GetActiveFrame()->GetMapView(0)->GetGridSize();
+						if (nextSize < 1024.f)
+							nextSize *= 2.f;
+
+						for (int i = 0; i < 4; ++i)
+						{
+							Sys_GetActiveFrame()->GetMapView(i)->SetGridSize(nextSize);
+							Sys_GetActiveFrame()->GetMapView(i)->RedrawWindow();
+						}
+
+					} break;
+				case 0x22: // PGDN
+					{
+						float nextSize = Sys_GetActiveFrame()->GetMapView(0)->GetGridSize();
+						if (nextSize > 1.f)
+							nextSize /= 2.f;
+
+						for (int i = 0; i < 4; ++i)
+						{
+							Sys_GetActiveFrame()->GetMapView(i)->SetGridSize(nextSize);
+							Sys_GetActiveFrame()->GetMapView(i)->RedrawWindow();
+						}
+
+					} break;
+
 				break;
 				}
 			}

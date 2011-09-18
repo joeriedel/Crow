@@ -39,7 +39,7 @@
 #include "r_sys.h"
 #include "System.h"
 
-CVec3D_Manipulator::CVec3D_Manipulator()
+CVec3D_Manipulator::CVec3D_Manipulator(float scale) : m_scale(scale)
 {
 	m_bHover = false;
 	color = 0;
@@ -110,7 +110,7 @@ void CVec3D_Manipulator::OnDraw( CMapView* pView )
 	vec3 ort;
 
 	pos = vec3( (*x_in)[0], (*y_in)[1], (*z_in)[2] );
-	end = pos + ( vec * size );
+	end = pos + ( vec * size * m_scale );
 
 	ort = a = ortho_vec( vec );
 	b = cross( a, vec );
@@ -118,10 +118,10 @@ void CVec3D_Manipulator::OnDraw( CMapView* pView )
 	ra = -a;
 	rb = -b;
 
-	a  = (( a*(8.0f)) + end) - (vec * (24.0f));
-	b  = (( b*(8.0f)) + end) - (vec * (24.0f));
-	ra = ((ra*(8.0f)) + end) - (vec * (24.0f));
-	rb = ((rb*(8.0f)) + end) - (vec * (24.0f));
+	a  = (( a*(8.0f*m_scale)) + end) - (vec * (24.0f*m_scale));
+	b  = (( b*(8.0f*m_scale)) + end) - (vec * (24.0f*m_scale));
+	ra = ((ra*(8.0f*m_scale)) + end) - (vec * (24.0f*m_scale));
+	rb = ((rb*(8.0f*m_scale)) + end) - (vec * (24.0f*m_scale));
 
 	glLineWidth( 3.0f );
 	glBegin(GL_LINES);
@@ -156,6 +156,6 @@ void CVec3D_Manipulator::OnDraw( CMapView* pView )
 	{
 		//pos = pos + ( vec * ( size * 0.5f ) ) + (ort * 12.0f);
 		glColor4ub( 0x00, 0xFF, 0x00, 0xFF );
-		R_DrawStringXYZ( end + ( vec * 8.0f ), BOXSIZE_FONT, string );
+		R_DrawStringXYZ( end + ( vec * 8.0f*m_scale ), BOXSIZE_FONT, string );
 	}
 }

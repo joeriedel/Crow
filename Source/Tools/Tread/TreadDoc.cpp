@@ -1534,7 +1534,12 @@ void CTreadDoc::NudgeSelection( int dirbits ) // uses the active view.
 		return;
 	if( m_SelectedObjectList.IsEmpty() )
 		return;
-	if( GetNudgeFactor() <= 0.0f )
+
+	float nudgeFactor = 1.f;
+	if (GetChildFrame()->GetMapView(0)->GetGridSnap())
+		nudgeFactor = GetChildFrame()->GetMapView(0)->GetGridSize();
+
+	if( nudgeFactor <= 0.0f )
 		return;
 
 	vec3 maxis[3] = { sysAxisX, sysAxisY, sysAxisZ };
@@ -1586,7 +1591,7 @@ void CTreadDoc::NudgeSelection( int dirbits ) // uses the active view.
 		}
 	}
 
-	vec3 nudge = maxis[best]*(sign*bitsign*GetNudgeFactor());
+	vec3 nudge = maxis[best]*(sign*bitsign*nudgeFactor);
 
 	GenericUndoRedoFromSelection()->SetTitle("Nudge Selection");
 
