@@ -59,11 +59,12 @@ public:
 			m_elapsed += dt;
 		}
 
-		if (m_elapsed < 0.25)
-			return;
-		m_elapsed = 0.f;
+		/*if (m_elapsed < 0.25)
+			return;*/
 
 		Draw(game);
+		
+		m_elapsed = 0.f;
 
 #if defined(RAD_OPT_PC_TOOLS)
 		if (game.toolsCallback)
@@ -163,15 +164,18 @@ private:
 
 		gl.MatrixMode(GL_PROJECTION);
 		gl.LoadIdentity();
+		
+		float yaspect = ((float)vph)/((float)vpw);
 #if defined(RAD_OPT_IOS)
 		gl.Rotatef(-90, 0, 0, 1);
+		yaspect *= 1.2;
 #endif
 		gl.Ortho((double)vpx, (double)vpw, (double)(vpy+vph), (double)vpy, -1.0, 1.0);
 		gl.MatrixMode(GL_MODELVIEW);
 		gl.LoadIdentity();
 		const float size = 128.f;
-		gl.Translatef(vpw-size-8.f, vph-size-8.f, 0.f);
-		gl.Scalef(size, size, 1.f);
+		gl.Translatef(vpw-size-8.f, vph-(size*yaspect)-8.f, 0.f);
+		gl.Scalef(size, size*yaspect, 1.f);
 
 		Material *m = m_parser->material;
 

@@ -54,8 +54,8 @@
 		339E0A711389C73E004B5DC9 /* liblibvorbis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 339E0A701389C73C004B5DC9 /* liblibvorbis.a */; };
 		33BBC131134D75AB00458D52 /* G_ScreenView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33BBC12E134D75AB00458D52 /* G_ScreenView.cpp */; };
 		33BBC133134D75B400458D52 /* G_ScreenView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33BBC12E134D75AB00458D52 /* G_ScreenView.cpp */; };
-		33D17DE213F1F4FF00540A1B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D17DE113F1F4FF00540A1B /* AudioToolbox.framework */; };
-		33D17DE413F1F50800540A1B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D17DE313F1F50800540A1B /* AudioToolbox.framework */; };
+		33D4336614269138007CEE73 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D4336514269138007CEE73 /* AudioToolbox.framework */; };
+		33D4336814269141007CEE73 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D4336714269141007CEE73 /* AudioToolbox.framework */; };
 		33F2DD7B13160636008217BC /* G_SkModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33F2DD7913160636008217BC /* G_SkModel.cpp */; };
 /* End PBXBuildFile section */
 
@@ -137,8 +137,8 @@
 		33BBC12E134D75AB00458D52 /* G_ScreenView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_ScreenView.cpp; sourceTree = "<group>"; };
 		33BBC12F134D75AB00458D52 /* G_ScreenView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_ScreenView.h; sourceTree = "<group>"; };
 		33C3BAC212A06E1900976EFE /* Crow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crow.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		33D17DE113F1F4FF00540A1B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		33D17DE313F1F50800540A1B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		33D4336514269138007CEE73 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		33D4336714269141007CEE73 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		33F2DD7913160636008217BC /* G_SkModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_SkModel.cpp; sourceTree = "<group>"; };
 		33F2DD7A13160636008217BC /* G_SkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_SkModel.h; sourceTree = "<group>"; };
 		33FEFE3212A0C3D400D0C604 /* Base */ = {isa = PBXFileReference; explicitFileType = folder; name = Base; path = ../../../Base; sourceTree = SOURCE_ROOT; };
@@ -149,7 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33D17DE213F1F4FF00540A1B /* AudioToolbox.framework in Frameworks */,
+				33D4336814269141007CEE73 /* AudioToolbox.framework in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */,
@@ -165,7 +165,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33D17DE413F1F50800540A1B /* AudioToolbox.framework in Frameworks */,
+				33D4336614269138007CEE73 /* AudioToolbox.framework in Frameworks */,
 				3302583A132C768D0032AD96 /* Foundation.framework in Frameworks */,
 				3302583B132C768D0032AD96 /* UIKit.framework in Frameworks */,
 				3302583C132C768D0032AD96 /* OpenGLES.framework in Frameworks */,
@@ -185,8 +185,8 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				33D17DE313F1F50800540A1B /* AudioToolbox.framework */,
-				33D17DE113F1F4FF00540A1B /* AudioToolbox.framework */,
+				33D4336714269141007CEE73 /* AudioToolbox.framework */,
+				33D4336514269138007CEE73 /* AudioToolbox.framework */,
 				339E0A681389C73C004B5DC9 /* libvorbis.xcodeproj */,
 				339E09F61389C4F2004B5DC9 /* libogg.xcodeproj */,
 				338C24F4133EBECF00C4740B /* freetype.xcodeproj */,
