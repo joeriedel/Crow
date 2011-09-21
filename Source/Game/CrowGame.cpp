@@ -47,12 +47,7 @@ public:
 				App::Get()->engine->sys->r->SwapBuffers();
 
 			mapAsset->world->draw->rb->ClearBackBuffer();
-#if defined(RAD_OPT_PC_TOOLS)
-			if (game.toolsCallback)
-				game.toolsCallback->SwapBuffers();
-			else
-#endif
-				App::Get()->engine->sys->r->SwapBuffers();
+
 		}
 		else
 		{
@@ -65,13 +60,6 @@ public:
 		Draw(game);
 		
 		m_elapsed = 0.f;
-
-#if defined(RAD_OPT_PC_TOOLS)
-		if (game.toolsCallback)
-			game.toolsCallback->SwapBuffers();
-		else
-#endif
-			App::Get()->engine->sys->r->SwapBuffers();
 	}
 
 private:
