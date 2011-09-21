@@ -119,6 +119,8 @@ Audio/sunside_logo_audio
 // CHARACTERS
 
 Characters/Crow
+FX/crowshieldcracking01_M
+FX/crowshieldcracking02_M
 
 // GLOBALS
 
@@ -137,12 +139,12 @@ UI/main-UI02_M
 UI/main-UI03_M
 UI/main-UI04_M
 UI/main-UI05_M
-UI/chapter_locked_M
 UI/ch1_icon_M
 UI/ch2_icon_M
 UI/ch3_icon_M
 UI/ch4_icon_M
 UI/ch5_icon_M
+UI/chapter_select_background_M
 UI/ringwave01_M
 UI/energy_full01_M
 UI/energy_base01_M
@@ -179,7 +181,6 @@ FX/demonedge01_M
 FX/owl_glow_eyes1
 FX/owl_feathers1
 FX/owl_glow_eyes1
-FX/crowshieldcracking01_M
 FX/lightning1_M
 Cinematic/ToL
 Objects/Runestone_Mesh01
