@@ -89,7 +89,7 @@ FX/windmillglow02
 01Scarecrow/wheatbale01_M
 01Scarecrow/treebranches01_M
 Characters/Scarecrow01_M
-
+Objects/cloudsandfog1
 
 // CHAPTER 2
 
