@@ -101,6 +101,7 @@ Objects/cloudsandfog1
 02Giant/BossLevel01
 Characters/Archer1
 Characters/Giant
+Characters/EvilTree
 FX/snow_overlay1_M
 Audio/ch2_audio
 
