@@ -105,6 +105,7 @@ Characters/Giant
 Characters/EvilTree
 FX/snow_overlay1_M
 Audio/ch2_audio
+Audio/SotC1
 
 
 // CINEMATIC
