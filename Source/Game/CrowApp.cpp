@@ -11,6 +11,18 @@
 #include <Engine/Renderer/PC/RBackend.h>
 #endif
 
+#if defined(RAD_OPT_IOS)
+bool __IOSAPP_AllowHD()
+{
+#if defined(SUPPORT_HD)
+	return true;
+#else
+	return false;
+#endif
+}
+
+#endif
+
 App *App::New() { return new CrowApp(); }
 
 CrowApp::CrowApp()
