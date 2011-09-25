@@ -99,6 +99,7 @@ Characters/Scarecrow01_M
 02Giant/OmenLevel01
 02Giant/OmenLevel02
 02Giant/BossLevel01
+Objects/arrow
 Characters/Archer1
 Characters/Giant
 Characters/EvilTree
