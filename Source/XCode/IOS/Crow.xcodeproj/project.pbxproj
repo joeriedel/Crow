@@ -13,50 +13,79 @@
 		28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
 		28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
 		330257AD132C23540032AD96 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 330257AB132C23540032AD96 /* Icon-72.png */; };
-		3302582F132C768D0032AD96 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
-		33025831132C768D0032AD96 /* autoexec.txt in Resources */ = {isa = PBXBuildFile; fileRef = 332C4BB4132B364E00E10CA2 /* autoexec.txt */; };
-		33025832132C768D0032AD96 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 330257AB132C23540032AD96 /* Icon-72.png */; };
-		33025834132C768D0032AD96 /* CrowGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59412A1E942004F29C0 /* CrowGame.cpp */; };
-		33025835132C768D0032AD96 /* G_Exports.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59712A1E942004F29C0 /* G_Exports.cpp */; };
-		33025836132C768D0032AD96 /* G_ViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59B12A1E942004F29C0 /* G_ViewController.cpp */; };
-		33025837132C768D0032AD96 /* G_SkModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33F2DD7913160636008217BC /* G_SkModel.cpp */; };
-		33025838132C768D0032AD96 /* CrowApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59212A1E942004F29C0 /* CrowApp.cpp */; };
-		3302583A132C768D0032AD96 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
-		3302583B132C768D0032AD96 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
-		3302583C132C768D0032AD96 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
-		3302583D132C768D0032AD96 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
-		3302583E132C768D0032AD96 /* libglsl_optimizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 337F031B12A87F74001376E7 /* libglsl_optimizer.a */; };
-		3302583F132C768D0032AD96 /* libRadiance.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 337F032112A87F74001376E7 /* libRadiance.a */; };
 		33277BA813501AE6005DBC1F /* G_ScreenPawn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33277BA613501AE6005DBC1F /* G_ScreenPawn.cpp */; };
-		33277BB913501D24005DBC1F /* G_ScreenPawn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33277BA613501AE6005DBC1F /* G_ScreenPawn.cpp */; };
 		332C4194132AC86800E10CA2 /* CrowApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59212A1E942004F29C0 /* CrowApp.cpp */; };
 		332C4BB5132B364E00E10CA2 /* autoexec.txt in Resources */ = {isa = PBXBuildFile; fileRef = 332C4BB4132B364E00E10CA2 /* autoexec.txt */; };
 		332EF5A312A1E943004F29C0 /* CrowGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59412A1E942004F29C0 /* CrowGame.cpp */; };
 		332EF5A412A1E943004F29C0 /* G_Exports.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59712A1E942004F29C0 /* G_Exports.cpp */; };
 		332EF5A612A1E943004F29C0 /* G_ViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59B12A1E942004F29C0 /* G_ViewController.cpp */; };
 		33519A1B132C890F000D4455 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 33FEFE3212A0C3D400D0C604 /* Base */; };
-		33519A1C132C8915000D4455 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 33519A16132C88F0000D4455 /* Base */; };
 		335A01FD136F4BD0007C6377 /* G_ScreenProjectile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 335A01FB136F4BD0007C6377 /* G_ScreenProjectile.cpp */; };
-		335A01FE136F4BD5007C6377 /* G_ScreenProjectile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 335A01FB136F4BD0007C6377 /* G_ScreenProjectile.cpp */; };
-		336CE188133ED20800523593 /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 338C24FC133EBECF00C4740B /* libfreetype.a */; };
-		3372DBAD13F4C1CC001F0E4D /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3372DBAC13F4C1CC001F0E4D /* Default-Landscape~ipad.png */; };
-		3372DBAF13F4C1E8001F0E4D /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3372DBAE13F4C1E8001F0E4D /* Default-Portrait~ipad.png */; };
-		3372DBB013F4C2C1001F0E4D /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 330257AC132C23540032AD96 /* Icon.png */; };
-		3372DBB213F4C314001F0E4D /* Icon-114.png in Resources */ = {isa = PBXBuildFile; fileRef = 3372DBB113F4C314001F0E4D /* Icon-114.png */; };
-		3372DBB413F4C3D9001F0E4D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3372DBB313F4C3D9001F0E4D /* Default.png */; };
-		3372DBB613F4C41B001F0E4D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3372DBB513F4C41B001F0E4D /* Default@2x.png */; };
 		337F032A12A87F7F001376E7 /* libglsl_optimizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 337F031B12A87F74001376E7 /* libglsl_optimizer.a */; };
 		337F032B12A87F81001376E7 /* libRadiance.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 337F032112A87F74001376E7 /* libRadiance.a */; };
 		338E741E133EE04A00991013 /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 338C24FC133EBECF00C4740B /* libfreetype.a */; };
-		339E09991389C064004B5DC9 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 339E09981389C064004B5DC9 /* OpenAL.framework */; };
 		339E099A1389C06B004B5DC9 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 339E09981389C064004B5DC9 /* OpenAL.framework */; };
-		339E09FF1389C4F4004B5DC9 /* liblibogg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 339E09FE1389C4F2004B5DC9 /* liblibogg.a */; };
-		339E0A711389C73E004B5DC9 /* liblibvorbis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 339E0A701389C73C004B5DC9 /* liblibvorbis.a */; };
 		33BBC131134D75AB00458D52 /* G_ScreenView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33BBC12E134D75AB00458D52 /* G_ScreenView.cpp */; };
-		33BBC133134D75B400458D52 /* G_ScreenView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33BBC12E134D75AB00458D52 /* G_ScreenView.cpp */; };
-		33D4336614269138007CEE73 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D4336514269138007CEE73 /* AudioToolbox.framework */; };
 		33D4336814269141007CEE73 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D4336714269141007CEE73 /* AudioToolbox.framework */; };
 		33F2DD7B13160636008217BC /* G_SkModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33F2DD7913160636008217BC /* G_SkModel.cpp */; };
+		33F5E4BC142ECCC70000987E /* CrowGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59412A1E942004F29C0 /* CrowGame.cpp */; };
+		33F5E4BD142ECCC70000987E /* G_Exports.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59712A1E942004F29C0 /* G_Exports.cpp */; };
+		33F5E4BE142ECCC70000987E /* G_ViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59B12A1E942004F29C0 /* G_ViewController.cpp */; };
+		33F5E4BF142ECCC70000987E /* G_SkModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33F2DD7913160636008217BC /* G_SkModel.cpp */; };
+		33F5E4C0142ECCC70000987E /* CrowApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59212A1E942004F29C0 /* CrowApp.cpp */; };
+		33F5E4C1142ECCC70000987E /* G_ScreenView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33BBC12E134D75AB00458D52 /* G_ScreenView.cpp */; };
+		33F5E4C2142ECCC70000987E /* G_ScreenPawn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33277BA613501AE6005DBC1F /* G_ScreenPawn.cpp */; };
+		33F5E4C3142ECCC70000987E /* G_ScreenProjectile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 335A01FB136F4BD0007C6377 /* G_ScreenProjectile.cpp */; };
+		33F5E4C5142ECCC70000987E /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		33F5E4C6142ECCC70000987E /* autoexec.txt in Resources */ = {isa = PBXBuildFile; fileRef = 332C4BB4132B364E00E10CA2 /* autoexec.txt */; };
+		33F5E4C7142ECCC70000987E /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 330257AB132C23540032AD96 /* Icon-72.png */; };
+		33F5E4C8142ECCC70000987E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 33519A16132C88F0000D4455 /* Base */; };
+		33F5E4C9142ECCC70000987E /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3372DBAC13F4C1CC001F0E4D /* Default-Landscape~ipad.png */; };
+		33F5E4CA142ECCC70000987E /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3372DBAE13F4C1E8001F0E4D /* Default-Portrait~ipad.png */; };
+		33F5E4CB142ECCC70000987E /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 330257AC132C23540032AD96 /* Icon.png */; };
+		33F5E4CC142ECCC70000987E /* Icon-114.png in Resources */ = {isa = PBXBuildFile; fileRef = 3372DBB113F4C314001F0E4D /* Icon-114.png */; };
+		33F5E4CD142ECCC70000987E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3372DBB313F4C3D9001F0E4D /* Default.png */; };
+		33F5E4CE142ECCC70000987E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3372DBB513F4C41B001F0E4D /* Default@2x.png */; };
+		33F5E4D0142ECCC70000987E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D4336514269138007CEE73 /* AudioToolbox.framework */; };
+		33F5E4D1142ECCC70000987E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		33F5E4D2142ECCC70000987E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		33F5E4D3142ECCC70000987E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
+		33F5E4D4142ECCC70000987E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
+		33F5E4D5142ECCC70000987E /* libglsl_optimizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 337F031B12A87F74001376E7 /* libglsl_optimizer.a */; };
+		33F5E4D6142ECCC70000987E /* libRadiance.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 337F032112A87F74001376E7 /* libRadiance.a */; };
+		33F5E4D7142ECCC70000987E /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 338C24FC133EBECF00C4740B /* libfreetype.a */; };
+		33F5E4D8142ECCC70000987E /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 339E09981389C064004B5DC9 /* OpenAL.framework */; };
+		33F5E4D9142ECCC70000987E /* liblibogg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 339E09FE1389C4F2004B5DC9 /* liblibogg.a */; };
+		33F5E4DA142ECCC70000987E /* liblibvorbis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 339E0A701389C73C004B5DC9 /* liblibvorbis.a */; };
+		33F5E4E5142ECCF60000987E /* CrowGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59412A1E942004F29C0 /* CrowGame.cpp */; };
+		33F5E4E6142ECCF60000987E /* G_Exports.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59712A1E942004F29C0 /* G_Exports.cpp */; };
+		33F5E4E7142ECCF60000987E /* G_ViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59B12A1E942004F29C0 /* G_ViewController.cpp */; };
+		33F5E4E8142ECCF60000987E /* G_SkModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33F2DD7913160636008217BC /* G_SkModel.cpp */; };
+		33F5E4E9142ECCF60000987E /* CrowApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59212A1E942004F29C0 /* CrowApp.cpp */; };
+		33F5E4EA142ECCF60000987E /* G_ScreenView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33BBC12E134D75AB00458D52 /* G_ScreenView.cpp */; };
+		33F5E4EB142ECCF60000987E /* G_ScreenPawn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33277BA613501AE6005DBC1F /* G_ScreenPawn.cpp */; };
+		33F5E4EC142ECCF60000987E /* G_ScreenProjectile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 335A01FB136F4BD0007C6377 /* G_ScreenProjectile.cpp */; };
+		33F5E4EE142ECCF60000987E /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		33F5E4EF142ECCF60000987E /* autoexec.txt in Resources */ = {isa = PBXBuildFile; fileRef = 332C4BB4132B364E00E10CA2 /* autoexec.txt */; };
+		33F5E4F0142ECCF60000987E /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 330257AB132C23540032AD96 /* Icon-72.png */; };
+		33F5E4F1142ECCF60000987E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 33519A16132C88F0000D4455 /* Base */; };
+		33F5E4F2142ECCF60000987E /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3372DBAC13F4C1CC001F0E4D /* Default-Landscape~ipad.png */; };
+		33F5E4F3142ECCF60000987E /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3372DBAE13F4C1E8001F0E4D /* Default-Portrait~ipad.png */; };
+		33F5E4F4142ECCF60000987E /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 330257AC132C23540032AD96 /* Icon.png */; };
+		33F5E4F5142ECCF60000987E /* Icon-114.png in Resources */ = {isa = PBXBuildFile; fileRef = 3372DBB113F4C314001F0E4D /* Icon-114.png */; };
+		33F5E4F6142ECCF60000987E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3372DBB313F4C3D9001F0E4D /* Default.png */; };
+		33F5E4F7142ECCF60000987E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3372DBB513F4C41B001F0E4D /* Default@2x.png */; };
+		33F5E4F9142ECCF60000987E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D4336514269138007CEE73 /* AudioToolbox.framework */; };
+		33F5E4FA142ECCF60000987E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		33F5E4FB142ECCF60000987E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		33F5E4FC142ECCF60000987E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
+		33F5E4FD142ECCF60000987E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
+		33F5E4FE142ECCF60000987E /* libglsl_optimizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 337F031B12A87F74001376E7 /* libglsl_optimizer.a */; };
+		33F5E4FF142ECCF60000987E /* libRadiance.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 337F032112A87F74001376E7 /* libRadiance.a */; };
+		33F5E500142ECCF60000987E /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 338C24FC133EBECF00C4740B /* libfreetype.a */; };
+		33F5E501142ECCF60000987E /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 339E09981389C064004B5DC9 /* OpenAL.framework */; };
+		33F5E502142ECCF60000987E /* liblibogg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 339E09FE1389C4F2004B5DC9 /* liblibogg.a */; };
+		33F5E503142ECCF60000987E /* liblibvorbis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 339E0A701389C73C004B5DC9 /* liblibvorbis.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,7 +136,6 @@
 		330257AC132C23540032AD96 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		33025825132C75FE0032AD96 /* CrowiPadDev.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CrowiPadDev.plist; sourceTree = "<group>"; };
 		3302582A132C76490032AD96 /* CrowiPadGold.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CrowiPadGold.plist; sourceTree = "<group>"; };
-		33025843132C768D0032AD96 /* Crow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33277BA613501AE6005DBC1F /* G_ScreenPawn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_ScreenPawn.cpp; sourceTree = "<group>"; };
 		33277BA713501AE6005DBC1F /* G_ScreenPawn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_ScreenPawn.h; sourceTree = "<group>"; };
 		332C4BB4132B364E00E10CA2 /* autoexec.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = autoexec.txt; path = ../../../autoexec.txt; sourceTree = SOURCE_ROOT; };
@@ -141,6 +169,8 @@
 		33D4336714269141007CEE73 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		33F2DD7913160636008217BC /* G_SkModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_SkModel.cpp; sourceTree = "<group>"; };
 		33F2DD7A13160636008217BC /* G_SkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_SkModel.h; sourceTree = "<group>"; };
+		33F5E4E0142ECCC70000987E /* Crow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		33F5E509142ECCF60000987E /* Crow HD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crow HD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33FEFE3212A0C3D400D0C604 /* Base */ = {isa = PBXFileReference; explicitFileType = folder; name = Base; path = ../../../Base; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -161,21 +191,39 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		33025839132C768D0032AD96 /* Frameworks */ = {
+		33F5E4CF142ECCC70000987E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33D4336614269138007CEE73 /* AudioToolbox.framework in Frameworks */,
-				3302583A132C768D0032AD96 /* Foundation.framework in Frameworks */,
-				3302583B132C768D0032AD96 /* UIKit.framework in Frameworks */,
-				3302583C132C768D0032AD96 /* OpenGLES.framework in Frameworks */,
-				3302583D132C768D0032AD96 /* QuartzCore.framework in Frameworks */,
-				3302583E132C768D0032AD96 /* libglsl_optimizer.a in Frameworks */,
-				3302583F132C768D0032AD96 /* libRadiance.a in Frameworks */,
-				336CE188133ED20800523593 /* libfreetype.a in Frameworks */,
-				339E09991389C064004B5DC9 /* OpenAL.framework in Frameworks */,
-				339E09FF1389C4F4004B5DC9 /* liblibogg.a in Frameworks */,
-				339E0A711389C73E004B5DC9 /* liblibvorbis.a in Frameworks */,
+				33F5E4D0142ECCC70000987E /* AudioToolbox.framework in Frameworks */,
+				33F5E4D1142ECCC70000987E /* Foundation.framework in Frameworks */,
+				33F5E4D2142ECCC70000987E /* UIKit.framework in Frameworks */,
+				33F5E4D3142ECCC70000987E /* OpenGLES.framework in Frameworks */,
+				33F5E4D4142ECCC70000987E /* QuartzCore.framework in Frameworks */,
+				33F5E4D5142ECCC70000987E /* libglsl_optimizer.a in Frameworks */,
+				33F5E4D6142ECCC70000987E /* libRadiance.a in Frameworks */,
+				33F5E4D7142ECCC70000987E /* libfreetype.a in Frameworks */,
+				33F5E4D8142ECCC70000987E /* OpenAL.framework in Frameworks */,
+				33F5E4D9142ECCC70000987E /* liblibogg.a in Frameworks */,
+				33F5E4DA142ECCC70000987E /* liblibvorbis.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33F5E4F8142ECCF60000987E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33F5E4F9142ECCF60000987E /* AudioToolbox.framework in Frameworks */,
+				33F5E4FA142ECCF60000987E /* Foundation.framework in Frameworks */,
+				33F5E4FB142ECCF60000987E /* UIKit.framework in Frameworks */,
+				33F5E4FC142ECCF60000987E /* OpenGLES.framework in Frameworks */,
+				33F5E4FD142ECCF60000987E /* QuartzCore.framework in Frameworks */,
+				33F5E4FE142ECCF60000987E /* libglsl_optimizer.a in Frameworks */,
+				33F5E4FF142ECCF60000987E /* libRadiance.a in Frameworks */,
+				33F5E500142ECCF60000987E /* libfreetype.a in Frameworks */,
+				33F5E501142ECCF60000987E /* OpenAL.framework in Frameworks */,
+				33F5E502142ECCF60000987E /* liblibogg.a in Frameworks */,
+				33F5E503142ECCF60000987E /* liblibvorbis.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,7 +364,8 @@
 			isa = PBXGroup;
 			children = (
 				33C3BAC212A06E1900976EFE /* Crow.app */,
-				33025843132C768D0032AD96 /* Crow.app */,
+				33F5E4E0142ECCC70000987E /* Crow.app */,
+				33F5E509142ECCF60000987E /* Crow HD.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -333,9 +382,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D6058900D05DD3D006BFB54 /* CrowiPadDev */ = {
+		1D6058900D05DD3D006BFB54 /* CrowDev */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "CrowiPadDev" */;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "CrowDev" */;
 			buildPhases = (
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
@@ -345,26 +394,43 @@
 			);
 			dependencies = (
 			);
-			name = CrowiPadDev;
+			name = CrowDev;
 			productName = Balance;
 			productReference = 33C3BAC212A06E1900976EFE /* Crow.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3302582D132C768D0032AD96 /* CrowiPadGold */ = {
+		33F5E4BA142ECCC70000987E /* Crow */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 33025840132C768D0032AD96 /* Build configuration list for PBXNativeTarget "CrowiPadGold" */;
+			buildConfigurationList = 33F5E4DB142ECCC70000987E /* Build configuration list for PBXNativeTarget "Crow" */;
 			buildPhases = (
-				33025833132C768D0032AD96 /* Sources */,
-				3302582E132C768D0032AD96 /* Resources */,
-				33025839132C768D0032AD96 /* Frameworks */,
+				33F5E4BB142ECCC70000987E /* Sources */,
+				33F5E4C4142ECCC70000987E /* Resources */,
+				33F5E4CF142ECCC70000987E /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = CrowiPadGold;
+			name = Crow;
 			productName = Balance;
-			productReference = 33025843132C768D0032AD96 /* Crow.app */;
+			productReference = 33F5E4E0142ECCC70000987E /* Crow.app */;
+			productType = "com.apple.product-type.application";
+		};
+		33F5E4E3142ECCF60000987E /* Crow HD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33F5E504142ECCF60000987E /* Build configuration list for PBXNativeTarget "Crow HD" */;
+			buildPhases = (
+				33F5E4E4142ECCF60000987E /* Sources */,
+				33F5E4ED142ECCF60000987E /* Resources */,
+				33F5E4F8142ECCF60000987E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Crow HD";
+			productName = Balance;
+			productReference = 33F5E509142ECCF60000987E /* Crow HD.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -409,8 +475,9 @@
 			);
 			projectRoot = "";
 			targets = (
-				1D6058900D05DD3D006BFB54 /* CrowiPadDev */,
-				3302582D132C768D0032AD96 /* CrowiPadGold */,
+				1D6058900D05DD3D006BFB54 /* CrowDev */,
+				33F5E4BA142ECCC70000987E /* Crow */,
+				33F5E4E3142ECCF60000987E /* Crow HD */,
 			);
 		};
 /* End PBXProject section */
@@ -465,20 +532,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3302582E132C768D0032AD96 /* Resources */ = {
+		33F5E4C4142ECCC70000987E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3302582F132C768D0032AD96 /* MainWindow.xib in Resources */,
-				33025831132C768D0032AD96 /* autoexec.txt in Resources */,
-				33025832132C768D0032AD96 /* Icon-72.png in Resources */,
-				33519A1C132C8915000D4455 /* Base in Resources */,
-				3372DBAD13F4C1CC001F0E4D /* Default-Landscape~ipad.png in Resources */,
-				3372DBAF13F4C1E8001F0E4D /* Default-Portrait~ipad.png in Resources */,
-				3372DBB013F4C2C1001F0E4D /* Icon.png in Resources */,
-				3372DBB213F4C314001F0E4D /* Icon-114.png in Resources */,
-				3372DBB413F4C3D9001F0E4D /* Default.png in Resources */,
-				3372DBB613F4C41B001F0E4D /* Default@2x.png in Resources */,
+				33F5E4C5142ECCC70000987E /* MainWindow.xib in Resources */,
+				33F5E4C6142ECCC70000987E /* autoexec.txt in Resources */,
+				33F5E4C7142ECCC70000987E /* Icon-72.png in Resources */,
+				33F5E4C8142ECCC70000987E /* Base in Resources */,
+				33F5E4C9142ECCC70000987E /* Default-Landscape~ipad.png in Resources */,
+				33F5E4CA142ECCC70000987E /* Default-Portrait~ipad.png in Resources */,
+				33F5E4CB142ECCC70000987E /* Icon.png in Resources */,
+				33F5E4CC142ECCC70000987E /* Icon-114.png in Resources */,
+				33F5E4CD142ECCC70000987E /* Default.png in Resources */,
+				33F5E4CE142ECCC70000987E /* Default@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33F5E4ED142ECCF60000987E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33F5E4EE142ECCF60000987E /* MainWindow.xib in Resources */,
+				33F5E4EF142ECCF60000987E /* autoexec.txt in Resources */,
+				33F5E4F0142ECCF60000987E /* Icon-72.png in Resources */,
+				33F5E4F1142ECCF60000987E /* Base in Resources */,
+				33F5E4F2142ECCF60000987E /* Default-Landscape~ipad.png in Resources */,
+				33F5E4F3142ECCF60000987E /* Default-Portrait~ipad.png in Resources */,
+				33F5E4F4142ECCF60000987E /* Icon.png in Resources */,
+				33F5E4F5142ECCF60000987E /* Icon-114.png in Resources */,
+				33F5E4F6142ECCF60000987E /* Default.png in Resources */,
+				33F5E4F7142ECCF60000987E /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,18 +584,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		33025833132C768D0032AD96 /* Sources */ = {
+		33F5E4BB142ECCC70000987E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33025834132C768D0032AD96 /* CrowGame.cpp in Sources */,
-				33025835132C768D0032AD96 /* G_Exports.cpp in Sources */,
-				33025836132C768D0032AD96 /* G_ViewController.cpp in Sources */,
-				33025837132C768D0032AD96 /* G_SkModel.cpp in Sources */,
-				33025838132C768D0032AD96 /* CrowApp.cpp in Sources */,
-				33BBC133134D75B400458D52 /* G_ScreenView.cpp in Sources */,
-				33277BB913501D24005DBC1F /* G_ScreenPawn.cpp in Sources */,
-				335A01FE136F4BD5007C6377 /* G_ScreenProjectile.cpp in Sources */,
+				33F5E4BC142ECCC70000987E /* CrowGame.cpp in Sources */,
+				33F5E4BD142ECCC70000987E /* G_Exports.cpp in Sources */,
+				33F5E4BE142ECCC70000987E /* G_ViewController.cpp in Sources */,
+				33F5E4BF142ECCC70000987E /* G_SkModel.cpp in Sources */,
+				33F5E4C0142ECCC70000987E /* CrowApp.cpp in Sources */,
+				33F5E4C1142ECCC70000987E /* G_ScreenView.cpp in Sources */,
+				33F5E4C2142ECCC70000987E /* G_ScreenPawn.cpp in Sources */,
+				33F5E4C3142ECCC70000987E /* G_ScreenProjectile.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33F5E4E4142ECCF60000987E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33F5E4E5142ECCF60000987E /* CrowGame.cpp in Sources */,
+				33F5E4E6142ECCF60000987E /* G_Exports.cpp in Sources */,
+				33F5E4E7142ECCF60000987E /* G_ViewController.cpp in Sources */,
+				33F5E4E8142ECCF60000987E /* G_SkModel.cpp in Sources */,
+				33F5E4E9142ECCF60000987E /* CrowApp.cpp in Sources */,
+				33F5E4EA142ECCF60000987E /* G_ScreenView.cpp in Sources */,
+				33F5E4EB142ECCF60000987E /* G_ScreenPawn.cpp in Sources */,
+				33F5E4EC142ECCF60000987E /* G_ScreenProjectile.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,9 +628,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Crow_Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
-				INFOPLIST_FILE = CrowiPadDev.plist;
+				INFOPLIST_FILE = CrowDev.plist;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = Crow;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -547,45 +646,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Crow_Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
-				INFOPLIST_FILE = CrowiPadDev.plist;
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_NAME = Crow;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Developer;
-		};
-		33025841132C768D0032AD96 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Crow_Prefix.pch;
-				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
-				INFOPLIST_FILE = CrowiPadGold.plist;
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = Crow;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "armv6 armv7";
-			};
-			name = Debug;
-		};
-		33025842132C768D0032AD96 /* Developer */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Crow_Prefix.pch;
-				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
-				INFOPLIST_FILE = CrowiPadGold.plist;
+				INFOPLIST_FILE = CrowDev.plist;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = Crow;
 				SDKROOT = iphoneos;
@@ -644,24 +705,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Crow_Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
-				INFOPLIST_FILE = CrowiPadDev.plist;
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_NAME = Crow;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Golden;
-		};
-		33025848132C770A0032AD96 /* Golden */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Crow_Prefix.pch;
-				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
-				INFOPLIST_FILE = CrowiPadGold.plist;
+				INFOPLIST_FILE = CrowDev.plist;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = Crow;
 				SDKROOT = iphoneos;
@@ -721,8 +765,9 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Crow_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
-				INFOPLIST_FILE = CrowiPadDev.plist;
+				INFOPLIST_FILE = CrowDev.plist;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = Crow;
 				SDKROOT = iphoneos;
@@ -731,7 +776,29 @@
 			};
 			name = AdHoc;
 		};
-		33E7443B13E276BC005E25B8 /* AdHoc */ = {
+		33F5E4DC142ECCC70000987E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Crow_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				INFOPLIST_FILE = Crow.plist;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = Crow;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "armv6 armv7";
+			};
+			name = Debug;
+		};
+		33F5E4DD142ECCC70000987E /* Developer */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -739,9 +806,136 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Crow_Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
-				INFOPLIST_FILE = CrowiPadGold.plist;
+				INFOPLIST_FILE = Crow.plist;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = Crow;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Developer;
+		};
+		33F5E4DE142ECCC70000987E /* Golden */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Crow_Prefix.pch;
+				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				INFOPLIST_FILE = Crow.plist;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = Crow;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Golden;
+		};
+		33F5E4DF142ECCC70000987E /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Crow_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				INFOPLIST_FILE = Crow.plist;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = Crow;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = AdHoc;
+		};
+		33F5E505142ECCF60000987E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Crow_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					SUPPORT_HD,
+				);
+				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				INFOPLIST_FILE = CrowHD.plist;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				ONLY_ACTIVE_ARCH = YES;
+				PLIST_FILE_OUTPUT_FORMAT = binary;
+				PRODUCT_NAME = "Crow HD";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv6 armv7";
+			};
+			name = Debug;
+		};
+		33F5E506142ECCF60000987E /* Developer */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Crow_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					SUPPORT_HD,
+				);
+				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				INFOPLIST_FILE = CrowHD.plist;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PLIST_FILE_OUTPUT_FORMAT = binary;
+				PRODUCT_NAME = "Crow HD";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Developer;
+		};
+		33F5E507142ECCF60000987E /* Golden */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Crow_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					SUPPORT_HD,
+				);
+				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				INFOPLIST_FILE = CrowHD.plist;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PLIST_FILE_OUTPUT_FORMAT = binary;
+				PRODUCT_NAME = "Crow HD";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Golden;
+		};
+		33F5E508142ECCF60000987E /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Crow_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					SUPPORT_HD,
+				);
+				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				INFOPLIST_FILE = CrowHD.plist;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PLIST_FILE_OUTPUT_FORMAT = binary;
+				PRODUCT_NAME = "Crow HD";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -837,7 +1031,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "CrowiPadDev" */ = {
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "CrowDev" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
@@ -848,13 +1042,24 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Golden;
 		};
-		33025840132C768D0032AD96 /* Build configuration list for PBXNativeTarget "CrowiPadGold" */ = {
+		33F5E4DB142ECCC70000987E /* Build configuration list for PBXNativeTarget "Crow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				33025841132C768D0032AD96 /* Debug */,
-				33025842132C768D0032AD96 /* Developer */,
-				33025848132C770A0032AD96 /* Golden */,
-				33E7443B13E276BC005E25B8 /* AdHoc */,
+				33F5E4DC142ECCC70000987E /* Debug */,
+				33F5E4DD142ECCC70000987E /* Developer */,
+				33F5E4DE142ECCC70000987E /* Golden */,
+				33F5E4DF142ECCC70000987E /* AdHoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Golden;
+		};
+		33F5E504142ECCF60000987E /* Build configuration list for PBXNativeTarget "Crow HD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33F5E505142ECCF60000987E /* Debug */,
+				33F5E506142ECCF60000987E /* Developer */,
+				33F5E507142ECCF60000987E /* Golden */,
+				33F5E508142ECCF60000987E /* AdHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Golden;
