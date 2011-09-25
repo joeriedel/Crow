@@ -89,7 +89,7 @@ FX/windmillglow02
 01Scarecrow/wheatbale01_M
 01Scarecrow/treebranches01_M
 Characters/Scarecrow01_M
-Objects/cloudsandfog1
+
 
 // CHAPTER 2
 
@@ -188,6 +188,8 @@ Objects/Runestone_Mesh01
 Objects/Runestone_Mesh02
 Objects/Shiny_Object_Mesh01
 Objects/trinket1
+Objects/cloudsandfog1
+Objects/cloudsandfog2
 Audio/demontalk_audio01
 Audio/opening_cinematic_soundtrack
 Audio/rain_wind_thunder01
