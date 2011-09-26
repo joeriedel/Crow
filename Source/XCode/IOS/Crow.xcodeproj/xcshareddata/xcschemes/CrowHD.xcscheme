@@ -81,7 +81,7 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.GDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.GDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
-      buildConfiguration = "AdHoc">
+      buildConfiguration = "Developer">
       <Testables>
       </Testables>
    </TestAction>
@@ -92,13 +92,13 @@
       displayScale = "1.00"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "AdHoc">
+      buildConfiguration = "Golden">
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "33F5E4BA142ECCC70000987E"
-            BuildableName = "Crow.app"
-            BlueprintName = "Crow"
+            BlueprintIdentifier = "33F5E4E3142ECCF60000987E"
+            BuildableName = "Crow HD.app"
+            BlueprintName = "Crow HD"
             ReferencedContainer = "container:Crow.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -111,22 +111,22 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "AdHoc">
+      buildConfiguration = "Developer">
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "33F5E4BA142ECCC70000987E"
-            BuildableName = "Crow.app"
-            BlueprintName = "Crow"
+            BlueprintIdentifier = "33F5E4E3142ECCF60000987E"
+            BuildableName = "Crow HD.app"
+            BlueprintName = "Crow HD"
             ReferencedContainer = "container:Crow.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
-      buildConfiguration = "AdHoc">
+      buildConfiguration = "Developer">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "AdHoc"
+      buildConfiguration = "Developer"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>
