@@ -41,6 +41,7 @@ UI/gametip_10_M
 UI/train_demontip1_M
 UI/train_demontip2_M
 UI/train_demontip3_M
+UI/train_demontip4_M
 Audio/Scarecrow01Omenlevel01_music
 Audio/Scarecrow01Overworld01_music
 Audio/banshee_fireball_impact
@@ -226,3 +227,4 @@ Audio/projectile_miss
 Audio/score_reveal
 Audio/score_tick
 Audio/lightning_strike1
+Audio/magneto
