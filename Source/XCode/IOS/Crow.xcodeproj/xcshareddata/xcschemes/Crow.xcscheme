@@ -84,6 +84,15 @@
       buildConfiguration = "Developer">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "33F5E4BA142ECCC70000987E"
+            BuildableName = "Crow.app"
+            BlueprintName = "Crow"
+            ReferencedContainer = "container:Crow.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.GDB"
@@ -92,7 +101,10 @@
       displayScale = "1.00"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Golden">
+      buildConfiguration = "Golden"
+      debugDocumentVersioning = "YES"
+      enablesOpenGLESFrameCapture = "YES"
+      allowLocationSimulation = "YES">
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
@@ -111,7 +123,8 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Developer">
+      buildConfiguration = "Developer"
+      debugDocumentVersioning = "YES">
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
@@ -123,7 +136,7 @@
       </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
-      buildConfiguration = "Developer">
+      buildConfiguration = "Golden">
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Developer"

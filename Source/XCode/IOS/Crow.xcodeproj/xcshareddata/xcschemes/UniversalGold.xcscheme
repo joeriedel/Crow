@@ -81,9 +81,18 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.GDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.GDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
-      buildConfiguration = "Developer">
+      buildConfiguration = "Golden">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "33F5E4E3142ECCF60000987E"
+            BuildableName = "Crow HD.app"
+            BlueprintName = "Crow HD"
+            ReferencedContainer = "container:Crow.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.GDB"
@@ -92,7 +101,9 @@
       displayScale = "1.00"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Golden">
+      buildConfiguration = "Golden"
+      debugDocumentVersioning = "YES"
+      allowLocationSimulation = "YES">
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
@@ -111,7 +122,8 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Developer">
+      buildConfiguration = "Golden"
+      debugDocumentVersioning = "YES">
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
@@ -123,10 +135,10 @@
       </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
-      buildConfiguration = "Developer">
+      buildConfiguration = "Golden">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "Developer"
+      buildConfiguration = "Golden"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

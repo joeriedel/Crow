@@ -49,7 +49,7 @@
 		33F5E4D0142ECCC70000987E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D4336514269138007CEE73 /* AudioToolbox.framework */; };
 		33F5E4D1142ECCC70000987E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		33F5E4D2142ECCC70000987E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
-		33F5E4D3142ECCC70000987E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
+		33F5E4D3142ECCC70000987E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		33F5E4D4142ECCC70000987E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
 		33F5E4D5142ECCC70000987E /* libglsl_optimizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 337F031B12A87F74001376E7 /* libglsl_optimizer.a */; };
 		33F5E4D6142ECCC70000987E /* libRadiance.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 337F032112A87F74001376E7 /* libRadiance.a */; };
@@ -631,7 +631,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Crow_Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
-				GCC_VERSION = 4.2;
 				INFOPLIST_FILE = CrowDev.plist;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = NO;
@@ -650,7 +649,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Crow_Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
-				GCC_VERSION = 4.2;
 				INFOPLIST_FILE = CrowDev.plist;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = Crow;
@@ -666,9 +664,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEAD_CODE_STRIPPING = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					RAD_OPT_POSIXFILES,
 					RAD_OPT_POSIXTHREADS,
@@ -683,7 +682,7 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_THUMB_SUPPORT = NO;
-				GCC_VERSION = 4.2;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
@@ -694,8 +693,14 @@
 					"../../../Radiance/Extern/libogg-1.2.2/include",
 					"../../../Radiance/Extern/libvorbis-1.3.2/include",
 				);
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = "";
+				MACH_O_TYPE = mh_execute;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USE_HEADERMAP = NO;
@@ -711,7 +716,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Crow_Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
-				GCC_VERSION = 4.2;
 				INFOPLIST_FILE = CrowDev.plist;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = Crow;
@@ -721,16 +725,17 @@
 			};
 			name = Golden;
 		};
-		33E7443913E276BC005E25B8 /* AdHoc */ = {
+		334F8511144D572B0093BDEE /* GoldenNoOpt */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
-				CODE_SIGN_ENTITLEMENTS = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEAD_CODE_STRIPPING = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_DEBUGGING_SYMBOLS = full;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					RAD_OPT_POSIXFILES,
 					RAD_OPT_POSIXTHREADS,
@@ -745,7 +750,7 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_THUMB_SUPPORT = NO;
-				GCC_VERSION = 4.2;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
@@ -756,8 +761,117 @@
 					"../../../Radiance/Extern/libogg-1.2.2/include",
 					"../../../Radiance/Extern/libvorbis-1.3.2/include",
 				);
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = "";
+				MACH_O_TYPE = mh_execute;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = armv7;
+			};
+			name = GoldenNoOpt;
+		};
+		334F8512144D572B0093BDEE /* GoldenNoOpt */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Crow_Prefix.pch;
+				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				INFOPLIST_FILE = CrowDev.plist;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = Crow;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = GoldenNoOpt;
+		};
+		334F8513144D572B0093BDEE /* GoldenNoOpt */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Crow_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				INFOPLIST_FILE = Crow.plist;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = Crow;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = GoldenNoOpt;
+		};
+		334F8514144D572B0093BDEE /* GoldenNoOpt */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Crow_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					SUPPORT_HD,
+				);
+				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				INFOPLIST_FILE = CrowHD.plist;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PLIST_FILE_OUTPUT_FORMAT = binary;
+				PRODUCT_NAME = "Crow HD";
+				SDKROOT = iphoneos;
+				VALID_ARCHS = armv7;
+			};
+			name = GoldenNoOpt;
+		};
+		33E7443913E276BC005E25B8 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				CODE_SIGN_ENTITLEMENTS = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEAD_CODE_STRIPPING = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					RAD_OPT_POSIXFILES,
+					RAD_OPT_POSIXTHREADS,
+					BOOST_ALL_NO_LIB,
+					UNICODE,
+					RADMATH_OPT_NO_REFLECTION,
+					RAD_OPT_GL,
+					RAD_TARGET_GOLDEN,
+					RAD_OPT_CONSOLE,
+					NDEBUG,
+					_XOPEN_SOURCE,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../../Radiance/Source,
+					../../../Radiance/Extern/boost/1.38.0,
+					../../../Radiance/Extern/Lua/5.1.4,
+					../../../Radiance/Extern/SDL/1.2,
+					"../../../Radiance/Extern/libogg-1.2.2/include",
+					"../../../Radiance/Extern/libvorbis-1.3.2/include",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = "";
+				MACH_O_TYPE = mh_execute;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -775,7 +889,6 @@
 				GCC_PREFIX_HEADER = Crow_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "";
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
-				GCC_VERSION = 4.2;
 				INFOPLIST_FILE = CrowDev.plist;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = Crow;
@@ -797,9 +910,7 @@
 				GCC_PREFIX_HEADER = Crow_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
-				GCC_VERSION = 4.2;
 				INFOPLIST_FILE = Crow.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = Crow;
@@ -818,9 +929,7 @@
 				GCC_PREFIX_HEADER = Crow_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
-				GCC_VERSION = 4.2;
 				INFOPLIST_FILE = Crow.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = Crow;
 				SDKROOT = iphoneos;
@@ -838,9 +947,7 @@
 				GCC_PREFIX_HEADER = Crow_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
-				GCC_VERSION = 4.2;
 				INFOPLIST_FILE = Crow.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = Crow;
 				SDKROOT = iphoneos;
@@ -858,9 +965,7 @@
 				GCC_PREFIX_HEADER = Crow_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
-				GCC_VERSION = 4.2;
 				INFOPLIST_FILE = Crow.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = Crow;
 				SDKROOT = iphoneos;
@@ -873,9 +978,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Crow_Prefix.pch;
@@ -884,14 +986,11 @@
 					SUPPORT_HD,
 				);
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
-				GCC_VERSION = 4.2;
 				INFOPLIST_FILE = CrowHD.plist;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				ONLY_ACTIVE_ARCH = YES;
 				PLIST_FILE_OUTPUT_FORMAT = binary;
 				PRODUCT_NAME = "Crow HD";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = armv7;
 			};
 			name = Debug;
@@ -900,7 +999,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Crow_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -908,13 +1006,11 @@
 					SUPPORT_HD,
 				);
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
-				GCC_VERSION = 4.2;
 				INFOPLIST_FILE = CrowHD.plist;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PLIST_FILE_OUTPUT_FORMAT = binary;
 				PRODUCT_NAME = "Crow HD";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = armv7;
 			};
@@ -924,7 +1020,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Crow_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -932,13 +1027,11 @@
 					SUPPORT_HD,
 				);
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
-				GCC_VERSION = 4.2;
 				INFOPLIST_FILE = CrowHD.plist;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PLIST_FILE_OUTPUT_FORMAT = binary;
 				PRODUCT_NAME = "Crow HD";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = armv7;
 			};
@@ -948,7 +1041,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Crow_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -956,13 +1048,11 @@
 					SUPPORT_HD,
 				);
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
-				GCC_VERSION = 4.2;
 				INFOPLIST_FILE = CrowHD.plist;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PLIST_FILE_OUTPUT_FORMAT = binary;
 				PRODUCT_NAME = "Crow HD";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = armv7;
 			};
@@ -974,7 +1064,9 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEAD_CODE_STRIPPING = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_DEBUGGING_SYMBOLS = full;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -993,7 +1085,7 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_THUMB_SUPPORT = NO;
-				GCC_VERSION = 4.2;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
@@ -1005,9 +1097,16 @@
 					"../../../Radiance/Extern/libvorbis-1.3.2/include",
 				);
 				INFOPLIST_FILE = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = "";
+				MACH_O_TYPE = mh_execute;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USE_HEADERMAP = NO;
 				VALID_ARCHS = armv7;
 			};
 			name = Debug;
@@ -1018,9 +1117,11 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEAD_CODE_STRIPPING = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_DEBUGGING_SYMBOLS = full;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					RAD_OPT_POSIXFILES,
 					RAD_OPT_POSIXTHREADS,
@@ -1036,7 +1137,7 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_THUMB_SUPPORT = NO;
-				GCC_VERSION = 4.2;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
@@ -1047,8 +1148,14 @@
 					"../../../Radiance/Extern/libogg-1.2.2/include",
 					"../../../Radiance/Extern/libvorbis-1.3.2/include",
 				);
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = "";
+				MACH_O_TYPE = mh_execute;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USE_HEADERMAP = NO;
@@ -1065,6 +1172,7 @@
 				1D6058940D05DD3E006BFB54 /* Debug */,
 				1D6058950D05DD3E006BFB54 /* Developer */,
 				33025847132C770A0032AD96 /* Golden */,
+				334F8512144D572B0093BDEE /* GoldenNoOpt */,
 				33E7443A13E276BC005E25B8 /* AdHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1076,6 +1184,7 @@
 				33F5E4DC142ECCC70000987E /* Debug */,
 				33F5E4DD142ECCC70000987E /* Developer */,
 				33F5E4DE142ECCC70000987E /* Golden */,
+				334F8513144D572B0093BDEE /* GoldenNoOpt */,
 				33F5E4DF142ECCC70000987E /* AdHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1087,6 +1196,7 @@
 				33F5E505142ECCF60000987E /* Debug */,
 				33F5E506142ECCF60000987E /* Developer */,
 				33F5E507142ECCF60000987E /* Golden */,
+				334F8514144D572B0093BDEE /* GoldenNoOpt */,
 				33F5E508142ECCF60000987E /* AdHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1098,6 +1208,7 @@
 				C01FCF4F08A954540054247B /* Debug */,
 				C01FCF5008A954540054247B /* Developer */,
 				33025846132C770A0032AD96 /* Golden */,
+				334F8511144D572B0093BDEE /* GoldenNoOpt */,
 				33E7443913E276BC005E25B8 /* AdHoc */,
 			);
 			defaultConfigurationIsVisible = 0;

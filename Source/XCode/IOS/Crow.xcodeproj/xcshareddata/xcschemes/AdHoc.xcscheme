@@ -84,6 +84,15 @@
       buildConfiguration = "AdHoc">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "33F5E4BA142ECCC70000987E"
+            BuildableName = "Crow.app"
+            BlueprintName = "Crow"
+            ReferencedContainer = "container:Crow.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.GDB"
@@ -92,7 +101,10 @@
       displayScale = "1.00"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "AdHoc">
+      buildConfiguration = "AdHoc"
+      debugDocumentVersioning = "YES"
+      enablesOpenGLESFrameCapture = "YES"
+      allowLocationSimulation = "YES">
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
@@ -111,7 +123,8 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "AdHoc">
+      buildConfiguration = "AdHoc"
+      debugDocumentVersioning = "YES">
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
