@@ -554,6 +554,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\..\Base\Scripts\Crystal.lua"
+				>
+			</File>
+			<File
 				RelativePath="..\..\Base\Scripts\EnemyPawn.lua"
 				>
 			</File>
