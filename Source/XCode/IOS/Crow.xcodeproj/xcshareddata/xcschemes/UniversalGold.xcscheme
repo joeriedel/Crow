@@ -103,6 +103,7 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Golden"
       debugDocumentVersioning = "YES"
+      enablesOpenGLESFrameCapture = "YES"
       allowLocationSimulation = "YES">
       <BuildableProductRunnable>
          <BuildableReference
