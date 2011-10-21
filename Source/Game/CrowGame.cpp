@@ -194,12 +194,12 @@ private:
 		);
 		gls.BindBuffer(
 			GL_ELEMENT_ARRAY_BUFFER_ARB,
-			m_rectIB->id
+			m_rectIB
 		);
 
 		m->shader->BindStates(true, Vec4(1,1,1,1));
 		gls.Commit();
-		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_SHORT, 0);
+		gl.DrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_SHORT, 0);
 		CHECK_GL_ERRORS();
 		m->shader->End();
 
