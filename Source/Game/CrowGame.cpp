@@ -22,6 +22,12 @@ struct OverlayVert
 	float st[2];
 };
 
+enum
+{
+	BaseRectSize = 64,
+	OverlayDiv = 8
+};
+
 class GSCrowLoadMap : public GSLoadMap
 {
 public:
@@ -54,9 +60,6 @@ public:
 			m_elapsed += dt;
 		}
 
-		/*if (m_elapsed < 0.25)
-			return;*/
-
 		Draw(game);
 		
 		m_elapsed = 0.f;
@@ -85,60 +88,7 @@ private:
 		m_parser = asset::MaterialParser::Cast(m_mat);
 		m_loader = asset::MaterialLoader::Cast(m_mat);
 
-		m_rectVB.reset(
-			new GLVertexBuffer(
-				GL_ARRAY_BUFFER_ARB, 
-				GL_STATIC_DRAW_ARB, 
-				sizeof(OverlayVert)*4
-			)
-		);
-
-		RAD_ASSERT(m_rectVB);
-
-		GLVertexBuffer::Ptr::Ref vb = m_rectVB->Map();
-		RAD_ASSERT(vb);
-		OverlayVert *verts = (OverlayVert*)vb->ptr.get();
-		verts[0].xy[0] = 0.f;
-		verts[0].xy[1] = 0.f;
-		verts[0].st[0] = 0.f;
-		verts[0].st[1] = 0.f;
-		verts[1].xy[0] = 1.f;
-		verts[1].xy[1] = 0.f;
-		verts[1].st[0] = 1.f;
-		verts[1].st[1] = 0.f;
-		verts[2].xy[0] = 1.f;
-		verts[2].xy[1] = 1.f;
-		verts[2].st[0] = 1.f;
-		verts[2].st[1] = 1.f;
-		verts[3].xy[0] = 0.f;
-		verts[3].xy[1] = 1.f;
-		verts[3].st[0] = 0.f;
-		verts[3].st[1] = 1.f;
-
-		vb.reset(); // unmap
-
-		// setup triangle indices
-
-		m_rectIB.reset(
-			new GLVertexBuffer(
-				GL_ELEMENT_ARRAY_BUFFER_ARB,
-				GL_STATIC_DRAW_ARB,
-				sizeof(U16)*6
-			)
-		);
-
-		vb = m_rectIB->Map();
-		RAD_ASSERT(vb);
-		U16 *indices = (U16*)vb->ptr.get();
-
-		indices[0] = 0;
-		indices[1] = 1;
-		indices[2] = 3;
-		indices[3] = 1;
-		indices[4] = 2;
-		indices[5] = 3;
-
-		vb.reset();
+		InitRectVerts(BaseRectSize, BaseRectSize);
 	}
 
 	void Draw(Game &game)
@@ -154,16 +104,13 @@ private:
 		gl.LoadIdentity();
 		
 		float yaspect = ((float)vph)/((float)vpw);
-#if defined(RAD_OPT_IOS)
-		gl.Rotatef(-90, 0, 0, 1);
-		yaspect *= 1.2;
-#endif
+
 		gl.Ortho((double)vpx, (double)vpw, (double)(vpy+vph), (double)vpy, -1.0, 1.0);
 		gl.MatrixMode(GL_MODELVIEW);
 		gl.LoadIdentity();
 		const float size = 128.f;
 		gl.Translatef(vpw-size-8.f, vph-(size*yaspect)-8.f, 0.f);
-		gl.Scalef(size, size*yaspect, 1.f);
+		gl.Scalef(size/BaseRectSize, (size*yaspect)/BaseRectSize, 1.f);
 
 		Material *m = m_parser->material;
 
@@ -199,13 +146,87 @@ private:
 
 		m->shader->BindStates(true, Vec4(1,1,1,1));
 		gls.Commit();
-		gl.DrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_SHORT, 0);
+		gl.DrawElements(GL_TRIANGLES, (OverlayDiv-1)*(OverlayDiv-1)*6, GL_UNSIGNED_SHORT, 0);
 		CHECK_GL_ERRORS();
 		m->shader->End();
 
 		m_time += 0.1f;
 		m->Sample(m_time, 0.1f);
 	}
+	
+	void InitRectVerts(int vpw, int vph)
+	{
+		m_rectVB.reset(
+		   new GLVertexBuffer(
+			  GL_ARRAY_BUFFER_ARB, 
+			  GL_STATIC_DRAW_ARB, 
+			  sizeof(OverlayVert)*OverlayDiv*OverlayDiv
+			)
+	   );
+		
+		RAD_ASSERT(m_rectVB);
+		
+		GLVertexBuffer::Ptr::Ref vb = m_rectVB->Map();
+		RAD_ASSERT(vb);
+		OverlayVert *verts = (OverlayVert*)vb->ptr.get();
+		
+		float xInc = vpw / ((float)OverlayDiv-1);
+		float yInc = vph / ((float)OverlayDiv-1);
+		
+		int x, y;
+		float xf, yf;
+		
+		for (y = 0, yf = 0.f; y < OverlayDiv; ++y, yf += yInc)
+		{
+			for (x = 0, xf = 0.f; x < OverlayDiv; ++x, xf += xInc)
+			{
+				OverlayVert &v = verts[y*OverlayDiv+x];
+				v.xy[0] = xf;
+				v.xy[1] = yf;
+				v.st[0] = xf / vpw;
+				v.st[1] = yf / vph;
+			}
+		}
+		
+		vb.reset(); // unmap
+		
+		// setup triangle indices
+		
+		m_rectIB.reset(
+		   new GLVertexBuffer(
+			  GL_ELEMENT_ARRAY_BUFFER_ARB,
+			  GL_STATIC_DRAW_ARB,
+			  sizeof(U16)*(OverlayDiv-1)*(OverlayDiv-1)*6
+			)
+		);
+		
+		vb = m_rectIB->Map();
+		RAD_ASSERT(vb);
+		U16 *indices = (U16*)vb->ptr.get();
+		
+		for (y = 0; y < OverlayDiv-1; ++y)
+		{
+			for (x = 0; x < OverlayDiv-1; ++x)
+			{
+				U16 *idx = &indices[y*(OverlayDiv-1)*6+x*6];
+				
+				// glOrtho() inverts the +Z axis (or -Z can't recall), inverting the 
+				// dot product sign and culling CCW faces (i.e. we're looking from the 
+				// back instead of from the front).
+				// I'm correcting this in the indices.
+				
+				idx[2] = (U16)(y*OverlayDiv+x);
+				idx[1] = (U16)((y+1)*OverlayDiv+x);
+				idx[0] = (U16)((y+1)*OverlayDiv+x+1);
+				idx[5] = (U16)(y*OverlayDiv+x);
+				idx[4] = (U16)((y+1)*OverlayDiv+x+1);
+				idx[3] = (U16)(y*OverlayDiv+x+1);
+			}
+		}
+		
+		vb.reset(); // unmap
+	}
+
 
 	int m_charIdx;
 	float m_elapsed;

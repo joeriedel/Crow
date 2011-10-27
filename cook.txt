@@ -50,7 +50,6 @@ Audio/banshee_intro1
 Audio/banshee_scream1
 Audio/banshee_pain1
 Audio/banshee_impact
-Audio/banshee_failed_attack
 Audio/banshee_teleport_disappear
 Audio/banshee_teleport_appear
 Audio/owl_intro1
@@ -156,9 +155,18 @@ UI/finger_shadow_M
 UI/Score_TF
 UI/ToL_TF
 UI/ToL_Dark_TF
-UI/ToL_menu1_M
-UI/ToL_menu1a_M
-UI/ToL_menu1b_M
+UI/ToL_quit_M
+UI/ToL_quit_pressed_M
+UI/ToL_resume_ch1_M
+UI/ToL_resume_ch2_M
+UI/ToL_resume_ch3_M
+UI/ToL_resume_ch4_M
+UI/ToL_resume_ch5_M
+UI/ToL_resume_ch1_pressed_M
+UI/ToL_resume_ch2_pressed_M
+UI/ToL_resume_ch3_pressed_M
+UI/ToL_resume_ch4_pressed_M
+UI/ToL_resume_ch5_pressed_M
 UI/spellcasting_overlay1_M
 UI/minus_float_text_TF
 UI/plus_float_text_TF
@@ -180,13 +188,14 @@ Audio/purchase_skill_fail
 
 UI/skill_locked_M
 UI/skill_locked_description_M
-UI/skill_purchased_M
+UI/skill_purchase_M
 UI/skill_purchase_disabled_M
+UI/skill_grid_M
+UI/sel_skill_M
 UI/attack_damage_L0_M
 UI/attack_damage_L1_M
 UI/attack_damage_L2_M
 UI/attack_damage_L3_M
-UI/attack_damage_description_L0_M
 UI/attack_damage_description_L1_M
 UI/attack_damage_description_L2_M
 UI/attack_damage_description_L3_M
@@ -194,7 +203,6 @@ UI/energy_storage_L0_M
 UI/energy_storage_L1_M
 UI/energy_storage_L2_M
 UI/energy_storage_L3_M
-UI/energy_storage_description_L0_M
 UI/energy_storage_description_L1_M
 UI/energy_storage_description_L2_M
 UI/energy_storage_description_L3_M
@@ -206,7 +214,6 @@ UI/regeneration_L0_M
 UI/regeneration_L1_M
 UI/regeneration_L2_M
 UI/regeneration_L3_M
-UI/regeneration_description_L0_M
 UI/regeneration_description_L1_M
 UI/regeneration_description_L2_M
 UI/regeneration_description_L3_M
