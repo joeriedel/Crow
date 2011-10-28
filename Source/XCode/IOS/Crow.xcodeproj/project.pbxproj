@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33129E9A145A82C5004FAB95 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 33129E98145A82C5004FAB95 /* Default-Portrait.png */; };
+		33129E9B145A82C5004FAB95 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 33129E98145A82C5004FAB95 /* Default-Portrait.png */; };
+		33129E9C145A82C5004FAB95 /* Default@2x-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 33129E99145A82C5004FAB95 /* Default@2x-Portrait.png */; };
+		33129E9D145A82C5004FAB95 /* Default@2x-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 33129E99145A82C5004FAB95 /* Default@2x-Portrait.png */; };
 		33F5E4BC142ECCC70000987E /* CrowGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59412A1E942004F29C0 /* CrowGame.cpp */; };
 		33F5E4BD142ECCC70000987E /* G_Exports.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59712A1E942004F29C0 /* G_Exports.cpp */; };
 		33F5E4BE142ECCC70000987E /* G_ViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59B12A1E942004F29C0 /* G_ViewController.cpp */; };
@@ -115,6 +119,8 @@
 		330257AC132C23540032AD96 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		33025825132C75FE0032AD96 /* CrowiPadDev.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CrowiPadDev.plist; sourceTree = "<group>"; };
 		3302582A132C76490032AD96 /* CrowiPadGold.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CrowiPadGold.plist; sourceTree = "<group>"; };
+		33129E98145A82C5004FAB95 /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait.png"; sourceTree = "<group>"; };
+		33129E99145A82C5004FAB95 /* Default@2x-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x-Portrait.png"; sourceTree = "<group>"; };
 		33277BA613501AE6005DBC1F /* G_ScreenPawn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_ScreenPawn.cpp; sourceTree = "<group>"; };
 		33277BA713501AE6005DBC1F /* G_ScreenPawn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_ScreenPawn.h; sourceTree = "<group>"; };
 		332C4BB4132B364E00E10CA2 /* autoexec.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = autoexec.txt; path = ../../../autoexec.txt; sourceTree = SOURCE_ROOT; };
@@ -216,6 +222,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				33129E98145A82C5004FAB95 /* Default-Portrait.png */,
+				33129E99145A82C5004FAB95 /* Default@2x-Portrait.png */,
 				3372DBB513F4C41B001F0E4D /* Default@2x.png */,
 				3372DBB313F4C3D9001F0E4D /* Default.png */,
 				3372DBAE13F4C1E8001F0E4D /* Default-Portrait~ipad.png */,
@@ -481,6 +489,8 @@
 				33F5E4CC142ECCC70000987E /* Icon-114.png in Resources */,
 				33F5E4CD142ECCC70000987E /* Default.png in Resources */,
 				33F5E4CE142ECCC70000987E /* Default@2x.png in Resources */,
+				33129E9A145A82C5004FAB95 /* Default-Portrait.png in Resources */,
+				33129E9C145A82C5004FAB95 /* Default@2x-Portrait.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +508,8 @@
 				33F5E4F5142ECCF60000987E /* Icon-114.png in Resources */,
 				33F5E4F6142ECCF60000987E /* Default.png in Resources */,
 				33F5E4F7142ECCF60000987E /* Default@2x.png in Resources */,
+				33129E9B145A82C5004FAB95 /* Default-Portrait.png in Resources */,
+				33129E9D145A82C5004FAB95 /* Default@2x-Portrait.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
