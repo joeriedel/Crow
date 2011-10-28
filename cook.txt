@@ -44,6 +44,7 @@ UI/train_demontip3_M
 UI/train_demontip4_M
 Audio/Scarecrow01Omenlevel01_music
 Audio/Scarecrow01Overworld01_music
+"Audio/Flight of the Crow"
 Audio/banshee_fireball_impact
 Audio/banshee_fireball_throw
 Audio/banshee_intro1
