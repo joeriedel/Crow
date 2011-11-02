@@ -44,7 +44,6 @@ UI/train_demontip3_M
 UI/train_demontip4_M
 Audio/Scarecrow01Omenlevel01_music
 Audio/Scarecrow01Overworld01_music
-"Audio/Flight of the Crow"
 Audio/banshee_fireball_impact
 Audio/banshee_fireball_throw
 Audio/banshee_intro1
@@ -99,14 +98,35 @@ Characters/Scarecrow01_M
 02Giant/Overworld03
 02Giant/OmenLevel01
 02Giant/OmenLevel02
+02Giant/CollectionLevel01
 02Giant/BossLevel01
 Objects/arrow
+Objects/Crystals
 Characters/Archer1
+Characters/Archer2
 Characters/Giant
 Characters/EvilTree
+Characters/Geyser
 FX/snow_overlay1_M
 Audio/ch2_audio
-Audio/SotC1
+Audio/FotC
+Audio/magneto
+
+
+// CHAPTER 3
+
+03Baron/Overworld01
+03Baron/BossLevel01
+
+
+// CHAPTER 4
+
+04Unicorn/Overworld01
+
+
+// CHAPTER 5
+
+05Demon/Overworld01
 
 
 // CINEMATIC
@@ -120,11 +140,13 @@ Objects/crow_title
 Audio/ch1_intro_audio
 Audio/sunside_logo_audio
 
+
 // CHARACTERS
 
 Characters/Crow
 FX/crowshieldcracking01_M
 FX/crowshieldcracking02_M
+
 
 // GLOBALS
 
@@ -295,4 +317,3 @@ Audio/projectile_miss
 Audio/score_reveal
 Audio/score_tick
 Audio/lightning_strike1
-Audio/magneto
