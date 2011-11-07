@@ -559,10 +559,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					armv7,
-				);
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEAD_CODE_STRIPPING = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
@@ -593,7 +589,7 @@
 					"../../../Radiance/Extern/libogg-1.2.2/include",
 					"../../../Radiance/Extern/libvorbis-1.3.2/include",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = "";
 				MACH_O_TYPE = mh_execute;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
@@ -604,7 +600,7 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USE_HEADERMAP = NO;
-				VALID_ARCHS = "armv6 armv7";
+				VALID_ARCHS = "$(inherited)";
 			};
 			name = Golden;
 		};
@@ -612,10 +608,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					armv7,
-				);
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEAD_CODE_STRIPPING = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
@@ -647,7 +639,7 @@
 					"../../../Radiance/Extern/libogg-1.2.2/include",
 					"../../../Radiance/Extern/libvorbis-1.3.2/include",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = "";
 				MACH_O_TYPE = mh_execute;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
@@ -655,7 +647,7 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USE_HEADERMAP = NO;
-				VALID_ARCHS = "armv6 armv7";
+				VALID_ARCHS = "$(inherited)";
 			};
 			name = GoldenNoOpt;
 		};
@@ -671,7 +663,6 @@
 				INFOPLIST_FILE = Crow.plist;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = Crow;
-				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -692,7 +683,6 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PLIST_FILE_OUTPUT_FORMAT = binary;
 				PRODUCT_NAME = "Crow HD";
-				SDKROOT = iphoneos;
 			};
 			name = GoldenNoOpt;
 		};
@@ -700,10 +690,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					armv7,
-				);
 				CODE_SIGN_ENTITLEMENTS = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEAD_CODE_STRIPPING = YES;
@@ -735,7 +721,7 @@
 					"../../../Radiance/Extern/libogg-1.2.2/include",
 					"../../../Radiance/Extern/libvorbis-1.3.2/include",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = "";
 				MACH_O_TYPE = mh_execute;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
@@ -747,7 +733,7 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USE_HEADERMAP = NO;
-				VALID_ARCHS = "armv6 armv7";
+				VALID_ARCHS = "$(inherited)";
 			};
 			name = AdHoc;
 		};
@@ -767,7 +753,6 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = Crow;
-				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -784,7 +769,6 @@
 				INFOPLIST_FILE = Crow.plist;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = Crow;
-				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -802,7 +786,6 @@
 				INFOPLIST_FILE = Crow.plist;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = Crow;
-				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -820,7 +803,6 @@
 				INFOPLIST_FILE = Crow.plist;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = Crow;
-				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -842,7 +824,6 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PLIST_FILE_OUTPUT_FORMAT = binary;
 				PRODUCT_NAME = "Crow HD";
-				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -861,7 +842,6 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PLIST_FILE_OUTPUT_FORMAT = binary;
 				PRODUCT_NAME = "Crow HD";
-				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Developer;
@@ -881,7 +861,6 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PLIST_FILE_OUTPUT_FORMAT = binary;
 				PRODUCT_NAME = "Crow HD";
-				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Golden;
@@ -901,7 +880,6 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PLIST_FILE_OUTPUT_FORMAT = binary;
 				PRODUCT_NAME = "Crow HD";
-				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = AdHoc;
@@ -910,10 +888,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					armv7,
-				);
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEAD_CODE_STRIPPING = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
@@ -948,7 +922,7 @@
 					"../../../Radiance/Extern/libvorbis-1.3.2/include",
 				);
 				INFOPLIST_FILE = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = "";
 				MACH_O_TYPE = mh_execute;
 				OTHER_LDFLAGS = (
@@ -958,7 +932,7 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USE_HEADERMAP = NO;
-				VALID_ARCHS = "armv6 armv7";
+				VALID_ARCHS = "$(inherited)";
 			};
 			name = Debug;
 		};
@@ -966,10 +940,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					armv7,
-				);
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEAD_CODE_STRIPPING = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
@@ -1002,7 +972,7 @@
 					"../../../Radiance/Extern/libogg-1.2.2/include",
 					"../../../Radiance/Extern/libvorbis-1.3.2/include",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = "";
 				MACH_O_TYPE = mh_execute;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
@@ -1013,7 +983,7 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USE_HEADERMAP = NO;
-				VALID_ARCHS = "armv6 armv7";
+				VALID_ARCHS = "$(inherited)";
 			};
 			name = Developer;
 		};
