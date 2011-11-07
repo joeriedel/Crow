@@ -145,6 +145,14 @@ void CrowApp::OnTick(float dt)
 #endif
 }
 
+void CrowApp::PostInputEvent(const InputEvent &e)
+{
+#if defined(RAD_TARGET_GOLDEN) || defined(RAD_OPT_IOS)
+	if (m_game)
+		m_game->PostInputEvent(e);
+#endif
+}
+
 const wchar_t *CrowApp::RAD_IMPLEMENT_GET(title)
 {
 	return L"Crow";
