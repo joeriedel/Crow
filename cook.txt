@@ -42,8 +42,6 @@ UI/train_demontip1_M
 UI/train_demontip2_M
 UI/train_demontip3_M
 UI/train_demontip4_M
-Audio/Scarecrow01Omenlevel01_music
-Audio/Scarecrow01Overworld01_music
 Audio/banshee_fireball_impact
 Audio/banshee_fireball_throw
 Audio/banshee_intro1
@@ -109,8 +107,6 @@ Characters/EvilTree
 Characters/Geyser
 FX/snow_overlay1_M
 Audio/ch2_audio
-Audio/FotC
-Audio/magneto
 
 
 // CHAPTER 3
@@ -146,6 +142,12 @@ Audio/sunside_logo_audio
 Characters/Crow
 FX/crowshieldcracking01_M
 FX/crowshieldcracking02_M
+
+
+// MUSIC
+
+Audio/FlightoftheCrow
+Audio/BattleoftheCrow
 
 
 // GLOBALS
