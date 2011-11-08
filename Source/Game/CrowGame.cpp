@@ -7,7 +7,6 @@
 #include <Engine/Engine.h>
 #include <Engine/Game/GSLoadMap.h>
 #include <Engine/Game/GSPlay.h>
-#include <Engine/Renderer/TextModel.h>
 #include <Engine/Packages/Packages.h>
 #include <Engine/Assets/MaterialParser.h>
 #include <Engine/Renderer/GL/GLState.h>
