@@ -160,7 +160,12 @@ UI/start_button_M
 UI/start_button2_M
 UI/continue_button_M
 UI/continue_button2_M
-UI/chapter_select_button_M
+UI/load_game_button_M
+UI/load_game_button2_M
+UI/settings_button_M
+UI/settings_button2_M
+UI/synchronizing_background_M
+UI/synchronizing_M
 UI/crow_title_M
 UI/main-UI01_M
 UI/main-UI02_M
@@ -172,6 +177,10 @@ UI/ch2_icon_M
 UI/ch3_icon_M
 UI/ch4_icon_M
 UI/ch5_icon_M
+UI/no_data_M
+UI/overwrite_prompt_M
+UI/overwrite_prompt_a_M
+UI/overwrite_prompt_b_M
 UI/chapter_select_background_M
 UI/ringwave01_M
 UI/energy_full01_M

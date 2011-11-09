@@ -19,6 +19,7 @@ public:
 	virtual bool PreInit();
 	virtual bool Initialize();
 	virtual void Finalize();
+	virtual void NotifyBackground(bool background);
 	virtual void PostInputEvent(const InputEvent &e);
 
 #if defined(RAD_OPT_PC)

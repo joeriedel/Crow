@@ -145,6 +145,14 @@ void CrowApp::OnTick(float dt)
 #endif
 }
 
+void CrowApp::NotifyBackground(bool background)
+{
+#if defined(RAD_TARGET_GOLDEN) || defined(RAD_OPT_IOS)
+	if (background && m_game)
+		m_game->NotifySaveState();
+#endif
+}
+
 void CrowApp::PostInputEvent(const InputEvent &e)
 {
 #if defined(RAD_TARGET_GOLDEN) || defined(RAD_OPT_IOS)
