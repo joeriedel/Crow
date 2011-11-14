@@ -297,6 +297,8 @@ Objects/cloudsandfog2
 Audio/demontalk_audio01
 Audio/opening_cinematic_soundtrack
 Audio/rain_wind_thunder01
+Audio/bird_vision_start
+Audio/bird_vision_end
 Audio/crow_caw1
 Audio/crow_caw2
 Audio/distant_thunder1
