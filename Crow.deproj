@@ -40,9 +40,6 @@
     <filename>Base\Scripts\Math.lua</filename>
   </file>
   <file>
-    <filename>Base\Scripts\OmenBossTrigger.lua</filename>
-  </file>
-  <file>
     <filename>Base\Scripts\OmenEnergy.lua</filename>
   </file>
   <file>

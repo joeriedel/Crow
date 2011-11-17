@@ -140,8 +140,10 @@ Audio/sunside_logo_audio
 // CHARACTERS
 
 Characters/Crow
+FX/crow_shield01
+FX/shieldshatter
+FX/shieldshatter_M
 FX/crowshieldcracking01_M
-FX/crowshieldcracking02_M
 
 
 // MUSIC
@@ -152,7 +154,6 @@ Audio/BattleoftheCrow
 
 // GLOBALS
 
-FX/crow_shield01
 UI/omen_meter_M
 UI/menu_button01M
 UI/Solid_M
