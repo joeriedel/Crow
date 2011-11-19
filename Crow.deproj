@@ -37,6 +37,9 @@
     <filename>Base\Scripts\Input.lua</filename>
   </file>
   <file>
+    <filename>Base\Scripts\MainMenu.lua</filename>
+  </file>
+  <file>
     <filename>Base\Scripts\Math.lua</filename>
   </file>
   <file>
@@ -80,6 +83,9 @@
   </file>
   <file>
     <filename>Base\Scripts\SoundEmitter.lua</filename>
+  </file>
+  <file>
+    <filename>Base\Scripts\StoryPoint.lua</filename>
   </file>
   <file>
     <filename>Base\Scripts\System.lua</filename>

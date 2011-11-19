@@ -42,6 +42,7 @@ UI/train_demontip1_M
 UI/train_demontip2_M
 UI/train_demontip3_M
 UI/train_demontip4_M
+UI/story1_M
 Audio/banshee_fireball_impact
 Audio/banshee_fireball_throw
 Audio/banshee_intro1
@@ -293,6 +294,7 @@ Objects/Runestone_Mesh01
 Objects/Runestone_Mesh02
 Objects/Shiny_Object_Mesh01
 Objects/trinket1
+Objects/storypoint1
 Objects/cloudsandfog1
 Objects/cloudsandfog2
 Audio/demontalk_audio01
