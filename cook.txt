@@ -29,7 +29,6 @@ UI/confirmation_02_M
 UI/confirmation_02a_M
 UI/confirmation_02b_M
 UI/gametip_01_M
-UI/gametip_02_M
 UI/gametip_03_M
 UI/gametip_04_M
 UI/gametip_05_M
@@ -38,6 +37,12 @@ UI/gametip_07_M
 UI/gametip_08_M
 UI/gametip_09_M
 UI/gametip_10_M
+UI/bevTip1_M
+UI/bevTip2_M
+UI/birdVisionTip1_M
+UI/birdVisionTip2_M
+UI/birdVisionTip3_M
+UI/storyPointTip1_M
 UI/train_demontip1_M
 UI/train_demontip2_M
 UI/train_demontip3_M
