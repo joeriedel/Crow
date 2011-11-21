@@ -48,6 +48,7 @@ UI/train_demontip2_M
 UI/train_demontip3_M
 UI/train_demontip4_M
 UI/story1_M
+UI/story1b_M
 Audio/banshee_fireball_impact
 Audio/banshee_fireball_throw
 Audio/banshee_intro1
@@ -76,6 +77,7 @@ Objects/windmill_blade1
 Objects/windmill_blade2
 Objects/windmillblades_broken
 Objects/windmillblades_looping
+Objects/level_select_scarecrow_mesh
 FX/Owlprojectile01
 Characters/Crow_Feathers03_M
 Characters/Crow_windy
@@ -303,8 +305,10 @@ Objects/Runestone_Mesh02
 Objects/Shiny_Object_Mesh01
 Objects/trinket1
 Objects/storypoint1
+Objects/storypoint_mesh
 Objects/cloudsandfog1
 Objects/cloudsandfog2
+Objects/level_select_generic_mesh
 Audio/demontalk_audio01
 Audio/opening_cinematic_soundtrack
 Audio/rain_wind_thunder01
