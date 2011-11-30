@@ -38,4 +38,5 @@ ui_*.h
 .sconsign.dblite
 Bin/*
 Base/*
+Temp/*
 globals.data
