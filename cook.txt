@@ -119,8 +119,8 @@ Audio/ch2_audio
 
 // CHAPTER 3
 
-//03Baron/Overworld01
-//03Baron/BossLevel01
+03Baron/Overworld01
+03Baron/BossLevel01
 
 
 // CHAPTER 4
