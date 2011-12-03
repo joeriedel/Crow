@@ -349,3 +349,8 @@ Audio/greed_grab_energy_big
 Audio/greed_grab_score
 Audio/greed_grab_trinket
 Audio/skill_points_awarded
+
+// System (for DebugUI)
+
+Sys/Debug_TF
+Sys/DebugWireframe_M
