@@ -42,7 +42,8 @@ UI/bevTip2_M
 UI/birdVisionTip1_M
 UI/birdVisionTip2_M
 UI/birdVisionTip3_M
-UI/storyPointTip1_M
+UI/birdVisionTip4_M
+UI/birdVisionTip5_M
 UI/train_demontip1_M
 UI/train_demontip2_M
 UI/train_demontip3_M
