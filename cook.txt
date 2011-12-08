@@ -303,6 +303,7 @@ Objects/Runestone_Mesh02
 Objects/Shiny_Object_Mesh01
 Objects/trinket1
 Objects/trinket_overworld
+Objects/trinket_action_level
 Objects/storypoint1
 Objects/storypoint_mesh
 Objects/cloudsandfog1
