@@ -16,12 +16,9 @@ FX/Banshee_shield01
 FX/Banshee_teleport
 UI/rain_overlay01_M
 UI/rain_overlay02_M
-UI/demontip_01_M
 UI/demontip_02_M
 UI/demontip_02a_M
 UI/demontip_02b_M
-UI/demontip_03_M
-UI/demontip_04_M
 UI/confirmation_01_M
 UI/confirmation_01a_M
 UI/confirmation_01b_M
@@ -40,10 +37,6 @@ UI/gametip_10_M
 UI/bevTip1_M
 UI/bevTip2_M
 UI/birdVisionTip1_M
-UI/birdVisionTip2_M
-UI/birdVisionTip3_M
-UI/birdVisionTip4_M
-UI/birdVisionTip5_M
 UI/train_demontip1_M
 UI/train_demontip2_M
 UI/train_demontip3_M
