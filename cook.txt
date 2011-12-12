@@ -272,10 +272,7 @@ Audio/select_skill
 Audio/purchase_skill
 Audio/purchase_skill_fail
 
-FX/greed_energy_big
-FX/greed_energy_small
 FX/greed_score
-FX/trinket_greed
 
 FX/crow_attack01_M
 FX/crow_attack_blocked01_M
@@ -295,6 +292,7 @@ Cinematic/ToL
 Objects/Runestone_Mesh01
 Objects/Runestone_Mesh02
 Objects/Shiny_Object_Mesh01
+Objects/energy_large
 Objects/trinket1
 Objects/trinket_overworld
 Objects/trinket_action_level
