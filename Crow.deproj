@@ -19,10 +19,16 @@
     <filename>Base\Scripts\Crystal.lua</filename>
   </file>
   <file>
+    <filename>Base\Scripts\DebugUI.lua</filename>
+  </file>
+  <file>
     <filename>Base\Scripts\EnemyPawn.lua</filename>
   </file>
   <file>
     <filename>Base\Scripts\Entity.lua</filename>
+  </file>
+  <file>
+    <filename>Base\Scripts\EvilTree.lua</filename>
   </file>
   <file>
     <filename>Base\Scripts\Game.lua</filename>
