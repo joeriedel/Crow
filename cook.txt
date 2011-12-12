@@ -188,6 +188,7 @@ UI/overwrite_prompt_b_M
 UI/chapter_select_background_M
 UI/ringwave01_M
 UI/energy_full01_M
+UI/energy_curse_M
 UI/energy_base01_M
 UI/finger_shadow_M
 UI/Score_TF
@@ -341,6 +342,8 @@ Audio/ability_unlocked
 Audio/greed_grab_energy_big
 Audio/greed_grab_score
 Audio/skill_points_awarded
+Audio/curse_enabled
+Audio/energy_meter_curse
 
 // System (for DebugUI)
 
