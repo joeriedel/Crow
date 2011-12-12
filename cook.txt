@@ -27,13 +27,11 @@ UI/confirmation_02a_M
 UI/confirmation_02b_M
 UI/gametip_01_M
 UI/gametip_03_M
-UI/gametip_04_M
 UI/gametip_05_M
 UI/gametip_06_M
-UI/gametip_07_M
-UI/gametip_08_M
 UI/gametip_09_M
 UI/gametip_10_M
+UI/gametip_11_M
 UI/bevTip1_M
 UI/bevTip2_M
 UI/birdVisionTip1_M
@@ -267,6 +265,9 @@ UI/ToL_robustness2_M
 UI/ToL_robustness_desc1_M
 UI/ToL_robustness_desc2_M
 
+UI/trinket_icon_M
+Audio/trinket_icon_sound
+
 Audio/select_skill
 Audio/purchase_skill
 Audio/purchase_skill_fail
@@ -341,7 +342,6 @@ Audio/lightning_strike1
 Audio/ability_unlocked
 Audio/greed_grab_energy_big
 Audio/greed_grab_score
-Audio/greed_grab_trinket
 Audio/skill_points_awarded
 
 // System (for DebugUI)
