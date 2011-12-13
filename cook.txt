@@ -344,6 +344,9 @@ Audio/greed_grab_score
 Audio/skill_points_awarded
 Audio/curse_enabled
 Audio/energy_meter_curse
+Audio/greed_item_spawn
+Audio/death
+Audio/grab_crystal
 
 // System (for DebugUI)
 
