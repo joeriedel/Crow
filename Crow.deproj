@@ -19,6 +19,9 @@
     <filename>Base\Scripts\Crystal.lua</filename>
   </file>
   <file>
+    <filename>Base\Scripts\DamageTarget.lua</filename>
+  </file>
+  <file>
     <filename>Base\Scripts\DebugUI.lua</filename>
   </file>
   <file>
@@ -41,6 +44,9 @@
   </file>
   <file>
     <filename>Base\Scripts\Input.lua</filename>
+  </file>
+  <file>
+    <filename>Base\Scripts\LogicNode.lua</filename>
   </file>
   <file>
     <filename>Base\Scripts\MainMenu.lua</filename>
