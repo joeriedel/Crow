@@ -4,6 +4,7 @@
 	Version="8.00"
 	Name="Crow"
 	ProjectGUID="{63E6F49A-4BD0-4C11-91BF-9E738642414E}"
+	RootNamespace="Crow"
 	Keyword="MakeFileProj"
 	>
 	<Platforms>
@@ -22,12 +23,12 @@
 			>
 			<Tool
 				Name="VCNMakeTool"
-				BuildCommandLine=""
-				ReBuildCommandLine=""
-				CleanCommandLine=""
-				Output="Balance.exe"
+				BuildCommandLine="$(ProjectDir)build.bat"
+				ReBuildCommandLine="$(ProjectDir)rebuild.bat"
+				CleanCommandLine="$(ProjectDir)clean.bat"
+				Output="$(ProjectDir)..\..\Bin\win-msvc8-debug\Crow.exe"
 				PreprocessorDefinitions="WIN32;_DEBUG"
-				IncludeSearchPath=""
+				IncludeSearchPath="&quot;$(ProjectDir)..\..\Radiance\Extern\boost&quot;;&quot;$(ProjectDir)..\..\Radiance\Extern\Win\Qt\4.5.2\vs8-dll\include&quot;;&quot;$(ProjectDir)..\..\Radiance\Source&quot;"
 				ForcedIncludes=""
 				AssemblySearchPath=""
 				ForcedUsingAssemblies=""
@@ -42,12 +43,12 @@
 			>
 			<Tool
 				Name="VCNMakeTool"
-				BuildCommandLine=""
-				ReBuildCommandLine=""
-				CleanCommandLine=""
-				Output="Balance.exe"
+				BuildCommandLine="$(ProjectDir)build.bat --developer --sym"
+				ReBuildCommandLine="$(ProjectDir)rebuild.bat --developer --sym"
+				CleanCommandLine="$(ProjectDir)clean.bat --developer --sym"
+				Output="$(ProjectDir)..\..\Bin\win-msvc8-developer-sym\Crow.exe"
 				PreprocessorDefinitions="WIN32;NDEBUG"
-				IncludeSearchPath=""
+				IncludeSearchPath="&quot;$(ProjectDir)..\..\Radiance\Extern\boost&quot;;&quot;$(ProjectDir)..\..\Radiance\Extern\Win\Qt\4.5.2\vs8-dll\include&quot;;&quot;$(ProjectDir)..\..\Radiance\Source&quot;"
 				ForcedIncludes=""
 				AssemblySearchPath=""
 				ForcedUsingAssemblies=""
