@@ -106,6 +106,7 @@ Characters/Giant
 Characters/EvilTree
 Characters/Geyser
 FX/snow_overlay1_M
+FX/EvilTree_projectile
 Audio/ch2_audio
 
 
@@ -132,6 +133,7 @@ Cinematic/ch1_intro
 Cinematic/ch2_intro
 Cinematic/opening_cin_fate2_M
 Cinematic/opening_cin_fate3_M
+Cinematic/Skip_TF
 Objects/crow_title
 Audio/ch1_intro_audio
 Audio/sunside_logo_audio
