@@ -54,6 +54,8 @@ def build_game(name, type):
 		x.add('Entities/G_ScreenProjectile.cpp')
 		x.add('Entities/G_ScreenView.cpp')
 		x.add('Entities/G_ViewController.cpp')
+		x.add('Entities/G_OmenEnergy.cpp')
+		x.add('Entities/G_Thwap.cpp')
 		x.add('Lua/G_SkModel.cpp')
 
 	x.add(project_name + 'App.cpp')
