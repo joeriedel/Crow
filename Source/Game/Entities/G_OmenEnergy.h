@@ -24,10 +24,6 @@ protected:
 		float dt,
 		const xtime::TimeSlice &time
 	);
-
-private:
-
-	float m_nextTick;
 };
 
 } // world

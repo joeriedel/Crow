@@ -8,7 +8,7 @@
 
 namespace world {
 
-G_Thwap::G_Thwap() : m_nextTick(0.f), m_touching(false)
+G_Thwap::G_Thwap() : m_touching(false)
 {
 }
 
@@ -19,9 +19,6 @@ G_Thwap::~G_Thwap()
 void G_Thwap::Tick(int frame, float dt, const xtime::TimeSlice &time)
 {
 	Entity::Tick(frame, dt, time);
-
-	if (m_nextTick > world->time)
-		return; // not ready to think.
 
 	BBox bbox(ps->bbox);
 	bbox.Translate(ps->worldPos);
@@ -43,8 +40,6 @@ void G_Thwap::Tick(int frame, float dt, const xtime::TimeSlice &time)
 	{
 		m_touching = false;
 	}
-
-	m_nextTick = world->time + (50/1000.f);
 }
 
 } // world

@@ -107,8 +107,12 @@ Characters/EvilTree
 Characters/Geyser
 FX/snow_overlay1_M
 FX/EvilTree_projectile
+FX/snow_stomp
+FX/giantarm
 Audio/ch2_audio
-
+Audio/rider_intro1
+Audio/rider_shoot_arrow
+Audio/rider_fall
 
 // CHAPTER 3
 

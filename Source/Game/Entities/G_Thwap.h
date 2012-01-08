@@ -27,7 +27,6 @@ protected:
 
 private:
 
-	float m_nextTick;
 	bool m_touching;
 };
 

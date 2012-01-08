@@ -8,7 +8,7 @@
 
 namespace world {
 
-G_OmenEnergy::G_OmenEnergy() : m_nextTick(0.f)
+G_OmenEnergy::G_OmenEnergy()
 {
 }
 
@@ -19,9 +19,6 @@ G_OmenEnergy::~G_OmenEnergy()
 void G_OmenEnergy::Tick(int frame, float dt, const xtime::TimeSlice &time)
 {
 	Entity::Tick(frame, dt, time);
-
-	if (m_nextTick > world->time)
-		return; // not ready to think.
 
 	BBox bbox(ps->bbox);
 	bbox.Translate(ps->worldPos);
@@ -34,8 +31,6 @@ void G_OmenEnergy::Tick(int frame, float dt, const xtime::TimeSlice &time)
 		if (PushEntityCall("OnPlayerTouched"))
 			world->lua->Call("G_OmenEnergy::Tick", 1, 0, 0);
 	}
-
-	m_nextTick = world->time + (50/1000.f);
 }
 
 } // world
