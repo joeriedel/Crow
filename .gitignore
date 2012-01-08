@@ -39,4 +39,10 @@ ui_*.h
 Bin/*
 Base/*
 Temp/*
+Cooked/*
 globals.data
+*.sav
+*.deuser
+TODO.txt
+autoexec.txt
+editor.user.ini
