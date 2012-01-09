@@ -7,6 +7,8 @@
 01Scarecrow/OmenLevel02
 01Scarecrow/OmenLevel03
 01Scarecrow/BossLevel01
+01Scarecrow/CollectionLevel01
+01Scarecrow/CollectionLevel02
 Characters/Scarecrow
 Characters/Scarecrow2
 Characters/Owl
@@ -97,6 +99,9 @@ Characters/Scarecrow01_M
 02Giant/OmenLevel01
 02Giant/OmenLevel02
 02Giant/CollectionLevel01
+02Giant/CollectionLevel02
+02Giant/CollectionLevel03
+02Giant/CollectionLevel04
 02Giant/BossLevel01
 Objects/arrow
 Objects/Crystals
@@ -118,17 +123,23 @@ Audio/rider_fall
 
 03Baron/Overworld01
 03Baron/BossLevel01
-
+03Baron/CollectionLevel01
+03Baron/CollectionLevel02
+03Baron/CollectionLevel03
+03Baron/CollectionLevel04
 
 // CHAPTER 4
 
 04Unicorn/Overworld01
-
+04Unicorn/CollectionLevel01
+04Unicorn/CollectionLevel02
 
 // CHAPTER 5
 
 05Demon/Overworld01
-
+05Demon/CollectionLevel01
+05Demon/CollectionLevel02
+05Demon/CollectionLevel03
 
 // CINEMATIC
 
@@ -309,6 +320,7 @@ Objects/storypoint_mesh
 Objects/cloudsandfog1
 Objects/cloudsandfog2
 Objects/level_select_generic_mesh
+Objects/level_select_challenge_mesh
 Audio/demontalk_audio01
 Audio/opening_cinematic_soundtrack
 Audio/rain_wind_thunder01
