@@ -321,6 +321,8 @@ Objects/cloudsandfog1
 Objects/cloudsandfog2
 Objects/level_select_generic_mesh
 Objects/level_select_challenge_mesh
+Objects/fallingrocks_ice
+Objects/steamshoot1
 Audio/demontalk_audio01
 Audio/opening_cinematic_soundtrack
 Audio/rain_wind_thunder01
