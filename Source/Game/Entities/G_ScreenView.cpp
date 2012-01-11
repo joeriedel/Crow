@@ -30,6 +30,9 @@ ENT_GETSET(G_ScreenView, ScreenControlTarget, Vec3, m_target);
 ENT_GETSET(G_ScreenView, ScreenControlClip, Vec3, m_clip);
 ENT_GETSET(G_ScreenView, ScreenControlTargetVelocity, Vec3, m_targetVel);
 ENT_GETSET(G_ScreenView, ScreenControlEnabled, bool, m_enabled);
+ENT_GET(G_ScreenView, ScreenControlVertexVelocity, Vec3, m_vertex.vel);
+ENT_GET(G_ScreenView, ScreenControlVertexForce, Vec3, m_vertex.force);
+ENT_GET(G_ScreenView, ScreenControlVertexLength, float, m_vertex.length);
 
 void G_ScreenView::TickPhysics(
 	int frame, 
@@ -79,6 +82,9 @@ void G_ScreenView::PushCallTable(lua_State *L)
 	LUART_REGISTER_GETSET(L, ScreenControlClip);
 	LUART_REGISTER_GETSET(L, ScreenControlTargetVelocity);
 	LUART_REGISTER_GETSET(L, ScreenControlEnabled);
+	LUART_REGISTER_GET(L, ScreenControlVertexVelocity);
+	LUART_REGISTER_GET(L, ScreenControlVertexForce);
+	LUART_REGISTER_GET(L, ScreenControlVertexLength);
 }
 
 } // world

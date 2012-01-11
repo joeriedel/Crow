@@ -44,6 +44,9 @@ private:
 	ENT_DECL_GETSET(ScreenControlClip);
 	ENT_DECL_GETSET(ScreenControlTargetVelocity);
 	ENT_DECL_GETSET(ScreenControlEnabled);
+	ENT_DECL_GET(ScreenControlVertexVelocity);
+	ENT_DECL_GET(ScreenControlVertexForce);
+	ENT_DECL_GET(ScreenControlVertexLength);
 
 	RAD_DECLARE_GET(spring, physics::Spring*) { return &const_cast<G_ScreenView*>(this)->m_spring; }
 	RAD_DECLARE_GET(vertex, physics::SpringVertex*) { return &const_cast<G_ScreenView*>(this)->m_vertex; }
