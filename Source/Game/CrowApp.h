@@ -49,4 +49,6 @@ private:
 	bool RunAutoExec();
 	Game::Ref m_game;
 #endif
+
+	bool m_background;
 };

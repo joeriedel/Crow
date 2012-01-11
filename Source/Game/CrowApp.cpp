@@ -25,7 +25,7 @@ bool __IOSAPP_AllowHD()
 
 App *App::New() { return new CrowApp(); }
 
-CrowApp::CrowApp()
+CrowApp::CrowApp() : m_background(false)
 {
 	spawn::G_Exports();
 }
@@ -148,8 +148,15 @@ void CrowApp::OnTick(float dt)
 void CrowApp::NotifyBackground(bool background)
 {
 #if defined(RAD_TARGET_GOLDEN) || defined(RAD_OPT_IOS)
-	if (background && m_game)
-		m_game->NotifySaveState();
+	if (m_game && (m_background != background))
+	{
+		if (background)
+			m_game->NotifySaveState();
+		else
+			m_game->NotifyRestoreState();
+
+		m_background = background;
+	}
 #endif
 }
 

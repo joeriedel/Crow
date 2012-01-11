@@ -37,6 +37,7 @@ UI/gametip_11_M
 UI/bevTip1_M
 UI/bevTip2_M
 UI/birdVisionTip1_M
+UI/birdVisionTip2_M
 UI/train_demontip1_M
 UI/train_demontip2_M
 UI/train_demontip3_M
@@ -368,6 +369,7 @@ Audio/energy_meter_curse
 Audio/greed_item_spawn
 Audio/death
 Audio/grab_crystal
+Audio/item_discovered
 
 // System (for DebugUI)
 
