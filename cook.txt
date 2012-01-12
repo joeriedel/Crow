@@ -370,7 +370,7 @@ Audio/greed_item_spawn
 Audio/death
 Audio/grab_crystal
 Audio/item_discovered
-Audio/level_Select_tap
+Audio/level_select_tap
 Audio/level_select_tap_fail
 
 // System (for DebugUI)
