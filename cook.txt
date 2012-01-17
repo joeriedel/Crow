@@ -308,6 +308,7 @@ FX/owl_feathers1
 FX/owl_glow_eyes1
 FX/lightning1_M
 FX/snow_kickup_mesh
+FX/snowvolume_particlefaux
 Cinematic/ToL
 Objects/Runestone_Mesh01
 Objects/Runestone_Mesh02
