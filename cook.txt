@@ -232,6 +232,7 @@ UI/Score_Screen_Big_TF
 UI/spellcasting_edgelines_M
 UI/notify_TF
 UI/notify_background_M
+UI/score_backdrop_M
 
 UI/ToL_locked_desc1_M
 UI/ToL_purchase1_M
