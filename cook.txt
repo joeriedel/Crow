@@ -284,6 +284,8 @@ UI/ToL_robustness1_M
 UI/ToL_robustness2_M
 UI/ToL_robustness_desc1_M
 UI/ToL_robustness_desc2_M
+UI/rose_M
+UI/rose_overlay_M
 
 UI/trinket_icon_M
 Audio/trinket_icon_sound
