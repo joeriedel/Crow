@@ -126,7 +126,8 @@ private:
 			GL_FLOAT,
 			GL_FALSE,
 			sizeof(OverlayVert),
-			0
+			0,
+			false
 		);
 		gls.SetMGSource(
 			r::MGS_TexCoords,
@@ -136,7 +137,8 @@ private:
 			GL_FLOAT,
 			GL_FALSE,
 			sizeof(OverlayVert),
-			sizeof(float)*2
+			sizeof(float)*2,
+			false
 		);
 		gls.BindBuffer(
 			GL_ELEMENT_ARRAY_BUFFER_ARB,
