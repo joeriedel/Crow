@@ -27,7 +27,6 @@ UI/confirmation_01b_M
 UI/confirmation_02_M
 UI/confirmation_02a_M
 UI/confirmation_02b_M
-UI/gametip_01_M
 UI/gametip_03_M
 UI/gametip_05_M
 UI/gametip_06_M
@@ -175,8 +174,6 @@ Audio/GlidingHigh
 
 // GLOBALS
 
-UI/omen_meter_M
-UI/menu_button01M
 UI/Solid_M
 UI/start_button_M
 UI/start_button2_M
