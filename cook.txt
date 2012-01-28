@@ -27,6 +27,7 @@ UI/confirmation_01b_M
 UI/confirmation_02_M
 UI/confirmation_02a_M
 UI/confirmation_02b_M
+UI/gametip_01_M
 UI/gametip_03_M
 UI/gametip_05_M
 UI/gametip_06_M
