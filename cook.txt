@@ -123,6 +123,8 @@ Audio/rider_fall
 // CHAPTER 3
 
 03Baron/Overworld01
+03Baron/Overworld02
+03Baron/OmenLevel01
 03Baron/BossLevel01
 03Baron/CollectionLevel01
 03Baron/CollectionLevel02
