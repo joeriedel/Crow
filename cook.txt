@@ -102,7 +102,6 @@ Characters/Scarecrow01_M
 02Giant/CollectionLevel01
 02Giant/CollectionLevel02
 02Giant/CollectionLevel03
-02Giant/CollectionLevel04
 02Giant/BossLevel01
 Objects/arrow
 Objects/Crystals
@@ -115,6 +114,7 @@ FX/snow_overlay1_M
 FX/EvilTree_projectile
 FX/snow_stomp
 FX/giantarm
+FX/giantshadow1
 Audio/ch2_audio
 Audio/rider_intro1
 Audio/rider_shoot_arrow
