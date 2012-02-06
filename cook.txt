@@ -379,6 +379,8 @@ Audio/grab_crystal
 Audio/item_discovered
 Audio/level_select_tap
 Audio/level_select_tap_fail
+Audio/BEV_enter
+Audio/BEV_exit
 
 // System (for DebugUI)
 
