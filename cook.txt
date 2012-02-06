@@ -42,8 +42,11 @@ UI/train_demontip1_M
 UI/train_demontip2_M
 UI/train_demontip3_M
 UI/train_demontip4_M
-UI/story1_M
-UI/story1b_M
+UI/story01_M
+UI/story02_M
+UI/story03_M
+UI/story04_M
+UI/story05_M
 Audio/banshee_fireball_impact
 Audio/banshee_fireball_throw
 Audio/banshee_intro1
