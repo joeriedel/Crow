@@ -14,7 +14,6 @@ Characters/Scarecrow2
 Characters/Owl
 Characters/Banshee
 FX/Banshee_fireball01
-FX/Banshee_shield01
 FX/Banshee_teleport
 UI/rain_overlay01_M
 UI/rain_overlay02_M
@@ -163,7 +162,7 @@ Cinematic/Skip_TF
 Objects/crow_title
 Audio/ch1_intro_audio
 Audio/sunside_logo_audio
-
+Cinematic/spare1_foreground_M
 
 // CHARACTERS
 
@@ -386,6 +385,7 @@ Audio/level_select_tap
 Audio/level_select_tap_fail
 Audio/BEV_enter
 Audio/BEV_exit
+Audio/ToL_curse_spare
 
 // System (for DebugUI)
 
