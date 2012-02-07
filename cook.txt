@@ -113,6 +113,11 @@ Characters/Archer2
 Characters/Giant
 Characters/EvilTree
 Characters/Geyser
+UI/story06_M
+UI/story07_M
+UI/story08_M
+UI/story09_M
+UI/story10_M
 FX/snow_overlay1_M
 FX/EvilTree_projectile
 FX/snow_stomp
