@@ -15,6 +15,10 @@ Characters/Owl
 Characters/Banshee
 FX/Banshee_fireball01
 FX/Banshee_teleport
+FX/Banshee_damageparticles
+FX/Banshee_firebody_center
+FX/Banshee_firebody_left
+FX/Banshee_firebody_right
 UI/rain_overlay01_M
 UI/rain_overlay02_M
 UI/demontip_02_M
@@ -106,7 +110,7 @@ Characters/Scarecrow01_M
 02Giant/CollectionLevel03
 02Giant/BossLevel01
 Objects/arrow
-Objects/Crystals
+Objects/eviltree_icerock
 Characters/Archer1
 Characters/Archer2
 Characters/Giant
@@ -163,6 +167,7 @@ Objects/crow_title
 Audio/ch1_intro_audio
 Audio/sunside_logo_audio
 Cinematic/spare1_foreground_M
+Audio/opening_cinematic_soundtrack
 
 // CHARACTERS
 
@@ -335,8 +340,8 @@ Objects/level_select_generic_mesh
 Objects/level_select_challenge_mesh
 Objects/fallingrocks_ice
 Objects/steamshoot1
+Objects/Crystals
 Audio/demontalk_audio01
-Audio/opening_cinematic_soundtrack
 Audio/rain_wind_thunder01
 Audio/bird_vision_start
 Audio/bird_vision_end
@@ -386,6 +391,7 @@ Audio/level_select_tap_fail
 Audio/BEV_enter
 Audio/BEV_exit
 Audio/ToL_curse_spare
+Audio/spare1_cinematic
 
 // System (for DebugUI)
 
