@@ -87,9 +87,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "33F5E4E3142ECCF60000987E"
-            BuildableName = "Crow HD.app"
-            BlueprintName = "Crow HD"
+            BlueprintIdentifier = "33F5E4BA142ECCC70000987E"
+            BuildableName = "Crow.app"
+            BlueprintName = "Crow"
             ReferencedContainer = "container:Crow.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -108,9 +108,9 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "33F5E4E3142ECCF60000987E"
-            BuildableName = "Crow HD.app"
-            BlueprintName = "Crow HD"
+            BlueprintIdentifier = "33F5E4BA142ECCC70000987E"
+            BuildableName = "Crow.app"
+            BlueprintName = "Crow"
             ReferencedContainer = "container:Crow.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -128,9 +128,9 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "33F5E4E3142ECCF60000987E"
-            BuildableName = "Crow HD.app"
-            BlueprintName = "Crow HD"
+            BlueprintIdentifier = "33F5E4BA142ECCC70000987E"
+            BuildableName = "Crow.app"
+            BlueprintName = "Crow"
             ReferencedContainer = "container:Crow.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
