@@ -140,6 +140,7 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "AdHoc"
+      customArchiveName = "Crow TestFlightApp"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>
