@@ -322,6 +322,7 @@ FX/owl_glow_eyes1
 FX/owl_feathers1
 FX/owl_glow_eyes1
 FX/lightning1_M
+FX/lightning2_M
 FX/snow_kickup_mesh
 FX/snowvolume_particlefaux
 Cinematic/ToL
@@ -392,6 +393,8 @@ Audio/BEV_enter
 Audio/BEV_exit
 Audio/ToL_curse_spare
 Audio/spare1_cinematic
+Audio/power_caw
+Audio/sparechoice_yell
 
 // System (for DebugUI)
 
