@@ -253,7 +253,13 @@ UI/ToL_purchase2_M
 UI/ToL_menu_background1_M
 
 UI/ToL_efficiency1_M
+UI/ToL_efficiency1b_M
+UI/ToL_efficiency1c_M
+UI/ToL_efficiency1d_M
 UI/ToL_efficiency2_M
+UI/ToL_efficiency2b_M
+UI/ToL_efficiency2c_M
+UI/ToL_efficiency2d_M
 UI/ToL_efficiency_desc1_M
 UI/ToL_efficiency_desc2_M
 UI/ToL_efficiency_desc3_M
@@ -261,19 +267,33 @@ UI/ToL_efficiency_desc3_M
 UI/ToL_fury_locked_M
 UI/ToL_fury_locked2_M
 UI/ToL_fury1_M
+UI/ToL_fury1b_M
+UI/ToL_fury1c_M
 UI/ToL_fury2_M
+UI/ToL_fury2b_M
+UI/ToL_fury2c_M
 UI/ToL_fury_desc1_M
 UI/ToL_fury_desc2_M
 
 UI/ToL_greed_locked_M
 UI/ToL_greed_locked2_M
 UI/ToL_greed1_M
+UI/ToL_greed1b_M
+UI/ToL_greed1c_M
 UI/ToL_greed2_M
+UI/ToL_greed2b_M
+UI/ToL_greed2c_M
 UI/ToL_greed_desc1_M
 UI/ToL_greed_desc2_M
 
 UI/ToL_protection1_M
+UI/ToL_protection1b_M
+UI/ToL_protection1c_M
+UI/ToL_protection1d_M
 UI/ToL_protection2_M
+UI/ToL_protection2b_M
+UI/ToL_protection2c_M
+UI/ToL_protection2d_M
 UI/ToL_protection_desc1_M
 UI/ToL_protection_desc2_M
 UI/ToL_protection_desc3_M
@@ -281,12 +301,22 @@ UI/ToL_protection_desc3_M
 UI/ToL_reflection_locked_M
 UI/ToL_reflection_locked2_M
 UI/ToL_reflection1_M
+UI/ToL_reflection1b_M
+UI/ToL_reflection1c_M
 UI/ToL_reflection2_M
+UI/ToL_reflection2b_M
+UI/ToL_reflection2c_M
 UI/ToL_reflection_desc1_M
 UI/ToL_reflection_desc2_M
 
 UI/ToL_regeneration1_M
+UI/ToL_regeneration1b_M
+UI/ToL_regeneration1c_M
+UI/ToL_regeneration1d_M
 UI/ToL_regeneration2_M
+UI/ToL_regeneration2b_M
+UI/ToL_regeneration2c_M
+UI/ToL_regeneration2d_M
 UI/ToL_regeneration_desc1_M
 UI/ToL_regeneration_desc2_M
 UI/ToL_regeneration_desc3_M
@@ -294,7 +324,11 @@ UI/ToL_regeneration_desc3_M
 UI/ToL_robustness_locked_M
 UI/ToL_robustness_locked2_M
 UI/ToL_robustness1_M
+UI/ToL_robustness1b_M
+UI/ToL_robustness1c_M
 UI/ToL_robustness2_M
+UI/ToL_robustness2b_M
+UI/ToL_robustness2c_M
 UI/ToL_robustness_desc1_M
 UI/ToL_robustness_desc2_M
 UI/rose_M
