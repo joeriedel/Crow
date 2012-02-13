@@ -430,6 +430,8 @@ Audio/ToL_curse_spare
 Audio/spare1_cinematic
 Audio/power_caw
 Audio/sparechoice_yell
+Audio/demon_background
+Audio/unicorn_whispers
 
 // System (for DebugUI)
 
