@@ -130,6 +130,7 @@ Audio/ch2_audio
 Audio/rider_intro1
 Audio/rider_shoot_arrow
 Audio/rider_fall
+Audio/archer-horse_intro_ch2
 
 // CHAPTER 3
 
