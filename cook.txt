@@ -50,6 +50,11 @@ UI/story02_M
 UI/story03_M
 UI/story04_M
 UI/story05_M
+UI/story01b_M
+UI/story02b_M
+UI/story03b_M
+UI/story04b_M
+UI/story05b_M
 Audio/banshee_fireball_impact
 Audio/banshee_fireball_throw
 Audio/banshee_intro1
@@ -121,15 +126,36 @@ UI/story07_M
 UI/story08_M
 UI/story09_M
 UI/story10_M
+UI/story06b_M
+UI/story07b_M
+UI/story08b_M
+UI/story09b_M
+UI/story10b_M
 FX/snow_overlay1_M
 FX/EvilTree_projectile
 FX/snow_stomp
 FX/giantarm
 FX/giantshadow1
 Audio/ch2_audio
+Audio/EvilTreeImpact
+Audio/EvilTreeThrow
+Audio/eviltree1
+Audio/eviltree2
+Audio/eviltree_death
+Audio/giant_footstep1
+Audio/giant_footstep2
+Audio/giant_howl1
+Audio/giant_rumble1
+Audio/giant_smash1
+Audio/giant_smash_mono1
+Audio/archer_yells1
+Audio/archer_yells2
+Audio/archer_yells_mono1
+Audio/archer_yells_mono2
 Audio/rider_intro1
 Audio/rider_shoot_arrow
 Audio/rider_fall
+Audio/horse_loop1
 Audio/archer-horse_intro_ch2
 
 // CHAPTER 3
@@ -433,6 +459,10 @@ Audio/power_caw
 Audio/sparechoice_yell
 Audio/demon_background
 Audio/unicorn_whispers
+Audio/whoosh1
+Audio/whoosh_mono1
+Audio/spare_leaf
+Audio/curse_leaf
 
 // System (for DebugUI)
 
