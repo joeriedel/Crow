@@ -21,9 +21,12 @@ FX/Banshee_firebody_left
 FX/Banshee_firebody_right
 UI/rain_overlay01_M
 UI/rain_overlay02_M
+UI/demontip_01_M
 UI/demontip_02_M
 UI/demontip_02a_M
 UI/demontip_02b_M
+UI/demontip_03_M
+UI/demontip_04_M
 UI/confirmation_01_M
 UI/confirmation_01a_M
 UI/confirmation_01b_M
