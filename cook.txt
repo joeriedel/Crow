@@ -27,9 +27,6 @@ UI/demontip_02a_M
 UI/demontip_02b_M
 UI/demontip_03_M
 UI/demontip_04_M
-UI/demontip_05_M
-UI/demontip_06_M
-UI/demontip_07_M
 UI/confirmation_01_M
 UI/confirmation_01a_M
 UI/confirmation_01b_M
@@ -37,6 +34,7 @@ UI/confirmation_02_M
 UI/confirmation_02a_M
 UI/confirmation_02b_M
 UI/gametip_01_M
+UI/gametip_02_M
 UI/gametip_03_M
 UI/gametip_05_M
 UI/gametip_06_M
@@ -127,6 +125,7 @@ Characters/Archer2
 Characters/Giant
 Characters/EvilTree
 Characters/Geyser
+UI/demontip_05_M
 UI/story06_M
 UI/story07_M
 UI/story08_M
@@ -168,21 +167,15 @@ Audio/archer-horse_intro_ch2
 
 03Baron/Overworld01
 03Baron/Overworld02
-03Baron/OmenLevel01
+UI/demontip_06_M
+//03Baron/OmenLevel01
 03Baron/BossLevel01
 03Baron/CollectionLevel01
 03Baron/CollectionLevel02
-03Baron/CollectionLevel03
-03Baron/CollectionLevel04
-
-// CHAPTER 4
-
-04Unicorn/Overworld01
-04Unicorn/CollectionLevel01
-04Unicorn/CollectionLevel02
 
 // CHAPTER 5
 
+UI/demontip_07_M
 05Demon/Overworld01
 05Demon/CollectionLevel01
 05Demon/CollectionLevel02
