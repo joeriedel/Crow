@@ -27,6 +27,9 @@ UI/demontip_02a_M
 UI/demontip_02b_M
 UI/demontip_03_M
 UI/demontip_04_M
+UI/demontip_05_M
+UI/demontip_06_M
+UI/demontip_07_M
 UI/confirmation_01_M
 UI/confirmation_01a_M
 UI/confirmation_01b_M
