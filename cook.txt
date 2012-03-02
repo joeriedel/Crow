@@ -171,15 +171,15 @@ UI/demontip_06_M
 //03Baron/OmenLevel01
 03Baron/BossLevel01
 03Baron/CollectionLevel01
-03Baron/CollectionLevel02
+//03Baron/CollectionLevel02
 
 // CHAPTER 5
 
 UI/demontip_07_M
 05Demon/Overworld01
-05Demon/CollectionLevel01
-05Demon/CollectionLevel02
-05Demon/CollectionLevel03
+//05Demon/CollectionLevel01
+//05Demon/CollectionLevel02
+//05Demon/CollectionLevel03
 
 // CINEMATIC
 
