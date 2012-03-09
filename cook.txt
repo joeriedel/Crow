@@ -404,6 +404,9 @@ Objects/level_select_challenge_mesh
 Objects/fallingrocks_ice
 Objects/steamshoot1
 Objects/Crystals
+Objects/Chest1
+Objects/Mushroom1
+Objects/Pouch1
 Audio/demontalk_audio01
 Audio/rain_wind_thunder01
 Audio/bird_vision_start
