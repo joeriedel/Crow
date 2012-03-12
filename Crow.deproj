@@ -37,6 +37,9 @@
     <filename>Base\Scripts\Game.lua</filename>
   </file>
   <file>
+    <filename>Base\Scripts\GameNetwork.lua</filename>
+  </file>
+  <file>
     <filename>Base\Scripts\Imports.lua</filename>
   </file>
   <file>
