@@ -41,6 +41,8 @@ UI/gametip_06_M
 UI/gametip_09_M
 UI/gametip_10_M
 UI/gametip_11_M
+UI/gametip_earn_sp_M
+UI/gametip_spend_sp_M
 UI/bevTip1_M
 UI/bevTip2_M
 UI/birdVisionTip1_M

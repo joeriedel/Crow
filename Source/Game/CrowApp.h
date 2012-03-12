@@ -1,6 +1,7 @@
 // CrowApp.h
 // Copyright (c) 2010 Sunside Inc., All Rights Reserved
 // Author: Joe Riedel (joeriedel@hotmail.com)
+// See Crow/LICENSE for licensing terms.
 
 #pragma once
 

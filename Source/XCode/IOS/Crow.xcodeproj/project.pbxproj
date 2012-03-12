@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		33129E9A145A82C5004FAB95 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 33129E98145A82C5004FAB95 /* Default-Portrait.png */; };
 		33129E9B145A82C5004FAB95 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 33129E98145A82C5004FAB95 /* Default-Portrait.png */; };
+		33246771150DD25A009F3901 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33246770150DD25A009F3901 /* GameKit.framework */; };
 		33CE9BCF14BA0915008F3AC4 /* G_OmenEnergy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33CE9BCB14BA0915008F3AC4 /* G_OmenEnergy.cpp */; };
 		33CE9BD014BA0915008F3AC4 /* G_OmenEnergy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33CE9BCB14BA0915008F3AC4 /* G_OmenEnergy.cpp */; };
 		33CE9BD114BA0915008F3AC4 /* G_Thwap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33CE9BCD14BA0915008F3AC4 /* G_Thwap.cpp */; };
@@ -124,6 +125,7 @@
 		330257AB132C23540032AD96 /* Icon-72.png */ = {isa = PBXFileReference; explicitFileType = image.icns; path = "Icon-72.png"; sourceTree = "<group>"; };
 		330257AC132C23540032AD96 /* Icon.png */ = {isa = PBXFileReference; explicitFileType = image.icns; path = Icon.png; sourceTree = "<group>"; };
 		33129E98145A82C5004FAB95 /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait.png"; sourceTree = "<group>"; };
+		33246770150DD25A009F3901 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		33277BA613501AE6005DBC1F /* G_ScreenPawn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_ScreenPawn.cpp; sourceTree = "<group>"; };
 		33277BA713501AE6005DBC1F /* G_ScreenPawn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_ScreenPawn.h; sourceTree = "<group>"; };
 		332C4BB4132B364E00E10CA2 /* autoexec.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = autoexec.txt; path = ../../../autoexec.txt; sourceTree = SOURCE_ROOT; };
@@ -174,6 +176,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33246771150DD25A009F3901 /* GameKit.framework in Frameworks */,
 				33F5E4D0142ECCC70000987E /* AudioToolbox.framework in Frameworks */,
 				33F5E4D1142ECCC70000987E /* Foundation.framework in Frameworks */,
 				33F5E4D2142ECCC70000987E /* UIKit.framework in Frameworks */,
@@ -212,6 +215,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				33246770150DD25A009F3901 /* GameKit.framework */,
 				33D4336714269141007CEE73 /* AudioToolbox.framework */,
 				33D4336514269138007CEE73 /* AudioToolbox.framework */,
 				339E0A681389C73C004B5DC9 /* libvorbis.xcodeproj */,

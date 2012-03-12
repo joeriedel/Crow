@@ -1,7 +1,7 @@
 // G_SkModel.h
 // Copyright (c) 2010 Sunside Inc., All Rights Reserved
 // Author: Joe Riedel (joeriedel@hotmail.com)
-// See Radiance/LICENSE for licensing terms.
+// See Crow/LICENSE for licensing terms.
 
 #include <Engine/World/Lua/D_SkModel.h>
 #include <Runtime/PushPack.h>

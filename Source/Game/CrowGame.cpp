@@ -1,6 +1,7 @@
-// CrowGame.h
+// CrowGame.cpp
 // Copyright (c) 2010 Sunside Inc., All Rights Reserved
 // Author: Joe Riedel (joeriedel@hotmail.com)
+// See Crow/LICENSE for licensing terms.
 
 #include "CrowGame.h"
 #include <Engine/App.h>
