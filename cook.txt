@@ -251,6 +251,7 @@ UI/energy_curse_M
 UI/energy_base01_M
 UI/finger_shadow_M
 UI/Score_TF
+UI/ObjectiveDiscovered_TF
 UI/ToL_TF
 UI/ToL_Dark_TF
 UI/ToL_Small_TF
@@ -270,6 +271,8 @@ UI/Score_Screen_TF
 UI/Score_Screen_Blue_TF
 UI/Score_Screen_Red_TF
 UI/Score_Screen_Big_TF
+UI/Score_Screen_HighScore_TF
+UI/Score_Screen_Big_NewScore_TF
 UI/spellcasting_edgelines_M
 UI/notify_TF
 UI/notify_background_M
