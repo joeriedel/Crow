@@ -82,6 +82,9 @@
     <filename>Base\Scripts\Projectile.lua</filename>
   </file>
   <file>
+    <filename>Base\Scripts\ProjectileSource.lua</filename>
+  </file>
+  <file>
     <filename>Base\Scripts\Rider.lua</filename>
   </file>
   <file>
