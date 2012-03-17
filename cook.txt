@@ -167,18 +167,22 @@ Audio/archer-horse_intro_ch2
 
 // CHAPTER 3
 
+UI/demontip_06_M
 03Baron/Overworld01
 03Baron/Overworld02
-UI/demontip_06_M
-//03Baron/OmenLevel01
+03Baron/OmenLevel01
 03Baron/BossLevel01
 03Baron/CollectionLevel01
-//03Baron/CollectionLevel02
 
 // CHAPTER 5
 
 UI/demontip_07_M
 05Demon/Overworld01
+05Demon/BossLevel01
+Characters/DarkLord
+Characters/Demon_Tentacle
+FX/DLfirelight
+FX/DLrockring
 //05Demon/CollectionLevel01
 //05Demon/CollectionLevel02
 //05Demon/CollectionLevel03
@@ -192,6 +196,7 @@ Cinematic/opening_cin_fate2_M
 Cinematic/opening_cin_fate3_M
 Cinematic/Skip_TF
 Cinematic/ending_demo
+Cinematic/ending
 Objects/crow_title
 Audio/ch1_intro_audio
 Audio/sunside_logo_audio
