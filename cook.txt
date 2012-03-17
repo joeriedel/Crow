@@ -370,6 +370,9 @@ UI/ToL_robustness_desc2_M
 UI/rose_M
 UI/rose_overlay_M
 UI/attack_hint_M
+UI/confirm_collection_replay_M
+UI/confirm_collection_replay_b_M
+UI/confirm_collection_replay_c_M
 
 UI/trinket_icon_M
 Audio/trinket_icon_sound
@@ -476,6 +479,8 @@ Audio/whoosh1
 Audio/whoosh_mono1
 Audio/spare_leaf
 Audio/curse_leaf
+Audio/EndCredits1
+Audio/EndCredits2
 
 // System (for DebugUI)
 
