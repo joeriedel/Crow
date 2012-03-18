@@ -192,6 +192,8 @@ FX/DLrockring
 Cinematic/opening_cinematic
 Cinematic/ch1_intro
 Cinematic/ch2_intro
+Cinematic/ch3_intro
+Cinematic/ch5_intro
 Cinematic/opening_cin_fate2_M
 Cinematic/opening_cin_fate3_M
 Cinematic/Skip_TF
