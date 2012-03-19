@@ -173,6 +173,10 @@ UI/demontip_06_M
 03Baron/OmenLevel01
 03Baron/BossLevel01
 03Baron/CollectionLevel01
+03Baron/lightshafts
+Objects/doubledoors
+Objects/stainedglass
+Characters/Baron
 
 // CHAPTER 5
 
@@ -197,7 +201,6 @@ Cinematic/ch5_intro
 Cinematic/opening_cin_fate2_M
 Cinematic/opening_cin_fate3_M
 Cinematic/Skip_TF
-Cinematic/ending_demo
 Cinematic/ending
 Objects/crow_title
 Audio/ch1_intro_audio
