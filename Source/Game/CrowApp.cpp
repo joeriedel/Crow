@@ -200,6 +200,11 @@ bool CrowApp::RAD_IMPLEMENT_GET(allowMultipleInstances)
 	return false;
 }
 
+const char *CrowApp::RAD_IMPLEMENT_GET(flurryAPIKey)
+{
+	return "NSUEK83QJRBVXRFDND2T";
+}
+
 #if defined(RAD_OPT_PC)
 void CrowApp::CloseWindow()
 {

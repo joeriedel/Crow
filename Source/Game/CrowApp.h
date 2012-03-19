@@ -38,6 +38,7 @@ private:
 	virtual RAD_DECLARE_GET(company, const wchar_t*);
 	virtual RAD_DECLARE_GET(website, const wchar_t*);
 	virtual RAD_DECLARE_GET(allowMultipleInstances, bool);
+	virtual RAD_DECLARE_GET(flurryAPIKey, const char*);
 
 #if defined(RAD_OPT_PC_TOOLS)
 	virtual RAD_DECLARE_GET(wantEditor, bool);
