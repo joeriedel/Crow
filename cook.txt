@@ -398,6 +398,7 @@ FX/Crow_Feathers_Particles01
 FX/Crow_Feather01
 FX/Crow_Feather02
 FX/Invert_M
+FX/InvertFury_M
 FX/WindTurb_M
 FX/demoneyes01_M
 FX/demonedge01_M
@@ -489,6 +490,7 @@ Audio/spare_leaf
 Audio/curse_leaf
 Audio/EndCredits1
 Audio/EndCredits2
+Audio/fury_attack
 
 // System (for DebugUI)
 
