@@ -231,6 +231,7 @@ Audio/GlidingHigh
 
 // GLOBALS
 
+UI/MainMenu_Small_TF
 UI/Solid_M
 UI/start_button_M
 UI/start_button2_M
@@ -254,6 +255,8 @@ UI/ch3_icon_M
 UI/ch4_icon_M
 UI/ch5_icon_M
 UI/no_data_M
+UI/locked_M
+UI/checkpoint_M
 UI/overwrite_prompt_M
 UI/overwrite_prompt_a_M
 UI/overwrite_prompt_b_M
@@ -378,9 +381,18 @@ UI/ToL_robustness_desc2_M
 UI/rose_M
 UI/rose_overlay_M
 UI/attack_hint_M
+UI/confirm_collection_M
+UI/confirm_collection_b_M
+UI/confirm_collection_c_M
 UI/confirm_collection_replay_M
 UI/confirm_collection_replay_b_M
 UI/confirm_collection_replay_c_M
+UI/confirm_story_point_M
+UI/confirm_story_point_b_M
+UI/confirm_story_point_c_M
+UI/first_collection_level_M
+UI/first_collection_level_a_M
+UI/first_collection_level_b_M
 
 UI/trinket_icon_M
 Audio/trinket_icon_sound
