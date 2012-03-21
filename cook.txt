@@ -186,6 +186,7 @@ UI/demontip_07_M
 05Demon/darksky_mesh
 Characters/DarkLord
 Characters/Demon_Tentacle
+Characters/DarkLord_yell
 FX/DLfirelight
 FX/DLrockring
 Audio/DemonDown
