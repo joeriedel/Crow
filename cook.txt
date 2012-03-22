@@ -242,6 +242,10 @@ UI/load_game_button_M
 UI/load_game_button2_M
 UI/leaderboards_button_M
 UI/leaderboards_button2_M
+UI/achievements_button_M
+UI/achievements_button2_M
+UI/collection_levels_button_M
+UI/collection_levels_button2_M
 UI/synchronizing_background_M
 UI/synchronizing_M
 UI/crow_title_M
@@ -394,6 +398,15 @@ UI/confirm_story_point_c_M
 UI/first_collection_level_M
 UI/first_collection_level_a_M
 UI/first_collection_level_b_M
+UI/col_1_1_icon_M
+UI/col_1_2_icon_M
+UI/col_2_1_icon_M
+UI/col_2_2_icon_M
+UI/col_2_3_icon_M
+UI/col_3_1_icon_M
+UI/col_3_2_icon_M
+UI/col_4_1_icon_M
+UI/col_4_2_icon_M
 
 UI/trinket_icon_M
 Audio/trinket_icon_sound
