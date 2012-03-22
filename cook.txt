@@ -265,6 +265,9 @@ UI/checkpoint_M
 UI/overwrite_prompt_M
 UI/overwrite_prompt_a_M
 UI/overwrite_prompt_b_M
+UI/collection_replay_mm_prompt_M
+UI/collection_replay_mm_prompt_a_M
+UI/collection_replay_mm_prompt_b_M
 UI/chapter_select_background_M
 UI/ringwave01_M
 UI/energy_full01_M
