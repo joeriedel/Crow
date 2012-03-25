@@ -420,7 +420,6 @@ UI/col_2_1_icon_M
 UI/col_2_2_icon_M
 UI/col_2_3_icon_M
 UI/col_3_1_icon_M
-UI/col_3_2_icon_M
 UI/col_4_1_icon_M
 UI/col_4_2_icon_M
 
