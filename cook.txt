@@ -225,6 +225,8 @@ FX/crow_shield01
 FX/shieldshatter
 FX/shieldshatter_M
 FX/crowshieldcracking01_M
+FX/crow_smallpower
+FX/crow_largepower
 
 
 // MUSIC
