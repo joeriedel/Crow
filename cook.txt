@@ -93,6 +93,7 @@ Objects/level_select_scarecrow_mesh
 FX/Owlprojectile01
 Characters/Crow_Feathers03_M
 Characters/Crow_windy
+Characters/CrowHM
 FX/wave_projectile1
 FX/pumpkin_projectile1
 FX/fence_projectile1
@@ -216,6 +217,9 @@ Audio/sunside_logo_audio
 Cinematic/spare1_foreground_M
 Audio/opening_cinematic_soundtrack
 Cinematic/magicparticles_mesh
+Cinematic/endtitlemesh1
+Cinematic/endtitlemesh2
+Cinematic/endtitlemesh3
 
 // CHARACTERS
 
