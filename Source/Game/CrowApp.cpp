@@ -202,7 +202,11 @@ bool CrowApp::RAD_IMPLEMENT_GET(allowMultipleInstances)
 
 const char *CrowApp::RAD_IMPLEMENT_GET(flurryAPIKey)
 {
+#if defined(RAD_OPT_SHIP)
 	return "NSUEK83QJRBVXRFDND2T";
+#else
+	return "69GLZJN9GT5XN5IYQYXC";
+#endif
 }
 
 #if defined(RAD_OPT_PC)
