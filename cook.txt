@@ -537,6 +537,7 @@ Audio/curse_leaf
 Audio/EndCredits1
 Audio/EndCredits2
 Audio/fury_attack
+Audio/DemonicRise
 
 // System (for DebugUI)
 
