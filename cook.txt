@@ -220,6 +220,7 @@ Cinematic/magicparticles_mesh
 Cinematic/endtitlemesh1
 Cinematic/endtitlemesh2
 Cinematic/endtitlemesh3
+Characters/WhiteSpirit
 
 // CHARACTERS
 
