@@ -178,6 +178,12 @@ UI/demontip_06_M
 Objects/doubledoors
 Objects/stainedglass
 Characters/Baron
+UI/story011_M
+UI/story012_M
+UI/story013_M
+UI/story11b_M
+UI/story12b_M
+UI/story13b_M
 
 // CHAPTER 5
 
@@ -198,7 +204,10 @@ FX/DLthrowrockblast
 Audio/DemonDown
 05Demon/CollectionLevel01
 05Demon/CollectionLevel02
-//05Demon/CollectionLevel03
+UI/story014A_M
+UI/story014B_M
+UI/story014Ab_M
+UI/story014Bb_M
 
 // CINEMATIC
 
@@ -230,6 +239,7 @@ FX/crow_shield01
 FX/shieldshatter
 FX/shieldshatter_M
 FX/crowshieldcracking01_M
+FX/crowshieldcracking02_M
 FX/crow_smallpower
 FX/crow_largepower
 
