@@ -438,8 +438,24 @@ UI/col_3_1_icon_M
 UI/col_4_1_icon_M
 UI/col_4_2_icon_M
 UI/signinbkg_M
-
+UI/tutorial_M
+UI/victory_M
+UI/unstoppable_M
+UI/unbreakable_M
+UI/invincible_M
+UI/kind_hearted_M
+UI/defiant_M
+UI/nefarious_M
+UI/pure_evil_M
+UI/the_millionaire_M
 UI/trinket_icon_M
+UI/mega_millions_M
+UI/trinket_lover_M
+UI/treasure_chest_M
+UI/history_major_M
+UI/candy_store_M
+UI/catchers_mitt_M
+UI/ludicrous_speed_M
 Audio/trinket_icon_sound
 
 Audio/select_skill

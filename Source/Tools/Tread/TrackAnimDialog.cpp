@@ -918,6 +918,8 @@ void CTrackAnimDialog::OnDblclkEventKeys()
 
 	m_track->SetKeyFrameInfo( k->ticks, ticks, vec3::zero, dlg.m_sScript, KEYFRAME_EVENTS, KEYFRAME_MASK_EVENT|KEYFRAME_MASK_TICKS );
 	LoadKeyList( m_track->GetKeyFrames(KEYFRAME_EVENTS), &m_Events );
+
+	m_Events.SetCurSel(sel);
 }
 
 void CTrackAnimDialog::OnNoMotionCheck() 
