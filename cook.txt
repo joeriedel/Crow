@@ -74,6 +74,7 @@ Audio/scarecrow_pumpkin_hit
 Audio/scarecrow_pumpkin_spawn
 Audio/scarecrow_fence_spawn
 Audio/scarecrow_fence_hit
+Audio/scarecrow_windy_spawn
 Audio/owl_projectile_throw
 Audio/scarecrow_VO1
 Audio/scarecrow_VO2
