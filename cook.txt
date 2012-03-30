@@ -231,6 +231,14 @@ Cinematic/endtitlemesh1
 Cinematic/endtitlemesh2
 Cinematic/endtitlemesh3
 Characters/WhiteSpirit
+Cinematic/WS_tip1_M
+Cinematic/WS_tip2_M
+Cinematic/WS_tip3_M
+Cinematic/demontip_final_M
+Audio/WS_VO1
+Audio/WS_V02
+Audio/WS_V03
+Audio/demon_final
 
 // CHARACTERS
 
