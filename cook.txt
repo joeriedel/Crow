@@ -178,9 +178,9 @@ UI/demontip_06_M
 Objects/doubledoors
 Objects/stainedglass
 Characters/Baron
-UI/story011_M
-UI/story012_M
-UI/story013_M
+UI/story11_M
+UI/story12_M
+UI/story13_M
 UI/story11b_M
 UI/story12b_M
 UI/story13b_M
@@ -204,10 +204,10 @@ FX/DLthrowrockblast
 Audio/DemonDown
 05Demon/CollectionLevel01
 05Demon/CollectionLevel02
-UI/story014A_M
-UI/story014B_M
-UI/story014Ab_M
-UI/story014Bb_M
+UI/story14A_M
+UI/story14B_M
+UI/story14Ab_M
+UI/story14Bb_M
 
 // CINEMATIC
 
