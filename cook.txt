@@ -189,13 +189,13 @@ Audio/archer_death1
 Audio/archer_death1
 Audio/archer_death3
 Audio/archer_death4
-Audio/baron_V01
-Audio/baron_V02
-Audio/baron_V03
-Audio/baron_V04
-Audio/baron_V05
-Audio/baron_V06
-Audio/baron_V07
+Audio/baron_VO1
+Audio/baron_VO2
+Audio/baron_VO3
+Audio/baron_VO4
+Audio/baron_VO5
+Audio/baron_VO6
+Audio/baron_VO7
 Audio/ch3_baroncurse
 
 // CHAPTER 5
@@ -252,7 +252,7 @@ Cinematic/WS_tip1_M
 Cinematic/WS_tip2_M
 Cinematic/WS_tip3_M
 Cinematic/demontip_final_M
-Audio/WS_VO1
+Audio/WS_V01
 Audio/WS_V02
 Audio/WS_V03
 Audio/demon_final
@@ -590,7 +590,6 @@ Audio/spare_leaf
 Audio/curse_leaf
 Audio/EndCredits1
 Audio/EndCredits2
-Audio/fury_attack
 Audio/DemonicRise
 
 // System (for DebugUI)
