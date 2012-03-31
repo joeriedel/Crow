@@ -185,6 +185,18 @@ UI/story13_M
 UI/story11b_M
 UI/story12b_M
 UI/story13b_M
+Audio/archer_death1
+Audio/archer_death1
+Audio/archer_death3
+Audio/archer_death4
+Audio/baron_V01
+Audio/baron_V02
+Audio/baron_V03
+Audio/baron_V04
+Audio/baron_V05
+Audio/baron_V06
+Audio/baron_V07
+Audio/ch3_baroncurse
 
 // CHAPTER 5
 
@@ -209,6 +221,11 @@ UI/story14A_M
 UI/story14B_M
 UI/story14Ab_M
 UI/story14Bb_M
+Audio/evilwoosh
+Audio/laser1
+Audio/rocksmash1
+Audio/strangedeath
+Audio/vortexwind1
 
 // CINEMATIC
 
@@ -480,6 +497,7 @@ FX/Crow_Feathers_Particles01
 FX/Crow_Feather01
 FX/Crow_Feather02
 FX/Invert_M
+FX/InvertAttack_M
 FX/InvertFury_M
 FX/WindTurb_M
 FX/demoneyes01_M
