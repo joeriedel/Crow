@@ -186,7 +186,7 @@ UI/story11b_M
 UI/story12b_M
 UI/story13b_M
 Audio/archer_death1
-Audio/archer_death1
+Audio/archer_death2
 Audio/archer_death3
 Audio/archer_death4
 Audio/baron_VO1
@@ -226,6 +226,7 @@ Audio/laser1
 Audio/rocksmash1
 Audio/strangedeath
 Audio/vortexwind1
+Objects/clouds1
 
 // CINEMATIC
 
