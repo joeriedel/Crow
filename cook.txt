@@ -257,6 +257,7 @@ Audio/WS_V01
 Audio/WS_V02
 Audio/WS_V03
 Audio/demon_final
+Cinematic/legaleeze_M
 
 // CHARACTERS
 
