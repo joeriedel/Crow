@@ -304,6 +304,7 @@ UI/main-UI02_M
 UI/main-UI03_M
 UI/main-UI04_M
 UI/main-UI05_M
+UI/main-UI06_M
 UI/ch1_icon_M
 UI/ch2_icon_M
 UI/ch3_icon_M
@@ -484,14 +485,22 @@ UI/history_major_M
 UI/candy_store_M
 UI/catchers_mitt_M
 UI/ludicrous_speed_M
-Audio/trinket_icon_sound
+UI/C1_OW1_BEVtip_M
+UI/C1_OW2_BEVtip_M
+UI/C1_OW3_BEVtip_M
+UI/C2_OW1_BEVtip_M
+UI/C2_OW2_BEVtip_M
+UI/C2_OW3_BEVtip_M
+UI/C3_OW1_BEVtip_M
+UI/C3_OW2_BEVtip_M
+UI/C5_OW1_BEVtip_M
 
+Audio/trinket_icon_sound
 Audio/select_skill
 Audio/purchase_skill
 Audio/purchase_skill_fail
 
 FX/greed_score
-
 FX/crow_attack01_M
 FX/crow_attack_blocked01_M
 FX/crow_attack_missed01_M
