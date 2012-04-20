@@ -1,6 +1,6 @@
 // G_ViewController.h
 // Copyright (c) 2010 Sunside Inc., All Rights Reserved
-// Author: Joe Riedel (joeriedel@hotmail.com)
+// Author: Joe Riedel
 
 #include <Engine/World/Entities/E_ViewController.h>
 #include <Runtime/PushPack.h>

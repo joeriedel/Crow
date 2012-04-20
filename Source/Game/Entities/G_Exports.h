@@ -1,6 +1,6 @@
 // G_Exports.h
 // Copyright (c) 2010 Sunside Inc., All Rights Reserved
-// Author: Joe Riedel (joeriedel@hotmail.com)
+// Author: Joe Riedel
 
 namespace spawn {
 
