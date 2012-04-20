@@ -1,6 +1,6 @@
 # Source/SConstruct
 # Crow construction file
-# Author: Joe Riedel (joeriedel@hotmail.com)
+# Author: Joe Riedel
 
 Import('radvars')
 Import('boost_threads')

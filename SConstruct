@@ -1,6 +1,6 @@
 # SConstruct
 # Crow construction file
-# Author: Joe Riedel (joeriedel@hotmail.com)
+# Author: Joe Riedel
 
 import os
 
