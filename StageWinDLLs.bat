@@ -24,10 +24,10 @@ xcopy Radiance\Extern\Win\Qt\4.5.2\vs8-dll\lib\QtCore4.dll Bin\win-msvc8-develop
 xcopy Radiance\Extern\Win\Qt\4.5.2\vs8-dll\lib\QtGui4.dll Bin\win-msvc8-developer-sym /D /Y
 xcopy Radiance\Extern\Win\Qt\4.5.2\vs8-dll\lib\QtOpenGL4.dll Bin\win-msvc8-developer-sym /D /Y
 
-xcopy Radiance\Extern\Win\SDL\1.2\SDL.dll Bin\win-msvc8-debug /D /Y
-xcopy Radiance\Extern\Win\SDL\1.2\SDL.dll Bin\win-msvc8-developer /D /Y
-xcopy Radiance\Extern\Win\SDL\1.2\SDL.dll Bin\win-msvc8-developer-sym /D /Y
-xcopy Radiance\Extern\Win\SDL\1.2\SDL.dll Bin\win-msvc8-golden /D /Y
+xcopy Radiance\Extern\Win\SDL\1.2.15\SDL.dll Bin\win-msvc8-debug /D /Y
+xcopy Radiance\Extern\Win\SDL\1.2.15\SDL.dll Bin\win-msvc8-developer /D /Y
+xcopy Radiance\Extern\Win\SDL\1.2.15\SDL.dll Bin\win-msvc8-developer-sym /D /Y
+xcopy Radiance\Extern\Win\SDL\1.2.15\SDL.dll Bin\win-msvc8-golden /D /Y
 
 xcopy Radiance\Extern\Win\VLD\1.9h\VS8\bin\dbghelp.dll Bin\win-msvc8-debug /D /Y
 xcopy Radiance\Extern\Win\VLD\1.9h\VS8\bin\Microsoft.DTfW.DHL.manifest Bin\win-msvc8-debug /D /Y
