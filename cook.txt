@@ -1,4 +1,7 @@
 
+// Strings
+UI/Globals
+
 // CHAPTER 1
 
 01Scarecrow/Overworld01
