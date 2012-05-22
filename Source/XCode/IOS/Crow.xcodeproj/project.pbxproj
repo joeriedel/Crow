@@ -18,6 +18,7 @@
 		33E2AA8A1466617D00094222 /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 33E2AA881466617D00094222 /* Default-Landscape.png */; };
 		33E2AA8C1466618E00094222 /* Default@2x-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 33E2AA8B1466618E00094222 /* Default@2x-Landscape.png */; };
 		33E2AA8D1466618E00094222 /* Default@2x-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 33E2AA8B1466618E00094222 /* Default@2x-Landscape.png */; };
+		33EA9B27156BF9DE00337DC0 /* languages.txt in Resources */ = {isa = PBXBuildFile; fileRef = 33EA9B26156BF9DE00337DC0 /* languages.txt */; };
 		33F5E4BC142ECCC70000987E /* CrowGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59412A1E942004F29C0 /* CrowGame.cpp */; };
 		33F5E4BD142ECCC70000987E /* G_Exports.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59712A1E942004F29C0 /* G_Exports.cpp */; };
 		33F5E4BE142ECCC70000987E /* G_ViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332EF59B12A1E942004F29C0 /* G_ViewController.cpp */; };
@@ -164,6 +165,7 @@
 		33E2AA8B1466618E00094222 /* Default@2x-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x-Landscape.png"; sourceTree = "<group>"; };
 		33E2AA8E1466635100094222 /* Crow.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Crow.plist; sourceTree = "<group>"; };
 		33E2AA8F1466635100094222 /* CrowHD.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = CrowHD.plist; sourceTree = "<group>"; };
+		33EA9B26156BF9DE00337DC0 /* languages.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = languages.txt; path = ../../../languages.txt; sourceTree = "<group>"; };
 		33F2DD7913160636008217BC /* G_SkModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_SkModel.cpp; sourceTree = "<group>"; };
 		33F2DD7A13160636008217BC /* G_SkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_SkModel.h; sourceTree = "<group>"; };
 		33F5E4E0142ECCC70000987E /* Crow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crow.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -225,6 +227,7 @@
 				337F031312A87F74001376E7 /* Radiance.xcodeproj */,
 				332EF59012A1E927004F29C0 /* Source */,
 				332C4BB4132B364E00E10CA2 /* autoexec.txt */,
+				33EA9B26156BF9DE00337DC0 /* languages.txt */,
 				33FEFE3212A0C3D400D0C604 /* Base */,
 				33519A16132C88F0000D4455 /* Base */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -499,6 +502,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33EA9B27156BF9DE00337DC0 /* languages.txt in Resources */,
 				33F5E4C5142ECCC70000987E /* MainWindow.xib in Resources */,
 				33F5E4C6142ECCC70000987E /* autoexec.txt in Resources */,
 				33F5E4C7142ECCC70000987E /* Icon-72.png in Resources */,
