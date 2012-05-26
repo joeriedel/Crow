@@ -261,6 +261,8 @@ Audio/WS_V02
 Audio/WS_V03
 Audio/demon_final
 Cinematic/legaleeze_M
+UI/facebook_M
+UI/download_itunes_M
 
 // CHARACTERS
 
