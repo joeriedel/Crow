@@ -285,6 +285,15 @@ Audio/GlidingHigh
 
 // GLOBALS
 
+UI/confirmation_03_M
+UI/confirmation_03a_M
+UI/confirmation_03b_M
+UI/confirmation_04_M
+UI/confirmation_04a_M
+UI/confirmation_04b_M
+UI/confirmation_05_M
+UI/confirmation_05a_M
+UI/confirmation_05b_M
 UI/MainMenu_Small_TF
 UI/Solid_M
 UI/start_button_M
