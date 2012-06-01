@@ -326,6 +326,7 @@ UI/ch4_icon_M
 UI/ch5_icon_M
 UI/no_data_M
 UI/locked_M
+UI/lockedspecial_M
 UI/checkpoint_M
 UI/overwrite_prompt_M
 UI/overwrite_prompt_a_M
@@ -480,6 +481,7 @@ UI/col_2_3_icon_M
 UI/col_3_1_icon_M
 UI/col_4_1_icon_M
 UI/col_4_2_icon_M
+UI/ch5_col3_M
 UI/signinbkg_M
 UI/tutorial_M
 UI/victory_M
