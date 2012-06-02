@@ -220,6 +220,7 @@ FX/DLthrowrockblast
 Audio/DemonDown
 05Demon/CollectionLevel01
 05Demon/CollectionLevel02
+05Demon/CollectionLevel03
 UI/story14A_M
 UI/story14B_M
 UI/story14Ab_M
