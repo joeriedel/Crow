@@ -1,0 +1,592 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3383816415A9976900A28CCF /* macicon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3383816315A9976900A28CCF /* macicon.icns */; };
+		339743B915A8C4BF0043ECCD /* libRadiance.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 339740DE15A8BBA90043ECCD /* libRadiance.a */; };
+		3397465915A8DBC90043ECCD /* CrowApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3397464015A8DBC90043ECCD /* CrowApp.cpp */; };
+		3397465A15A8DBC90043ECCD /* CrowGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3397464215A8DBC90043ECCD /* CrowGame.cpp */; };
+		3397465B15A8DBC90043ECCD /* G_Exports.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3397464515A8DBC90043ECCD /* G_Exports.cpp */; };
+		3397465C15A8DBC90043ECCD /* G_OmenEnergy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3397464715A8DBC90043ECCD /* G_OmenEnergy.cpp */; };
+		3397465D15A8DBC90043ECCD /* G_ScreenPawn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3397464915A8DBC90043ECCD /* G_ScreenPawn.cpp */; };
+		3397465E15A8DBC90043ECCD /* G_ScreenProjectile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3397464B15A8DBC90043ECCD /* G_ScreenProjectile.cpp */; };
+		3397465F15A8DBC90043ECCD /* G_ScreenView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3397464D15A8DBC90043ECCD /* G_ScreenView.cpp */; };
+		3397466015A8DBC90043ECCD /* G_Thwap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3397464F15A8DBC90043ECCD /* G_Thwap.cpp */; };
+		3397466115A8DBC90043ECCD /* G_ViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3397465115A8DBC90043ECCD /* G_ViewController.cpp */; };
+		3397466215A8DBC90043ECCD /* G_SkModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3397465415A8DBC90043ECCD /* G_SkModel.cpp */; };
+		33974B4515A8EB5A0043ECCD /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33974B4415A8EB5A0043ECCD /* OpenGL.framework */; };
+		33974B4815A8EC600043ECCD /* SDL in Frameworks */ = {isa = PBXBuildFile; fileRef = 33974B4615A8EBA90043ECCD /* SDL */; };
+		33974B5015A8EE080043ECCD /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33974B4F15A8EE080043ECCD /* OpenAL.framework */; };
+		33974B5515A8F0880043ECCD /* SDL.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 33974B5415A8F0880043ECCD /* SDL.framework */; };
+		33974B5815A8F1430043ECCD /* Base in CopyFiles */ = {isa = PBXBuildFile; fileRef = 33974B5715A8F1430043ECCD /* Base */; };
+		33974B5A15A8F15A0043ECCD /* languages.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 33974B5915A8F15A0043ECCD /* languages.txt */; };
+		33974B5C15A8F1B20043ECCD /* autoexec.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 33974B5B15A8F1B20043ECCD /* autoexec.txt */; };
+		33A1663D15A8753900404C47 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33A1663C15A8753900404C47 /* Cocoa.framework */; };
+		33A1664715A8753900404C47 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 33A1664515A8753900404C47 /* InfoPlist.strings */; };
+		33A1667915A87A7100404C47 /* liblibogg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33A1667715A87A5D00404C47 /* liblibogg.a */; };
+		33A166E015A87DE600404C47 /* liblibvorbis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33A166B215A87D1F00404C47 /* liblibvorbis.a */; };
+		33A1676815A8B96300404C47 /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33A1671315A881D000404C47 /* libfreetype.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		339740DD15A8BBA90043ECCD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 339740D615A8BBA90043ECCD /* Radiance.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 339740C615A8BAFD0043ECCD;
+			remoteInfo = Radiance;
+		};
+		33A1667615A87A5D00404C47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33A1666F15A87A5D00404C47 /* libogg.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 33A1666815A87A3F00404C47;
+			remoteInfo = libogg;
+		};
+		33A166B115A87D1F00404C47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33A166AA15A87D1F00404C47 /* libvorbis.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 33A1668B15A87CD000404C47;
+			remoteInfo = libvorbis;
+		};
+		33A1671215A881D000404C47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33A1670B15A881D000404C47 /* freetype.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 33A166FB15A881B700404C47;
+			remoteInfo = freetype;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		33974B5315A8F02E0043ECCD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				33974B5515A8F0880043ECCD /* SDL.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33974B5615A8F0C30043ECCD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = ../..;
+			dstSubfolderSpec = 6;
+			files = (
+				33974B5C15A8F1B20043ECCD /* autoexec.txt in CopyFiles */,
+				33974B5A15A8F15A0043ECCD /* languages.txt in CopyFiles */,
+				33974B5815A8F1430043ECCD /* Base in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3383816315A9976900A28CCF /* macicon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = macicon.icns; sourceTree = "<group>"; };
+		339740D615A8BBA90043ECCD /* Radiance.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Radiance.xcodeproj; path = ../../../Radiance/Source/XCode/MacApp/Radiance.xcodeproj; sourceTree = "<group>"; };
+		3397464015A8DBC90043ECCD /* CrowApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CrowApp.cpp; sourceTree = "<group>"; };
+		3397464115A8DBC90043ECCD /* CrowApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowApp.h; sourceTree = "<group>"; };
+		3397464215A8DBC90043ECCD /* CrowGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CrowGame.cpp; sourceTree = "<group>"; };
+		3397464315A8DBC90043ECCD /* CrowGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowGame.h; sourceTree = "<group>"; };
+		3397464515A8DBC90043ECCD /* G_Exports.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_Exports.cpp; sourceTree = "<group>"; };
+		3397464615A8DBC90043ECCD /* G_Exports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_Exports.h; sourceTree = "<group>"; };
+		3397464715A8DBC90043ECCD /* G_OmenEnergy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_OmenEnergy.cpp; sourceTree = "<group>"; };
+		3397464815A8DBC90043ECCD /* G_OmenEnergy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_OmenEnergy.h; sourceTree = "<group>"; };
+		3397464915A8DBC90043ECCD /* G_ScreenPawn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_ScreenPawn.cpp; sourceTree = "<group>"; };
+		3397464A15A8DBC90043ECCD /* G_ScreenPawn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_ScreenPawn.h; sourceTree = "<group>"; };
+		3397464B15A8DBC90043ECCD /* G_ScreenProjectile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_ScreenProjectile.cpp; sourceTree = "<group>"; };
+		3397464C15A8DBC90043ECCD /* G_ScreenProjectile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_ScreenProjectile.h; sourceTree = "<group>"; };
+		3397464D15A8DBC90043ECCD /* G_ScreenView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_ScreenView.cpp; sourceTree = "<group>"; };
+		3397464E15A8DBC90043ECCD /* G_ScreenView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_ScreenView.h; sourceTree = "<group>"; };
+		3397464F15A8DBC90043ECCD /* G_Thwap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_Thwap.cpp; sourceTree = "<group>"; };
+		3397465015A8DBC90043ECCD /* G_Thwap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_Thwap.h; sourceTree = "<group>"; };
+		3397465115A8DBC90043ECCD /* G_ViewController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_ViewController.cpp; sourceTree = "<group>"; };
+		3397465215A8DBC90043ECCD /* G_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_ViewController.h; sourceTree = "<group>"; };
+		3397465415A8DBC90043ECCD /* G_SkModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_SkModel.cpp; sourceTree = "<group>"; };
+		3397465515A8DBC90043ECCD /* G_SkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_SkModel.h; sourceTree = "<group>"; };
+		33974B4415A8EB5A0043ECCD /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		33974B4615A8EBA90043ECCD /* SDL */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = SDL; path = ../../../Radiance/Extern/Mac/SDL/1.2/SDL.framework/Versions/A/SDL; sourceTree = "<group>"; };
+		33974B4F15A8EE080043ECCD /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		33974B5415A8F0880043ECCD /* SDL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL.framework; path = ../../../Radiance/Extern/Mac/SDL/1.2/SDL.framework; sourceTree = "<group>"; };
+		33974B5715A8F1430043ECCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Base; path = ../../../Cooked/Packages/Base; sourceTree = "<group>"; };
+		33974B5915A8F15A0043ECCD /* languages.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = languages.txt; path = ../../../languages.txt; sourceTree = "<group>"; };
+		33974B5B15A8F1B20043ECCD /* autoexec.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = autoexec.txt; path = ../../../autoexec.txt; sourceTree = "<group>"; };
+		33A1663815A8753900404C47 /* Crow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		33A1663C15A8753900404C47 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		33A1663F15A8753900404C47 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		33A1664015A8753900404C47 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		33A1664115A8753900404C47 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		33A1664415A8753900404C47 /* Crow-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Crow-Info.plist"; path = "Crow/Crow-Info.plist"; sourceTree = "<group>"; };
+		33A1664615A8753900404C47 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		33A1664A15A8753900404C47 /* Crow-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Crow-Prefix.pch"; sourceTree = "<group>"; };
+		33A1666F15A87A5D00404C47 /* libogg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libogg.xcodeproj; path = ../../../Radiance/Source/XCode/MacApp/libogg.xcodeproj; sourceTree = "<group>"; };
+		33A166AA15A87D1F00404C47 /* libvorbis.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libvorbis.xcodeproj; path = ../../../Radiance/Source/XCode/MacApp/libvorbis.xcodeproj; sourceTree = "<group>"; };
+		33A1670B15A881D000404C47 /* freetype.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = freetype.xcodeproj; path = ../../../Radiance/Source/XCode/MacApp/freetype.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		33A1663515A8753900404C47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33974B5015A8EE080043ECCD /* OpenAL.framework in Frameworks */,
+				33974B4815A8EC600043ECCD /* SDL in Frameworks */,
+				33974B4515A8EB5A0043ECCD /* OpenGL.framework in Frameworks */,
+				33A1663D15A8753900404C47 /* Cocoa.framework in Frameworks */,
+				33A1667915A87A7100404C47 /* liblibogg.a in Frameworks */,
+				33A166E015A87DE600404C47 /* liblibvorbis.a in Frameworks */,
+				33A1676815A8B96300404C47 /* libfreetype.a in Frameworks */,
+				339743B915A8C4BF0043ECCD /* libRadiance.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		339740D715A8BBA90043ECCD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				339740DE15A8BBA90043ECCD /* libRadiance.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3397463E15A8DB6D0043ECCD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				33974B5B15A8F1B20043ECCD /* autoexec.txt */,
+				33974B5915A8F15A0043ECCD /* languages.txt */,
+				33974B5715A8F1430043ECCD /* Base */,
+				33974B5415A8F0880043ECCD /* SDL.framework */,
+				33A1664415A8753900404C47 /* Crow-Info.plist */,
+				33A1664515A8753900404C47 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		3397463F15A8DBC90043ECCD /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				3397464415A8DBC90043ECCD /* Entities */,
+				3397465315A8DBC90043ECCD /* Lua */,
+				3397464015A8DBC90043ECCD /* CrowApp.cpp */,
+				3397464115A8DBC90043ECCD /* CrowApp.h */,
+				3397464215A8DBC90043ECCD /* CrowGame.cpp */,
+				3397464315A8DBC90043ECCD /* CrowGame.h */,
+			);
+			name = Game;
+			path = ../../../Game;
+			sourceTree = "<group>";
+		};
+		3397464415A8DBC90043ECCD /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				3397464515A8DBC90043ECCD /* G_Exports.cpp */,
+				3397464615A8DBC90043ECCD /* G_Exports.h */,
+				3397464715A8DBC90043ECCD /* G_OmenEnergy.cpp */,
+				3397464815A8DBC90043ECCD /* G_OmenEnergy.h */,
+				3397464915A8DBC90043ECCD /* G_ScreenPawn.cpp */,
+				3397464A15A8DBC90043ECCD /* G_ScreenPawn.h */,
+				3397464B15A8DBC90043ECCD /* G_ScreenProjectile.cpp */,
+				3397464C15A8DBC90043ECCD /* G_ScreenProjectile.h */,
+				3397464D15A8DBC90043ECCD /* G_ScreenView.cpp */,
+				3397464E15A8DBC90043ECCD /* G_ScreenView.h */,
+				3397464F15A8DBC90043ECCD /* G_Thwap.cpp */,
+				3397465015A8DBC90043ECCD /* G_Thwap.h */,
+				3397465115A8DBC90043ECCD /* G_ViewController.cpp */,
+				3397465215A8DBC90043ECCD /* G_ViewController.h */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		3397465315A8DBC90043ECCD /* Lua */ = {
+			isa = PBXGroup;
+			children = (
+				3397465415A8DBC90043ECCD /* G_SkModel.cpp */,
+				3397465515A8DBC90043ECCD /* G_SkModel.h */,
+			);
+			path = Lua;
+			sourceTree = "<group>";
+		};
+		33A1662D15A8753900404C47 = {
+			isa = PBXGroup;
+			children = (
+				3383816315A9976900A28CCF /* macicon.icns */,
+				33A1664215A8753900404C47 /* Source */,
+				3397463E15A8DB6D0043ECCD /* Resources */,
+				33A1663B15A8753900404C47 /* Frameworks */,
+				33A1663915A8753900404C47 /* Products */,
+				33A1666F15A87A5D00404C47 /* libogg.xcodeproj */,
+				33A166AA15A87D1F00404C47 /* libvorbis.xcodeproj */,
+				33A1670B15A881D000404C47 /* freetype.xcodeproj */,
+				339740D615A8BBA90043ECCD /* Radiance.xcodeproj */,
+			);
+			sourceTree = "<group>";
+		};
+		33A1663915A8753900404C47 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				33A1663815A8753900404C47 /* Crow.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		33A1663B15A8753900404C47 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				33974B4615A8EBA90043ECCD /* SDL */,
+				33974B4F15A8EE080043ECCD /* OpenAL.framework */,
+				33974B4415A8EB5A0043ECCD /* OpenGL.framework */,
+				33A1663C15A8753900404C47 /* Cocoa.framework */,
+				33A1663E15A8753900404C47 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		33A1663E15A8753900404C47 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				33A1663F15A8753900404C47 /* AppKit.framework */,
+				33A1664015A8753900404C47 /* CoreData.framework */,
+				33A1664115A8753900404C47 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		33A1664215A8753900404C47 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				3397463F15A8DBC90043ECCD /* Game */,
+				33A1664A15A8753900404C47 /* Crow-Prefix.pch */,
+			);
+			name = Source;
+			path = Crow;
+			sourceTree = "<group>";
+		};
+		33A1667015A87A5D00404C47 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				33A1667715A87A5D00404C47 /* liblibogg.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		33A166AB15A87D1F00404C47 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				33A166B215A87D1F00404C47 /* liblibvorbis.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		33A1670C15A881D000404C47 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				33A1671315A881D000404C47 /* libfreetype.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		33A1663715A8753900404C47 /* Crow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33A1665615A8753900404C47 /* Build configuration list for PBXNativeTarget "Crow" */;
+			buildPhases = (
+				33A1663415A8753900404C47 /* Sources */,
+				33A1663515A8753900404C47 /* Frameworks */,
+				33A1663615A8753900404C47 /* Resources */,
+				33974B5315A8F02E0043ECCD /* CopyFiles */,
+				33974B5615A8F0C30043ECCD /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Crow;
+			productName = Crow;
+			productReference = 33A1663815A8753900404C47 /* Crow.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		33A1662F15A8753900404C47 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 33A1663215A8753900404C47 /* Build configuration list for PBXProject "Crow" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 33A1662D15A8753900404C47;
+			productRefGroup = 33A1663915A8753900404C47 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 33A1670C15A881D000404C47 /* Products */;
+					ProjectRef = 33A1670B15A881D000404C47 /* freetype.xcodeproj */;
+				},
+				{
+					ProductGroup = 33A1667015A87A5D00404C47 /* Products */;
+					ProjectRef = 33A1666F15A87A5D00404C47 /* libogg.xcodeproj */;
+				},
+				{
+					ProductGroup = 33A166AB15A87D1F00404C47 /* Products */;
+					ProjectRef = 33A166AA15A87D1F00404C47 /* libvorbis.xcodeproj */;
+				},
+				{
+					ProductGroup = 339740D715A8BBA90043ECCD /* Products */;
+					ProjectRef = 339740D615A8BBA90043ECCD /* Radiance.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				33A1663715A8753900404C47 /* Crow */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		339740DE15A8BBA90043ECCD /* libRadiance.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRadiance.a;
+			remoteRef = 339740DD15A8BBA90043ECCD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		33A1667715A87A5D00404C47 /* liblibogg.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = liblibogg.a;
+			remoteRef = 33A1667615A87A5D00404C47 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		33A166B215A87D1F00404C47 /* liblibvorbis.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = liblibvorbis.a;
+			remoteRef = 33A166B115A87D1F00404C47 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		33A1671315A881D000404C47 /* libfreetype.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libfreetype.a;
+			remoteRef = 33A1671215A881D000404C47 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		33A1663615A8753900404C47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33A1664715A8753900404C47 /* InfoPlist.strings in Resources */,
+				3383816415A9976900A28CCF /* macicon.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		33A1663415A8753900404C47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3397465915A8DBC90043ECCD /* CrowApp.cpp in Sources */,
+				3397465A15A8DBC90043ECCD /* CrowGame.cpp in Sources */,
+				3397465B15A8DBC90043ECCD /* G_Exports.cpp in Sources */,
+				3397465C15A8DBC90043ECCD /* G_OmenEnergy.cpp in Sources */,
+				3397465D15A8DBC90043ECCD /* G_ScreenPawn.cpp in Sources */,
+				3397465E15A8DBC90043ECCD /* G_ScreenProjectile.cpp in Sources */,
+				3397465F15A8DBC90043ECCD /* G_ScreenView.cpp in Sources */,
+				3397466015A8DBC90043ECCD /* G_Thwap.cpp in Sources */,
+				3397466115A8DBC90043ECCD /* G_ViewController.cpp in Sources */,
+				3397466215A8DBC90043ECCD /* G_SkModel.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		33A1664515A8753900404C47 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				33A1664615A8753900404C47 /* en */,
+			);
+			name = InfoPlist.strings;
+			path = Crow;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		33A1665415A8753900404C47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					RAD_OPT_POSIXFILES,
+					RAD_OPT_POSIXTHREADS,
+					BOOST_ALL_NO_LIB,
+					UNICODE,
+					RADMATH_OPT_NO_REFLECTION,
+					RAD_OPT_GL,
+					RAD_TARGET_GOLDEN,
+					RAD_OPT_PC,
+					DEBUG,
+					_DEBUG,
+					_XOPEN_SOURCE,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../../Radiance/Source,
+					../../../Radiance/Extern/boost/1.38.0,
+					../../../Radiance/Extern/Lua/5.1.4,
+					../../../Radiance/Extern/SDL/1.2,
+					"../../../Radiance/Extern/libogg-1.2.2/include",
+					"../../../Radiance/Extern/libvorbis-1.3.2/include",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				SDKROOT = macosx;
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		33A1665515A8753900404C47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					RAD_OPT_POSIXFILES,
+					RAD_OPT_POSIXTHREADS,
+					BOOST_ALL_NO_LIB,
+					UNICODE,
+					RADMATH_OPT_NO_REFLECTION,
+					RAD_OPT_GL,
+					RAD_TARGET_GOLDEN,
+					RAD_OPT_PC,
+					NDEBUG,
+					_XOPEN_SOURCE,
+					"$(inherited)",
+				);
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../../Radiance/Source,
+					../../../Radiance/Extern/boost/1.38.0,
+					../../../Radiance/Extern/Lua/5.1.4,
+					../../../Radiance/Extern/SDL/1.2,
+					"../../../Radiance/Extern/libogg-1.2.2/include",
+					"../../../Radiance/Extern/libvorbis-1.3.2/include",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				SDKROOT = macosx;
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		33A1665715A8753900404C47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Crow/Crow-Prefix.pch";
+				INFOPLIST_FILE = "Crow/Crow-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Radiance/Extern/Mac/SDL/1.2/SDL.framework/Versions/A\"",
+					"\"$(SRCROOT)/../../../Radiance/Extern/Mac/OpenAL/libs\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		33A1665815A8753900404C47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Crow/Crow-Prefix.pch";
+				INFOPLIST_FILE = "Crow/Crow-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Radiance/Extern/Mac/SDL/1.2/SDL.framework/Versions/A\"",
+					"\"$(SRCROOT)/../../../Radiance/Extern/Mac/OpenAL/libs\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		33A1663215A8753900404C47 /* Build configuration list for PBXProject "Crow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33A1665415A8753900404C47 /* Debug */,
+				33A1665515A8753900404C47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33A1665615A8753900404C47 /* Build configuration list for PBXNativeTarget "Crow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33A1665715A8753900404C47 /* Debug */,
+				33A1665815A8753900404C47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 33A1662F15A8753900404C47 /* Project object */;
+}

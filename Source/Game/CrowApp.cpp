@@ -24,7 +24,9 @@ bool __IOSAPP_AllowHD()
 
 #endif
 
-App *App::New() { return new CrowApp(); }
+App *App::New() { 
+	return new CrowApp(); 
+}
 
 CrowApp::CrowApp() : m_background(false)
 {
