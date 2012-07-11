@@ -4,6 +4,9 @@
 *.suo
 *.ncb
 *.vcproj.*.user
+*.opensdf
+*.vcxproj.user
+*.sdf
 *~
 BuildLog.htm
 *.idb
@@ -11,6 +14,7 @@ BuildLog.htm
 *.exe
 *.manifest
 *.pch
+*.ipch
 *.lib
 *.pdb
 *.dep
@@ -43,6 +47,7 @@ Cooked/*
 globals.data
 *.sav
 *.deuser
+Extern/*
 TODO.txt
 autoexec.txt
 editor.user.ini

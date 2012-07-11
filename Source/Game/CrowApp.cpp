@@ -9,45 +9,29 @@
 #include <Runtime/File.h>
 #include "Entities/G_Exports.h"
 #if defined(RAD_TARGET_GOLDEN) && defined(RAD_OPT_PC)
-#include <Engine/Renderer/PC/RBackend.h>
+#include <Engine/Renderer/PC/RGLBackend.h>
 #endif
 
-#if defined(RAD_OPT_IOS)
-bool __IOSAPP_AllowHD()
-{
-#if defined(SUPPORT_HD)
-	return true;
-#else
-	return false;
-#endif
+App *App::New(int argc, const char **argv) { 
+	return new CrowApp(argc, argv); 
 }
 
-#endif
-
-App *App::New() { 
-	return new CrowApp(); 
-}
-
-CrowApp::CrowApp() : m_background(false)
-{
+CrowApp::CrowApp(int argc, const char **argv) : App(argc, argv), m_background(false) {
 	spawn::G_Exports();
 }
 
-CrowApp::~CrowApp()
-{
+CrowApp::~CrowApp() {
 }
 
-bool CrowApp::PreInit()
-{
-	COut(C_Info) << string::Shorten(title).c_str() << " built on " << __DATE__ << " @ " << __TIME__ << std::endl;
+bool CrowApp::PreInit() {
+	COut(C_Info) << title.get() << " built on " << __DATE__ << " @ " << __TIME__ << std::endl;
 	COut(C_Info) << "PreInit..." << std::endl;
 	if (!App::PreInit()) 
 		return false;
 	return true;
 }
 
-bool CrowApp::Initialize()
-{
+bool CrowApp::Initialize() {
 	COut(C_Info) << "Initializing..." << std::endl;
 	if (!App::Initialize()) 
 		return false;
@@ -80,13 +64,12 @@ bool CrowApp::Initialize()
 
 	// disable all file access except through the pak file.
 	engine->sys->files->enabledMedia = file::Paks;
-
-	// bind context (pc only)
-#if defined(RAD_OPT_PC)
-	engine->sys->r->ctx = engine->sys->r.Cast<r::IRBackend>()->BindContext();
-#endif
 #endif
 
+	return true;
+}
+
+bool CrowApp::Run() {
 #if defined(RAD_TARGET_GOLDEN) || defined(RAD_OPT_IOS)
 	return RunAutoExec();
 #else
@@ -95,8 +78,7 @@ bool CrowApp::Initialize()
 }
 
 #if defined(RAD_TARGET_GOLDEN) || defined(RAD_OPT_IOS)
-bool CrowApp::RunAutoExec()
-{
+bool CrowApp::RunAutoExec() {
 	wchar_t nativePath[file::MaxFilePathLen+1];
 	file::ExpandToNativePath(L"9:/autoexec.txt", nativePath, file::MaxFilePathLen+1);
 	FILE *fp = file::wfopen(nativePath, L"rb");
@@ -135,8 +117,7 @@ bool CrowApp::RunAutoExec()
 }
 #endif
 
-void CrowApp::OnTick(float dt)
-{
+void CrowApp::OnTick(float dt) {
 #if defined(RAD_TARGET_GOLDEN) || defined(RAD_OPT_IOS)
 	if (m_game)
 	{
@@ -148,8 +129,7 @@ void CrowApp::OnTick(float dt)
 #endif
 }
 
-void CrowApp::NotifyBackground(bool background)
-{
+void CrowApp::NotifyBackground(bool background) {
 #if defined(RAD_TARGET_GOLDEN) || defined(RAD_OPT_IOS)
 	if (m_game && (m_background != background))
 	{
@@ -163,31 +143,29 @@ void CrowApp::NotifyBackground(bool background)
 #endif
 }
 
-void CrowApp::PostInputEvent(const InputEvent &e)
-{
+void CrowApp::PostInputEvent(const InputEvent &e) {
 #if defined(RAD_TARGET_GOLDEN) || defined(RAD_OPT_IOS)
 	if (m_game)
 		m_game->PostInputEvent(e);
 #endif
 }
 
-const wchar_t *CrowApp::RAD_IMPLEMENT_GET(title)
+const char *CrowApp::RAD_IMPLEMENT_GET(title)
 {
-	return L"Crow";
+	return "Crow";
 }
 
-const wchar_t *CrowApp::RAD_IMPLEMENT_GET(company)
+const char *CrowApp::RAD_IMPLEMENT_GET(company)
 {
-	return L"Sunside";
+	return "Sunside";
 }
 
-const wchar_t *CrowApp::RAD_IMPLEMENT_GET(website)
+const char *CrowApp::RAD_IMPLEMENT_GET(website)
 {
-	return L"www.sunsidegames.com";
+	return "www.sunsidegames.com";
 }
 
-void CrowApp::Finalize()
-{
+void CrowApp::Finalize() {
 #if defined(RAD_TARGET_GOLDEN) || defined(RAD_OPT_IOS)
 	m_game.reset();
 #if defined(RAD_OPT_PC)
@@ -197,13 +175,7 @@ void CrowApp::Finalize()
 	App::Finalize();
 }
 
-bool CrowApp::RAD_IMPLEMENT_GET(allowMultipleInstances)
-{
-	return false;
-}
-
-const char *CrowApp::RAD_IMPLEMENT_GET(flurryAPIKey)
-{
+const char *CrowApp::RAD_IMPLEMENT_GET(flurryAPIKey) {
 #if defined(RAD_OPT_SHIP)
 	return "NSUEK83QJRBVXRFDND2T";
 #else
@@ -211,30 +183,4 @@ const char *CrowApp::RAD_IMPLEMENT_GET(flurryAPIKey)
 #endif
 }
 
-#if defined(RAD_OPT_PC)
-void CrowApp::CloseWindow()
-{
-	exit = true;
-}
-
-void CrowApp::FocusChange(bool focus)
-{
-}
-#endif
-
-#if defined(RAD_OPT_PC_TOOLS)
-bool CrowApp::RAD_IMPLEMENT_GET(wantEditor)
-{
-	return true;
-}
-
-void CrowApp::SwitchEditorMode(bool editor)
-{
-	engine->SwitchEditorMode(editor);
-}
-
-void CrowApp::EditorStart()
-{
-}
-#endif
 

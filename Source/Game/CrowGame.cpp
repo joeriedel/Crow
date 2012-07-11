@@ -48,10 +48,9 @@ public:
 #if defined(RAD_OPT_PC_TOOLS)
 			if (game.toolsCallback)
 				game.toolsCallback->SwapBuffers();
-			else
+#else
+			App::Get()->engine->sys->r->SwapBuffers();
 #endif
-				App::Get()->engine->sys->r->SwapBuffers();
-
 			mapAsset->world->draw->rb->ClearBackBuffer();
 
 		}
