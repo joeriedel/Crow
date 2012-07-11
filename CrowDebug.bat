@@ -1,1 +1,1 @@
-.\Bin\win-msvc8-debug\Crow.exe
+".\Bin\Dev - Debug - x64\Crow.exe"
