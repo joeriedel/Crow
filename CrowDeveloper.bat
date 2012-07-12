@@ -1,1 +1,1 @@
-.\Bin\win-msvc8-developer\Crow.exe
+".\Bin\Dev - Release - x64\Crow.exe"
