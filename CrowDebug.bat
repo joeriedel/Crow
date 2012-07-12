@@ -1,1 +1,1 @@
-".\Bin\Dev - Debug - x64\Crow.exe"
+".\Bin\Dev - Debug - Win32\Crow.exe"
