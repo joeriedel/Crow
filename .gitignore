@@ -7,6 +7,7 @@
 *.opensdf
 *.vcxproj.user
 *.sdf
+*.cache
 *~
 BuildLog.htm
 *.idb
