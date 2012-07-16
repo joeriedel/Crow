@@ -15,23 +15,23 @@
 // tell linker to link with version.lib for VerQueryValue, etc.
 #pragma comment(linker, "/defaultlib:version.lib")
 
-#ifndef DLLVERSIONINFO
-// following is from shlwapi.h, in November 1997 release of the Windows SDK
-
-typedef struct _DllVersionInfo
-{
-        DWORD cbSize;
-        DWORD dwMajorVersion;                   // Major version
-        DWORD dwMinorVersion;                   // Minor version
-        DWORD dwBuildNumber;                    // Build number
-        DWORD dwPlatformID;                     // DLLVER_PLATFORM_*
-} DLLVERSIONINFO;
-
-// Platform IDs for DLLVERSIONINFO
-#define DLLVER_PLATFORM_WINDOWS         0x00000001      // Windows 95
-#define DLLVER_PLATFORM_NT              0x00000002      // Windows NT
-
-#endif // DLLVERSIONINFO
+//#ifndef DLLVERSIONINFO
+//// following is from shlwapi.h, in November 1997 release of the Windows SDK
+//
+//typedef struct _DllVersionInfo
+//{
+//        DWORD cbSize;
+//        DWORD dwMajorVersion;                   // Major version
+//        DWORD dwMinorVersion;                   // Minor version
+//        DWORD dwBuildNumber;                    // Build number
+//        DWORD dwPlatformID;                     // DLLVER_PLATFORM_*
+//} DLLVERSIONINFO;
+//
+//// Platform IDs for DLLVERSIONINFO
+//#define DLLVER_PLATFORM_WINDOWS         0x00000001      // Windows 95
+//#define DLLVER_PLATFORM_NT              0x00000002      // Windows NT
+//
+//#endif // DLLVERSIONINFO
 
 //////////////////
 // CModuleVersion version info about a module.

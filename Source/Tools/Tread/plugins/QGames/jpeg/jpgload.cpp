@@ -32,9 +32,9 @@
 // OF SUCH DAMAGE.
 ///////////////////////////////////////////////////////////////////////////////
 
+#include "stdafx.h"
 #include "jpeglib.h"
 #include <memory.h>
-#include "stdafx.h"
 #include <stdio.h>
 #include "jpeglib.h"
 #include "jerror.h"
