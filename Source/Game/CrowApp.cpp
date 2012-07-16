@@ -8,7 +8,7 @@
 #include <Engine/Utils/Tokenizer.h>
 #include <Runtime/File.h>
 #include "Entities/G_Exports.h"
-#if defined(RAD_TARGET_GOLDEN) && defined(RAD_OPT_PC)
+#if defined(RAD_OPT_GL) && defined(RAD_TARGET_GOLDEN) && defined(RAD_OPT_PC)
 #include <Engine/Renderer/PC/RGLBackend.h>
 #endif
 
@@ -28,6 +28,62 @@ bool CrowApp::PreInit() {
 	COut(C_Info) << "PreInit..." << std::endl;
 	if (!App::PreInit()) 
 		return false;
+
+#if defined(RAD_OPT_GL) && defined(RAD_TARGET_GOLDEN) && defined(RAD_OPT_PC)
+	// pick a video mode that is the same aspect ratio as their desktop resolution.
+	RAD_ASSERT(primaryDisplay.get());
+	r::VidMode desktopMode = *primaryDisplay->curVidMode.get();
+
+	// This matches the 13inch MBA
+	r::VidMode mode(1440, 900, 32, 0, false);
+
+	if (!primaryDisplay->MatchVidMode(
+		mode,
+		DisplayDevice::kMatchDisposition_AllowAspect16x9|
+		DisplayDevice::kMatchDisposition_AllowAspect16x10|
+		DisplayDevice::kMatchDisposition_Upsize
+	)) {
+		// can we find anything?
+		COut(C_Warn) << "WARNING: Unable to find a compatible resolution with " << mode.w << "x" << mode.h << ", trying again with fewer restrictions..." << std::endl;
+		if (!primaryDisplay->MatchVidMode(
+			mode,
+			DisplayDevice::kMatchDisposition_AllowAspectChange
+		)) {
+			COut(C_Error) << "ERROR: unable to find a compatible video mode!" << std::endl;
+			return false;
+		}
+	}
+
+	if (!BindDisplayDevice(primaryDisplay, mode)) {
+		COut(C_Error) << "ERROR: failed to set video mode " << mode.w << "x" << mode.h << std::endl;
+		return false;
+	}
+
+	GLPixelFormat glpf;
+	glpf.red = 8;
+	glpf.green = 8;
+	glpf.blue = 8;
+	glpf.alpha = 8;
+	glpf.depth = 24;
+	glpf.stencil = 8;
+	glpf.mSamples = 0;
+	glpf.doubleBuffer = true;
+	
+	// Create an openGL context and bind it to the rendering backend.
+	NativeDeviceContext::Ref glContext = CreateOpenGLContext(glpf);
+	if (!glContext)
+		return false;
+
+	r::HRBackend rb = engine->sys->r.Cast<r::IRBackend>();
+
+	r::HContext ctx = rb->CreateContext(glContext);
+	if (!ctx)
+		return false;
+
+	// Assign the context
+	engine->sys->r->ctx = ctx;
+#endif
+
 	return true;
 }
 
@@ -41,7 +97,7 @@ bool CrowApp::Initialize() {
 
 	int media = file::AllMedia;
 	int r = engine->sys->files->OpenFile(
-		L"pak0.pak",
+		"pak0.pak",
 		media,
 		file,
 		file::HIONotify()
@@ -53,7 +109,7 @@ bool CrowApp::Initialize() {
 		return false;
 	}
 
-	file::HPakFile pak = engine->sys->paks->MountPakFile(file, L"pak0.pak");
+	file::HPakFile pak = engine->sys->paks->MountPakFile(file, "pak0.pak");
 	if (!pak)
 	{
 		COut(C_Error) << "Unable to mount pak0.pak!" << std::endl;
@@ -79,9 +135,9 @@ bool CrowApp::Run() {
 
 #if defined(RAD_TARGET_GOLDEN) || defined(RAD_OPT_IOS)
 bool CrowApp::RunAutoExec() {
-	wchar_t nativePath[file::MaxFilePathLen+1];
-	file::ExpandToNativePath(L"9:/autoexec.txt", nativePath, file::MaxFilePathLen+1);
-	FILE *fp = file::wfopen(nativePath, L"rb");
+	char nativePath[file::MaxFilePathLen+1];
+	file::ExpandToNativePath("9:/autoexec.txt", nativePath, file::MaxFilePathLen+1);
+	FILE *fp = fopen(nativePath, "rb");
 	if (!fp)
 		return false;
 	fseek(fp, 0, SEEK_END);
@@ -104,9 +160,9 @@ bool CrowApp::RunAutoExec() {
 	if (script.GetToken(token))
 	{
 		m_game = Game::New();
-		r::VidMode vidMode = engine->sys->r->curVidMode;
-		m_game->SetViewport(0, 0, vidMode.w, vidMode.h);
-		if (!(m_game->LoadEntry() && m_game->LoadMapSeq(token.c_str(), 0, world::UD_Slot, true)))
+		const r::VidMode *vidMode = activeDisplay->curVidMode;
+		m_game->SetViewport(0, 0, vidMode->w, vidMode->h);
+		if (!(m_game->LoadEntry() && m_game->LoadMapSeq(token.c_str, 0, world::UD_Slot, true)))
 		{
 			m_game.reset();
 			return false;
@@ -121,8 +177,8 @@ void CrowApp::OnTick(float dt) {
 #if defined(RAD_TARGET_GOLDEN) || defined(RAD_OPT_IOS)
 	if (m_game)
 	{
-		r::VidMode vidMode = engine->sys->r->curVidMode;
-		m_game->SetViewport(0, 0, vidMode.w, vidMode.h);
+		const r::VidMode *vidMode = activeDisplay->curVidMode;
+		m_game->SetViewport(0, 0, vidMode->w, vidMode->h);
 		m_game->Tick(dt);
 		engine->sys->r->SwapBuffers();
 	}
@@ -168,9 +224,6 @@ const char *CrowApp::RAD_IMPLEMENT_GET(website)
 void CrowApp::Finalize() {
 #if defined(RAD_TARGET_GOLDEN) || defined(RAD_OPT_IOS)
 	m_game.reset();
-#if defined(RAD_OPT_PC)
-	engine->sys->r->ctx = r::HContext();
-#endif
 #endif
 	App::Finalize();
 }
