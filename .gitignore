@@ -27,6 +27,9 @@ BuildLog.htm
 *.pbxuser
 *.a
 *.mode1v3
+*.tlog
+*.log
+*.lastbuildstate
 pbxindex.header
 *.pbxsymbols
 *.hmap

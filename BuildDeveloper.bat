@@ -1,6 +1,4 @@
-call "%VS80COMNTOOLS%vsvars32.bat"
-devenv Source/VS8Projects/Crow.sln /rebuild "Release|Win32" /project QGames
-rem call scons --nocom --nounittests --developer -j 4 --clean
-call scons --nocom --nounittests --developer -j 4
-call StageWinDLLs.bat
+call "%VS100COMNTOOLS%\..\..\VC\vcvarsall.bat" x86
+devenv Source/VSProjects/VS10/Crow.sln /rebuild "Dev - Release|Win32"
+
 pause
