@@ -1,0 +1,1084 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3319497415B9F5EC00458F43 /* libboostOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382447615B793C5002B9F95 /* libboostOSX.a */; };
+		3319497515B9F5EF00458F43 /* libfreetypeOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382446D15B793C1002B9F95 /* libfreetypeOSX.a */; };
+		3319497615B9F5F300458F43 /* libglsl-optimizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382446615B793BD002B9F95 /* libglsl-optimizer.a */; };
+		3319497715B9F5F600458F43 /* liblibjpegOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382445E15B793B8002B9F95 /* liblibjpegOSX.a */; };
+		3319497815B9F5F900458F43 /* libliboggOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382444C15B793A3002B9F95 /* libliboggOSX.a */; };
+		3319497915B9F5FC00458F43 /* liblibpngOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 338244F315B795A1002B9F95 /* liblibpngOSX.a */; };
+		3319497A15B9F60000458F43 /* liblibvorbisOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 334B549615B89AEC00EEFC92 /* liblibvorbisOSX.a */; };
+		3319497B15B9F60600458F43 /* libRadianceDevOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E882E615B9934A0089BA08 /* libRadianceDevOSX.a */; };
+		3319497D15B9F77600458F43 /* libopenal.1.14.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3319497C15B9F77600458F43 /* libopenal.1.14.0.dylib */; };
+		3319497F15B9F78A00458F43 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3319497E15B9F78A00458F43 /* OpenGL.framework */; };
+		3319498115B9F85100458F43 /* libPVRTexLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3319498015B9F85100458F43 /* libPVRTexLib.a */; };
+		3319498915B9FEC700458F43 /* Cg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3319498815B9FEC700458F43 /* Cg.framework */; };
+		3319498D15B9FF5C00458F43 /* QtCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3319498A15B9FF5C00458F43 /* QtCore.framework */; };
+		3319498E15B9FF5C00458F43 /* QtGui.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3319498B15B9FF5C00458F43 /* QtGui.framework */; };
+		3319498F15B9FF5C00458F43 /* QtOpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3319498C15B9FF5C00458F43 /* QtOpenGL.framework */; };
+		3319499015B9FF6D00458F43 /* libluaOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 334B55AC15B8A79500EEFC92 /* libluaOSX.a */; };
+		3319499115B9FF6D00458F43 /* libzlibOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E8812615B8AB5C0089BA08 /* libzlibOSX.a */; };
+		338243F115B791B3002B9F95 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 338243F015B791B3002B9F95 /* Cocoa.framework */; };
+		3382441915B79261002B9F95 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382441815B79261002B9F95 /* UIKit.framework */; };
+		3382441B15B79261002B9F95 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382441A15B79261002B9F95 /* Foundation.framework */; };
+		3382441D15B79261002B9F95 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382441C15B79261002B9F95 /* CoreGraphics.framework */; };
+		3382441F15B79261002B9F95 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382441E15B79261002B9F95 /* GLKit.framework */; };
+		3382442115B79261002B9F95 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382442015B79261002B9F95 /* OpenGLES.framework */; };
+		3382442715B79261002B9F95 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3382442515B79261002B9F95 /* InfoPlist.strings */; };
+		3382442915B79261002B9F95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3382442815B79261002B9F95 /* main.m */; };
+		3382442D15B79261002B9F95 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3382442C15B79261002B9F95 /* AppDelegate.m */; };
+		3382442F15B79261002B9F95 /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 3382442E15B79261002B9F95 /* Shader.fsh */; };
+		3382443115B79261002B9F95 /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 3382443015B79261002B9F95 /* Shader.vsh */; };
+		3382443415B79261002B9F95 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3382443315B79261002B9F95 /* ViewController.m */; };
+		3382443715B79261002B9F95 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3382443515B79261002B9F95 /* ViewController_iPhone.xib */; };
+		3382443A15B79261002B9F95 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3382443815B79261002B9F95 /* ViewController_iPad.xib */; };
+		3382449315B7942B002B9F95 /* libboostiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382447815B793C5002B9F95 /* libboostiOS.a */; };
+		3382449415B79439002B9F95 /* libfreetypeiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382446F15B793C1002B9F95 /* libfreetypeiOS.a */; };
+		3382449515B79445002B9F95 /* liblibjpegiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382446015B793B8002B9F95 /* liblibjpegiOS.a */; };
+		3382449615B79445002B9F95 /* libliboggiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382444E15B793A3002B9F95 /* libliboggiOS.a */; };
+		33836C6A15B9E7F70030EAEC /* CrowApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5215B9E7F70030EAEC /* CrowApp.cpp */; };
+		33836C6B15B9E7F70030EAEC /* CrowApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5215B9E7F70030EAEC /* CrowApp.cpp */; };
+		33836C6C15B9E7F70030EAEC /* CrowGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5415B9E7F70030EAEC /* CrowGame.cpp */; };
+		33836C6D15B9E7F70030EAEC /* CrowGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5415B9E7F70030EAEC /* CrowGame.cpp */; };
+		33836C6E15B9E7F70030EAEC /* G_Exports.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5715B9E7F70030EAEC /* G_Exports.cpp */; };
+		33836C6F15B9E7F70030EAEC /* G_Exports.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5715B9E7F70030EAEC /* G_Exports.cpp */; };
+		33836C7015B9E7F80030EAEC /* G_OmenEnergy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5915B9E7F70030EAEC /* G_OmenEnergy.cpp */; };
+		33836C7115B9E7F80030EAEC /* G_OmenEnergy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5915B9E7F70030EAEC /* G_OmenEnergy.cpp */; };
+		33836C7215B9E7F80030EAEC /* G_ScreenPawn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5B15B9E7F70030EAEC /* G_ScreenPawn.cpp */; };
+		33836C7315B9E7F80030EAEC /* G_ScreenPawn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5B15B9E7F70030EAEC /* G_ScreenPawn.cpp */; };
+		33836C7415B9E7F80030EAEC /* G_ScreenProjectile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5D15B9E7F70030EAEC /* G_ScreenProjectile.cpp */; };
+		33836C7515B9E7F80030EAEC /* G_ScreenProjectile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5D15B9E7F70030EAEC /* G_ScreenProjectile.cpp */; };
+		33836C7615B9E7F80030EAEC /* G_ScreenView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5F15B9E7F70030EAEC /* G_ScreenView.cpp */; };
+		33836C7715B9E7F80030EAEC /* G_ScreenView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5F15B9E7F70030EAEC /* G_ScreenView.cpp */; };
+		33836C7815B9E7F80030EAEC /* G_Thwap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C6115B9E7F70030EAEC /* G_Thwap.cpp */; };
+		33836C7915B9E7F80030EAEC /* G_Thwap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C6115B9E7F70030EAEC /* G_Thwap.cpp */; };
+		33836C7A15B9E7F80030EAEC /* G_ViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C6315B9E7F70030EAEC /* G_ViewController.cpp */; };
+		33836C7B15B9E7F80030EAEC /* G_ViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C6315B9E7F70030EAEC /* G_ViewController.cpp */; };
+		33836C7C15B9E7F80030EAEC /* G_SkModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C6615B9E7F70030EAEC /* G_SkModel.cpp */; };
+		33836C7D15B9E7F80030EAEC /* G_SkModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C6615B9E7F70030EAEC /* G_SkModel.cpp */; };
+		33836C8115B9EA190030EAEC /* macicon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 33836C8015B9EA190030EAEC /* macicon.icns */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		334B549515B89AEC00EEFC92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 334B549015B89AEC00EEFC92 /* libvorbis.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 334B548E15B89AE100EEFC92;
+			remoteInfo = libvorbisOSX;
+		};
+		334B549715B89AEC00EEFC92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 334B549015B89AEC00EEFC92 /* libvorbis.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 334B548F15B89AE100EEFC92;
+			remoteInfo = libvorbisiOS;
+		};
+		334B55AB15B8A79500EEFC92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 334B55A615B8A79500EEFC92 /* lua.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 334B55A415B8A78F00EEFC92;
+			remoteInfo = luaOSX;
+		};
+		334B55AD15B8A79500EEFC92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 334B55A615B8A79500EEFC92 /* lua.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 334B55A515B8A78F00EEFC92;
+			remoteInfo = luaiOS;
+		};
+		3382444B15B793A3002B9F95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3382444615B793A3002B9F95 /* libogg.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 338384CA15B7886900A28CCF;
+			remoteInfo = liboggOSX;
+		};
+		3382444D15B793A3002B9F95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3382444615B793A3002B9F95 /* libogg.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 338384CB15B7886900A28CCF;
+			remoteInfo = liboggiOS;
+		};
+		3382445D15B793B8002B9F95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3382445815B793B8002B9F95 /* libjpeg.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 338383FC15B7866200A28CCF;
+			remoteInfo = libjpegOSX;
+		};
+		3382445F15B793B8002B9F95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3382445815B793B8002B9F95 /* libjpeg.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 338383FD15B7866200A28CCF;
+			remoteInfo = libjpegiOS;
+		};
+		3382446515B793BD002B9F95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3382446115B793BD002B9F95 /* glsl-optimizer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3383834315B77F4A00A28CCF;
+			remoteInfo = "glsl-optimizer";
+		};
+		3382446C15B793C1002B9F95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3382446715B793C1002B9F95 /* freetype.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 338382E915B771E400A28CCF;
+			remoteInfo = freetypeOSX;
+		};
+		3382446E15B793C1002B9F95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3382446715B793C1002B9F95 /* freetype.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 338382EA15B771E400A28CCF;
+			remoteInfo = freetypeiOS;
+		};
+		3382447515B793C5002B9F95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3382447015B793C4002B9F95 /* boost.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3383824C15B73D7200A28CCF;
+			remoteInfo = boostOSX;
+		};
+		3382447715B793C5002B9F95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3382447015B793C4002B9F95 /* boost.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3383824D15B73D7200A28CCF;
+			remoteInfo = boostiOS;
+		};
+		338244F215B795A1002B9F95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 338244E815B795A0002B9F95 /* libpng.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 338244EE15B795A0002B9F95;
+			remoteInfo = libpngOSX;
+		};
+		338244F415B795A1002B9F95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 338244E815B795A0002B9F95 /* libpng.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 338244EF15B795A0002B9F95;
+			remoteInfo = libpngiOS;
+		};
+		33E8812515B8AB5C0089BA08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33E8811B15B8AB5B0089BA08 /* zlib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 33E8812115B8AB5B0089BA08;
+			remoteInfo = zlibOSX;
+		};
+		33E8812715B8AB5C0089BA08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33E8811B15B8AB5B0089BA08 /* zlib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 33E8812215B8AB5B0089BA08;
+			remoteInfo = zlibiOS;
+		};
+		33E882E515B9934A0089BA08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33E8816015B8AD650089BA08 /* Radiance.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 33E882CD15B9934A0089BA08;
+			remoteInfo = RadianceDevOSX;
+		};
+		33E882E715B9934A0089BA08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33E8816015B8AD650089BA08 /* Radiance.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 33E882CE15B9934A0089BA08;
+			remoteInfo = RadianceiOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3319497C15B9F77600458F43 /* libopenal.1.14.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopenal.1.14.0.dylib; path = "../../Extern/OpenALSoft-1.14/libs/libopenal.1.14.0.dylib"; sourceTree = "<group>"; };
+		3319497E15B9F78A00458F43 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		3319498015B9F85100458F43 /* libPVRTexLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPVRTexLib.a; path = "../../Extern/PVRTexLib-4.04/MacOS_x86/libPVRTexLib.a"; sourceTree = "<group>"; };
+		3319498815B9FEC700458F43 /* Cg.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cg.framework; path = "../../Extern/Cg-3.1.0013/Cg.framework"; sourceTree = "<group>"; };
+		3319498A15B9FF5C00458F43 /* QtCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtCore.framework; path = "../../Extern/Qt-4.8.2/QtCore.framework"; sourceTree = "<group>"; };
+		3319498B15B9FF5C00458F43 /* QtGui.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtGui.framework; path = "../../Extern/Qt-4.8.2/QtGui.framework"; sourceTree = "<group>"; };
+		3319498C15B9FF5C00458F43 /* QtOpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtOpenGL.framework; path = "../../Extern/Qt-4.8.2/QtOpenGL.framework"; sourceTree = "<group>"; };
+		334B549015B89AEC00EEFC92 /* libvorbis.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libvorbis.xcodeproj; path = ../../Radiance/Source/XCode/libvorbis.xcodeproj; sourceTree = "<group>"; };
+		334B55A615B8A79500EEFC92 /* lua.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = lua.xcodeproj; path = ../../Radiance/Source/XCode/lua.xcodeproj; sourceTree = "<group>"; };
+		338243F015B791B3002B9F95 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		338243F315B791B3002B9F95 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		338243F415B791B3002B9F95 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		338243F515B791B3002B9F95 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3382441815B79261002B9F95 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		3382441A15B79261002B9F95 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3382441C15B79261002B9F95 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		3382441E15B79261002B9F95 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = Library/Frameworks/GLKit.framework; sourceTree = DEVELOPER_DIR; };
+		3382442015B79261002B9F95 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
+		3382442415B79261002B9F95 /* CrowiOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CrowiOS-Info.plist"; sourceTree = "<group>"; };
+		3382442615B79261002B9F95 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3382442815B79261002B9F95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3382442A15B79261002B9F95 /* CrowiOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CrowiOS-Prefix.pch"; sourceTree = "<group>"; };
+		3382442B15B79261002B9F95 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3382442C15B79261002B9F95 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3382442E15B79261002B9F95 /* Shader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.fsh; path = Shaders/Shader.fsh; sourceTree = "<group>"; };
+		3382443015B79261002B9F95 /* Shader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.vsh; path = Shaders/Shader.vsh; sourceTree = "<group>"; };
+		3382443215B79261002B9F95 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3382443315B79261002B9F95 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3382443615B79261002B9F95 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		3382443915B79261002B9F95 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		3382444615B793A3002B9F95 /* libogg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libogg.xcodeproj; path = ../../Radiance/Source/XCode/libogg.xcodeproj; sourceTree = "<group>"; };
+		3382445815B793B8002B9F95 /* libjpeg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libjpeg.xcodeproj; path = ../../Radiance/Source/XCode/libjpeg.xcodeproj; sourceTree = "<group>"; };
+		3382446115B793BD002B9F95 /* glsl-optimizer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "glsl-optimizer.xcodeproj"; path = "../../Radiance/Source/XCode/glsl-optimizer.xcodeproj"; sourceTree = "<group>"; };
+		3382446715B793C1002B9F95 /* freetype.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = freetype.xcodeproj; path = ../../Radiance/Source/XCode/freetype.xcodeproj; sourceTree = "<group>"; };
+		3382447015B793C4002B9F95 /* boost.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = boost.xcodeproj; path = ../../Radiance/Source/XCode/boost.xcodeproj; sourceTree = "<group>"; };
+		338244B015B794A0002B9F95 /* CrowDeveloper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrowDeveloper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		338244B215B794A0002B9F95 /* CrowiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrowiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		338244E815B795A0002B9F95 /* libpng.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libpng.xcodeproj; path = ../../Radiance/Source/XCode/libpng.xcodeproj; sourceTree = "<group>"; };
+		33836C5215B9E7F70030EAEC /* CrowApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CrowApp.cpp; sourceTree = "<group>"; };
+		33836C5315B9E7F70030EAEC /* CrowApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowApp.h; sourceTree = "<group>"; };
+		33836C5415B9E7F70030EAEC /* CrowGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CrowGame.cpp; sourceTree = "<group>"; };
+		33836C5515B9E7F70030EAEC /* CrowGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowGame.h; sourceTree = "<group>"; };
+		33836C5715B9E7F70030EAEC /* G_Exports.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_Exports.cpp; sourceTree = "<group>"; };
+		33836C5815B9E7F70030EAEC /* G_Exports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_Exports.h; sourceTree = "<group>"; };
+		33836C5915B9E7F70030EAEC /* G_OmenEnergy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_OmenEnergy.cpp; sourceTree = "<group>"; };
+		33836C5A15B9E7F70030EAEC /* G_OmenEnergy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_OmenEnergy.h; sourceTree = "<group>"; };
+		33836C5B15B9E7F70030EAEC /* G_ScreenPawn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_ScreenPawn.cpp; sourceTree = "<group>"; };
+		33836C5C15B9E7F70030EAEC /* G_ScreenPawn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_ScreenPawn.h; sourceTree = "<group>"; };
+		33836C5D15B9E7F70030EAEC /* G_ScreenProjectile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_ScreenProjectile.cpp; sourceTree = "<group>"; };
+		33836C5E15B9E7F70030EAEC /* G_ScreenProjectile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_ScreenProjectile.h; sourceTree = "<group>"; };
+		33836C5F15B9E7F70030EAEC /* G_ScreenView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_ScreenView.cpp; sourceTree = "<group>"; };
+		33836C6015B9E7F70030EAEC /* G_ScreenView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_ScreenView.h; sourceTree = "<group>"; };
+		33836C6115B9E7F70030EAEC /* G_Thwap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_Thwap.cpp; sourceTree = "<group>"; };
+		33836C6215B9E7F70030EAEC /* G_Thwap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_Thwap.h; sourceTree = "<group>"; };
+		33836C6315B9E7F70030EAEC /* G_ViewController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_ViewController.cpp; sourceTree = "<group>"; };
+		33836C6415B9E7F70030EAEC /* G_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_ViewController.h; sourceTree = "<group>"; };
+		33836C6615B9E7F70030EAEC /* G_SkModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_SkModel.cpp; sourceTree = "<group>"; };
+		33836C6715B9E7F70030EAEC /* G_SkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_SkModel.h; sourceTree = "<group>"; };
+		33836C8015B9EA190030EAEC /* macicon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = macicon.icns; sourceTree = "<group>"; };
+		33836C8215B9EA640030EAEC /* Crow-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Crow-Info.plist"; path = "OSX/Crow-Info.plist"; sourceTree = SOURCE_ROOT; };
+		33836C8315B9EA640030EAEC /* Crow-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Crow-Prefix.pch"; path = "OSX/Crow-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		33836C8515B9EA740030EAEC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = OSX/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		33836C8715B9EA740030EAEC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = OSX/en.lproj/MainMenu.xib; sourceTree = SOURCE_ROOT; };
+		33836C8915B9EFBF0030EAEC /* AppBuild.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = AppBuild.xcconfig; path = ../../Radiance/Source/XCode/XCConfig/AppBuild.xcconfig; sourceTree = "<group>"; };
+		33836C8A15B9EFBF0030EAEC /* AppDeveloperDebug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = AppDeveloperDebug.xcconfig; path = ../../Radiance/Source/XCode/XCConfig/AppDeveloperDebug.xcconfig; sourceTree = "<group>"; };
+		33836C8B15B9EFBF0030EAEC /* AppDeveloperRelease.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = AppDeveloperRelease.xcconfig; path = ../../Radiance/Source/XCode/XCConfig/AppDeveloperRelease.xcconfig; sourceTree = "<group>"; };
+		33E8811B15B8AB5B0089BA08 /* zlib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = zlib.xcodeproj; path = ../../Radiance/Source/XCode/zlib.xcodeproj; sourceTree = "<group>"; };
+		33E8816015B8AD650089BA08 /* Radiance.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Radiance.xcodeproj; path = ../../Radiance/Source/XCode/Radiance.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		338243E915B791B3002B9F95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3319498115B9F85100458F43 /* libPVRTexLib.a in Frameworks */,
+				3319497D15B9F77600458F43 /* libopenal.1.14.0.dylib in Frameworks */,
+				3319499015B9FF6D00458F43 /* libluaOSX.a in Frameworks */,
+				3319499115B9FF6D00458F43 /* libzlibOSX.a in Frameworks */,
+				3319497B15B9F60600458F43 /* libRadianceDevOSX.a in Frameworks */,
+				3319497A15B9F60000458F43 /* liblibvorbisOSX.a in Frameworks */,
+				3319497915B9F5FC00458F43 /* liblibpngOSX.a in Frameworks */,
+				3319497815B9F5F900458F43 /* libliboggOSX.a in Frameworks */,
+				3319497715B9F5F600458F43 /* liblibjpegOSX.a in Frameworks */,
+				3319497615B9F5F300458F43 /* libglsl-optimizer.a in Frameworks */,
+				3319497515B9F5EF00458F43 /* libfreetypeOSX.a in Frameworks */,
+				3319497415B9F5EC00458F43 /* libboostOSX.a in Frameworks */,
+				3319498D15B9FF5C00458F43 /* QtCore.framework in Frameworks */,
+				3319498E15B9FF5C00458F43 /* QtGui.framework in Frameworks */,
+				3319498F15B9FF5C00458F43 /* QtOpenGL.framework in Frameworks */,
+				3319498915B9FEC700458F43 /* Cg.framework in Frameworks */,
+				3319497F15B9F78A00458F43 /* OpenGL.framework in Frameworks */,
+				338243F115B791B3002B9F95 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3382441315B79261002B9F95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3382449515B79445002B9F95 /* liblibjpegiOS.a in Frameworks */,
+				3382449615B79445002B9F95 /* libliboggiOS.a in Frameworks */,
+				3382449415B79439002B9F95 /* libfreetypeiOS.a in Frameworks */,
+				3382449315B7942B002B9F95 /* libboostiOS.a in Frameworks */,
+				3382441915B79261002B9F95 /* UIKit.framework in Frameworks */,
+				3382441B15B79261002B9F95 /* Foundation.framework in Frameworks */,
+				3382441D15B79261002B9F95 /* CoreGraphics.framework in Frameworks */,
+				3382441F15B79261002B9F95 /* GLKit.framework in Frameworks */,
+				3382442115B79261002B9F95 /* OpenGLES.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		334B549115B89AEC00EEFC92 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				334B549615B89AEC00EEFC92 /* liblibvorbisOSX.a */,
+				334B549815B89AEC00EEFC92 /* liblibvorbisiOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		334B55A715B8A79500EEFC92 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				334B55AC15B8A79500EEFC92 /* libluaOSX.a */,
+				334B55AE15B8A79500EEFC92 /* libluaiOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		338243E115B791B3002B9F95 = {
+			isa = PBXGroup;
+			children = (
+				3319498A15B9FF5C00458F43 /* QtCore.framework */,
+				3319498B15B9FF5C00458F43 /* QtGui.framework */,
+				3319498C15B9FF5C00458F43 /* QtOpenGL.framework */,
+				3319498815B9FEC700458F43 /* Cg.framework */,
+				33E8816015B8AD650089BA08 /* Radiance.xcodeproj */,
+				3382447015B793C4002B9F95 /* boost.xcodeproj */,
+				3382446715B793C1002B9F95 /* freetype.xcodeproj */,
+				3382446115B793BD002B9F95 /* glsl-optimizer.xcodeproj */,
+				3382445815B793B8002B9F95 /* libjpeg.xcodeproj */,
+				3382444615B793A3002B9F95 /* libogg.xcodeproj */,
+				338244E815B795A0002B9F95 /* libpng.xcodeproj */,
+				334B549015B89AEC00EEFC92 /* libvorbis.xcodeproj */,
+				334B55A615B8A79500EEFC92 /* lua.xcodeproj */,
+				33E8811B15B8AB5B0089BA08 /* zlib.xcodeproj */,
+				33836C8015B9EA190030EAEC /* macicon.icns */,
+				33836C5015B9E7DC0030EAEC /* Source */,
+				33836C8815B9EDF00030EAEC /* XCConfig */,
+				338243F615B791B3002B9F95 /* OSX */,
+				3382442215B79261002B9F95 /* iOS */,
+				338243EF15B791B3002B9F95 /* Frameworks */,
+				338244BE15B794A7002B9F95 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		338243EF15B791B3002B9F95 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3319498015B9F85100458F43 /* libPVRTexLib.a */,
+				3319497C15B9F77600458F43 /* libopenal.1.14.0.dylib */,
+				3319497E15B9F78A00458F43 /* OpenGL.framework */,
+				338243F015B791B3002B9F95 /* Cocoa.framework */,
+				3382441815B79261002B9F95 /* UIKit.framework */,
+				3382441A15B79261002B9F95 /* Foundation.framework */,
+				3382441C15B79261002B9F95 /* CoreGraphics.framework */,
+				3382441E15B79261002B9F95 /* GLKit.framework */,
+				3382442015B79261002B9F95 /* OpenGLES.framework */,
+				338243F215B791B3002B9F95 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		338243F215B791B3002B9F95 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				338243F315B791B3002B9F95 /* AppKit.framework */,
+				338243F415B791B3002B9F95 /* CoreData.framework */,
+				338243F515B791B3002B9F95 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		338243F615B791B3002B9F95 /* OSX */ = {
+			isa = PBXGroup;
+			children = (
+				33836C8415B9EA740030EAEC /* InfoPlist.strings */,
+				33836C8615B9EA740030EAEC /* MainMenu.xib */,
+				33836C8215B9EA640030EAEC /* Crow-Info.plist */,
+				33836C8315B9EA640030EAEC /* Crow-Prefix.pch */,
+			);
+			name = OSX;
+			path = Crow;
+			sourceTree = "<group>";
+		};
+		3382442215B79261002B9F95 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3382442B15B79261002B9F95 /* AppDelegate.h */,
+				3382442C15B79261002B9F95 /* AppDelegate.m */,
+				3382442E15B79261002B9F95 /* Shader.fsh */,
+				3382443015B79261002B9F95 /* Shader.vsh */,
+				3382443215B79261002B9F95 /* ViewController.h */,
+				3382443315B79261002B9F95 /* ViewController.m */,
+				3382443515B79261002B9F95 /* ViewController_iPhone.xib */,
+				3382443815B79261002B9F95 /* ViewController_iPad.xib */,
+				3382442315B79261002B9F95 /* Supporting Files */,
+			);
+			name = iOS;
+			path = CrowiOS;
+			sourceTree = "<group>";
+		};
+		3382442315B79261002B9F95 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3382442415B79261002B9F95 /* CrowiOS-Info.plist */,
+				3382442515B79261002B9F95 /* InfoPlist.strings */,
+				3382442815B79261002B9F95 /* main.m */,
+				3382442A15B79261002B9F95 /* CrowiOS-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3382444715B793A3002B9F95 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3382444C15B793A3002B9F95 /* libliboggOSX.a */,
+				3382444E15B793A3002B9F95 /* libliboggiOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3382445915B793B8002B9F95 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3382445E15B793B8002B9F95 /* liblibjpegOSX.a */,
+				3382446015B793B8002B9F95 /* liblibjpegiOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3382446215B793BD002B9F95 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3382446615B793BD002B9F95 /* libglsl-optimizer.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3382446815B793C1002B9F95 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3382446D15B793C1002B9F95 /* libfreetypeOSX.a */,
+				3382446F15B793C1002B9F95 /* libfreetypeiOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3382447115B793C4002B9F95 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3382447615B793C5002B9F95 /* libboostOSX.a */,
+				3382447815B793C5002B9F95 /* libboostiOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		338244BE15B794A7002B9F95 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				338244B015B794A0002B9F95 /* CrowDeveloper.app */,
+				338244B215B794A0002B9F95 /* CrowiOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		338244E915B795A0002B9F95 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				338244F315B795A1002B9F95 /* liblibpngOSX.a */,
+				338244F515B795A1002B9F95 /* liblibpngiOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		33836C5015B9E7DC0030EAEC /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				33836C5115B9E7F70030EAEC /* Game */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		33836C5115B9E7F70030EAEC /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				33836C5615B9E7F70030EAEC /* Entities */,
+				33836C6515B9E7F70030EAEC /* Lua */,
+				33836C5215B9E7F70030EAEC /* CrowApp.cpp */,
+				33836C5315B9E7F70030EAEC /* CrowApp.h */,
+				33836C5415B9E7F70030EAEC /* CrowGame.cpp */,
+				33836C5515B9E7F70030EAEC /* CrowGame.h */,
+			);
+			name = Game;
+			path = ../Game;
+			sourceTree = "<group>";
+		};
+		33836C5615B9E7F70030EAEC /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				33836C5715B9E7F70030EAEC /* G_Exports.cpp */,
+				33836C5815B9E7F70030EAEC /* G_Exports.h */,
+				33836C5915B9E7F70030EAEC /* G_OmenEnergy.cpp */,
+				33836C5A15B9E7F70030EAEC /* G_OmenEnergy.h */,
+				33836C5B15B9E7F70030EAEC /* G_ScreenPawn.cpp */,
+				33836C5C15B9E7F70030EAEC /* G_ScreenPawn.h */,
+				33836C5D15B9E7F70030EAEC /* G_ScreenProjectile.cpp */,
+				33836C5E15B9E7F70030EAEC /* G_ScreenProjectile.h */,
+				33836C5F15B9E7F70030EAEC /* G_ScreenView.cpp */,
+				33836C6015B9E7F70030EAEC /* G_ScreenView.h */,
+				33836C6115B9E7F70030EAEC /* G_Thwap.cpp */,
+				33836C6215B9E7F70030EAEC /* G_Thwap.h */,
+				33836C6315B9E7F70030EAEC /* G_ViewController.cpp */,
+				33836C6415B9E7F70030EAEC /* G_ViewController.h */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		33836C6515B9E7F70030EAEC /* Lua */ = {
+			isa = PBXGroup;
+			children = (
+				33836C6615B9E7F70030EAEC /* G_SkModel.cpp */,
+				33836C6715B9E7F70030EAEC /* G_SkModel.h */,
+			);
+			path = Lua;
+			sourceTree = "<group>";
+		};
+		33836C8815B9EDF00030EAEC /* XCConfig */ = {
+			isa = PBXGroup;
+			children = (
+				33836C8915B9EFBF0030EAEC /* AppBuild.xcconfig */,
+				33836C8A15B9EFBF0030EAEC /* AppDeveloperDebug.xcconfig */,
+				33836C8B15B9EFBF0030EAEC /* AppDeveloperRelease.xcconfig */,
+			);
+			name = XCConfig;
+			sourceTree = "<group>";
+		};
+		33E8811C15B8AB5B0089BA08 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				33E8812615B8AB5C0089BA08 /* libzlibOSX.a */,
+				33E8812815B8AB5C0089BA08 /* libzlibiOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		33E8816115B8AD650089BA08 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				33E882E615B9934A0089BA08 /* libRadianceDevOSX.a */,
+				33E882E815B9934A0089BA08 /* libRadianceiOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		338243EB15B791B3002B9F95 /* CrowDeveloper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3382440A15B791B3002B9F95 /* Build configuration list for PBXNativeTarget "CrowDeveloper" */;
+			buildPhases = (
+				338243E815B791B3002B9F95 /* Sources */,
+				338243E915B791B3002B9F95 /* Frameworks */,
+				338243EA15B791B3002B9F95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CrowDeveloper;
+			productName = Crow;
+			productReference = 338244B015B794A0002B9F95 /* CrowDeveloper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3382441515B79261002B9F95 /* CrowiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3382443B15B79261002B9F95 /* Build configuration list for PBXNativeTarget "CrowiOS" */;
+			buildPhases = (
+				3382441215B79261002B9F95 /* Sources */,
+				3382441315B79261002B9F95 /* Frameworks */,
+				3382441415B79261002B9F95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CrowiOS;
+			productName = CrowiOS;
+			productReference = 338244B215B794A0002B9F95 /* CrowiOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		338243E315B791B3002B9F95 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 338243E615B791B3002B9F95 /* Build configuration list for PBXProject "Crow" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 338243E115B791B3002B9F95;
+			productRefGroup = 338243E115B791B3002B9F95;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3382447115B793C4002B9F95 /* Products */;
+					ProjectRef = 3382447015B793C4002B9F95 /* boost.xcodeproj */;
+				},
+				{
+					ProductGroup = 3382446815B793C1002B9F95 /* Products */;
+					ProjectRef = 3382446715B793C1002B9F95 /* freetype.xcodeproj */;
+				},
+				{
+					ProductGroup = 3382446215B793BD002B9F95 /* Products */;
+					ProjectRef = 3382446115B793BD002B9F95 /* glsl-optimizer.xcodeproj */;
+				},
+				{
+					ProductGroup = 3382445915B793B8002B9F95 /* Products */;
+					ProjectRef = 3382445815B793B8002B9F95 /* libjpeg.xcodeproj */;
+				},
+				{
+					ProductGroup = 3382444715B793A3002B9F95 /* Products */;
+					ProjectRef = 3382444615B793A3002B9F95 /* libogg.xcodeproj */;
+				},
+				{
+					ProductGroup = 338244E915B795A0002B9F95 /* Products */;
+					ProjectRef = 338244E815B795A0002B9F95 /* libpng.xcodeproj */;
+				},
+				{
+					ProductGroup = 334B549115B89AEC00EEFC92 /* Products */;
+					ProjectRef = 334B549015B89AEC00EEFC92 /* libvorbis.xcodeproj */;
+				},
+				{
+					ProductGroup = 334B55A715B8A79500EEFC92 /* Products */;
+					ProjectRef = 334B55A615B8A79500EEFC92 /* lua.xcodeproj */;
+				},
+				{
+					ProductGroup = 33E8816115B8AD650089BA08 /* Products */;
+					ProjectRef = 33E8816015B8AD650089BA08 /* Radiance.xcodeproj */;
+				},
+				{
+					ProductGroup = 33E8811C15B8AB5B0089BA08 /* Products */;
+					ProjectRef = 33E8811B15B8AB5B0089BA08 /* zlib.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				338243EB15B791B3002B9F95 /* CrowDeveloper */,
+				3382441515B79261002B9F95 /* CrowiOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		334B549615B89AEC00EEFC92 /* liblibvorbisOSX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = liblibvorbisOSX.a;
+			remoteRef = 334B549515B89AEC00EEFC92 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		334B549815B89AEC00EEFC92 /* liblibvorbisiOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = liblibvorbisiOS.a;
+			remoteRef = 334B549715B89AEC00EEFC92 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		334B55AC15B8A79500EEFC92 /* libluaOSX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libluaOSX.a;
+			remoteRef = 334B55AB15B8A79500EEFC92 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		334B55AE15B8A79500EEFC92 /* libluaiOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libluaiOS.a;
+			remoteRef = 334B55AD15B8A79500EEFC92 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3382444C15B793A3002B9F95 /* libliboggOSX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libliboggOSX.a;
+			remoteRef = 3382444B15B793A3002B9F95 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3382444E15B793A3002B9F95 /* libliboggiOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libliboggiOS.a;
+			remoteRef = 3382444D15B793A3002B9F95 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3382445E15B793B8002B9F95 /* liblibjpegOSX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = liblibjpegOSX.a;
+			remoteRef = 3382445D15B793B8002B9F95 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3382446015B793B8002B9F95 /* liblibjpegiOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = liblibjpegiOS.a;
+			remoteRef = 3382445F15B793B8002B9F95 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3382446615B793BD002B9F95 /* libglsl-optimizer.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libglsl-optimizer.a";
+			remoteRef = 3382446515B793BD002B9F95 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3382446D15B793C1002B9F95 /* libfreetypeOSX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libfreetypeOSX.a;
+			remoteRef = 3382446C15B793C1002B9F95 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3382446F15B793C1002B9F95 /* libfreetypeiOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libfreetypeiOS.a;
+			remoteRef = 3382446E15B793C1002B9F95 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3382447615B793C5002B9F95 /* libboostOSX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libboostOSX.a;
+			remoteRef = 3382447515B793C5002B9F95 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3382447815B793C5002B9F95 /* libboostiOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libboostiOS.a;
+			remoteRef = 3382447715B793C5002B9F95 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		338244F315B795A1002B9F95 /* liblibpngOSX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = liblibpngOSX.a;
+			remoteRef = 338244F215B795A1002B9F95 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		338244F515B795A1002B9F95 /* liblibpngiOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = liblibpngiOS.a;
+			remoteRef = 338244F415B795A1002B9F95 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		33E8812615B8AB5C0089BA08 /* libzlibOSX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libzlibOSX.a;
+			remoteRef = 33E8812515B8AB5C0089BA08 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		33E8812815B8AB5C0089BA08 /* libzlibiOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libzlibiOS.a;
+			remoteRef = 33E8812715B8AB5C0089BA08 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		33E882E615B9934A0089BA08 /* libRadianceDevOSX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRadianceDevOSX.a;
+			remoteRef = 33E882E515B9934A0089BA08 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		33E882E815B9934A0089BA08 /* libRadianceiOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRadianceiOS.a;
+			remoteRef = 33E882E715B9934A0089BA08 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		338243EA15B791B3002B9F95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33836C8115B9EA190030EAEC /* macicon.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3382441415B79261002B9F95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3382442715B79261002B9F95 /* InfoPlist.strings in Resources */,
+				3382442F15B79261002B9F95 /* Shader.fsh in Resources */,
+				3382443115B79261002B9F95 /* Shader.vsh in Resources */,
+				3382443715B79261002B9F95 /* ViewController_iPhone.xib in Resources */,
+				3382443A15B79261002B9F95 /* ViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		338243E815B791B3002B9F95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33836C6A15B9E7F70030EAEC /* CrowApp.cpp in Sources */,
+				33836C6C15B9E7F70030EAEC /* CrowGame.cpp in Sources */,
+				33836C6E15B9E7F70030EAEC /* G_Exports.cpp in Sources */,
+				33836C7015B9E7F80030EAEC /* G_OmenEnergy.cpp in Sources */,
+				33836C7215B9E7F80030EAEC /* G_ScreenPawn.cpp in Sources */,
+				33836C7415B9E7F80030EAEC /* G_ScreenProjectile.cpp in Sources */,
+				33836C7615B9E7F80030EAEC /* G_ScreenView.cpp in Sources */,
+				33836C7815B9E7F80030EAEC /* G_Thwap.cpp in Sources */,
+				33836C7A15B9E7F80030EAEC /* G_ViewController.cpp in Sources */,
+				33836C7C15B9E7F80030EAEC /* G_SkModel.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3382441215B79261002B9F95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3382442915B79261002B9F95 /* main.m in Sources */,
+				3382442D15B79261002B9F95 /* AppDelegate.m in Sources */,
+				3382443415B79261002B9F95 /* ViewController.m in Sources */,
+				33836C6B15B9E7F70030EAEC /* CrowApp.cpp in Sources */,
+				33836C6D15B9E7F70030EAEC /* CrowGame.cpp in Sources */,
+				33836C6F15B9E7F70030EAEC /* G_Exports.cpp in Sources */,
+				33836C7115B9E7F80030EAEC /* G_OmenEnergy.cpp in Sources */,
+				33836C7315B9E7F80030EAEC /* G_ScreenPawn.cpp in Sources */,
+				33836C7515B9E7F80030EAEC /* G_ScreenProjectile.cpp in Sources */,
+				33836C7715B9E7F80030EAEC /* G_ScreenView.cpp in Sources */,
+				33836C7915B9E7F80030EAEC /* G_Thwap.cpp in Sources */,
+				33836C7B15B9E7F80030EAEC /* G_ViewController.cpp in Sources */,
+				33836C7D15B9E7F80030EAEC /* G_SkModel.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3382442515B79261002B9F95 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3382442615B79261002B9F95 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3382443515B79261002B9F95 /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3382443615B79261002B9F95 /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		3382443815B79261002B9F95 /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3382443915B79261002B9F95 /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		33836C8415B9EA740030EAEC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				33836C8515B9EA740030EAEC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		33836C8615B9EA740030EAEC /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				33836C8715B9EA740030EAEC /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3382440815B791B3002B9F95 /* Dev - Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = "Dev - Debug";
+		};
+		3382440915B791B3002B9F95 /* Dev - Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = "Dev - Release";
+		};
+		3382440B15B791B3002B9F95 /* Dev - Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33836C8A15B9EFBF0030EAEC /* AppDeveloperDebug.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Extern/Cg-3.1.0013\"",
+					"\"$(SRCROOT)/../../Extern/Qt-4.8.2\"",
+				);
+				INFOPLIST_FILE = "OSX/Crow-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Extern/OpenALSoft-1.14/libs\"",
+					"\"$(SRCROOT)/../../Extern/PVRTexLib-4.04/MacOS_x86\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = "Dev - Debug";
+		};
+		3382440C15B791B3002B9F95 /* Dev - Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33836C8B15B9EFBF0030EAEC /* AppDeveloperRelease.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Extern/Cg-3.1.0013\"",
+					"\"$(SRCROOT)/../../Extern/Qt-4.8.2\"",
+				);
+				INFOPLIST_FILE = "OSX/Crow-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Extern/OpenALSoft-1.14/libs\"",
+					"\"$(SRCROOT)/../../Extern/PVRTexLib-4.04/MacOS_x86\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = "Dev - Release";
+		};
+		3382443C15B79261002B9F95 /* Dev - Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CrowiOS/CrowiOS-Prefix.pch";
+				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				INFOPLIST_FILE = "CrowiOS/CrowiOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = "Dev - Debug";
+		};
+		3382443D15B79261002B9F95 /* Dev - Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CrowiOS/CrowiOS-Prefix.pch";
+				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				INFOPLIST_FILE = "CrowiOS/CrowiOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = "Dev - Release";
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		338243E615B791B3002B9F95 /* Build configuration list for PBXProject "Crow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3382440815B791B3002B9F95 /* Dev - Debug */,
+				3382440915B791B3002B9F95 /* Dev - Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Dev - Release";
+		};
+		3382440A15B791B3002B9F95 /* Build configuration list for PBXNativeTarget "CrowDeveloper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3382440B15B791B3002B9F95 /* Dev - Debug */,
+				3382440C15B791B3002B9F95 /* Dev - Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Dev - Release";
+		};
+		3382443B15B79261002B9F95 /* Build configuration list for PBXNativeTarget "CrowiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3382443C15B79261002B9F95 /* Dev - Debug */,
+				3382443D15B79261002B9F95 /* Dev - Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Dev - Release";
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 338243E315B791B3002B9F95 /* Project object */;
+}

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   version = "1.3">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "338243EB15B791B3002B9F95"
+               BuildableName = "CrowDeveloper.app"
+               BlueprintName = "CrowDeveloper"
+               ReferencedContainer = "container:Crow.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "338381ED15B7316B00A28CCF"
+               BuildableName = "libRadianceDevOSX.a"
+               BlueprintName = "RadianceDevOSX"
+               ReferencedContainer = "container:../../Radiance/Source/XCode/Radiance.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3383823015B73CF800A28CCF"
+               BuildableName = "libboostOSX.a"
+               BlueprintName = "boostOSX"
+               ReferencedContainer = "container:../../Radiance/Source/XCode/boost.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "338382CD15B7717D00A28CCF"
+               BuildableName = "libfreetypeOSX.a"
+               BlueprintName = "freetypeOSX"
+               ReferencedContainer = "container:../../Radiance/Source/XCode/freetype.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3383834215B77F4A00A28CCF"
+               BuildableName = "libglsl-optimizer.a"
+               BlueprintName = "glsl-optimizer"
+               ReferencedContainer = "container:../../Radiance/Source/XCode/glsl-optimizer.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "338383E015B785C200A28CCF"
+               BuildableName = "liblibjpegOSX.a"
+               BlueprintName = "libjpegOSX"
+               ReferencedContainer = "container:../../Radiance/Source/XCode/libjpeg.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "338384AE15B7882100A28CCF"
+               BuildableName = "libliboggOSX.a"
+               BlueprintName = "liboggOSX"
+               ReferencedContainer = "container:../../Radiance/Source/XCode/libogg.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "338244C915B794FF002B9F95"
+               BuildableName = "liblibpngOSX.a"
+               BlueprintName = "libpngOSX"
+               ReferencedContainer = "container:../../Radiance/Source/XCode/libpng.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "334B546C15B89AA300EEFC92"
+               BuildableName = "liblibvorbisOSX.a"
+               BlueprintName = "libvorbisOSX"
+               ReferencedContainer = "container:../../Radiance/Source/XCode/libvorbis.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "334B558215B8A74D00EEFC92"
+               BuildableName = "libluaOSX.a"
+               BlueprintName = "luaOSX"
+               ReferencedContainer = "container:../../Radiance/Source/XCode/lua.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "33E880FC15B8AB270089BA08"
+               BuildableName = "libzlibOSX.a"
+               BlueprintName = "zlibOSX"
+               ReferencedContainer = "container:../../Radiance/Source/XCode/zlib.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      buildConfiguration = "Dev - Debug">
+      <Testables>
+      </Testables>
+   </TestAction>
+   <LaunchAction
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "YES"
+      customWorkingDirectory = "/Users/joeriedel/Desktop/CrowPC"
+      buildConfiguration = "Dev - Debug"
+      ignoresPersistentStateOnLaunch = "YES"
+      debugDocumentVersioning = "YES"
+      allowLocationSimulation = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "338243EB15B791B3002B9F95"
+            BuildableName = "CrowDeveloper.app"
+            BlueprintName = "CrowDeveloper"
+            ReferencedContainer = "container:Crow.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </LaunchAction>
+   <ProfileAction
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Dev - Release"
+      debugDocumentVersioning = "YES">
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Dev - Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Dev - Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>

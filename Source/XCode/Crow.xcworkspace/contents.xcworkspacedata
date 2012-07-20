@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Crow.xcodeproj">
+      location = "group:Crow.xcodeproj">
    </FileRef>
 </Workspace>
