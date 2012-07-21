@@ -24,6 +24,7 @@
 		3319498F15B9FF5C00458F43 /* QtOpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3319498C15B9FF5C00458F43 /* QtOpenGL.framework */; };
 		3319499015B9FF6D00458F43 /* libluaOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 334B55AC15B8A79500EEFC92 /* libluaOSX.a */; };
 		3319499115B9FF6D00458F43 /* libzlibOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E8812615B8AB5C0089BA08 /* libzlibOSX.a */; };
+		331949A315BA0EDC00458F43 /* osxicon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 331949A215BA0EDC00458F43 /* osxicon.icns */; };
 		338243F115B791B3002B9F95 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 338243F015B791B3002B9F95 /* Cocoa.framework */; };
 		3382441915B79261002B9F95 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382441815B79261002B9F95 /* UIKit.framework */; };
 		3382441B15B79261002B9F95 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382441A15B79261002B9F95 /* Foundation.framework */; };
@@ -62,7 +63,6 @@
 		33836C7B15B9E7F80030EAEC /* G_ViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C6315B9E7F70030EAEC /* G_ViewController.cpp */; };
 		33836C7C15B9E7F80030EAEC /* G_SkModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C6615B9E7F70030EAEC /* G_SkModel.cpp */; };
 		33836C7D15B9E7F80030EAEC /* G_SkModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C6615B9E7F70030EAEC /* G_SkModel.cpp */; };
-		33836C8115B9EA190030EAEC /* macicon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 33836C8015B9EA190030EAEC /* macicon.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -209,6 +209,7 @@
 		3319498A15B9FF5C00458F43 /* QtCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtCore.framework; path = "../../Extern/Qt-4.8.2/QtCore.framework"; sourceTree = "<group>"; };
 		3319498B15B9FF5C00458F43 /* QtGui.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtGui.framework; path = "../../Extern/Qt-4.8.2/QtGui.framework"; sourceTree = "<group>"; };
 		3319498C15B9FF5C00458F43 /* QtOpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtOpenGL.framework; path = "../../Extern/Qt-4.8.2/QtOpenGL.framework"; sourceTree = "<group>"; };
+		331949A215BA0EDC00458F43 /* osxicon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = osxicon.icns; sourceTree = "<group>"; };
 		334B549015B89AEC00EEFC92 /* libvorbis.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libvorbis.xcodeproj; path = ../../Radiance/Source/XCode/libvorbis.xcodeproj; sourceTree = "<group>"; };
 		334B55A615B8A79500EEFC92 /* lua.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = lua.xcodeproj; path = ../../Radiance/Source/XCode/lua.xcodeproj; sourceTree = "<group>"; };
 		338243F015B791B3002B9F95 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -260,7 +261,6 @@
 		33836C6415B9E7F70030EAEC /* G_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_ViewController.h; sourceTree = "<group>"; };
 		33836C6615B9E7F70030EAEC /* G_SkModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_SkModel.cpp; sourceTree = "<group>"; };
 		33836C6715B9E7F70030EAEC /* G_SkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_SkModel.h; sourceTree = "<group>"; };
-		33836C8015B9EA190030EAEC /* macicon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = macicon.icns; sourceTree = "<group>"; };
 		33836C8215B9EA640030EAEC /* Crow-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Crow-Info.plist"; path = "OSX/Crow-Info.plist"; sourceTree = SOURCE_ROOT; };
 		33836C8315B9EA640030EAEC /* Crow-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Crow-Prefix.pch"; path = "OSX/Crow-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		33836C8515B9EA740030EAEC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = OSX/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
@@ -352,7 +352,7 @@
 				334B549015B89AEC00EEFC92 /* libvorbis.xcodeproj */,
 				334B55A615B8A79500EEFC92 /* lua.xcodeproj */,
 				33E8811B15B8AB5B0089BA08 /* zlib.xcodeproj */,
-				33836C8015B9EA190030EAEC /* macicon.icns */,
+				331949A215BA0EDC00458F43 /* osxicon.icns */,
 				33836C5015B9E7DC0030EAEC /* Source */,
 				33836C8815B9EDF00030EAEC /* XCConfig */,
 				338243F615B791B3002B9F95 /* OSX */,
@@ -581,6 +581,7 @@
 				338243E815B791B3002B9F95 /* Sources */,
 				338243E915B791B3002B9F95 /* Frameworks */,
 				338243EA15B791B3002B9F95 /* Resources */,
+				331949A415BA112100458F43 /* Install Dependancies */,
 			);
 			buildRules = (
 			);
@@ -817,7 +818,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33836C8115B9EA190030EAEC /* macicon.icns in Resources */,
+				331949A315BA0EDC00458F43 /* osxicon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -834,6 +835,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		331949A415BA112100458F43 /* Install Dependancies */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Install Dependancies";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mkdir -p \"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks/QtCore.framework\"\nmkdir -p \"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks/QtGui.framework\"\nmkdir -p \"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks/QtOpenGL.framework\"\nmkdir -p \"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks/Cg.framework\"\ncp \"${EXTERN_PATH}/Qt-4.8.2/QtCore.framework/Versions/4/QtCore\" \"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks/QtCore.framework\"\ncp \"${EXTERN_PATH}/Qt-4.8.2/QtGui.framework/Versions/4/QtGui\" \"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks/QtGui.framework\"\ncp -R \"${EXTERN_PATH}/Qt-4.8.2/QtGui.framework/Versions/4/Resources/\" \"${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\"\ncp \"${EXTERN_PATH}/Qt-4.8.2/QtOpenGL.framework/Versions/4/QtOpenGL\" \"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks/QtOpenGL.framework\"\ncp \"${EXTERN_PATH}/Cg-3.1.0013/Cg.framework/Versions/1.0/Cg\" \"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks/Cg.framework\"\ncp \"${EXTERN_PATH}/OpenALSoft-1.14/libs/libopenal.1.14.0.dylib\" \"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		338243E815B791B3002B9F95 /* Sources */ = {
