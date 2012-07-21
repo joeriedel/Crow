@@ -159,6 +159,20 @@
                ReferencedContainer = "container:../../Radiance/Source/XCode/Radiance.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "331949B115BA343800458F43"
+               BuildableName = "libMainOSX.a"
+               BlueprintName = "MainOSX"
+               ReferencedContainer = "container:../../Radiance/Source/XCode/Main.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

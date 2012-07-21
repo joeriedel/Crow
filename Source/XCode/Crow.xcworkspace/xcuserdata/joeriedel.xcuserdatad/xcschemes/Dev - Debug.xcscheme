@@ -159,6 +159,20 @@
                ReferencedContainer = "container:../../Radiance/Source/XCode/zlib.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "331949B115BA343800458F43"
+               BuildableName = "libMainOSX.a"
+               BlueprintName = "MainOSX"
+               ReferencedContainer = "container:../../Radiance/Source/XCode/Main.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -168,6 +182,15 @@
       buildConfiguration = "Dev - Debug">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "338243EB15B791B3002B9F95"
+            BuildableName = "CrowDeveloper.app"
+            BlueprintName = "CrowDeveloper"
+            ReferencedContainer = "container:Crow.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"

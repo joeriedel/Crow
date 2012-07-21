@@ -25,12 +25,8 @@
 		3319499015B9FF6D00458F43 /* libluaOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 334B55AC15B8A79500EEFC92 /* libluaOSX.a */; };
 		3319499115B9FF6D00458F43 /* libzlibOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E8812615B8AB5C0089BA08 /* libzlibOSX.a */; };
 		331949A315BA0EDC00458F43 /* osxicon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 331949A215BA0EDC00458F43 /* osxicon.icns */; };
+		33194A0015BA35DF00458F43 /* libMainOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 331949DB15BA34A800458F43 /* libMainOSX.a */; };
 		338243F115B791B3002B9F95 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 338243F015B791B3002B9F95 /* Cocoa.framework */; };
-		3382441915B79261002B9F95 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382441815B79261002B9F95 /* UIKit.framework */; };
-		3382441B15B79261002B9F95 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382441A15B79261002B9F95 /* Foundation.framework */; };
-		3382441D15B79261002B9F95 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382441C15B79261002B9F95 /* CoreGraphics.framework */; };
-		3382441F15B79261002B9F95 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382441E15B79261002B9F95 /* GLKit.framework */; };
-		3382442115B79261002B9F95 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382442015B79261002B9F95 /* OpenGLES.framework */; };
 		3382442715B79261002B9F95 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3382442515B79261002B9F95 /* InfoPlist.strings */; };
 		3382442915B79261002B9F95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3382442815B79261002B9F95 /* main.m */; };
 		3382442D15B79261002B9F95 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3382442C15B79261002B9F95 /* AppDelegate.m */; };
@@ -66,6 +62,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		331949DA15BA34A800458F43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 331949D015BA34A700458F43 /* Main.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 331949D615BA34A700458F43;
+			remoteInfo = MainOSX;
+		};
+		331949DC15BA34A800458F43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 331949D015BA34A700458F43 /* Main.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 331949D715BA34A700458F43;
+			remoteInfo = MainiOS;
+		};
 		334B549515B89AEC00EEFC92 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 334B549015B89AEC00EEFC92 /* libvorbis.xcodeproj */;
@@ -210,17 +220,13 @@
 		3319498B15B9FF5C00458F43 /* QtGui.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtGui.framework; path = "../../Extern/Qt-4.8.2/QtGui.framework"; sourceTree = "<group>"; };
 		3319498C15B9FF5C00458F43 /* QtOpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtOpenGL.framework; path = "../../Extern/Qt-4.8.2/QtOpenGL.framework"; sourceTree = "<group>"; };
 		331949A215BA0EDC00458F43 /* osxicon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = osxicon.icns; sourceTree = "<group>"; };
+		331949D015BA34A700458F43 /* Main.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Main.xcodeproj; path = ../../Radiance/Source/XCode/Main.xcodeproj; sourceTree = "<group>"; };
 		334B549015B89AEC00EEFC92 /* libvorbis.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libvorbis.xcodeproj; path = ../../Radiance/Source/XCode/libvorbis.xcodeproj; sourceTree = "<group>"; };
 		334B55A615B8A79500EEFC92 /* lua.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = lua.xcodeproj; path = ../../Radiance/Source/XCode/lua.xcodeproj; sourceTree = "<group>"; };
 		338243F015B791B3002B9F95 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		338243F315B791B3002B9F95 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		338243F415B791B3002B9F95 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		338243F515B791B3002B9F95 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		3382441815B79261002B9F95 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		3382441A15B79261002B9F95 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		3382441C15B79261002B9F95 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		3382441E15B79261002B9F95 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = Library/Frameworks/GLKit.framework; sourceTree = DEVELOPER_DIR; };
-		3382442015B79261002B9F95 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
 		3382442415B79261002B9F95 /* CrowiOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CrowiOS-Info.plist"; sourceTree = "<group>"; };
 		3382442615B79261002B9F95 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3382442815B79261002B9F95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -279,6 +285,7 @@
 			files = (
 				3319498115B9F85100458F43 /* libPVRTexLib.a in Frameworks */,
 				3319497D15B9F77600458F43 /* libopenal.1.14.0.dylib in Frameworks */,
+				33194A0015BA35DF00458F43 /* libMainOSX.a in Frameworks */,
 				3319499015B9FF6D00458F43 /* libluaOSX.a in Frameworks */,
 				3319499115B9FF6D00458F43 /* libzlibOSX.a in Frameworks */,
 				3319497B15B9F60600458F43 /* libRadianceDevOSX.a in Frameworks */,
@@ -306,17 +313,21 @@
 				3382449615B79445002B9F95 /* libliboggiOS.a in Frameworks */,
 				3382449415B79439002B9F95 /* libfreetypeiOS.a in Frameworks */,
 				3382449315B7942B002B9F95 /* libboostiOS.a in Frameworks */,
-				3382441915B79261002B9F95 /* UIKit.framework in Frameworks */,
-				3382441B15B79261002B9F95 /* Foundation.framework in Frameworks */,
-				3382441D15B79261002B9F95 /* CoreGraphics.framework in Frameworks */,
-				3382441F15B79261002B9F95 /* GLKit.framework in Frameworks */,
-				3382442115B79261002B9F95 /* OpenGLES.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		331949D115BA34A700458F43 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				331949DB15BA34A800458F43 /* libMainOSX.a */,
+				331949DD15BA34A800458F43 /* libMainiOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		334B549115B89AEC00EEFC92 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -338,10 +349,7 @@
 		338243E115B791B3002B9F95 = {
 			isa = PBXGroup;
 			children = (
-				3319498A15B9FF5C00458F43 /* QtCore.framework */,
-				3319498B15B9FF5C00458F43 /* QtGui.framework */,
-				3319498C15B9FF5C00458F43 /* QtOpenGL.framework */,
-				3319498815B9FEC700458F43 /* Cg.framework */,
+				331949D015BA34A700458F43 /* Main.xcodeproj */,
 				33E8816015B8AD650089BA08 /* Radiance.xcodeproj */,
 				3382447015B793C4002B9F95 /* boost.xcodeproj */,
 				3382446715B793C1002B9F95 /* freetype.xcodeproj */,
@@ -367,13 +375,12 @@
 			children = (
 				3319498015B9F85100458F43 /* libPVRTexLib.a */,
 				3319497C15B9F77600458F43 /* libopenal.1.14.0.dylib */,
+				3319498A15B9FF5C00458F43 /* QtCore.framework */,
+				3319498B15B9FF5C00458F43 /* QtGui.framework */,
+				3319498C15B9FF5C00458F43 /* QtOpenGL.framework */,
+				3319498815B9FEC700458F43 /* Cg.framework */,
 				3319497E15B9F78A00458F43 /* OpenGL.framework */,
 				338243F015B791B3002B9F95 /* Cocoa.framework */,
-				3382441815B79261002B9F95 /* UIKit.framework */,
-				3382441A15B79261002B9F95 /* Foundation.framework */,
-				3382441C15B79261002B9F95 /* CoreGraphics.framework */,
-				3382441E15B79261002B9F95 /* GLKit.framework */,
-				3382442015B79261002B9F95 /* OpenGLES.framework */,
 				338243F215B791B3002B9F95 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -661,6 +668,10 @@
 					ProjectRef = 334B55A615B8A79500EEFC92 /* lua.xcodeproj */;
 				},
 				{
+					ProductGroup = 331949D115BA34A700458F43 /* Products */;
+					ProjectRef = 331949D015BA34A700458F43 /* Main.xcodeproj */;
+				},
+				{
 					ProductGroup = 33E8816115B8AD650089BA08 /* Products */;
 					ProjectRef = 33E8816015B8AD650089BA08 /* Radiance.xcodeproj */;
 				},
@@ -678,6 +689,20 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		331949DB15BA34A800458F43 /* libMainOSX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMainOSX.a;
+			remoteRef = 331949DA15BA34A800458F43 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		331949DD15BA34A800458F43 /* libMainiOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMainiOS.a;
+			remoteRef = 331949DC15BA34A800458F43 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		334B549615B89AEC00EEFC92 /* liblibvorbisOSX.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
