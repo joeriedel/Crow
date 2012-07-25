@@ -35,7 +35,8 @@ bool CrowApp::PreInit() {
 	r::VidMode desktopMode = *primaryDisplay->curVidMode.get();
 
 	// This matches the 13inch MBA
-	r::VidMode mode(1440, 900, 32, 0, false);
+	//r::VidMode mode(1440, 900, 32, 0, true);
+	r::VidMode mode(1024, 640, 32, 0, false);
 
 	if (!primaryDisplay->MatchVidMode(
 		mode,
@@ -43,7 +44,7 @@ bool CrowApp::PreInit() {
 		DisplayDevice::kMatchDisposition_AllowAspect16x10|
 		DisplayDevice::kMatchDisposition_Upsize
 	)) {
-		// can we find anything?
+		// can we find anything?gl
 		COut(C_Warn) << "WARNING: Unable to find a compatible resolution with " << mode.w << "x" << mode.h << ", trying again with fewer restrictions..." << std::endl;
 		if (!primaryDisplay->MatchVidMode(
 			mode,

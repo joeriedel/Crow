@@ -13,9 +13,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "338243EB15B791B3002B9F95"
-               BuildableName = "CrowDeveloper.app"
-               BlueprintName = "CrowDeveloper"
+               BlueprintIdentifier = "337AE79415BF224300AD1617"
+               BuildableName = "CrowGoldenOSX.app"
+               BlueprintName = "CrowGoldenOSX"
                ReferencedContainer = "container:Crow.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -25,19 +25,44 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
-      buildConfiguration = "Release">
+      buildConfiguration = "Debug">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "337AE79415BF224300AD1617"
+            BuildableName = "CrowGoldenOSX.app"
+            BlueprintName = "CrowGoldenOSX"
+            ReferencedContainer = "container:Crow.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
-      useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Release"
+      useCustomWorkingDirectory = "YES"
+      customWorkingDirectory = "/Users/joeriedel/Desktop/CrowPC"
+      buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "337AE79415BF224300AD1617"
+            BuildableName = "CrowGoldenOSX.app"
+            BlueprintName = "CrowGoldenOSX"
+            ReferencedContainer = "container:Crow.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "-nosetwd"
+            isEnabled = "YES">
+         </CommandLineArgument>
+      </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -49,7 +74,7 @@
       debugDocumentVersioning = "YES">
    </ProfileAction>
    <AnalyzeAction
-      buildConfiguration = "Release">
+      buildConfiguration = "Debug">
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"

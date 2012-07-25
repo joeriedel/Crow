@@ -7,6 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		330A99DB15BCA5D6002A81EC /* osxicon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 331949A215BA0EDC00458F43 /* osxicon.icns */; };
+		33188EA315BCB64600C69D36 /* G_Exports.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5715B9E7F70030EAEC /* G_Exports.cpp */; };
+		33188EA415BCB64600C69D36 /* G_OmenEnergy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5915B9E7F70030EAEC /* G_OmenEnergy.cpp */; };
+		33188EA515BCB64600C69D36 /* G_ScreenPawn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5B15B9E7F70030EAEC /* G_ScreenPawn.cpp */; };
+		33188EA615BCB64600C69D36 /* G_ScreenProjectile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5D15B9E7F70030EAEC /* G_ScreenProjectile.cpp */; };
+		33188EA715BCB64600C69D36 /* G_ScreenView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5F15B9E7F70030EAEC /* G_ScreenView.cpp */; };
+		33188EA815BCB64600C69D36 /* G_Thwap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C6115B9E7F70030EAEC /* G_Thwap.cpp */; };
+		33188EA915BCB64600C69D36 /* G_ViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C6315B9E7F70030EAEC /* G_ViewController.cpp */; };
+		33188EAA15BCB64C00C69D36 /* G_SkModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C6615B9E7F70030EAEC /* G_SkModel.cpp */; };
+		33188EAB15BCB64C00C69D36 /* CrowApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5215B9E7F70030EAEC /* CrowApp.cpp */; };
+		33188EAC15BCB64C00C69D36 /* CrowGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5415B9E7F70030EAEC /* CrowGame.cpp */; };
+		33188EAD15BCB66B00C69D36 /* libboostOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382447615B793C5002B9F95 /* libboostOSX.a */; };
+		33188EAE15BCB66B00C69D36 /* libfreetypeOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382446D15B793C1002B9F95 /* libfreetypeOSX.a */; };
+		33188EAF15BCB66B00C69D36 /* liblibjpegOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382445E15B793B8002B9F95 /* liblibjpegOSX.a */; };
+		33188EB015BCB66B00C69D36 /* libliboggOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382444C15B793A3002B9F95 /* libliboggOSX.a */; };
+		33188EB115BCB66B00C69D36 /* liblibpngOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 338244F315B795A1002B9F95 /* liblibpngOSX.a */; };
+		33188EB215BCB66B00C69D36 /* liblibvorbisOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 334B549615B89AEC00EEFC92 /* liblibvorbisOSX.a */; };
+		33188EB315BCB66B00C69D36 /* libluaOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 334B55AC15B8A79500EEFC92 /* libluaOSX.a */; };
+		33188EB615BCB66B00C69D36 /* libzlibOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E8812615B8AB5C0089BA08 /* libzlibOSX.a */; };
+		33188EB715BCB67C00C69D36 /* libopenal.1.14.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3319497C15B9F77600458F43 /* libopenal.1.14.0.dylib */; };
+		33188EB915BCB6F400C69D36 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33188EB815BCB6F400C69D36 /* OpenGL.framework */; };
 		3319497415B9F5EC00458F43 /* libboostOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382447615B793C5002B9F95 /* libboostOSX.a */; };
 		3319497515B9F5EF00458F43 /* libfreetypeOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382446D15B793C1002B9F95 /* libfreetypeOSX.a */; };
 		3319497615B9F5F300458F43 /* libglsl-optimizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382446615B793BD002B9F95 /* libglsl-optimizer.a */; };
@@ -14,7 +35,6 @@
 		3319497815B9F5F900458F43 /* libliboggOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382444C15B793A3002B9F95 /* libliboggOSX.a */; };
 		3319497915B9F5FC00458F43 /* liblibpngOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 338244F315B795A1002B9F95 /* liblibpngOSX.a */; };
 		3319497A15B9F60000458F43 /* liblibvorbisOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 334B549615B89AEC00EEFC92 /* liblibvorbisOSX.a */; };
-		3319497B15B9F60600458F43 /* libRadianceDevOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E882E615B9934A0089BA08 /* libRadianceDevOSX.a */; };
 		3319497D15B9F77600458F43 /* libopenal.1.14.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3319497C15B9F77600458F43 /* libopenal.1.14.0.dylib */; };
 		3319497F15B9F78A00458F43 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3319497E15B9F78A00458F43 /* OpenGL.framework */; };
 		3319498115B9F85100458F43 /* libPVRTexLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3319498015B9F85100458F43 /* libPVRTexLib.a */; };
@@ -25,7 +45,35 @@
 		3319499015B9FF6D00458F43 /* libluaOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 334B55AC15B8A79500EEFC92 /* libluaOSX.a */; };
 		3319499115B9FF6D00458F43 /* libzlibOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E8812615B8AB5C0089BA08 /* libzlibOSX.a */; };
 		331949A315BA0EDC00458F43 /* osxicon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 331949A215BA0EDC00458F43 /* osxicon.icns */; };
-		33194A0015BA35DF00458F43 /* libMainOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 331949DB15BA34A800458F43 /* libMainOSX.a */; };
+		33194A4115BC5A7D00458F43 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 338243F015B791B3002B9F95 /* Cocoa.framework */; };
+		33194B2615BC89DD00458F43 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33194B2415BC89DD00458F43 /* MainMenu.xib */; };
+		335ED5ED15BF244A008DDBD9 /* libRadianceShipOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 335ED5E415BF22BC008DDBD9 /* libRadianceShipOSX.a */; };
+		335ED5EE15BF244F008DDBD9 /* libMainShipOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 335ED5D615BF22BC008DDBD9 /* libMainShipOSX.a */; };
+		335ED61915BF2953008DDBD9 /* libMainGoldenOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 337AE78C15BF223A00AD1617 /* libMainGoldenOSX.a */; };
+		335ED61A15BF2953008DDBD9 /* libRadianceGoldenOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 337AE79315BF223A00AD1617 /* libRadianceGoldenOSX.a */; };
+		337AE79615BF224300AD1617 /* G_Exports.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5715B9E7F70030EAEC /* G_Exports.cpp */; };
+		337AE79715BF224300AD1617 /* G_OmenEnergy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5915B9E7F70030EAEC /* G_OmenEnergy.cpp */; };
+		337AE79815BF224300AD1617 /* G_ScreenPawn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5B15B9E7F70030EAEC /* G_ScreenPawn.cpp */; };
+		337AE79915BF224300AD1617 /* G_ScreenProjectile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5D15B9E7F70030EAEC /* G_ScreenProjectile.cpp */; };
+		337AE79A15BF224300AD1617 /* G_ScreenView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5F15B9E7F70030EAEC /* G_ScreenView.cpp */; };
+		337AE79B15BF224300AD1617 /* G_Thwap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C6115B9E7F70030EAEC /* G_Thwap.cpp */; };
+		337AE79C15BF224300AD1617 /* G_ViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C6315B9E7F70030EAEC /* G_ViewController.cpp */; };
+		337AE79D15BF224300AD1617 /* G_SkModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C6615B9E7F70030EAEC /* G_SkModel.cpp */; };
+		337AE79E15BF224300AD1617 /* CrowApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5215B9E7F70030EAEC /* CrowApp.cpp */; };
+		337AE79F15BF224300AD1617 /* CrowGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5415B9E7F70030EAEC /* CrowGame.cpp */; };
+		337AE7A115BF224300AD1617 /* libopenal.1.14.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3319497C15B9F77600458F43 /* libopenal.1.14.0.dylib */; };
+		337AE7A215BF224300AD1617 /* libboostOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382447615B793C5002B9F95 /* libboostOSX.a */; };
+		337AE7A315BF224300AD1617 /* libfreetypeOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382446D15B793C1002B9F95 /* libfreetypeOSX.a */; };
+		337AE7A415BF224300AD1617 /* liblibjpegOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382445E15B793B8002B9F95 /* liblibjpegOSX.a */; };
+		337AE7A515BF224300AD1617 /* libliboggOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382444C15B793A3002B9F95 /* libliboggOSX.a */; };
+		337AE7A615BF224300AD1617 /* liblibpngOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 338244F315B795A1002B9F95 /* liblibpngOSX.a */; };
+		337AE7A715BF224300AD1617 /* liblibvorbisOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 334B549615B89AEC00EEFC92 /* liblibvorbisOSX.a */; };
+		337AE7A815BF224300AD1617 /* libluaOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 334B55AC15B8A79500EEFC92 /* libluaOSX.a */; };
+		337AE7A915BF224300AD1617 /* libzlibOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E8812615B8AB5C0089BA08 /* libzlibOSX.a */; };
+		337AE7AA15BF224300AD1617 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 338243F015B791B3002B9F95 /* Cocoa.framework */; };
+		337AE7AB15BF224300AD1617 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33188EB815BCB6F400C69D36 /* OpenGL.framework */; };
+		337AE7AD15BF224300AD1617 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33194B2415BC89DD00458F43 /* MainMenu.xib */; };
+		337AE7AE15BF224300AD1617 /* osxicon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 331949A215BA0EDC00458F43 /* osxicon.icns */; };
 		338243F115B791B3002B9F95 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 338243F015B791B3002B9F95 /* Cocoa.framework */; };
 		3382442715B79261002B9F95 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3382442515B79261002B9F95 /* InfoPlist.strings */; };
 		3382442915B79261002B9F95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3382442815B79261002B9F95 /* main.m */; };
@@ -59,23 +107,11 @@
 		33836C7B15B9E7F80030EAEC /* G_ViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C6315B9E7F70030EAEC /* G_ViewController.cpp */; };
 		33836C7C15B9E7F80030EAEC /* G_SkModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C6615B9E7F70030EAEC /* G_SkModel.cpp */; };
 		33836C7D15B9E7F80030EAEC /* G_SkModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C6615B9E7F70030EAEC /* G_SkModel.cpp */; };
+		33D8909415BF299500DD4FBC /* libMainDeveloper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 335ED5DA15BF22BC008DDBD9 /* libMainDeveloper.a */; };
+		33D8909515BF299500DD4FBC /* libRadianceDeveloper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 335ED5E015BF22BC008DDBD9 /* libRadianceDeveloper.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		331949DA15BA34A800458F43 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 331949D015BA34A700458F43 /* Main.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 331949D615BA34A700458F43;
-			remoteInfo = MainOSX;
-		};
-		331949DC15BA34A800458F43 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 331949D015BA34A700458F43 /* Main.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 331949D715BA34A700458F43;
-			remoteInfo = MainiOS;
-		};
 		334B549515B89AEC00EEFC92 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 334B549015B89AEC00EEFC92 /* libvorbis.xcodeproj */;
@@ -103,6 +139,62 @@
 			proxyType = 2;
 			remoteGlobalIDString = 334B55A515B8A78F00EEFC92;
 			remoteInfo = luaiOS;
+		};
+		335ED5D515BF22BC008DDBD9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 331949D015BA34A700458F43 /* Main.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 335ED5AC15BF22BB008DDBD9;
+			remoteInfo = MainShipOSX;
+		};
+		335ED5D715BF22BC008DDBD9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 331949D015BA34A700458F43 /* Main.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 335ED5AD15BF22BB008DDBD9;
+			remoteInfo = MainiOS;
+		};
+		335ED5D915BF22BC008DDBD9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 331949D015BA34A700458F43 /* Main.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 335ED5AE15BF22BB008DDBD9;
+			remoteInfo = MainDeveloper;
+		};
+		335ED5DF15BF22BC008DDBD9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33E8816015B8AD650089BA08 /* Radiance.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 335ED5B215BF22BC008DDBD9;
+			remoteInfo = RadianceDeveloper;
+		};
+		335ED5E115BF22BC008DDBD9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33E8816015B8AD650089BA08 /* Radiance.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 335ED5B315BF22BC008DDBD9;
+			remoteInfo = RadianceShipiOS;
+		};
+		335ED5E315BF22BC008DDBD9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33E8816015B8AD650089BA08 /* Radiance.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 335ED5B415BF22BC008DDBD9;
+			remoteInfo = RadianceShipOSX;
+		};
+		337AE78B15BF223A00AD1617 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 331949D015BA34A700458F43 /* Main.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 337AE78315BF217000AD1617;
+			remoteInfo = MainGoldenOSX;
+		};
+		337AE79215BF223A00AD1617 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33E8816015B8AD650089BA08 /* Radiance.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 337AE76D15BF214F00AD1617;
+			remoteInfo = RadianceGoldenOSX;
 		};
 		3382444B15B793A3002B9F95 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -195,23 +287,10 @@
 			remoteGlobalIDString = 33E8812215B8AB5B0089BA08;
 			remoteInfo = zlibiOS;
 		};
-		33E882E515B9934A0089BA08 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 33E8816015B8AD650089BA08 /* Radiance.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 33E882CD15B9934A0089BA08;
-			remoteInfo = RadianceDevOSX;
-		};
-		33E882E715B9934A0089BA08 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 33E8816015B8AD650089BA08 /* Radiance.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 33E882CE15B9934A0089BA08;
-			remoteInfo = RadianceiOS;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		33188EB815BCB6F400C69D36 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/OpenGL.framework; sourceTree = DEVELOPER_DIR; };
 		3319497C15B9F77600458F43 /* libopenal.1.14.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopenal.1.14.0.dylib; path = "../../Extern/OpenALSoft-1.14/libs/libopenal.1.14.0.dylib"; sourceTree = "<group>"; };
 		3319497E15B9F78A00458F43 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		3319498015B9F85100458F43 /* libPVRTexLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPVRTexLib.a; path = "../../Extern/PVRTexLib-4.04/MacOS_x86/libPVRTexLib.a"; sourceTree = "<group>"; };
@@ -221,8 +300,20 @@
 		3319498C15B9FF5C00458F43 /* QtOpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtOpenGL.framework; path = "../../Extern/Qt-4.8.2/QtOpenGL.framework"; sourceTree = "<group>"; };
 		331949A215BA0EDC00458F43 /* osxicon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = osxicon.icns; sourceTree = "<group>"; };
 		331949D015BA34A700458F43 /* Main.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Main.xcodeproj; path = ../../Radiance/Source/XCode/Main.xcodeproj; sourceTree = "<group>"; };
+		33194B2315BC896F00458F43 /* Crow-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Crow-Info.plist"; path = "Developer/Crow-Info.plist"; sourceTree = "<group>"; };
+		33194B2515BC89DD00458F43 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = OSX/en.lproj/MainMenu.xib; sourceTree = SOURCE_ROOT; };
 		334B549015B89AEC00EEFC92 /* libvorbis.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libvorbis.xcodeproj; path = ../../Radiance/Source/XCode/libvorbis.xcodeproj; sourceTree = "<group>"; };
 		334B55A615B8A79500EEFC92 /* lua.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = lua.xcodeproj; path = ../../Radiance/Source/XCode/lua.xcodeproj; sourceTree = "<group>"; };
+		335ED5BC15BF22BC008DDBD9 /* CrowDeveloper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrowDeveloper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		335ED5BE15BF22BC008DDBD9 /* CrowiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrowiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		335ED5C015BF22BC008DDBD9 /* CrowShipOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrowShipOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		335ED61215BF25A6008DDBD9 /* CrowGolden-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CrowGolden-Info.plist"; path = "OSX/CrowGolden-Info.plist"; sourceTree = SOURCE_ROOT; };
+		335ED61315BF25A6008DDBD9 /* CrowShip-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CrowShip-Info.plist"; path = "OSX/CrowShip-Info.plist"; sourceTree = SOURCE_ROOT; };
+		335ED61515BF25F1008DDBD9 /* AppGoldenDebugiOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = AppGoldenDebugiOS.xcconfig; path = ../../Radiance/Source/XCode/XCConfig/AppGoldenDebugiOS.xcconfig; sourceTree = "<group>"; };
+		335ED61615BF25F1008DDBD9 /* AppGoldenDebugOSX.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = AppGoldenDebugOSX.xcconfig; path = ../../Radiance/Source/XCode/XCConfig/AppGoldenDebugOSX.xcconfig; sourceTree = "<group>"; };
+		335ED61715BF25F1008DDBD9 /* AppGoldenReleaseiOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = AppGoldenReleaseiOS.xcconfig; path = ../../Radiance/Source/XCode/XCConfig/AppGoldenReleaseiOS.xcconfig; sourceTree = "<group>"; };
+		335ED61815BF25F1008DDBD9 /* AppGoldenReleaseOSX.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = AppGoldenReleaseOSX.xcconfig; path = ../../Radiance/Source/XCode/XCConfig/AppGoldenReleaseOSX.xcconfig; sourceTree = "<group>"; };
+		337AE7B315BF224300AD1617 /* CrowGoldenOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrowGoldenOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		338243F015B791B3002B9F95 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		338243F315B791B3002B9F95 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		338243F415B791B3002B9F95 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -244,8 +335,6 @@
 		3382446115B793BD002B9F95 /* glsl-optimizer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "glsl-optimizer.xcodeproj"; path = "../../Radiance/Source/XCode/glsl-optimizer.xcodeproj"; sourceTree = "<group>"; };
 		3382446715B793C1002B9F95 /* freetype.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = freetype.xcodeproj; path = ../../Radiance/Source/XCode/freetype.xcodeproj; sourceTree = "<group>"; };
 		3382447015B793C4002B9F95 /* boost.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = boost.xcodeproj; path = ../../Radiance/Source/XCode/boost.xcodeproj; sourceTree = "<group>"; };
-		338244B015B794A0002B9F95 /* CrowDeveloper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrowDeveloper.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		338244B215B794A0002B9F95 /* CrowiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrowiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		338244E815B795A0002B9F95 /* libpng.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libpng.xcodeproj; path = ../../Radiance/Source/XCode/libpng.xcodeproj; sourceTree = "<group>"; };
 		33836C5215B9E7F70030EAEC /* CrowApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CrowApp.cpp; sourceTree = "<group>"; };
 		33836C5315B9E7F70030EAEC /* CrowApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowApp.h; sourceTree = "<group>"; };
@@ -267,28 +356,66 @@
 		33836C6415B9E7F70030EAEC /* G_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_ViewController.h; sourceTree = "<group>"; };
 		33836C6615B9E7F70030EAEC /* G_SkModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_SkModel.cpp; sourceTree = "<group>"; };
 		33836C6715B9E7F70030EAEC /* G_SkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G_SkModel.h; sourceTree = "<group>"; };
-		33836C8215B9EA640030EAEC /* Crow-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Crow-Info.plist"; path = "OSX/Crow-Info.plist"; sourceTree = SOURCE_ROOT; };
-		33836C8315B9EA640030EAEC /* Crow-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Crow-Prefix.pch"; path = "OSX/Crow-Prefix.pch"; sourceTree = SOURCE_ROOT; };
-		33836C8515B9EA740030EAEC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = OSX/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
-		33836C8715B9EA740030EAEC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = OSX/en.lproj/MainMenu.xib; sourceTree = SOURCE_ROOT; };
 		33836C8915B9EFBF0030EAEC /* AppBuild.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = AppBuild.xcconfig; path = ../../Radiance/Source/XCode/XCConfig/AppBuild.xcconfig; sourceTree = "<group>"; };
-		33836C8A15B9EFBF0030EAEC /* AppDeveloperDebug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = AppDeveloperDebug.xcconfig; path = ../../Radiance/Source/XCode/XCConfig/AppDeveloperDebug.xcconfig; sourceTree = "<group>"; };
-		33836C8B15B9EFBF0030EAEC /* AppDeveloperRelease.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = AppDeveloperRelease.xcconfig; path = ../../Radiance/Source/XCode/XCConfig/AppDeveloperRelease.xcconfig; sourceTree = "<group>"; };
+		338CDF1A15BC939A0058DFF5 /* AppDeveloperDebugOSX.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = AppDeveloperDebugOSX.xcconfig; path = ../../Radiance/Source/XCode/XCConfig/AppDeveloperDebugOSX.xcconfig; sourceTree = "<group>"; };
+		338CDF1B15BC939A0058DFF5 /* AppDeveloperReleaseOSX.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = AppDeveloperReleaseOSX.xcconfig; path = ../../Radiance/Source/XCode/XCConfig/AppDeveloperReleaseOSX.xcconfig; sourceTree = "<group>"; };
+		338CDF1D15BC939A0058DFF5 /* AppShipDebugiOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = AppShipDebugiOS.xcconfig; path = ../../Radiance/Source/XCode/XCConfig/AppShipDebugiOS.xcconfig; sourceTree = "<group>"; };
+		338CDF1E15BC939A0058DFF5 /* AppShipDebugOSX.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = AppShipDebugOSX.xcconfig; path = ../../Radiance/Source/XCode/XCConfig/AppShipDebugOSX.xcconfig; sourceTree = "<group>"; };
+		338CDF2015BC939A0058DFF5 /* AppShipReleaseiOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = AppShipReleaseiOS.xcconfig; path = ../../Radiance/Source/XCode/XCConfig/AppShipReleaseiOS.xcconfig; sourceTree = "<group>"; };
+		338CDF2115BC939A0058DFF5 /* AppShipReleaseOSX.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = AppShipReleaseOSX.xcconfig; path = ../../Radiance/Source/XCode/XCConfig/AppShipReleaseOSX.xcconfig; sourceTree = "<group>"; };
 		33E8811B15B8AB5B0089BA08 /* zlib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = zlib.xcodeproj; path = ../../Radiance/Source/XCode/zlib.xcodeproj; sourceTree = "<group>"; };
 		33E8816015B8AD650089BA08 /* Radiance.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Radiance.xcodeproj; path = ../../Radiance/Source/XCode/Radiance.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		33194A3C15BC5A7D00458F43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33188EB715BCB67C00C69D36 /* libopenal.1.14.0.dylib in Frameworks */,
+				33188EAD15BCB66B00C69D36 /* libboostOSX.a in Frameworks */,
+				33188EAE15BCB66B00C69D36 /* libfreetypeOSX.a in Frameworks */,
+				33188EAF15BCB66B00C69D36 /* liblibjpegOSX.a in Frameworks */,
+				33188EB015BCB66B00C69D36 /* libliboggOSX.a in Frameworks */,
+				33188EB115BCB66B00C69D36 /* liblibpngOSX.a in Frameworks */,
+				33188EB215BCB66B00C69D36 /* liblibvorbisOSX.a in Frameworks */,
+				33188EB315BCB66B00C69D36 /* libluaOSX.a in Frameworks */,
+				33188EB615BCB66B00C69D36 /* libzlibOSX.a in Frameworks */,
+				335ED5EE15BF244F008DDBD9 /* libMainShipOSX.a in Frameworks */,
+				335ED5ED15BF244A008DDBD9 /* libRadianceShipOSX.a in Frameworks */,
+				33194A4115BC5A7D00458F43 /* Cocoa.framework in Frameworks */,
+				33188EB915BCB6F400C69D36 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		337AE7A015BF224300AD1617 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				337AE7A115BF224300AD1617 /* libopenal.1.14.0.dylib in Frameworks */,
+				337AE7A215BF224300AD1617 /* libboostOSX.a in Frameworks */,
+				337AE7A315BF224300AD1617 /* libfreetypeOSX.a in Frameworks */,
+				337AE7A415BF224300AD1617 /* liblibjpegOSX.a in Frameworks */,
+				337AE7A515BF224300AD1617 /* libliboggOSX.a in Frameworks */,
+				337AE7A615BF224300AD1617 /* liblibpngOSX.a in Frameworks */,
+				337AE7A715BF224300AD1617 /* liblibvorbisOSX.a in Frameworks */,
+				337AE7A815BF224300AD1617 /* libluaOSX.a in Frameworks */,
+				337AE7A915BF224300AD1617 /* libzlibOSX.a in Frameworks */,
+				335ED61915BF2953008DDBD9 /* libMainGoldenOSX.a in Frameworks */,
+				335ED61A15BF2953008DDBD9 /* libRadianceGoldenOSX.a in Frameworks */,
+				337AE7AA15BF224300AD1617 /* Cocoa.framework in Frameworks */,
+				337AE7AB15BF224300AD1617 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		338243E915B791B3002B9F95 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3319498115B9F85100458F43 /* libPVRTexLib.a in Frameworks */,
 				3319497D15B9F77600458F43 /* libopenal.1.14.0.dylib in Frameworks */,
-				33194A0015BA35DF00458F43 /* libMainOSX.a in Frameworks */,
 				3319499015B9FF6D00458F43 /* libluaOSX.a in Frameworks */,
 				3319499115B9FF6D00458F43 /* libzlibOSX.a in Frameworks */,
-				3319497B15B9F60600458F43 /* libRadianceDevOSX.a in Frameworks */,
 				3319497A15B9F60000458F43 /* liblibvorbisOSX.a in Frameworks */,
 				3319497915B9F5FC00458F43 /* liblibpngOSX.a in Frameworks */,
 				3319497815B9F5F900458F43 /* libliboggOSX.a in Frameworks */,
@@ -296,6 +423,8 @@
 				3319497615B9F5F300458F43 /* libglsl-optimizer.a in Frameworks */,
 				3319497515B9F5EF00458F43 /* libfreetypeOSX.a in Frameworks */,
 				3319497415B9F5EC00458F43 /* libboostOSX.a in Frameworks */,
+				33D8909415BF299500DD4FBC /* libMainDeveloper.a in Frameworks */,
+				33D8909515BF299500DD4FBC /* libRadianceDeveloper.a in Frameworks */,
 				3319498D15B9FF5C00458F43 /* QtCore.framework in Frameworks */,
 				3319498E15B9FF5C00458F43 /* QtGui.framework in Frameworks */,
 				3319498F15B9FF5C00458F43 /* QtOpenGL.framework in Frameworks */,
@@ -322,10 +451,20 @@
 		331949D115BA34A700458F43 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				331949DB15BA34A800458F43 /* libMainOSX.a */,
-				331949DD15BA34A800458F43 /* libMainiOS.a */,
+				335ED5D615BF22BC008DDBD9 /* libMainShipOSX.a */,
+				335ED5D815BF22BC008DDBD9 /* libMainiOS.a */,
+				335ED5DA15BF22BC008DDBD9 /* libMainDeveloper.a */,
+				337AE78C15BF223A00AD1617 /* libMainGoldenOSX.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		33194AEE15BC5BDA00458F43 /* Developer */ = {
+			isa = PBXGroup;
+			children = (
+				33194B2315BC896F00458F43 /* Crow-Info.plist */,
+			);
+			name = Developer;
 			sourceTree = "<group>";
 		};
 		334B549115B89AEC00EEFC92 /* Products */ = {
@@ -342,6 +481,17 @@
 			children = (
 				334B55AC15B8A79500EEFC92 /* libluaOSX.a */,
 				334B55AE15B8A79500EEFC92 /* libluaiOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		335ED61415BF25AE008DDBD9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				337AE7B315BF224300AD1617 /* CrowGoldenOSX.app */,
+				335ED5BC15BF22BC008DDBD9 /* CrowDeveloper.app */,
+				335ED5BE15BF22BC008DDBD9 /* CrowiOS.app */,
+				335ED5C015BF22BC008DDBD9 /* CrowShipOSX.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -365,8 +515,9 @@
 				33836C8815B9EDF00030EAEC /* XCConfig */,
 				338243F615B791B3002B9F95 /* OSX */,
 				3382442215B79261002B9F95 /* iOS */,
+				33194AEE15BC5BDA00458F43 /* Developer */,
 				338243EF15B791B3002B9F95 /* Frameworks */,
-				338244BE15B794A7002B9F95 /* Products */,
+				335ED61415BF25AE008DDBD9 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -375,6 +526,7 @@
 			children = (
 				3319498015B9F85100458F43 /* libPVRTexLib.a */,
 				3319497C15B9F77600458F43 /* libopenal.1.14.0.dylib */,
+				33188EB815BCB6F400C69D36 /* OpenGL.framework */,
 				3319498A15B9FF5C00458F43 /* QtCore.framework */,
 				3319498B15B9FF5C00458F43 /* QtGui.framework */,
 				3319498C15B9FF5C00458F43 /* QtOpenGL.framework */,
@@ -399,10 +551,9 @@
 		338243F615B791B3002B9F95 /* OSX */ = {
 			isa = PBXGroup;
 			children = (
-				33836C8415B9EA740030EAEC /* InfoPlist.strings */,
-				33836C8615B9EA740030EAEC /* MainMenu.xib */,
-				33836C8215B9EA640030EAEC /* Crow-Info.plist */,
-				33836C8315B9EA640030EAEC /* Crow-Prefix.pch */,
+				335ED61215BF25A6008DDBD9 /* CrowGolden-Info.plist */,
+				335ED61315BF25A6008DDBD9 /* CrowShip-Info.plist */,
+				33194B2415BC89DD00458F43 /* MainMenu.xib */,
 			);
 			name = OSX;
 			path = Crow;
@@ -480,15 +631,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		338244BE15B794A7002B9F95 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				338244B015B794A0002B9F95 /* CrowDeveloper.app */,
-				338244B215B794A0002B9F95 /* CrowiOS.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		338244E915B795A0002B9F95 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -554,8 +696,16 @@
 			isa = PBXGroup;
 			children = (
 				33836C8915B9EFBF0030EAEC /* AppBuild.xcconfig */,
-				33836C8A15B9EFBF0030EAEC /* AppDeveloperDebug.xcconfig */,
-				33836C8B15B9EFBF0030EAEC /* AppDeveloperRelease.xcconfig */,
+				338CDF1A15BC939A0058DFF5 /* AppDeveloperDebugOSX.xcconfig */,
+				338CDF1B15BC939A0058DFF5 /* AppDeveloperReleaseOSX.xcconfig */,
+				335ED61515BF25F1008DDBD9 /* AppGoldenDebugiOS.xcconfig */,
+				335ED61615BF25F1008DDBD9 /* AppGoldenDebugOSX.xcconfig */,
+				335ED61715BF25F1008DDBD9 /* AppGoldenReleaseiOS.xcconfig */,
+				335ED61815BF25F1008DDBD9 /* AppGoldenReleaseOSX.xcconfig */,
+				338CDF1D15BC939A0058DFF5 /* AppShipDebugiOS.xcconfig */,
+				338CDF1E15BC939A0058DFF5 /* AppShipDebugOSX.xcconfig */,
+				338CDF2015BC939A0058DFF5 /* AppShipReleaseiOS.xcconfig */,
+				338CDF2115BC939A0058DFF5 /* AppShipReleaseOSX.xcconfig */,
 			);
 			name = XCConfig;
 			sourceTree = "<group>";
@@ -572,8 +722,10 @@
 		33E8816115B8AD650089BA08 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				33E882E615B9934A0089BA08 /* libRadianceDevOSX.a */,
-				33E882E815B9934A0089BA08 /* libRadianceiOS.a */,
+				335ED5E015BF22BC008DDBD9 /* libRadianceDeveloper.a */,
+				335ED5E215BF22BC008DDBD9 /* libRadianceShipiOS.a */,
+				335ED5E415BF22BC008DDBD9 /* libRadianceShipOSX.a */,
+				337AE79315BF223A00AD1617 /* libRadianceGoldenOSX.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -581,6 +733,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		33194A3E15BC5A7D00458F43 /* CrowShipOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33194A5415BC5A7E00458F43 /* Build configuration list for PBXNativeTarget "CrowShipOSX" */;
+			buildPhases = (
+				33194A3B15BC5A7D00458F43 /* Sources */,
+				33194A3C15BC5A7D00458F43 /* Frameworks */,
+				33194A3D15BC5A7D00458F43 /* Resources */,
+				330A99CE15BCA222002A81EC /* Install Dependancies */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CrowShipOSX;
+			productName = CrowOSX;
+			productReference = 335ED5C015BF22BC008DDBD9 /* CrowShipOSX.app */;
+			productType = "com.apple.product-type.application";
+		};
+		337AE79415BF224300AD1617 /* CrowGoldenOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 337AE7B015BF224300AD1617 /* Build configuration list for PBXNativeTarget "CrowGoldenOSX" */;
+			buildPhases = (
+				337AE79515BF224300AD1617 /* Sources */,
+				337AE7A015BF224300AD1617 /* Frameworks */,
+				337AE7AC15BF224300AD1617 /* Resources */,
+				337AE7AF15BF224300AD1617 /* Install Dependancies */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CrowGoldenOSX;
+			productName = CrowOSX;
+			productReference = 337AE7B315BF224300AD1617 /* CrowGoldenOSX.app */;
+			productType = "com.apple.product-type.application";
+		};
 		338243EB15B791B3002B9F95 /* CrowDeveloper */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3382440A15B791B3002B9F95 /* Build configuration list for PBXNativeTarget "CrowDeveloper" */;
@@ -596,7 +784,7 @@
 			);
 			name = CrowDeveloper;
 			productName = Crow;
-			productReference = 338244B015B794A0002B9F95 /* CrowDeveloper.app */;
+			productReference = 335ED5BC15BF22BC008DDBD9 /* CrowDeveloper.app */;
 			productType = "com.apple.product-type.application";
 		};
 		3382441515B79261002B9F95 /* CrowiOS */ = {
@@ -613,7 +801,7 @@
 			);
 			name = CrowiOS;
 			productName = CrowiOS;
-			productReference = 338244B215B794A0002B9F95 /* CrowiOS.app */;
+			productReference = 335ED5BE15BF22BC008DDBD9 /* CrowiOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -684,25 +872,13 @@
 			targets = (
 				338243EB15B791B3002B9F95 /* CrowDeveloper */,
 				3382441515B79261002B9F95 /* CrowiOS */,
+				33194A3E15BC5A7D00458F43 /* CrowShipOSX */,
+				337AE79415BF224300AD1617 /* CrowGoldenOSX */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		331949DB15BA34A800458F43 /* libMainOSX.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libMainOSX.a;
-			remoteRef = 331949DA15BA34A800458F43 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		331949DD15BA34A800458F43 /* libMainiOS.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libMainiOS.a;
-			remoteRef = 331949DC15BA34A800458F43 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		334B549615B89AEC00EEFC92 /* liblibvorbisOSX.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -729,6 +905,62 @@
 			fileType = archive.ar;
 			path = libluaiOS.a;
 			remoteRef = 334B55AD15B8A79500EEFC92 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		335ED5D615BF22BC008DDBD9 /* libMainShipOSX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMainShipOSX.a;
+			remoteRef = 335ED5D515BF22BC008DDBD9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		335ED5D815BF22BC008DDBD9 /* libMainiOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMainiOS.a;
+			remoteRef = 335ED5D715BF22BC008DDBD9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		335ED5DA15BF22BC008DDBD9 /* libMainDeveloper.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMainDeveloper.a;
+			remoteRef = 335ED5D915BF22BC008DDBD9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		335ED5E015BF22BC008DDBD9 /* libRadianceDeveloper.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRadianceDeveloper.a;
+			remoteRef = 335ED5DF15BF22BC008DDBD9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		335ED5E215BF22BC008DDBD9 /* libRadianceShipiOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRadianceShipiOS.a;
+			remoteRef = 335ED5E115BF22BC008DDBD9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		335ED5E415BF22BC008DDBD9 /* libRadianceShipOSX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRadianceShipOSX.a;
+			remoteRef = 335ED5E315BF22BC008DDBD9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		337AE78C15BF223A00AD1617 /* libMainGoldenOSX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMainGoldenOSX.a;
+			remoteRef = 337AE78B15BF223A00AD1617 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		337AE79315BF223A00AD1617 /* libRadianceGoldenOSX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRadianceGoldenOSX.a;
+			remoteRef = 337AE79215BF223A00AD1617 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		3382444C15B793A3002B9F95 /* libliboggOSX.a */ = {
@@ -822,23 +1054,27 @@
 			remoteRef = 33E8812715B8AB5C0089BA08 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		33E882E615B9934A0089BA08 /* libRadianceDevOSX.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRadianceDevOSX.a;
-			remoteRef = 33E882E515B9934A0089BA08 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		33E882E815B9934A0089BA08 /* libRadianceiOS.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRadianceiOS.a;
-			remoteRef = 33E882E715B9934A0089BA08 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		33194A3D15BC5A7D00458F43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33194B2615BC89DD00458F43 /* MainMenu.xib in Resources */,
+				330A99DB15BCA5D6002A81EC /* osxicon.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		337AE7AC15BF224300AD1617 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				337AE7AD15BF224300AD1617 /* MainMenu.xib in Resources */,
+				337AE7AE15BF224300AD1617 /* osxicon.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		338243EA15B791B3002B9F95 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -862,6 +1098,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		330A99CE15BCA222002A81EC /* Install Dependancies */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Install Dependancies";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mkdir -p \"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks\"\ncp \"${EXTERN_PATH}/OpenALSoft-1.14/libs/libopenal.1.14.0.dylib\" \"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks\"";
+		};
 		331949A415BA112100458F43 /* Install Dependancies */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -876,9 +1126,57 @@
 			shellPath = /bin/sh;
 			shellScript = "mkdir -p \"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks/QtCore.framework\"\nmkdir -p \"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks/QtGui.framework\"\nmkdir -p \"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks/QtOpenGL.framework\"\nmkdir -p \"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks/Cg.framework\"\ncp \"${EXTERN_PATH}/Qt-4.8.2/QtCore.framework/Versions/4/QtCore\" \"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks/QtCore.framework\"\ncp \"${EXTERN_PATH}/Qt-4.8.2/QtGui.framework/Versions/4/QtGui\" \"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks/QtGui.framework\"\ncp -R \"${EXTERN_PATH}/Qt-4.8.2/QtGui.framework/Versions/4/Resources/\" \"${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\"\ncp \"${EXTERN_PATH}/Qt-4.8.2/QtOpenGL.framework/Versions/4/QtOpenGL\" \"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks/QtOpenGL.framework\"\ncp \"${EXTERN_PATH}/Cg-3.1.0013/Cg.framework/Versions/1.0/Cg\" \"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks/Cg.framework\"\ncp \"${EXTERN_PATH}/OpenALSoft-1.14/libs/libopenal.1.14.0.dylib\" \"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks\"";
 		};
+		337AE7AF15BF224300AD1617 /* Install Dependancies */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Install Dependancies";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mkdir -p \"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks\"\ncp \"${EXTERN_PATH}/OpenALSoft-1.14/libs/libopenal.1.14.0.dylib\" \"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks\"";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		33194A3B15BC5A7D00458F43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33188EA315BCB64600C69D36 /* G_Exports.cpp in Sources */,
+				33188EA415BCB64600C69D36 /* G_OmenEnergy.cpp in Sources */,
+				33188EA515BCB64600C69D36 /* G_ScreenPawn.cpp in Sources */,
+				33188EA615BCB64600C69D36 /* G_ScreenProjectile.cpp in Sources */,
+				33188EA715BCB64600C69D36 /* G_ScreenView.cpp in Sources */,
+				33188EA815BCB64600C69D36 /* G_Thwap.cpp in Sources */,
+				33188EA915BCB64600C69D36 /* G_ViewController.cpp in Sources */,
+				33188EAA15BCB64C00C69D36 /* G_SkModel.cpp in Sources */,
+				33188EAB15BCB64C00C69D36 /* CrowApp.cpp in Sources */,
+				33188EAC15BCB64C00C69D36 /* CrowGame.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		337AE79515BF224300AD1617 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				337AE79615BF224300AD1617 /* G_Exports.cpp in Sources */,
+				337AE79715BF224300AD1617 /* G_OmenEnergy.cpp in Sources */,
+				337AE79815BF224300AD1617 /* G_ScreenPawn.cpp in Sources */,
+				337AE79915BF224300AD1617 /* G_ScreenProjectile.cpp in Sources */,
+				337AE79A15BF224300AD1617 /* G_ScreenView.cpp in Sources */,
+				337AE79B15BF224300AD1617 /* G_Thwap.cpp in Sources */,
+				337AE79C15BF224300AD1617 /* G_ViewController.cpp in Sources */,
+				337AE79D15BF224300AD1617 /* G_SkModel.cpp in Sources */,
+				337AE79E15BF224300AD1617 /* CrowApp.cpp in Sources */,
+				337AE79F15BF224300AD1617 /* CrowGame.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		338243E815B791B3002B9F95 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -919,6 +1217,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		33194B2415BC89DD00458F43 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				33194B2515BC89DD00458F43 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
 		3382442515B79261002B9F95 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -943,80 +1249,98 @@
 			name = ViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
-		33836C8415B9EA740030EAEC /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				33836C8515B9EA740030EAEC /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		33836C8615B9EA740030EAEC /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				33836C8715B9EA740030EAEC /* en */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		3382440815B791B3002B9F95 /* Dev - Debug */ = {
+		33194A5515BC5A7E00458F43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 338CDF1E15BC939A0058DFF5 /* AppShipDebugOSX.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = "OSX/CrowShip-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Extern/OpenALSoft-1.14/libs\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		33194A5715BC5A7E00458F43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 338CDF2115BC939A0058DFF5 /* AppShipReleaseOSX.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = "OSX/CrowShip-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Extern/OpenALSoft-1.14/libs\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		337AE7B115BF224300AD1617 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 335ED61615BF25F1008DDBD9 /* AppGoldenDebugOSX.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = "OSX/CrowGolden-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Extern/OpenALSoft-1.14/libs\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		337AE7B215BF224300AD1617 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 335ED61815BF25F1008DDBD9 /* AppGoldenReleaseOSX.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = "OSX/CrowGolden-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Extern/OpenALSoft-1.14/libs\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3382440815B791B3002B9F95 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
 			};
-			name = "Dev - Debug";
+			name = Debug;
 		};
-		3382440915B791B3002B9F95 /* Dev - Release */ = {
+		3382440915B791B3002B9F95 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				SDKROOT = macosx;
 			};
-			name = "Dev - Release";
+			name = Release;
 		};
-		3382440B15B791B3002B9F95 /* Dev - Debug */ = {
+		3382440B15B791B3002B9F95 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 33836C8A15B9EFBF0030EAEC /* AppDeveloperDebug.xcconfig */;
+			baseConfigurationReference = 338CDF1A15BC939A0058DFF5 /* AppDeveloperDebugOSX.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../Extern/Cg-3.1.0013\"",
 					"\"$(SRCROOT)/../../Extern/Qt-4.8.2\"",
 				);
-				INFOPLIST_FILE = "OSX/Crow-Info.plist";
+				INFOPLIST_FILE = "Developer/Crow-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../Extern/OpenALSoft-1.14/libs\"",
@@ -1025,18 +1349,18 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
-			name = "Dev - Debug";
+			name = Debug;
 		};
-		3382440C15B791B3002B9F95 /* Dev - Release */ = {
+		3382440C15B791B3002B9F95 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 33836C8B15B9EFBF0030EAEC /* AppDeveloperRelease.xcconfig */;
+			baseConfigurationReference = 338CDF1B15BC939A0058DFF5 /* AppDeveloperReleaseOSX.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../Extern/Cg-3.1.0013\"",
 					"\"$(SRCROOT)/../../Extern/Qt-4.8.2\"",
 				);
-				INFOPLIST_FILE = "OSX/Crow-Info.plist";
+				INFOPLIST_FILE = "Developer/Crow-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../Extern/OpenALSoft-1.14/libs\"",
@@ -1045,10 +1369,11 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
-			name = "Dev - Release";
+			name = Release;
 		};
-		3382443C15B79261002B9F95 /* Dev - Debug */ = {
+		3382443C15B79261002B9F95 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 338CDF1D15BC939A0058DFF5 /* AppShipDebugiOS.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1066,10 +1391,11 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
-			name = "Dev - Debug";
+			name = Debug;
 		};
-		3382443D15B79261002B9F95 /* Dev - Release */ = {
+		3382443D15B79261002B9F95 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 338CDF2015BC939A0058DFF5 /* AppShipReleaseiOS.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1089,37 +1415,55 @@
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
-			name = "Dev - Release";
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		33194A5415BC5A7E00458F43 /* Build configuration list for PBXNativeTarget "CrowShipOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33194A5515BC5A7E00458F43 /* Debug */,
+				33194A5715BC5A7E00458F43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		337AE7B015BF224300AD1617 /* Build configuration list for PBXNativeTarget "CrowGoldenOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				337AE7B115BF224300AD1617 /* Debug */,
+				337AE7B215BF224300AD1617 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		338243E615B791B3002B9F95 /* Build configuration list for PBXProject "Crow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3382440815B791B3002B9F95 /* Dev - Debug */,
-				3382440915B791B3002B9F95 /* Dev - Release */,
+				3382440815B791B3002B9F95 /* Debug */,
+				3382440915B791B3002B9F95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Dev - Release";
+			defaultConfigurationName = Release;
 		};
 		3382440A15B791B3002B9F95 /* Build configuration list for PBXNativeTarget "CrowDeveloper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3382440B15B791B3002B9F95 /* Dev - Debug */,
-				3382440C15B791B3002B9F95 /* Dev - Release */,
+				3382440B15B791B3002B9F95 /* Debug */,
+				3382440C15B791B3002B9F95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Dev - Release";
+			defaultConfigurationName = Release;
 		};
 		3382443B15B79261002B9F95 /* Build configuration list for PBXNativeTarget "CrowiOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3382443C15B79261002B9F95 /* Dev - Debug */,
-				3382443D15B79261002B9F95 /* Dev - Release */,
+				3382443C15B79261002B9F95 /* Debug */,
+				3382443D15B79261002B9F95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Dev - Release";
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
