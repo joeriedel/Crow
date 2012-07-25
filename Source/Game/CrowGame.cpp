@@ -108,8 +108,11 @@ private:
 		gl.MatrixMode(GL_MODELVIEW);
 		gl.LoadIdentity();
 		const float size = 128.f;
-		gl.Translatef(vpw-size-8.f, vph-(size*yaspect)-8.f, 0.f);
-		gl.Scalef(size/BaseRectSize, (size*yaspect)/BaseRectSize, 1.f);
+		const float scale = vpw/1024.f;
+		const float sizeX = size*scale;
+		const float sizeY = size*scale * yaspect;
+		gl.Translatef(vpw-sizeX-8.f, vph-sizeY-8.f, 0.f);
+		gl.Scalef(sizeX/BaseRectSize, sizeY/BaseRectSize, 1.f);
 
 		Material *m = m_parser->material;
 
