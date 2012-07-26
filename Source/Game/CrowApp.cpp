@@ -182,6 +182,11 @@ void CrowApp::OnTick(float dt) {
 		m_game->SetViewport(0, 0, vidMode->w, vidMode->h);
 		m_game->Tick(dt);
 		engine->sys->r->SwapBuffers();
+
+#if !defined(RAD_OPT_IOS)
+		if (m_game->quit)
+			App::Get()->exit = true;
+#endif
 	}
 #endif
 }
