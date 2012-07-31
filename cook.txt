@@ -288,6 +288,8 @@ Audio/GlidingHigh
 
 // GLOBALS
 
+UI/BEV-UI01_M
+UI/oface_M
 UI/confirmation_03_M
 UI/confirmation_03a_M
 UI/confirmation_03b_M
@@ -527,6 +529,7 @@ FX/Crow_Feathers_Particles01
 FX/Crow_Feather01
 FX/Crow_Feather02
 FX/Invert_M
+FX/Bloom_M
 FX/InvertAttack_M
 FX/InvertFury_M
 FX/WindTurb_M
