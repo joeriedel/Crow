@@ -7,7 +7,7 @@
 #include <Engine/Engine.h>
 #include <Engine/Utils/Tokenizer.h>
 #include <Runtime/File.h>
-#include "Entities/G_Exports.h"
+#include "Game/Entities/G_Exports.h"
 #if defined(RAD_OPT_GL) && defined(RAD_TARGET_GOLDEN) && defined(RAD_OPT_PC)
 #include <Engine/Renderer/PC/RGLBackend.h>
 #endif
@@ -28,7 +28,37 @@ bool CrowApp::PreInit() {
 	COut(C_Info) << "PreInit..." << std::endl;
 	if (!App::PreInit()) 
 		return false;
+#if defined(RAD_TARGET_GOLDEN)
+	file::HFile file;
 
+	int media = file::AllMedia;
+	int r = engine->sys->files->OpenFile(
+		"pak0.pak",
+		media,
+		file,
+		file::HIONotify()
+	);
+
+	if (r < file::Success) {
+		COut(C_Error) << "Unable to open pak0.pak!" << std::endl;
+		return false;
+	}
+
+	file::HPakFile pak = engine->sys->paks->MountPakFile(file, "pak0.pak");
+	if (!pak) {
+		COut(C_Error) << "Unable to mount pak0.pak!" << std::endl;
+		return false;
+	}
+
+	engine->sys->files->AddPakFile(pak);
+
+	// disable all file access except through the pak file.
+	engine->sys->files->enabledMedia = file::Paks;
+#endif
+	return true;
+}
+
+bool CrowApp::InitWindow() {
 #if defined(RAD_OPT_GL) && defined(RAD_TARGET_GOLDEN) && defined(RAD_OPT_PC)
 	// pick a video mode that is the same aspect ratio as their desktop resolution.
 	RAD_ASSERT(primaryDisplay.get());
@@ -92,37 +122,6 @@ bool CrowApp::Initialize() {
 	COut(C_Info) << "Initializing..." << std::endl;
 	if (!App::Initialize()) 
 		return false;
-
-#if defined(RAD_TARGET_GOLDEN)
-	file::HFile file;
-
-	int media = file::AllMedia;
-	int r = engine->sys->files->OpenFile(
-		"pak0.pak",
-		media,
-		file,
-		file::HIONotify()
-	);
-
-	if (r < file::Success)
-	{
-		COut(C_Error) << "Unable to open pak0.pak!" << std::endl;
-		return false;
-	}
-
-	file::HPakFile pak = engine->sys->paks->MountPakFile(file, "pak0.pak");
-	if (!pak)
-	{
-		COut(C_Error) << "Unable to mount pak0.pak!" << std::endl;
-		return false;
-	}
-
-	engine->sys->files->AddPakFile(pak);
-
-	// disable all file access except through the pak file.
-	engine->sys->files->enabledMedia = file::Paks;
-#endif
-
 	return true;
 }
 

@@ -1,1 +1,1 @@
-.\Bin\win-msvc8-golden\Crow.exe
+".\Bin\Golden - Release - Win32\Crow.exe"

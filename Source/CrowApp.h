@@ -17,8 +17,10 @@ public:
 	virtual ~CrowApp();
 
 	virtual bool PreInit();
+	virtual bool InitWindow();
 	virtual bool Initialize();
 	virtual void Finalize();
+	virtual int DoLauncher();
 	virtual bool Run();
 	virtual void NotifyBackground(bool background);
 	virtual void PostInputEvent(const InputEvent &e);
