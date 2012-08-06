@@ -248,6 +248,8 @@ CrowGraphicsSettings::CrowGraphicsSettings(
   m_savedResolution(0),
   m_savedFullscreen(false) {
 
+	setWindowTitle("Graphics Settings");
+
 	setWindowFlags(
 		Qt::Window|
 		Qt::CustomizeWindowHint|
