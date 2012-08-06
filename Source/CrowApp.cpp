@@ -11,6 +11,9 @@
 #if defined(RAD_OPT_GL) && defined(RAD_TARGET_GOLDEN) && defined(RAD_OPT_PC)
 #include <Engine/Renderer/PC/RGLBackend.h>
 #endif
+#if defined(RAD_TARGET_GOLDEN) && defined(RAD_OPT_PC)
+#include <Engine/Persistence.h>
+#endif
 
 App *App::New(int argc, const char **argv) { 
 	return new CrowApp(argc, argv); 
@@ -60,19 +63,37 @@ bool CrowApp::PreInit() {
 
 bool CrowApp::InitWindow() {
 #if defined(RAD_OPT_GL) && defined(RAD_TARGET_GOLDEN) && defined(RAD_OPT_PC)
-	// pick a video mode that is the same aspect ratio as their desktop resolution.
-	RAD_ASSERT(primaryDisplay.get());
-	r::VidMode desktopMode = *primaryDisplay->curVidMode.get();
+	Persistence::Ref settings = Persistence::Load("settings.prefs");
+	
+	r::VidMode mode;
 
-	// This matches the 13inch MBA
-	//r::VidMode mode(1440, 900, 32, 0, true);
-	r::VidMode mode(1024, 640, 32, 0, false);
+	mode.bpp = 32;
+	mode.hz  = 0;
+
+#if defined(RAD_OPT_OSX)
+	const char *vidString = "1440x900";
+#else
+	const char *vidString = "1280x720";
+#endif
+
+	vidString = settings->keys->StringForKey("vidMode", vidString);
+	mode.fullscreen = settings->keys->BoolForKey("fullscreen", false);
+	
+	sscanf(vidString, "%dx%d", &mode.w, &mode.h);
+
+	// try to pick a video mode that is the same aspect ratio as their desktop resolution.
+	RAD_ASSERT(primaryDisplay.get());
+
+	DisplayDevice::MatchDisposition matchOptions = DisplayDevice::kMatchDisposition_Upsize;
+	if (primaryDisplay->curVidMode->Is16x9()) {
+		matchOptions |= DisplayDevice::kMatchDisposition_AllowAspect16x9;
+	} else {
+		matchOptions |= DisplayDevice::kMatchDisposition_AllowAspect16x10;
+	}
 
 	if (!primaryDisplay->MatchVidMode(
 		mode,
-		DisplayDevice::kMatchDisposition_AllowAspect16x9|
-		DisplayDevice::kMatchDisposition_AllowAspect16x10|
-		DisplayDevice::kMatchDisposition_Upsize
+		matchOptions
 	)) {
 		// can we find anything?gl
 		COut(C_Warn) << "WARNING: Unable to find a compatible resolution with " << mode.w << "x" << mode.h << ", trying again with fewer restrictions..." << std::endl;
