@@ -5,6 +5,7 @@
 
 #include "CrowApp.h"
 #include "CrowLauncher.h"
+#include <Runtime/Runtime.h>
 #include <QtGui/QApplication>
 #include <QtGui/QBoxLayout>
 #include <QtGui/QGridLayout>
@@ -15,25 +16,61 @@
 #include <QtGui/QGroupBox>
 #include <QtGui/QComboBox>
 #include <QtGui/QCheckBox>
+#include <QtGui/QMessageBox>
 #include <QtCore/QProcess>
+#include <QtCore/QTimer>
 #include <Runtime/Time.h>
 #include <Engine/Packages/Packages.h>
 #include <Engine/Sound/Sound.h>
 #include <cstdlib>
+#include <unistd.h>
+
+#if defined(RAD_OPT_DEBUG)
+#include <Runtime/File.h>
+#endif
+
+#if defined(RAD_OPT_OSX)
+void __OSX_BundlePath(char *dst);
+void __OSX_SpawnSandboxed(const char *application);
+#endif
 
 #undef qApp
 
-int CrowApp::DoLauncher() {
-	int argc = App::Get()->argc;
-	const char **argv = App::Get()->argv;
+int App::DoLauncher(int argc, const char **argv) {
+	rt::Initialize();
+	RAD_DEBUG_ONLY(file::EnforcePortablePaths(false));
+	
 	QApplication qApp(argc, (char**)argv);
+	
+	COut(C_Info) << "LauncherMain..." << std::endl;
+	COut(C_Info) << "echo command line: ";
+	
+	for (int i = 0; i < argc; ++i) {
+		COut(C_Info) << argv[i] << " ";
+	}
+	
+	COut(C_Info) << std::endl;
+	
+	App *app = App::Get(argc, (const char **)argv);
+	
+	if (!app->PreInit()) {
+		QMessageBox::critical(0, "Error", "Initialization failed! See log.txt for details.");
+		return 1;
+	}
+	
 	QCoreApplication::setOrganizationName(App::Get()->company.get());
 	QCoreApplication::setOrganizationDomain(App::Get()->website.get());
 	QCoreApplication::setApplicationName(App::Get()->title.get());
-
-	CrowLauncher launcher;
-	launcher.Run();
+	
+	CrowLauncher *launcher = new CrowLauncher();
+	launcher->Run();
 	qApp.exec();
+	
+	delete launcher;
+	
+	app->Finalize();
+	App::DestroyInstance();
+	rt::Finalize();
 	return 0;
 }
 
@@ -61,11 +98,11 @@ CrowLauncher::CrowLauncher() {
 	l->addWidget(banner);
 	l->addSpacing(32);
 
-	QPushButton *b = new QPushButton("Play");
-	l->addWidget(b);
-	RAD_VERIFY(connect(b, SIGNAL(clicked()), SLOT(Play())));
+	m_play = new QPushButton("Play");
+	l->addWidget(m_play);
+	RAD_VERIFY(connect(m_play, SIGNAL(clicked()), SLOT(Play())));
 
-	b = new QPushButton("Graphics Settings...");
+	QPushButton *b = new QPushButton("Graphics Settings...");
 	l->addWidget(b);
 	RAD_VERIFY(connect(b, SIGNAL(clicked()), SLOT(GraphicsSettings())));
 
@@ -86,6 +123,13 @@ CrowLauncher::CrowLauncher() {
 	setWindowTitle((CStr(App::Get()->title) + " Launcher").c_str.get());
 }
 
+CrowLauncher::~CrowLauncher() {
+	if (m_music)
+		m_music->Stop();
+	m_music.reset();
+	m_soundContext.reset();
+}
+
 bool CrowLauncher::Run() {
 	LoadSettings();
 	m_soundContext = SoundContext::New(App::Get()->engine->sys->alDriver);
@@ -98,7 +142,7 @@ bool CrowLauncher::Run() {
 void CrowLauncher::timerEvent(QTimerEvent*) {
 	float elapsed = 0.1f;
 	if (m_timer.IsTiming()) {
-		elapsed = m_timer.Elapsed();
+		elapsed = (float)m_timer.Elapsed();
 		m_timer.Stop();
 		m_timer.Start();
 	} else {
@@ -110,6 +154,7 @@ void CrowLauncher::timerEvent(QTimerEvent*) {
 }
 
 void CrowLauncher::Play() {
+#if defined(RAD_OPT_WIN)
 #if defined(RAD_OPT_SHIP)
 	const char *exe = "Crow.exe";
 #elif defined(RAD_OPT_MACHINE_SIZE_32)
@@ -127,6 +172,24 @@ void CrowLauncher::Play() {
 #endif
 	if (QProcess::startDetached(exe, QStringList() << "-nolauncher"))
 		close();
+#elif defined(RAD_OPT_OSX)
+#if defined(RAD_OPT_SHIP)
+	__OSX_SpawnSandboxed("com.sunsidegames.crowmac");
+#else
+	__OSX_BundlePath(bundle);
+	
+	String cmd;
+	cmd.Printf("open -n -a %s --args -nolauncher\"", bundle);
+	//cmd = CStr("/bin/sh -c \"sleep 1;open -a \\\"textedit\\\"\"");
+
+	COut(C_Debug) << "Spawning '" << cmd.c_str.get() << "'" << std::endl;
+	
+	QProcess::execute(cmd.c_str.get());
+	close();
+#endif
+#else
+#error RAD_ERROR_UNSUP_PLAT
+#endif
 }
 
 void CrowLauncher::GotoFacebook() {
@@ -163,7 +226,7 @@ void CrowLauncher::Center(const QRect &rect) {
 
 void CrowLauncher::PlayMusic() {
 	enum { kNumSongs = 5 };
-	static char *s_songs[kNumSongs] = {
+	static const char *s_songs[kNumSongs] = {
 		"Audio/EntertheFight",
 		"Audio/ch2_audio",
 		"Audio/demon_background",
@@ -311,7 +374,7 @@ CrowGraphicsSettings::CrowGraphicsSettings(
 	m_defaultFullscreen = m_settings->keys->BoolForKey("fullscreen");
 	m_savedFullscreen = m_settings->keys->BoolForKey("fullscreen");
 	m_fullscreen = new QCheckBox("Fullscreen");
-	m_fullscreen->setChecked(m_fullscreen);
+	m_fullscreen->setChecked(m_savedFullscreen);
 	RAD_VERIFY(connect(m_fullscreen, SIGNAL(stateChanged(int)), SLOT(UpdateEnabledState())));
 
 	l->addWidget(m_fullscreen);

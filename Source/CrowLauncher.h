@@ -23,6 +23,7 @@ class CrowLauncher : public QMainWindow {
 public:
 
 	CrowLauncher();
+	~CrowLauncher();
 
 	bool Run();
 
@@ -48,6 +49,7 @@ private:
 	SoundContextRef m_soundContext;
 	Persistence::Ref m_settings;
 	Persistence::Ref m_defaults;
+	QPushButton *m_play;
 };
 
 ///////////////////////////////////////////////////////////////////////////////

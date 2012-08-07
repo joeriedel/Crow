@@ -7,13 +7,13 @@
 	<key>CFBundleExecutable</key>
 	<string>CrowShipOSX</string>
 	<key>CFBundleIconFile</key>
-	<string>osxicon.icns</string>
+	<string>icon</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.sunsidegames.crowmac</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>Crow</string>
+	<string>CrowShipOSX</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>

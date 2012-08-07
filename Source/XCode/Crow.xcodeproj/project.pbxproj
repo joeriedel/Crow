@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		330A99DB15BCA5D6002A81EC /* osxicon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 331949A215BA0EDC00458F43 /* osxicon.icns */; };
+		3315F1BA15D090AB008B19BA /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 3315F1B915D090AB008B19BA /* Base */; };
 		33188EA315BCB64600C69D36 /* G_Exports.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5715B9E7F70030EAEC /* G_Exports.cpp */; };
 		33188EA415BCB64600C69D36 /* G_OmenEnergy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5915B9E7F70030EAEC /* G_OmenEnergy.cpp */; };
 		33188EA515BCB64600C69D36 /* G_ScreenPawn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5B15B9E7F70030EAEC /* G_ScreenPawn.cpp */; };
@@ -16,7 +16,6 @@
 		33188EA815BCB64600C69D36 /* G_Thwap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C6115B9E7F70030EAEC /* G_Thwap.cpp */; };
 		33188EA915BCB64600C69D36 /* G_ViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C6315B9E7F70030EAEC /* G_ViewController.cpp */; };
 		33188EAA15BCB64C00C69D36 /* G_SkModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C6615B9E7F70030EAEC /* G_SkModel.cpp */; };
-		33188EAB15BCB64C00C69D36 /* CrowApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5215B9E7F70030EAEC /* CrowApp.cpp */; };
 		33188EAC15BCB64C00C69D36 /* CrowGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5415B9E7F70030EAEC /* CrowGame.cpp */; };
 		33188EAD15BCB66B00C69D36 /* libboostOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382447615B793C5002B9F95 /* libboostOSX.a */; };
 		33188EAE15BCB66B00C69D36 /* libfreetypeOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382446D15B793C1002B9F95 /* libfreetypeOSX.a */; };
@@ -46,6 +45,8 @@
 		3319499115B9FF6D00458F43 /* libzlibOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E8812615B8AB5C0089BA08 /* libzlibOSX.a */; };
 		33194A4115BC5A7D00458F43 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 338243F015B791B3002B9F95 /* Cocoa.framework */; };
 		33194B2615BC89DD00458F43 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33194B2415BC89DD00458F43 /* MainMenu.xib */; };
+		3358B13115D09A1600C3536D /* launcher.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3358B12E15D098D900C3536D /* launcher.png */; };
+		3358B13315D0A5DA00C3536D /* autoexec.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3358B13215D0A5DA00C3536D /* autoexec.txt */; };
 		335ED5ED15BF244A008DDBD9 /* libRadianceShipOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 335ED5E415BF22BC008DDBD9 /* libRadianceShipOSX.a */; };
 		335ED5EE15BF244F008DDBD9 /* libMainShipOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 335ED5D615BF22BC008DDBD9 /* libMainShipOSX.a */; };
 		335ED61915BF2953008DDBD9 /* libMainGoldenOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 337AE78C15BF223A00AD1617 /* libMainGoldenOSX.a */; };
@@ -58,7 +59,6 @@
 		337AE79B15BF224300AD1617 /* G_Thwap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C6115B9E7F70030EAEC /* G_Thwap.cpp */; };
 		337AE79C15BF224300AD1617 /* G_ViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C6315B9E7F70030EAEC /* G_ViewController.cpp */; };
 		337AE79D15BF224300AD1617 /* G_SkModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C6615B9E7F70030EAEC /* G_SkModel.cpp */; };
-		337AE79E15BF224300AD1617 /* CrowApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5215B9E7F70030EAEC /* CrowApp.cpp */; };
 		337AE79F15BF224300AD1617 /* CrowGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5415B9E7F70030EAEC /* CrowGame.cpp */; };
 		337AE7A115BF224300AD1617 /* libopenal.1.14.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3319497C15B9F77600458F43 /* libopenal.1.14.0.dylib */; };
 		337AE7A215BF224300AD1617 /* libboostOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382447615B793C5002B9F95 /* libboostOSX.a */; };
@@ -72,7 +72,6 @@
 		337AE7AA15BF224300AD1617 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 338243F015B791B3002B9F95 /* Cocoa.framework */; };
 		337AE7AB15BF224300AD1617 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33188EB815BCB6F400C69D36 /* OpenGL.framework */; };
 		337AE7AD15BF224300AD1617 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33194B2415BC89DD00458F43 /* MainMenu.xib */; };
-		337AE7AE15BF224300AD1617 /* osxicon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 331949A215BA0EDC00458F43 /* osxicon.icns */; };
 		338243F115B791B3002B9F95 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 338243F015B791B3002B9F95 /* Cocoa.framework */; };
 		3382442715B79261002B9F95 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3382442515B79261002B9F95 /* InfoPlist.strings */; };
 		3382442915B79261002B9F95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3382442815B79261002B9F95 /* main.m */; };
@@ -86,8 +85,6 @@
 		3382449415B79439002B9F95 /* libfreetypeiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382446F15B793C1002B9F95 /* libfreetypeiOS.a */; };
 		3382449515B79445002B9F95 /* liblibjpegiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382446015B793B8002B9F95 /* liblibjpegiOS.a */; };
 		3382449615B79445002B9F95 /* libliboggiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382444E15B793A3002B9F95 /* libliboggiOS.a */; };
-		33836C6A15B9E7F70030EAEC /* CrowApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5215B9E7F70030EAEC /* CrowApp.cpp */; };
-		33836C6B15B9E7F70030EAEC /* CrowApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5215B9E7F70030EAEC /* CrowApp.cpp */; };
 		33836C6C15B9E7F70030EAEC /* CrowGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5415B9E7F70030EAEC /* CrowGame.cpp */; };
 		33836C6D15B9E7F70030EAEC /* CrowGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5415B9E7F70030EAEC /* CrowGame.cpp */; };
 		33836C6E15B9E7F70030EAEC /* G_Exports.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5715B9E7F70030EAEC /* G_Exports.cpp */; };
@@ -106,7 +103,19 @@
 		33836C7B15B9E7F80030EAEC /* G_ViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C6315B9E7F70030EAEC /* G_ViewController.cpp */; };
 		33836C7C15B9E7F80030EAEC /* G_SkModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C6615B9E7F70030EAEC /* G_SkModel.cpp */; };
 		33836C7D15B9E7F80030EAEC /* G_SkModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C6615B9E7F70030EAEC /* G_SkModel.cpp */; };
-		33D77F5A15CAFA760070FF43 /* macicon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 33D77F5915CAFA760070FF43 /* macicon.icns */; };
+		33B1A09215D05DFC00088E7C /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 33B1A09115D05DFC00088E7C /* icon.icns */; };
+		33B1A09715D05E7500088E7C /* CrowApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33B1A09315D05E7500088E7C /* CrowApp.cpp */; };
+		33B1A09815D05E7500088E7C /* CrowApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33B1A09315D05E7500088E7C /* CrowApp.cpp */; };
+		33B1A09915D05E7500088E7C /* CrowApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33B1A09315D05E7500088E7C /* CrowApp.cpp */; };
+		33B1A09A15D05E7500088E7C /* CrowLauncher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33B1A09515D05E7500088E7C /* CrowLauncher.cpp */; };
+		33B1A09B15D05E7500088E7C /* CrowLauncher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33B1A09515D05E7500088E7C /* CrowLauncher.cpp */; };
+		33B1A09C15D05E7500088E7C /* CrowLauncher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33B1A09515D05E7500088E7C /* CrowLauncher.cpp */; };
+		33B1A09E15D0640800088E7C /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 33B1A09115D05DFC00088E7C /* icon.icns */; };
+		33B1A09F15D0640D00088E7C /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 33B1A09115D05DFC00088E7C /* icon.icns */; };
+		33B1A0A915D06CE300088E7C /* QtCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3319498A15B9FF5C00458F43 /* QtCore.framework */; };
+		33B1A0AA15D06CE300088E7C /* QtGui.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3319498B15B9FF5C00458F43 /* QtGui.framework */; };
+		33B1A0AB15D06D0600088E7C /* QtCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3319498A15B9FF5C00458F43 /* QtCore.framework */; };
+		33B1A0AC15D06D0600088E7C /* QtGui.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3319498B15B9FF5C00458F43 /* QtGui.framework */; };
 		33D8909415BF299500DD4FBC /* libMainDeveloper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 335ED5DA15BF22BC008DDBD9 /* libMainDeveloper.a */; };
 		33D8909515BF299500DD4FBC /* libRadianceDeveloper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 335ED5E015BF22BC008DDBD9 /* libRadianceDeveloper.a */; };
 /* End PBXBuildFile section */
@@ -289,7 +298,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3358B13015D09A0900C3536D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Base;
+			dstSubfolderSpec = 7;
+			files = (
+				3358B13115D09A1600C3536D /* launcher.png in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		3315F19E15D08DCD008B19BA /* CrowShipOSX.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CrowShipOSX.entitlements; sourceTree = "<group>"; };
+		3315F1B915D090AB008B19BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Base; path = ../../Cooked/Packages/Base; sourceTree = "<group>"; };
 		33188EB815BCB6F400C69D36 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/OpenGL.framework; sourceTree = DEVELOPER_DIR; };
 		3319497C15B9F77600458F43 /* libopenal.1.14.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopenal.1.14.0.dylib; path = "../../Extern/OpenALSoft-1.14/libs/libopenal.1.14.0.dylib"; sourceTree = "<group>"; };
 		3319497E15B9F78A00458F43 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -298,12 +322,13 @@
 		3319498A15B9FF5C00458F43 /* QtCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtCore.framework; path = "../../Extern/Qt-4.8.2/QtCore.framework"; sourceTree = "<group>"; };
 		3319498B15B9FF5C00458F43 /* QtGui.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtGui.framework; path = "../../Extern/Qt-4.8.2/QtGui.framework"; sourceTree = "<group>"; };
 		3319498C15B9FF5C00458F43 /* QtOpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtOpenGL.framework; path = "../../Extern/Qt-4.8.2/QtOpenGL.framework"; sourceTree = "<group>"; };
-		331949A215BA0EDC00458F43 /* osxicon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = osxicon.icns; sourceTree = "<group>"; };
 		331949D015BA34A700458F43 /* Main.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Main.xcodeproj; path = ../../Radiance/Source/XCode/Main.xcodeproj; sourceTree = "<group>"; };
 		33194B2315BC896F00458F43 /* Crow-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Crow-Info.plist"; path = "Developer/Crow-Info.plist"; sourceTree = "<group>"; };
 		33194B2515BC89DD00458F43 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = OSX/en.lproj/MainMenu.xib; sourceTree = SOURCE_ROOT; };
 		334B549015B89AEC00EEFC92 /* libvorbis.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libvorbis.xcodeproj; path = ../../Radiance/Source/XCode/libvorbis.xcodeproj; sourceTree = "<group>"; };
 		334B55A615B8A79500EEFC92 /* lua.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = lua.xcodeproj; path = ../../Radiance/Source/XCode/lua.xcodeproj; sourceTree = "<group>"; };
+		3358B12E15D098D900C3536D /* launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launcher.png; path = ../../Base/launcher.png; sourceTree = "<group>"; };
+		3358B13215D0A5DA00C3536D /* autoexec.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = autoexec.txt; path = ../../autoexec.txt; sourceTree = "<group>"; };
 		335ED5BC15BF22BC008DDBD9 /* CrowDeveloper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrowDeveloper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		335ED5BE15BF22BC008DDBD9 /* CrowiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrowiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		335ED5C015BF22BC008DDBD9 /* CrowShipOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrowShipOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -336,8 +361,6 @@
 		3382446715B793C1002B9F95 /* freetype.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = freetype.xcodeproj; path = ../../Radiance/Source/XCode/freetype.xcodeproj; sourceTree = "<group>"; };
 		3382447015B793C4002B9F95 /* boost.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = boost.xcodeproj; path = ../../Radiance/Source/XCode/boost.xcodeproj; sourceTree = "<group>"; };
 		338244E815B795A0002B9F95 /* libpng.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libpng.xcodeproj; path = ../../Radiance/Source/XCode/libpng.xcodeproj; sourceTree = "<group>"; };
-		33836C5215B9E7F70030EAEC /* CrowApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CrowApp.cpp; sourceTree = "<group>"; };
-		33836C5315B9E7F70030EAEC /* CrowApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowApp.h; sourceTree = "<group>"; };
 		33836C5415B9E7F70030EAEC /* CrowGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CrowGame.cpp; sourceTree = "<group>"; };
 		33836C5515B9E7F70030EAEC /* CrowGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowGame.h; sourceTree = "<group>"; };
 		33836C5715B9E7F70030EAEC /* G_Exports.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = G_Exports.cpp; sourceTree = "<group>"; };
@@ -363,7 +386,12 @@
 		338CDF1E15BC939A0058DFF5 /* AppShipDebugOSX.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = AppShipDebugOSX.xcconfig; path = ../../Radiance/Source/XCode/XCConfig/AppShipDebugOSX.xcconfig; sourceTree = "<group>"; };
 		338CDF2015BC939A0058DFF5 /* AppShipReleaseiOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = AppShipReleaseiOS.xcconfig; path = ../../Radiance/Source/XCode/XCConfig/AppShipReleaseiOS.xcconfig; sourceTree = "<group>"; };
 		338CDF2115BC939A0058DFF5 /* AppShipReleaseOSX.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = AppShipReleaseOSX.xcconfig; path = ../../Radiance/Source/XCode/XCConfig/AppShipReleaseOSX.xcconfig; sourceTree = "<group>"; };
-		33D77F5915CAFA760070FF43 /* macicon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = macicon.icns; sourceTree = "<group>"; };
+		33B1A09115D05DFC00088E7C /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
+		33B1A09315D05E7500088E7C /* CrowApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CrowApp.cpp; path = ../CrowApp.cpp; sourceTree = "<group>"; };
+		33B1A09415D05E7500088E7C /* CrowApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrowApp.h; path = ../CrowApp.h; sourceTree = "<group>"; };
+		33B1A09515D05E7500088E7C /* CrowLauncher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CrowLauncher.cpp; path = ../CrowLauncher.cpp; sourceTree = "<group>"; };
+		33B1A09615D05E7500088E7C /* CrowLauncher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrowLauncher.h; path = ../CrowLauncher.h; sourceTree = "<group>"; };
+		33B1A0A315D06AD500088E7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Base; path = ../../Cooked/Packages/Base; sourceTree = "<group>"; };
 		33E8811B15B8AB5B0089BA08 /* zlib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = zlib.xcodeproj; path = ../../Radiance/Source/XCode/zlib.xcodeproj; sourceTree = "<group>"; };
 		33E8816015B8AD650089BA08 /* Radiance.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Radiance.xcodeproj; path = ../../Radiance/Source/XCode/Radiance.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -384,6 +412,8 @@
 				33188EB615BCB66B00C69D36 /* libzlibOSX.a in Frameworks */,
 				335ED5EE15BF244F008DDBD9 /* libMainShipOSX.a in Frameworks */,
 				335ED5ED15BF244A008DDBD9 /* libRadianceShipOSX.a in Frameworks */,
+				33B1A0AB15D06D0600088E7C /* QtCore.framework in Frameworks */,
+				33B1A0AC15D06D0600088E7C /* QtGui.framework in Frameworks */,
 				33194A4115BC5A7D00458F43 /* Cocoa.framework in Frameworks */,
 				33188EB915BCB6F400C69D36 /* OpenGL.framework in Frameworks */,
 			);
@@ -404,6 +434,8 @@
 				337AE7A915BF224300AD1617 /* libzlibOSX.a in Frameworks */,
 				335ED61915BF2953008DDBD9 /* libMainGoldenOSX.a in Frameworks */,
 				335ED61A15BF2953008DDBD9 /* libRadianceGoldenOSX.a in Frameworks */,
+				33B1A0A915D06CE300088E7C /* QtCore.framework in Frameworks */,
+				33B1A0AA15D06CE300088E7C /* QtGui.framework in Frameworks */,
 				337AE7AA15BF224300AD1617 /* Cocoa.framework in Frameworks */,
 				337AE7AB15BF224300AD1617 /* OpenGL.framework in Frameworks */,
 			);
@@ -500,7 +532,6 @@
 		338243E115B791B3002B9F95 = {
 			isa = PBXGroup;
 			children = (
-				33D77F5915CAFA760070FF43 /* macicon.icns */,
 				331949D015BA34A700458F43 /* Main.xcodeproj */,
 				33E8816015B8AD650089BA08 /* Radiance.xcodeproj */,
 				3382447015B793C4002B9F95 /* boost.xcodeproj */,
@@ -512,7 +543,6 @@
 				334B549015B89AEC00EEFC92 /* libvorbis.xcodeproj */,
 				334B55A615B8A79500EEFC92 /* lua.xcodeproj */,
 				33E8811B15B8AB5B0089BA08 /* zlib.xcodeproj */,
-				331949A215BA0EDC00458F43 /* osxicon.icns */,
 				33836C5015B9E7DC0030EAEC /* Source */,
 				33836C8815B9EDF00030EAEC /* XCConfig */,
 				338243F615B791B3002B9F95 /* OSX */,
@@ -520,6 +550,7 @@
 				33194AEE15BC5BDA00458F43 /* Developer */,
 				338243EF15B791B3002B9F95 /* Frameworks */,
 				335ED61415BF25AE008DDBD9 /* Products */,
+				33B1A0A615D06B0600088E7C /* Resources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -645,6 +676,10 @@
 		33836C5015B9E7DC0030EAEC /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				33B1A09315D05E7500088E7C /* CrowApp.cpp */,
+				33B1A09415D05E7500088E7C /* CrowApp.h */,
+				33B1A09515D05E7500088E7C /* CrowLauncher.cpp */,
+				33B1A09615D05E7500088E7C /* CrowLauncher.h */,
 				33836C5115B9E7F70030EAEC /* Game */,
 			);
 			name = Source;
@@ -655,8 +690,6 @@
 			children = (
 				33836C5615B9E7F70030EAEC /* Entities */,
 				33836C6515B9E7F70030EAEC /* Lua */,
-				33836C5215B9E7F70030EAEC /* CrowApp.cpp */,
-				33836C5315B9E7F70030EAEC /* CrowApp.h */,
 				33836C5415B9E7F70030EAEC /* CrowGame.cpp */,
 				33836C5515B9E7F70030EAEC /* CrowGame.h */,
 			);
@@ -712,6 +745,19 @@
 			name = XCConfig;
 			sourceTree = "<group>";
 		};
+		33B1A0A615D06B0600088E7C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3358B13215D0A5DA00C3536D /* autoexec.txt */,
+				3358B12E15D098D900C3536D /* launcher.png */,
+				3315F1B915D090AB008B19BA /* Base */,
+				3315F19E15D08DCD008B19BA /* CrowShipOSX.entitlements */,
+				33B1A0A315D06AD500088E7C /* Base */,
+				33B1A09115D05DFC00088E7C /* icon.icns */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		33E8811C15B8AB5B0089BA08 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -739,10 +785,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 33194A5415BC5A7E00458F43 /* Build configuration list for PBXNativeTarget "CrowShipOSX" */;
 			buildPhases = (
+				33B1A0A815D06B6C00088E7C /* Qt Moc */,
 				33194A3B15BC5A7D00458F43 /* Sources */,
 				33194A3C15BC5A7D00458F43 /* Frameworks */,
 				33194A3D15BC5A7D00458F43 /* Resources */,
 				330A99CE15BCA222002A81EC /* Install Dependancies */,
+				3358B13015D09A0900C3536D /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -757,6 +805,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 337AE7B015BF224300AD1617 /* Build configuration list for PBXNativeTarget "CrowGoldenOSX" */;
 			buildPhases = (
+				33B1A0A715D06B4600088E7C /* Qt Moc */,
 				337AE79515BF224300AD1617 /* Sources */,
 				337AE7A015BF224300AD1617 /* Frameworks */,
 				337AE7AC15BF224300AD1617 /* Resources */,
@@ -775,6 +824,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3382440A15B791B3002B9F95 /* Build configuration list for PBXNativeTarget "CrowDeveloper" */;
 			buildPhases = (
+				33B1A0A015D0641700088E7C /* Qt Moc */,
 				338243E815B791B3002B9F95 /* Sources */,
 				338243E915B791B3002B9F95 /* Frameworks */,
 				338243EA15B791B3002B9F95 /* Resources */,
@@ -1063,8 +1113,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3358B13315D0A5DA00C3536D /* autoexec.txt in Resources */,
+				3315F1BA15D090AB008B19BA /* Base in Resources */,
 				33194B2615BC89DD00458F43 /* MainMenu.xib in Resources */,
-				330A99DB15BCA5D6002A81EC /* osxicon.icns in Resources */,
+				33B1A09E15D0640800088E7C /* icon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1073,7 +1125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				337AE7AD15BF224300AD1617 /* MainMenu.xib in Resources */,
-				337AE7AE15BF224300AD1617 /* osxicon.icns in Resources */,
+				33B1A09F15D0640D00088E7C /* icon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1081,7 +1133,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33D77F5A15CAFA760070FF43 /* macicon.icns in Resources */,
+				33B1A09215D05DFC00088E7C /* icon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1112,7 +1164,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "mkdir -p \"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks\"\ncp \"${EXTERN_PATH}/OpenALSoft-1.14/libs/libopenal.1.14.0.dylib\" \"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks\"";
+			shellScript = "mkdir -p \"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks\"\nmkdir -p \"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks/QtCore.framework\"\nmkdir -p \"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks/QtGui.framework\"\ncp \"${EXTERN_PATH}/Qt-4.8.2/QtCore.framework/Versions/4/QtCore\" \"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks/QtCore.framework\"\ncp \"${EXTERN_PATH}/Qt-4.8.2/QtGui.framework/Versions/4/QtGui\" \"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks/QtGui.framework\"\ncp -R \"${EXTERN_PATH}/Qt-4.8.2/QtGui.framework/Versions/4/Resources/\" \"${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\"\ncp \"${EXTERN_PATH}/OpenALSoft-1.14/libs/libopenal.1.14.0.dylib\" \"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks\"";
 		};
 		331949A415BA112100458F43 /* Install Dependancies */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1140,7 +1192,52 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "mkdir -p \"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks\"\ncp \"${EXTERN_PATH}/OpenALSoft-1.14/libs/libopenal.1.14.0.dylib\" \"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks\"";
+			shellScript = "mkdir -p \"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks\"\nmkdir -p \"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks/QtCore.framework\"\nmkdir -p \"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks/QtGui.framework\"\ncp \"${EXTERN_PATH}/Qt-4.8.2/QtCore.framework/Versions/4/QtCore\" \"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks/QtCore.framework\"\ncp \"${EXTERN_PATH}/Qt-4.8.2/QtGui.framework/Versions/4/QtGui\" \"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks/QtGui.framework\"\ncp -R \"${EXTERN_PATH}/Qt-4.8.2/QtGui.framework/Versions/4/Resources/\" \"${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\"\ncp \"${EXTERN_PATH}/OpenALSoft-1.14/libs/libopenal.1.14.0.dylib\" \"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks\"";
+		};
+		33B1A0A015D0641700088E7C /* Qt Moc */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)../CrowLauncher.h",
+			);
+			name = "Qt Moc";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${SRCROOT}/mocfiles.sh\n";
+		};
+		33B1A0A715D06B4600088E7C /* Qt Moc */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)../CrowLauncher.h",
+			);
+			name = "Qt Moc";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${SRCROOT}/mocfiles.sh\n";
+		};
+		33B1A0A815D06B6C00088E7C /* Qt Moc */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)../CrowLauncher.h",
+			);
+			name = "Qt Moc";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${SRCROOT}/mocfiles.sh";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1157,8 +1254,9 @@
 				33188EA815BCB64600C69D36 /* G_Thwap.cpp in Sources */,
 				33188EA915BCB64600C69D36 /* G_ViewController.cpp in Sources */,
 				33188EAA15BCB64C00C69D36 /* G_SkModel.cpp in Sources */,
-				33188EAB15BCB64C00C69D36 /* CrowApp.cpp in Sources */,
 				33188EAC15BCB64C00C69D36 /* CrowGame.cpp in Sources */,
+				33B1A09815D05E7500088E7C /* CrowApp.cpp in Sources */,
+				33B1A09B15D05E7500088E7C /* CrowLauncher.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1174,8 +1272,9 @@
 				337AE79B15BF224300AD1617 /* G_Thwap.cpp in Sources */,
 				337AE79C15BF224300AD1617 /* G_ViewController.cpp in Sources */,
 				337AE79D15BF224300AD1617 /* G_SkModel.cpp in Sources */,
-				337AE79E15BF224300AD1617 /* CrowApp.cpp in Sources */,
 				337AE79F15BF224300AD1617 /* CrowGame.cpp in Sources */,
+				33B1A09915D05E7500088E7C /* CrowApp.cpp in Sources */,
+				33B1A09C15D05E7500088E7C /* CrowLauncher.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1183,7 +1282,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33836C6A15B9E7F70030EAEC /* CrowApp.cpp in Sources */,
 				33836C6C15B9E7F70030EAEC /* CrowGame.cpp in Sources */,
 				33836C6E15B9E7F70030EAEC /* G_Exports.cpp in Sources */,
 				33836C7015B9E7F80030EAEC /* G_OmenEnergy.cpp in Sources */,
@@ -1193,6 +1291,8 @@
 				33836C7815B9E7F80030EAEC /* G_Thwap.cpp in Sources */,
 				33836C7A15B9E7F80030EAEC /* G_ViewController.cpp in Sources */,
 				33836C7C15B9E7F80030EAEC /* G_SkModel.cpp in Sources */,
+				33B1A09715D05E7500088E7C /* CrowApp.cpp in Sources */,
+				33B1A09A15D05E7500088E7C /* CrowLauncher.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1203,7 +1303,6 @@
 				3382442915B79261002B9F95 /* main.m in Sources */,
 				3382442D15B79261002B9F95 /* AppDelegate.m in Sources */,
 				3382443415B79261002B9F95 /* ViewController.m in Sources */,
-				33836C6B15B9E7F70030EAEC /* CrowApp.cpp in Sources */,
 				33836C6D15B9E7F70030EAEC /* CrowGame.cpp in Sources */,
 				33836C6F15B9E7F70030EAEC /* G_Exports.cpp in Sources */,
 				33836C7115B9E7F80030EAEC /* G_OmenEnergy.cpp in Sources */,
@@ -1258,6 +1357,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 338CDF1E15BC939A0058DFF5 /* AppShipDebugOSX.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = CrowShipOSX.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Extern/Qt-4.8.2\"",
+				);
 				INFOPLIST_FILE = "OSX/CrowShip-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1272,6 +1377,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 338CDF2115BC939A0058DFF5 /* AppShipReleaseOSX.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = CrowShipOSX.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Extern/Qt-4.8.2\"",
+				);
 				INFOPLIST_FILE = "OSX/CrowShip-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1286,6 +1397,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 335ED61615BF25F1008DDBD9 /* AppGoldenDebugOSX.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Extern/Qt-4.8.2\"",
+				);
 				INFOPLIST_FILE = "OSX/CrowGolden-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1300,6 +1415,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 335ED61815BF25F1008DDBD9 /* AppGoldenReleaseOSX.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Extern/Qt-4.8.2\"",
+				);
 				INFOPLIST_FILE = "OSX/CrowGolden-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
