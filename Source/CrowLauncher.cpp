@@ -31,19 +31,16 @@
 
 #if defined(RAD_OPT_OSX)
 void __OSX_BundlePath(char *dst);
-void __OSX_SpawnSandboxed(const char *application);
 #endif
 
 #undef qApp
 
-int App::DoLauncher(int argc, const char **argv) {
-	rt::Initialize();
-	RAD_DEBUG_ONLY(file::EnforcePortablePaths(false));
+int CrowApp::DoLauncher() {
+
+	int _argc = argc;
+	QApplication *qApp = new QApplication(_argc, (char**)argv.get());
 	
-	QApplication qApp(argc, (char**)argv);
-	
-	COut(C_Info) << "LauncherMain..." << std::endl;
-	COut(C_Info) << "echo command line: ";
+	COut(C_Info) << "Enter Launcher..." << std::endl;
 	
 	for (int i = 0; i < argc; ++i) {
 		COut(C_Info) << argv[i] << " ";
@@ -51,30 +48,28 @@ int App::DoLauncher(int argc, const char **argv) {
 	
 	COut(C_Info) << std::endl;
 	
-	App *app = App::Get(argc, (const char **)argv);
+	App *app = App::Get();
 	
-	if (!app->PreInit()) {
-		QMessageBox::critical(0, "Error", "Initialization failed! See log.txt for details.");
-		return 1;
-	}
-	
-	QCoreApplication::setOrganizationName(App::Get()->company.get());
-	QCoreApplication::setOrganizationDomain(App::Get()->website.get());
-	QCoreApplication::setApplicationName(App::Get()->title.get());
+	QCoreApplication::setOrganizationName(app->company.get());
+	QCoreApplication::setOrganizationDomain(app->website.get());
+	QCoreApplication::setApplicationName(app->title.get());
 	
 	CrowLauncher *launcher = new CrowLauncher();
 	launcher->Run();
-	qApp.exec();
+	qApp->exec();
+	
+	int r = launcher->playClicked ? 1 : 0;
 	
 	delete launcher;
 	
-	app->Finalize();
-	App::DestroyInstance();
-	rt::Finalize();
-	return 0;
+#if !defined(RAD_OPT_OSX)
+	delete qApp; // leave the NSApp intact, we will use it in the OSX event loop.
+#endif
+	
+	return r;
 }
 
-CrowLauncher::CrowLauncher() {
+CrowLauncher::CrowLauncher() : m_playClicked(false) {
 	setWindowFlags(
 		Qt::Window|
 		Qt::CustomizeWindowHint|
@@ -154,42 +149,8 @@ void CrowLauncher::timerEvent(QTimerEvent*) {
 }
 
 void CrowLauncher::Play() {
-#if defined(RAD_OPT_WIN)
-#if defined(RAD_OPT_SHIP)
-	const char *exe = "Crow.exe";
-#elif defined(RAD_OPT_MACHINE_SIZE_32)
-#if defined(RAD_OPT_DEBUG)
-	const char *exe = "Bin/Golden - Debug - Win32/Crow.exe";
-#else
-	const char *exe = "Bin/Golden - Release - Win32/Crow.exe";
-#endif
-#else
-#if defined(RAD_OPT_DEBUG)
-	const char *exe = "Bin/Golden - Debug - x64/Crow.exe";
-#else
-	const char *exe = "Bin/Golden - Release - x64/Crow.exe";
-#endif
-#endif
-	if (QProcess::startDetached(exe, QStringList() << "-nolauncher"))
-		close();
-#elif defined(RAD_OPT_OSX)
-#if defined(RAD_OPT_SHIP)
-	__OSX_SpawnSandboxed("com.sunsidegames.crowmac");
-#else
-	__OSX_BundlePath(bundle);
-	
-	String cmd;
-	cmd.Printf("open -n -a %s --args -nolauncher\"", bundle);
-	//cmd = CStr("/bin/sh -c \"sleep 1;open -a \\\"textedit\\\"\"");
-
-	COut(C_Debug) << "Spawning '" << cmd.c_str.get() << "'" << std::endl;
-	
-	QProcess::execute(cmd.c_str.get());
+	m_playClicked = true;
 	close();
-#endif
-#else
-#error RAD_ERROR_UNSUP_PLAT
-#endif
 }
 
 void CrowLauncher::GotoFacebook() {

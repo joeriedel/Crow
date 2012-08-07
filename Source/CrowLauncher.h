@@ -26,6 +26,8 @@ public:
 	~CrowLauncher();
 
 	bool Run();
+	
+	RAD_DECLARE_READONLY_PROPERTY(CrowLauncher, playClicked, bool);
 
 protected:
 
@@ -38,6 +40,10 @@ private slots:
 	void GraphicsSettings();
 
 private:
+	
+	RAD_DECLARE_GET(playClicked, bool) {
+		return m_playClicked;
+	}
 
 	void LoadSettings();
 	void Center(const QRect &rect);
@@ -50,6 +56,7 @@ private:
 	Persistence::Ref m_settings;
 	Persistence::Ref m_defaults;
 	QPushButton *m_play;
+	bool m_playClicked;
 };
 
 ///////////////////////////////////////////////////////////////////////////////

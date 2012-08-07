@@ -17,6 +17,7 @@ public:
 	virtual ~CrowApp();
 
 	virtual bool PreInit();
+	virtual int DoLauncher();
 	virtual bool InitWindow();
 	virtual bool Initialize();
 	virtual void Finalize();
