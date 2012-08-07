@@ -331,7 +331,7 @@
 		3358B13215D0A5DA00C3536D /* autoexec.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = autoexec.txt; path = ../../autoexec.txt; sourceTree = "<group>"; };
 		335ED5BC15BF22BC008DDBD9 /* CrowDeveloper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrowDeveloper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		335ED5BE15BF22BC008DDBD9 /* CrowiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrowiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		335ED5C015BF22BC008DDBD9 /* CrowShipOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrowShipOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		335ED5C015BF22BC008DDBD9 /* Crow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		335ED61215BF25A6008DDBD9 /* CrowGolden-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CrowGolden-Info.plist"; path = "OSX/CrowGolden-Info.plist"; sourceTree = SOURCE_ROOT; };
 		335ED61315BF25A6008DDBD9 /* CrowShip-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CrowShip-Info.plist"; path = "OSX/CrowShip-Info.plist"; sourceTree = SOURCE_ROOT; };
 		335ED61515BF25F1008DDBD9 /* AppGoldenDebugiOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = AppGoldenDebugiOS.xcconfig; path = ../../Radiance/Source/XCode/XCConfig/AppGoldenDebugiOS.xcconfig; sourceTree = "<group>"; };
@@ -524,7 +524,7 @@
 				337AE7B315BF224300AD1617 /* CrowGoldenOSX.app */,
 				335ED5BC15BF22BC008DDBD9 /* CrowDeveloper.app */,
 				335ED5BE15BF22BC008DDBD9 /* CrowiOS.app */,
-				335ED5C015BF22BC008DDBD9 /* CrowShipOSX.app */,
+				335ED5C015BF22BC008DDBD9 /* Crow.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -798,7 +798,7 @@
 			);
 			name = CrowShipOSX;
 			productName = CrowOSX;
-			productReference = 335ED5C015BF22BC008DDBD9 /* CrowShipOSX.app */;
+			productReference = 335ED5C015BF22BC008DDBD9 /* Crow.app */;
 			productType = "com.apple.product-type.application";
 		};
 		337AE79415BF224300AD1617 /* CrowGoldenOSX */ = {
@@ -1368,7 +1368,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../../Extern/OpenALSoft-1.14/libs\"",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Crow;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1388,7 +1388,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../../Extern/OpenALSoft-1.14/libs\"",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Crow;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
