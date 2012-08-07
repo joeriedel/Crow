@@ -23,7 +23,10 @@
 #include <Engine/Packages/Packages.h>
 #include <Engine/Sound/Sound.h>
 #include <cstdlib>
+
+#if defined(RAD_OPT_OSX)
 #include <unistd.h>
+#endif
 
 #if defined(RAD_OPT_DEBUG)
 #include <Runtime/File.h>
