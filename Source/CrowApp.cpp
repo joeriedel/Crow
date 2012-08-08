@@ -95,7 +95,7 @@ bool CrowApp::InitWindow() {
 		mode,
 		matchOptions
 	)) {
-		// can we find anything?gl
+		// can we find anything?
 		COut(C_Warn) << "WARNING: Unable to find a compatible resolution with " << mode.w << "x" << mode.h << ", trying again with fewer restrictions..." << std::endl;
 		if (!primaryDisplay->MatchVidMode(
 			mode,
