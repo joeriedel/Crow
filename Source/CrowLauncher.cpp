@@ -38,11 +38,52 @@ void __OSX_BundlePath(char *dst);
 
 #undef qApp
 
+namespace {
+
+bool LoadPixmap(const char *filename, QPixmap &pixmap) {
+	int media = file::HDD;
+	file::HBufferedAsyncIO buf;
+
+	int enabledMedia = App::Get()->engine->sys->files->enabledMedia;
+	App::Get()->engine->sys->files->enabledMedia = file::Paks | file::HDD;
+
+	int r = App::Get()->engine->sys->files->LoadFile(
+		filename,
+		media,
+		buf,
+		file::HIONotify()
+	);
+
+	App::Get()->engine->sys->files->enabledMedia = enabledMedia;
+
+	if (r == file::Pending) {
+		buf->WaitForCompletion();
+		r = buf->result;
+	}
+
+	if (r != file::Success) 
+		return false;
+
+	return pixmap.loadFromData(
+		(const uchar*)buf->data->ptr.get(),
+		(uint)buf->data->size.get()
+	);
+}
+
+}
+
 int CrowApp::DoLauncher() {
 
 	int _argc = argc;
 	QApplication *qApp = new QApplication(_argc, (char**)argv.get());
-	
+#if defined(RAD_OPT_WIN)
+	{
+		QPixmap icon;
+		if (LoadPixmap("icon.tga", icon))
+			qApp->setWindowIcon(QIcon(icon));
+	}
+#endif
+
 	COut(C_Info) << "Enter Launcher..." << std::endl;
 	
 	for (int i = 0; i < argc; ++i) {
@@ -221,36 +262,6 @@ void CrowLauncher::PlayMusic() {
 	m_music = m_soundContext->NewSound(asset);
 	if (m_music)
 		m_music->Play(SC_Music, 0);
-}
-
-bool CrowLauncher::LoadPixmap(const char *filename, QPixmap &pixmap) {
-	int media = file::HDD;
-	file::HBufferedAsyncIO buf;
-
-	int enabledMedia = App::Get()->engine->sys->files->enabledMedia;
-	App::Get()->engine->sys->files->enabledMedia = file::Paks | file::HDD;
-
-	int r = App::Get()->engine->sys->files->LoadFile(
-		filename,
-		media,
-		buf,
-		file::HIONotify()
-	);
-
-	App::Get()->engine->sys->files->enabledMedia = enabledMedia;
-
-	if (r == file::Pending) {
-		buf->WaitForCompletion();
-		r = buf->result;
-	}
-
-	if (r != file::Success) 
-		return false;
-
-	return pixmap.loadFromData(
-		(const uchar*)buf->data->ptr.get(),
-		(uint)buf->data->size.get()
-	);
 }
 
 ///////////////////////////////////////////////////////////////////////////////

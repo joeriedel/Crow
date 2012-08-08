@@ -48,7 +48,6 @@ private:
 	void LoadSettings();
 	void Center(const QRect &rect);
 	void PlayMusic();
-	bool LoadPixmap(const char *filename, QPixmap &pixmap);
 
 	xtime::SecondsTimer<> m_timer;
 	SoundRef m_music;
