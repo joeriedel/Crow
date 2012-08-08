@@ -159,8 +159,10 @@ bool CrowApp::RunAutoExec() {
 	char nativePath[file::MaxFilePathLen+1];
 	file::ExpandToNativePath("9:/autoexec.txt", nativePath, file::MaxFilePathLen+1);
 	FILE *fp = fopen(nativePath, "rb");
-	if (!fp)
+	if (!fp) {
+		COut(C_Error) << "ERROR: autoexec.txt is missing." << std::endl;
 		return false;
+	}
 	fseek(fp, 0, SEEK_END);
 	size_t size = ftell(fp);
 	fseek(fp, 0, SEEK_SET);
