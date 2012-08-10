@@ -148,6 +148,10 @@ CrowLauncher::CrowLauncher() : m_playClicked(false) {
 	b = new QPushButton("Visit Us On Facebook...");
 	l->addWidget(b);
 	RAD_VERIFY(connect(b, SIGNAL(clicked()), SLOT(GotoFacebook())));
+	
+	b = new QPushButton("Buy Soundtrack...");
+	l->addWidget(b);
+	RAD_VERIFY(connect(b, SIGNAL(clicked()), SLOT(BuySoundtrack())));
 
 	b = new QPushButton("Quit");
 	l->addWidget(b);
@@ -199,6 +203,10 @@ void CrowLauncher::Play() {
 
 void CrowLauncher::GotoFacebook() {
 	App::Get()->LaunchURL("http://www.facebook.com/sunsidegames");
+}
+
+void CrowLauncher::BuySoundtrack() {
+	App::Get()->LaunchURL("http://itunes.apple.com/us/album/crow-original-soundtrack/id520981840");
 }
 
 void CrowLauncher::GraphicsSettings() {
@@ -322,18 +330,35 @@ CrowGraphicsSettings::CrowGraphicsSettings(
 	for (r::VidModeVec::const_iterator it = dd->vidModes->begin(); it != dd->vidModes->end(); ++it) {
 		const r::VidMode &m = *it;
 
+		if (!m.SameAspect(*defMode))
+			continue;
+		
+		if (defaultMode.SameSize(m))
+			m_defaultResolution = m_resolutions->count();
+		if (selectMode.SameSize(m))
+			m_savedResolution = m_resolutions->count();
+			
 		QString s;
 		s.sprintf("%dx%d", m.w, m.h);
-
-		if (!m.SameAspect(*defMode))
-			s += " [Stretched]";
-
+		
 		m_resolutions->addItem(s, MakeRes(m.w, m.h));
+	}
+	  
+	for (r::VidModeVec::const_iterator it = dd->vidModes->begin(); it != dd->vidModes->end(); ++it) {
+		const r::VidMode &m = *it;
+
+		if (m.SameAspect(*defMode))
+			continue;
 
 		if (defaultMode.SameSize(m))
-			m_defaultResolution = (int)(it-dd->vidModes->begin());
+			m_defaultResolution = m_resolutions->count();
 		if (selectMode.SameSize(m))
-			m_savedResolution = (int)(it-dd->vidModes->begin());
+			m_savedResolution = m_resolutions->count();
+			
+		QString s;
+		s.sprintf("%dx%d [Stretched]", m.w, m.h);
+		
+		m_resolutions->addItem(s, MakeRes(m.w, m.h));
 	}
 
 	if (m_savedResolution != -1)

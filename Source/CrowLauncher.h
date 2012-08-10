@@ -37,6 +37,7 @@ private slots:
 
 	void Play();
 	void GotoFacebook();
+	void BuySoundtrack();
 	void GraphicsSettings();
 
 private:

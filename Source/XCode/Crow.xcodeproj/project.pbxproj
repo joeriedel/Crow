@@ -51,6 +51,8 @@
 		335ED5EE15BF244F008DDBD9 /* libMainShipOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 335ED5D615BF22BC008DDBD9 /* libMainShipOSX.a */; };
 		335ED61915BF2953008DDBD9 /* libMainGoldenOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 337AE78C15BF223A00AD1617 /* libMainGoldenOSX.a */; };
 		335ED61A15BF2953008DDBD9 /* libRadianceGoldenOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 337AE79315BF223A00AD1617 /* libRadianceGoldenOSX.a */; };
+		336836D215D42CCD00EE9472 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 336836D115D42CCD00EE9472 /* GameKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		336836D315D42DC500EE9472 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 336836D115D42CCD00EE9472 /* GameKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		337AE79615BF224300AD1617 /* G_Exports.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5715B9E7F70030EAEC /* G_Exports.cpp */; };
 		337AE79715BF224300AD1617 /* G_OmenEnergy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5915B9E7F70030EAEC /* G_OmenEnergy.cpp */; };
 		337AE79815BF224300AD1617 /* G_ScreenPawn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5B15B9E7F70030EAEC /* G_ScreenPawn.cpp */; };
@@ -338,6 +340,7 @@
 		335ED61615BF25F1008DDBD9 /* AppGoldenDebugOSX.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = AppGoldenDebugOSX.xcconfig; path = ../../Radiance/Source/XCode/XCConfig/AppGoldenDebugOSX.xcconfig; sourceTree = "<group>"; };
 		335ED61715BF25F1008DDBD9 /* AppGoldenReleaseiOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = AppGoldenReleaseiOS.xcconfig; path = ../../Radiance/Source/XCode/XCConfig/AppGoldenReleaseiOS.xcconfig; sourceTree = "<group>"; };
 		335ED61815BF25F1008DDBD9 /* AppGoldenReleaseOSX.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = AppGoldenReleaseOSX.xcconfig; path = ../../Radiance/Source/XCode/XCConfig/AppGoldenReleaseOSX.xcconfig; sourceTree = "<group>"; };
+		336836D115D42CCD00EE9472 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/GameKit.framework; sourceTree = DEVELOPER_DIR; };
 		337AE7B315BF224300AD1617 /* CrowGoldenOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrowGoldenOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		338243F015B791B3002B9F95 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		338243F315B791B3002B9F95 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -416,6 +419,7 @@
 				33B1A0AC15D06D0600088E7C /* QtGui.framework in Frameworks */,
 				33194A4115BC5A7D00458F43 /* Cocoa.framework in Frameworks */,
 				33188EB915BCB6F400C69D36 /* OpenGL.framework in Frameworks */,
+				336836D315D42DC500EE9472 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +442,7 @@
 				33B1A0AA15D06CE300088E7C /* QtGui.framework in Frameworks */,
 				337AE7AA15BF224300AD1617 /* Cocoa.framework in Frameworks */,
 				337AE7AB15BF224300AD1617 /* OpenGL.framework in Frameworks */,
+				336836D215D42CCD00EE9472 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,6 +537,7 @@
 		338243E115B791B3002B9F95 = {
 			isa = PBXGroup;
 			children = (
+				336836D115D42CCD00EE9472 /* GameKit.framework */,
 				331949D015BA34A700458F43 /* Main.xcodeproj */,
 				33E8816015B8AD650089BA08 /* Radiance.xcodeproj */,
 				3382447015B793C4002B9F95 /* boost.xcodeproj */,
