@@ -123,19 +123,73 @@ CrowLauncher::CrowLauncher() : m_playClicked(false) {
 		Qt::MSWindowsFixedSizeDialogHint
 	);
 	setAttribute(Qt::WA_QuitOnClose);
+	setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
 
 	QWidget *w = new QWidget();
 	QVBoxLayout *l = new QVBoxLayout(w);
-	QLabel *banner = new QLabel();
-
-	{
-		QPixmap p;
-		if (LoadPixmap("launcher.png", p))
-			banner->setPixmap(p);
+	
+	int bkg = SelectBackground();
+	
+	if (bkg == 0) {
+		l->addSpacing(165); // push to bottom.
+		QHBoxLayout *h = new QHBoxLayout();
+		h->addSpacing(64);
+		QVBoxLayout *buttons = new QVBoxLayout();
+		CreateButtons(buttons);
+		h->addLayout(buttons);
+		h->addSpacing(64);
+		l->addLayout(h);
+	} else {
+		QHBoxLayout *left = new QHBoxLayout();
+		
+		left->addSpacing(255);
+		QVBoxLayout *buttons = new QVBoxLayout();
+		CreateButtons(buttons);
+		left->addLayout(buttons);
+		
+		l->addLayout(left);
+		l->addSpacing(165);
 	}
 
-	l->addWidget(banner);
-	l->addSpacing(32);
+	setCentralWidget(w);
+
+	QDesktopWidget *desktop = QApplication::desktop();
+	if (desktop)
+		Center(desktop->screenGeometry());
+
+	setWindowTitle((CStr(App::Get()->title) + " Launcher").c_str.get());
+}
+
+CrowLauncher::~CrowLauncher() {
+	if (m_music)
+		m_music->Stop();
+	m_music.reset();
+	m_soundContext.reset();
+}
+
+QSize CrowLauncher::sizeHint() const {
+	return QSize(534, 360);
+}
+
+int CrowLauncher::SelectBackground() {
+	const char *s_images[] = {
+		"launcher1.png",
+		"launcher2.png"
+	};
+	
+	int idx = (xtime::ReadMilliseconds() / 1000) & 1;
+	
+	QPixmap bg;
+	if (LoadPixmap(s_images[idx], bg)) {
+		QPalette p(palette());
+		p.setBrush(QPalette::Background, bg);
+		setPalette(p);
+	}
+	
+	return idx;
+}
+
+void CrowLauncher::CreateButtons(QVBoxLayout *l) {
 
 	m_play = new QPushButton("Play");
 	l->addWidget(m_play);
@@ -156,21 +210,6 @@ CrowLauncher::CrowLauncher() : m_playClicked(false) {
 	b = new QPushButton("Quit");
 	l->addWidget(b);
 	RAD_VERIFY(connect(b, SIGNAL(clicked()), SLOT(close())));
-
-	setCentralWidget(w);
-
-	QDesktopWidget *desktop = QApplication::desktop();
-	if (desktop)
-		Center(desktop->screenGeometry());
-
-	setWindowTitle((CStr(App::Get()->title) + " Launcher").c_str.get());
-}
-
-CrowLauncher::~CrowLauncher() {
-	if (m_music)
-		m_music->Stop();
-	m_music.reset();
-	m_soundContext.reset();
 }
 
 bool CrowLauncher::Run() {

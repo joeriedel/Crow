@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3315F1BA15D090AB008B19BA /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 3315F1B915D090AB008B19BA /* Base */; };
 		33188EA315BCB64600C69D36 /* G_Exports.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5715B9E7F70030EAEC /* G_Exports.cpp */; };
 		33188EA415BCB64600C69D36 /* G_OmenEnergy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5915B9E7F70030EAEC /* G_OmenEnergy.cpp */; };
 		33188EA515BCB64600C69D36 /* G_ScreenPawn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33836C5B15B9E7F70030EAEC /* G_ScreenPawn.cpp */; };
@@ -45,7 +44,6 @@
 		3319499115B9FF6D00458F43 /* libzlibOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E8812615B8AB5C0089BA08 /* libzlibOSX.a */; };
 		33194A4115BC5A7D00458F43 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 338243F015B791B3002B9F95 /* Cocoa.framework */; };
 		33194B2615BC89DD00458F43 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33194B2415BC89DD00458F43 /* MainMenu.xib */; };
-		3358B13115D09A1600C3536D /* launcher.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3358B12E15D098D900C3536D /* launcher.png */; };
 		3358B13315D0A5DA00C3536D /* autoexec.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3358B13215D0A5DA00C3536D /* autoexec.txt */; };
 		335ED5ED15BF244A008DDBD9 /* libRadianceShipOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 335ED5E415BF22BC008DDBD9 /* libRadianceShipOSX.a */; };
 		335ED5EE15BF244F008DDBD9 /* libMainShipOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 335ED5D615BF22BC008DDBD9 /* libMainShipOSX.a */; };
@@ -120,6 +118,9 @@
 		33B1A0AC15D06D0600088E7C /* QtGui.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3319498B15B9FF5C00458F43 /* QtGui.framework */; };
 		33D8909415BF299500DD4FBC /* libMainDeveloper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 335ED5DA15BF22BC008DDBD9 /* libMainDeveloper.a */; };
 		33D8909515BF299500DD4FBC /* libRadianceDeveloper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 335ED5E015BF22BC008DDBD9 /* libRadianceDeveloper.a */; };
+		33F679AE15D85AB500ED3B68 /* launcher1.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 33F679AC15D85AB500ED3B68 /* launcher1.png */; };
+		33F679AF15D85AB500ED3B68 /* launcher2.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 33F679AD15D85AB500ED3B68 /* launcher2.png */; };
+		33F679B115D85CC200ED3B68 /* pak0.pak in CopyFiles */ = {isa = PBXBuildFile; fileRef = 33F679B015D85CC200ED3B68 /* pak0.pak */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -307,7 +308,9 @@
 			dstPath = Base;
 			dstSubfolderSpec = 7;
 			files = (
-				3358B13115D09A1600C3536D /* launcher.png in CopyFiles */,
+				33F679B115D85CC200ED3B68 /* pak0.pak in CopyFiles */,
+				33F679AE15D85AB500ED3B68 /* launcher1.png in CopyFiles */,
+				33F679AF15D85AB500ED3B68 /* launcher2.png in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,7 +332,6 @@
 		33194B2515BC89DD00458F43 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = OSX/en.lproj/MainMenu.xib; sourceTree = SOURCE_ROOT; };
 		334B549015B89AEC00EEFC92 /* libvorbis.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libvorbis.xcodeproj; path = ../../Radiance/Source/XCode/libvorbis.xcodeproj; sourceTree = "<group>"; };
 		334B55A615B8A79500EEFC92 /* lua.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = lua.xcodeproj; path = ../../Radiance/Source/XCode/lua.xcodeproj; sourceTree = "<group>"; };
-		3358B12E15D098D900C3536D /* launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launcher.png; path = ../../Base/launcher.png; sourceTree = "<group>"; };
 		3358B13215D0A5DA00C3536D /* autoexec.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = autoexec.txt; path = ../../autoexec.txt; sourceTree = "<group>"; };
 		335ED5BC15BF22BC008DDBD9 /* CrowDeveloper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrowDeveloper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		335ED5BE15BF22BC008DDBD9 /* CrowiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrowiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -397,6 +399,9 @@
 		33B1A0A315D06AD500088E7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Base; path = ../../Cooked/Packages/Base; sourceTree = "<group>"; };
 		33E8811B15B8AB5B0089BA08 /* zlib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = zlib.xcodeproj; path = ../../Radiance/Source/XCode/zlib.xcodeproj; sourceTree = "<group>"; };
 		33E8816015B8AD650089BA08 /* Radiance.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Radiance.xcodeproj; path = ../../Radiance/Source/XCode/Radiance.xcodeproj; sourceTree = "<group>"; };
+		33F679AC15D85AB500ED3B68 /* launcher1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launcher1.png; path = ../../Base/launcher1.png; sourceTree = "<group>"; };
+		33F679AD15D85AB500ED3B68 /* launcher2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launcher2.png; path = ../../Base/launcher2.png; sourceTree = "<group>"; };
+		33F679B015D85CC200ED3B68 /* pak0.pak */ = {isa = PBXFileReference; lastKnownFileType = file; name = pak0.pak; path = ../../Cooked/Packages/Base/pak0.pak; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -537,6 +542,7 @@
 		338243E115B791B3002B9F95 = {
 			isa = PBXGroup;
 			children = (
+				33F679B015D85CC200ED3B68 /* pak0.pak */,
 				336836D115D42CCD00EE9472 /* GameKit.framework */,
 				331949D015BA34A700458F43 /* Main.xcodeproj */,
 				33E8816015B8AD650089BA08 /* Radiance.xcodeproj */,
@@ -754,8 +760,9 @@
 		33B1A0A615D06B0600088E7C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				33F679AC15D85AB500ED3B68 /* launcher1.png */,
+				33F679AD15D85AB500ED3B68 /* launcher2.png */,
 				3358B13215D0A5DA00C3536D /* autoexec.txt */,
-				3358B12E15D098D900C3536D /* launcher.png */,
 				3315F1B915D090AB008B19BA /* Base */,
 				3315F19E15D08DCD008B19BA /* CrowShipOSX.entitlements */,
 				33B1A0A315D06AD500088E7C /* Base */,
@@ -1120,7 +1127,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3358B13315D0A5DA00C3536D /* autoexec.txt in Resources */,
-				3315F1BA15D090AB008B19BA /* Base in Resources */,
 				33194B2615BC89DD00458F43 /* MainMenu.xib in Resources */,
 				33B1A09E15D0640800088E7C /* icon.icns in Resources */,
 			);

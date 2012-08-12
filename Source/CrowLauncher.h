@@ -17,6 +17,7 @@ class QTimerEvent;
 class QComboBox;
 class QCheckBox;
 class QPushButton;
+class QVBoxLayout;
 
 class CrowLauncher : public QMainWindow {
 	Q_OBJECT
@@ -32,6 +33,7 @@ public:
 protected:
 
 	virtual void timerEvent(QTimerEvent*);
+	virtual QSize sizeHint() const;
 
 private slots:
 
@@ -49,6 +51,8 @@ private:
 	void LoadSettings();
 	void Center(const QRect &rect);
 	void PlayMusic();
+	void CreateButtons(QVBoxLayout *layout);
+	int SelectBackground();
 
 	xtime::SecondsTimer<> m_timer;
 	SoundRef m_music;

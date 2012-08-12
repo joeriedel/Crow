@@ -70,11 +70,7 @@ bool CrowApp::InitWindow() {
 	mode.bpp = 32;
 	mode.hz  = 0;
 
-#if defined(RAD_OPT_OSX)
-	const char *vidString = "1440x900";
-#else
 	const char *vidString = "1280x720";
-#endif
 
 	vidString = settings->keys->StringForKey("vidMode", vidString);
 	mode.fullscreen = settings->keys->BoolForKey("fullscreen", false);
