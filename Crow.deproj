@@ -49,6 +49,9 @@
     <filename>Base\Scripts\Input.lua</filename>
   </file>
   <file>
+    <filename>Base\Scripts\KeyCodes.lua</filename>
+  </file>
+  <file>
     <filename>Base\Scripts\LogicNode.lua</filename>
   </file>
   <file>
