@@ -22,6 +22,7 @@
 #include <Runtime/Time.h>
 #include <Engine/Packages/Packages.h>
 #include <Engine/Sound/Sound.h>
+#include <Engine/COut.h>
 #include <cstdlib>
 
 #if defined(RAD_OPT_OSX)
@@ -257,11 +258,38 @@ void CrowLauncher::LoadSettings() {
 	m_defaults = Persistence::Load(0);
 	m_defaults->keys->pairs[String("fullscreen")] = String("true");
 	
-	DisplayDevice::Ref dd = App::Get()->primaryDisplay;
-	const r::VidMode *defMode = dd->defVidMode;
+	DisplayDevice::Ref primaryDisplay = App::Get()->primaryDisplay;
+	
+	r::VidMode mode;
+
+	mode.w = 1280;
+	mode.h = 720;
+	mode.bpp = 32;
+	mode.hz  = 0;
+	
+	DisplayDevice::MatchDisposition matchOptions = DisplayDevice::kMatchDisposition_Upsize;
+	if (primaryDisplay->curVidMode->Is16x9()) {
+		matchOptions |= DisplayDevice::kMatchDisposition_AllowAspect16x9;
+	} else {
+		matchOptions |= DisplayDevice::kMatchDisposition_AllowAspect16x10;
+	}
+
+	if (!primaryDisplay->MatchVidMode(
+		mode,
+		matchOptions
+	)) {
+		// can we find anything?
+		COut(C_Warn) << "WARNING: Unable to find a compatible resolution with " << mode.w << "x" << mode.h << ", trying again with fewer restrictions..." << std::endl;
+		if (!primaryDisplay->MatchVidMode(
+			mode,
+			DisplayDevice::kMatchDisposition_AllowAspectChange
+		)) {
+			COut(C_Error) << "ERROR: unable to find a compatible video mode!" << std::endl;
+		}
+	}
 
 	String s;
-	s.Printf("%dx%d", defMode->w, defMode->h);
+	s.Printf("%dx%d", mode.w, mode.h);
 
 	m_defaults->keys->pairs[String("vidMode")] = s;
 

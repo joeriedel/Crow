@@ -1366,7 +1366,7 @@
 			baseConfigurationReference = 338CDF1E15BC939A0058DFF5 /* AppShipDebugOSX.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = CrowShipOSX.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../Extern/Qt-4.8.2\"",
@@ -1387,7 +1387,7 @@
 			baseConfigurationReference = 338CDF2115BC939A0058DFF5 /* AppShipReleaseOSX.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = CrowShipOSX.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../Extern/Qt-4.8.2\"",
