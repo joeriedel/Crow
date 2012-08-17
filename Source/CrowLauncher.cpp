@@ -277,13 +277,12 @@ void CrowLauncher::Center(const QRect &rect) {
 }
 
 void CrowLauncher::PlayMusic() {
-	enum { kNumSongs = 5 };
+	enum { kNumSongs = 4 };
 	static const char *s_songs[kNumSongs] = {
 		"Audio/EntertheFight",
 		"Audio/ch2_audio",
 		"Audio/demon_background",
-		"Audio/rain_wind_thunder01",
-		"Audio/cave_drips1"
+		"Audio/rain_wind_thunder01"
 	};
 
 	srand((unsigned int)xtime::ReadMilliseconds());

@@ -318,7 +318,6 @@
 
 /* Begin PBXFileReference section */
 		3315F19E15D08DCD008B19BA /* CrowShipOSX.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CrowShipOSX.entitlements; sourceTree = "<group>"; };
-		3315F1B915D090AB008B19BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Base; path = ../../Cooked/Packages/Base; sourceTree = "<group>"; };
 		33188EB815BCB6F400C69D36 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/OpenGL.framework; sourceTree = DEVELOPER_DIR; };
 		3319497C15B9F77600458F43 /* libopenal.1.14.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopenal.1.14.0.dylib; path = "../../Extern/OpenALSoft-1.14/libs/libopenal.1.14.0.dylib"; sourceTree = "<group>"; };
 		3319497E15B9F78A00458F43 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -396,7 +395,6 @@
 		33B1A09415D05E7500088E7C /* CrowApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrowApp.h; path = ../CrowApp.h; sourceTree = "<group>"; };
 		33B1A09515D05E7500088E7C /* CrowLauncher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CrowLauncher.cpp; path = ../CrowLauncher.cpp; sourceTree = "<group>"; };
 		33B1A09615D05E7500088E7C /* CrowLauncher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrowLauncher.h; path = ../CrowLauncher.h; sourceTree = "<group>"; };
-		33B1A0A315D06AD500088E7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Base; path = ../../Cooked/Packages/Base; sourceTree = "<group>"; };
 		33E8811B15B8AB5B0089BA08 /* zlib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = zlib.xcodeproj; path = ../../Radiance/Source/XCode/zlib.xcodeproj; sourceTree = "<group>"; };
 		33E8816015B8AD650089BA08 /* Radiance.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Radiance.xcodeproj; path = ../../Radiance/Source/XCode/Radiance.xcodeproj; sourceTree = "<group>"; };
 		33F679AC15D85AB500ED3B68 /* launcher1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launcher1.png; path = ../../Base/launcher1.png; sourceTree = "<group>"; };
@@ -542,7 +540,6 @@
 		338243E115B791B3002B9F95 = {
 			isa = PBXGroup;
 			children = (
-				33F679B015D85CC200ED3B68 /* pak0.pak */,
 				336836D115D42CCD00EE9472 /* GameKit.framework */,
 				331949D015BA34A700458F43 /* Main.xcodeproj */,
 				33E8816015B8AD650089BA08 /* Radiance.xcodeproj */,
@@ -760,12 +757,11 @@
 		33B1A0A615D06B0600088E7C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				33F679B015D85CC200ED3B68 /* pak0.pak */,
 				33F679AC15D85AB500ED3B68 /* launcher1.png */,
 				33F679AD15D85AB500ED3B68 /* launcher2.png */,
 				3358B13215D0A5DA00C3536D /* autoexec.txt */,
-				3315F1B915D090AB008B19BA /* Base */,
 				3315F19E15D08DCD008B19BA /* CrowShipOSX.entitlements */,
-				33B1A0A315D06AD500088E7C /* Base */,
 				33B1A09115D05DFC00088E7C /* icon.icns */,
 			);
 			name = Resources;
@@ -1381,6 +1377,7 @@
 					"\"$(SRCROOT)/../../Extern/OpenALSoft-1.14/libs\"",
 				);
 				PRODUCT_NAME = Crow;
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1401,6 +1398,7 @@
 					"\"$(SRCROOT)/../../Extern/OpenALSoft-1.14/libs\"",
 				);
 				PRODUCT_NAME = Crow;
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
