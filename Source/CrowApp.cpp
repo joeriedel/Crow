@@ -80,26 +80,16 @@ bool CrowApp::InitWindow() {
 	// try to pick a video mode that is the same aspect ratio as their desktop resolution.
 	RAD_ASSERT(primaryDisplay.get());
 
-	DisplayDevice::MatchDisposition matchOptions = DisplayDevice::kMatchDisposition_Upsize;
-	if (primaryDisplay->curVidMode->Is16x9()) {
-		matchOptions |= DisplayDevice::kMatchDisposition_AllowAspect16x9;
-	} else {
-		matchOptions |= DisplayDevice::kMatchDisposition_AllowAspect16x10;
-	}
+	DisplayDevice::MatchDisposition matchOptions = DisplayDevice::kMatchDisposition_Upsize|
+		DisplayDevice::kMatchDisposition_Any;
 
 	if (!primaryDisplay->MatchVidMode(
 		mode,
 		matchOptions
 	)) {
 		// can we find anything?
-		COut(C_Warn) << "WARNING: Unable to find a compatible resolution with " << mode.w << "x" << mode.h << ", trying again with fewer restrictions..." << std::endl;
-		if (!primaryDisplay->MatchVidMode(
-			mode,
-			DisplayDevice::kMatchDisposition_AllowAspectChange
-		)) {
-			COut(C_Error) << "ERROR: unable to find a compatible video mode!" << std::endl;
-			return false;
-		}
+		COut(C_Error) << "ERROR: Unable to find resolution " << mode.w << "x" << std::endl;
+		return false;
 	}
 
 	if (!BindDisplayDevice(primaryDisplay, mode)) {

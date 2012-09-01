@@ -282,7 +282,7 @@ void CrowLauncher::LoadSettings() {
 		COut(C_Warn) << "WARNING: Unable to find a compatible resolution with " << mode.w << "x" << mode.h << ", trying again with fewer restrictions..." << std::endl;
 		if (!primaryDisplay->MatchVidMode(
 			mode,
-			DisplayDevice::kMatchDisposition_AllowAspectChange
+			DisplayDevice::kMatchDisposition_Upsize|DisplayDevice::kMatchDisposition_AllowAspect16x9|DisplayDevice::kMatchDisposition_AllowAspect16x10
 		)) {
 			COut(C_Error) << "ERROR: unable to find a compatible video mode!" << std::endl;
 		}
