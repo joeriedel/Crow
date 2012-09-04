@@ -39,6 +39,10 @@ void __OSX_BundlePath(char *dst);
 
 #undef qApp
 
+enum {
+	kSettingsVersion = 1
+};
+
 namespace {
 
 bool LoadPixmap(const char *filename, QPixmap &pixmap) {
@@ -295,8 +299,15 @@ void CrowLauncher::LoadSettings() {
 	m_defaults->keys->pairs[String("vidMode")] = s;
 
 	m_settings = Persistence::Load("settings.prefs");
-	if (m_settings->keys->pairs.empty()) {
+	int version = m_settings->keys->IntForKey("version", 0);
+	
+	if (m_settings->keys->pairs.empty() || (version != kSettingsVersion)) {
 		m_settings = m_defaults->Clone();
+		
+		String x;
+		x.Printf("%d", kSettingsVersion);
+		
+		m_settings->keys->pairs[String("version")] = x.c_str.get();
 		m_settings->Save("settings.prefs");
 	}
 }
