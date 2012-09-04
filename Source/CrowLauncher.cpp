@@ -77,6 +77,7 @@ int CrowApp::DoLauncher() {
 
 	int _argc = argc;
 	QApplication *qApp = new QApplication(_argc, (char**)argv.get());
+	QCoreApplication::setLibraryPaths(QStringList());
 #if defined(RAD_OPT_WIN)
 	{
 		QPixmap icon;
