@@ -304,10 +304,9 @@ void CrowLauncher::LoadSettings() {
 	if (m_settings->keys->pairs.empty() || (version != kSettingsVersion)) {
 		m_settings = m_defaults->Clone();
 		
-		String x;
-		x.Printf("%d", kSettingsVersion);
+		s.Printf("%d", kSettingsVersion);
 		
-		m_settings->keys->pairs[String("version")] = x.c_str.get();
+		m_settings->keys->pairs[String("version")] = s;
 		m_settings->Save("settings.prefs");
 	}
 }
