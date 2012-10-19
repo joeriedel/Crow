@@ -1,3 +1,14 @@
+// Halloween!
+
+Objects/Buttercup_action_level
+Objects/Buttercup_overworld
+Objects/Candycorn_action_level
+Objects/Candycorn_overworld
+Objects/Lollipop_action_level
+Objects/Lollipop_overworld
+Objects/pumpkins1
+Objects/pumpkins2
+Objects/pumpkins3
 
 // Strings
 UI/Globals
