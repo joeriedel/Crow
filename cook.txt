@@ -1,3 +1,19 @@
+// XMas!
+
+Cinematic/xmasClouds01_M
+Cinematic/xmasopening_cin_backdrop1_M
+Cinematic/xmasopening_cin_backdrop2_M
+Objects/xmascandycane
+Objects/xmasgingerbread
+Objects/xmaspresent
+Objects/santasack
+Characters/Baron_xmas
+Characters/DarkLord_xmas
+Characters/EvilTree_xmas
+Characters/Giant_xmas
+Characters/Scarecrow_xmas
+Characters/Scarecrow2_xmas
+
 // Halloween!
 
 Objects/Buttercup_action_level
