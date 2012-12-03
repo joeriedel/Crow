@@ -7,6 +7,12 @@ Objects/xmascandycane
 Objects/xmasgingerbread
 Objects/xmaspresent
 Objects/santasack
+Characters/Baron_xmas
+Characters/DarkLord_xmas
+Characters/EvilTree_xmas
+Characters/Giant_xmas
+Characters/Scarecrow_xmas
+Characters/Scarecrow2_xmas
 
 // Halloween!
 
