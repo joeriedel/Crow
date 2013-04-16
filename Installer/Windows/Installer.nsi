@@ -26,7 +26,7 @@ Var StartMenuFolder
 !insertmacro MUI_PAGE_STARTMENU Application $StartMenuFolder
 
 !insertmacro MUI_PAGE_INSTFILES
-!insertmacro MUI_PAGE_README README.txt
+!insertmacro MUI_PAGE_README CrowReadme.rtf
 !insertmacro MUI_PAGE_FINISH
 
 !insertmacro MUI_UNPAGE_WELCOME
@@ -57,10 +57,11 @@ Section "Dummy Section" SecDummy
   File Crow.exe
   File autoexec.txt
   File CrowEULA.rtf
-  File README.txt
+  File CrowReadme.rtf
   File OpenAL32.dll
   File QtCore4.dll
   File QtGui4.dll
+  File vcredist_x86.exe
 
   SetOutPath "$INSTDIR\Base"
 
@@ -69,10 +70,18 @@ Section "Dummy Section" SecDummy
   File Base\launcher2.png
   File Base\pak0.pak
 
-  SetOutPath "$INSTDIR"
-  
-  File vcredist_x86.exe
-  
+  SetOutPath "$INSTDIR\Concept Art"
+  File "Concept Art\*.*"
+
+  SetOutPath "$INSTDIR\Development Renders"
+  File "Development Renders\*.*"
+
+  SetOutPath "$INSTDIR\Marketing Images"
+  File "Marketing Images\*.*"
+
+  SetOutPath "$INSTDIR\Remastered Soundtrack"
+  File "Remastered Soundtrack\*.*"
+
   ;Store installation folder
   WriteRegStr HKCU "Software\Crow" "" $INSTDIR
 
@@ -81,13 +90,20 @@ Section "Dummy Section" SecDummy
   
   !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
   
+  ; this is the working directory for shortcuts
+  SetOutPath "$INSTDIR"
+
   ;Create shortcuts
   CreateDirectory "$SMPROGRAMS\$StartMenuFolder"
   CreateShortCut "$SMPROGRAMS\$StartMenuFolder\Crow.lnk" "$INSTDIR\Crow.exe"
-  CreateShortCut "$SMPROGRAMS\$StartMenuFolder\EULA.lnk" "$INSTDIR\CrowEULA.rtf"
-  CreateShortCut "$SMPROGRAMS\$StartMenuFolder\README.lnk" "$INSTDIR\README.txt"
+  CreateShortCut "$SMPROGRAMS\$StartMenuFolder\CrowEULA.lnk" "$INSTDIR\CrowEULA.rtf"
+  CreateShortCut "$SMPROGRAMS\$StartMenuFolder\CrowReadme.lnk" "$INSTDIR\CrowReadme.rtf"
   CreateShortCut "$SMPROGRAMS\$StartMenuFolder\Uninstall.lnk" "$INSTDIR\Uninstall.exe"
-  
+  CreateShortCut "$SMPROGRAMS\$StartMenuFolder\Concept Art.lnk" "$INSTDIR\Concept Art"
+  CreateShortCut "$SMPROGRAMS\$StartMenuFolder\Development Renders.lnk" "$INSTDIR\Development Renders"
+  CreateShortCut "$SMPROGRAMS\$StartMenuFolder\Marketing Images.lnk" "$INSTDIR\Marketing Images"
+  CreateShortCut "$SMPROGRAMS\$StartMenuFolder\Remastered Soundtrack.lnk" "$INSTDIR\Remastered Soundtrack"
+
   !insertmacro MUI_STARTMENU_WRITE_END
 
   ExecWait '"$INSTDIR\vcredist_x86.exe" /q /norestart'
@@ -104,7 +120,7 @@ Section "Uninstall"
 
 	Delete "$INSTDIR\Crow.exe"
 	Delete "$INSTDIR\CrowEULA.rtf"
-	Delete "$INSTDIR\README.txt"
+	Delete "$INSTDIR\CrowReadme.rtf"
 	Delete "$INSTDIR\OpenAL32.dll"
 	Delete "$INSTDIR\QtCore4.dll"
 	Delete "$INSTDIR\QtGui4.dll"
@@ -113,7 +129,21 @@ Section "Uninstall"
 	Delete "$INSTDIR\Base\launcher2.png"
 	Delete "$INSTDIR\Base\pak0.pak"
 	Delete "$INSTDIR\Uninstall.exe"
-	RMDir "$INSTDIR\Base"
+	Delete "$INSTDIR\Concept Art\*.*"
+    Delete "$INSTDIR\Development Renders\*.*"
+    Delete "$INSTDIR\Marketing Images\*.*"
+    Delete "$INSTDIR\Remastered Soundtrack\*.*"
+	Delete "$INSTDIR\autoexec.txt"
+	Delete "$INSTDIR\log.txt"
+	Delete "$INSTDIR\settings.prefs"
+	Delete "$INSTDIR\globals.dat"
+	Delete "$INSTDIR\Save*.sav"
+	Delete "$INSTDIR\vcredist_x86.exe"
+  	RMDir "$INSTDIR\Base"
+	RMDir "$INSTDIR\Concept Art"
+	RMDir "$INSTDIR\Development Renders"
+	RMDir "$INSTDIR\Marketing Images"
+	RMDir "$INSTDIR\Remastered Soundtrack"
 	RMDir "$INSTDIR"
 
 	!insertmacro MUI_STARTMENU_GETFOLDER Application $StartMenuFolder
