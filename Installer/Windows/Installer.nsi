@@ -5,7 +5,7 @@ SetCompressor /SOLID /FINAL lzma
 !include MUI2.nsh
 !include MUI_EXTRAPAGES.nsh
 
-Name "Crow v1.1"
+Name "Crow Beta"
 OutFile "Installer.exe"
 InstallDir $PROGRAMFILES\Crow
 InstallDirRegKey HKCU "Software\Crow" ""
@@ -136,7 +136,7 @@ Section "Uninstall"
 	Delete "$INSTDIR\autoexec.txt"
 	Delete "$INSTDIR\log.txt"
 	Delete "$INSTDIR\settings.prefs"
-	Delete "$INSTDIR\globals.dat"
+	Delete "$INSTDIR\globals.data"
 	Delete "$INSTDIR\Save*.sav"
 	Delete "$INSTDIR\vcredist_x86.exe"
   	RMDir "$INSTDIR\Base"
