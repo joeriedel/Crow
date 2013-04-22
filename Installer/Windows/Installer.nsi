@@ -149,8 +149,12 @@ Section "Uninstall"
 	!insertmacro MUI_STARTMENU_GETFOLDER Application $StartMenuFolder
 
 	Delete "$SMPROGRAMS\$StartMenuFolder\Crow.lnk"
-	Delete "$SMPROGRAMS\$StartMenuFolder\EULA.lnk"
-	Delete "$SMPROGRAMS\$StartMenuFolder\README.lnk"
+	Delete "$SMPROGRAMS\$StartMenuFolder\CrowEULA.lnk"
+	Delete "$SMPROGRAMS\$StartMenuFolder\CrowReadme.lnk"
+	Delete "$SMPROGRAMS\$StartMenuFolder\Concept Art.lnk"
+	Delete "$SMPROGRAMS\$StartMenuFolder\Development Renders.lnk"
+	Delete "$SMPROGRAMS\$StartMenuFolder\Marketing Images.lnk"
+	Delete "$SMPROGRAMS\$StartMenuFolder\Remastered Soundtrack.lnk"
 	Delete "$SMPROGRAMS\$StartMenuFolder\Uninstall.lnk"
 	RMDir "$SMPROGRAMS\$StartMenuFolder"
 	
